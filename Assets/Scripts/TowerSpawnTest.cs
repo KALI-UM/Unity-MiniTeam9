@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class TowerSpawnTest : MonoBehaviour
 {
-    public SlotManager slotManager;
-    public TowerManager towerManager;
+    public GameManager gameManager;
 
     public void OnClickSpawnTower()
     {
-        if (slotManager.IsEmptySlotExist())
+        if (gameManager.slotManager.IsEmptySlotExist())
         {
-            GameObject tower = towerManager.GetTower();
-            slotManager.AddTower(tower.GetComponent<Tower>());
+            GameObject tower = gameManager.towerManager.GetTower();
+            gameManager.slotManager.AddTower(tower.GetComponent<Tower>());
         }
     }
 }

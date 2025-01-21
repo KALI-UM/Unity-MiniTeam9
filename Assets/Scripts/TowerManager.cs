@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TowerManager : MonoBehaviour
 {
+    public GameManager gameManager;
+
     //임시로 타워를 여기 둔다
     [SerializeField]
     private List<GameObject> towerPrefabs = new List<GameObject>();

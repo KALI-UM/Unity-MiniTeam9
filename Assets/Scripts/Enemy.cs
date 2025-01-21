@@ -69,6 +69,8 @@ public class Enemy : MonoBehaviour
         Hp = 0;
         movement.enabled = false;
 
+        KALLogger.Log("enemy - die", this);
+
         onDie?.Invoke();
     }
 }

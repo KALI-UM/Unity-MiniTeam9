@@ -9822,7 +9822,7 @@ GameObject:
   - component: {fileID: 434634360}
   m_Layer: 0
   m_Name: EnemyManager
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9839,6 +9839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c047e832923accb478c2551a5070430a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   enemyPrefabs:
   - type: 0
     prefab: {fileID: 2455747337142597147, guid: d9a5989392d186840943db73bae00775, type: 3}
@@ -10378,7 +10379,7 @@ Transform:
   m_GameObject: {fileID: 925029190}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.97, y: 10.99, z: 0}
+  m_LocalPosition: {x: 5.01, y: 10.96, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10413,10 +10414,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d235098f6d53d043b586b1fde841d30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyManager: {fileID: 434634360}
   enemySpwanInterval: 5
   wave: 0
   waveEnemyCount: 35
+  enemyManager: {fileID: 434634360}
+  towerManager: {fileID: 1185533406}
+  slotManager: {fileID: 1341808401}
 --- !u!4 &941585312
 Transform:
   m_ObjectHideFlags: 0
@@ -10430,9 +10433,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1341808400}
-  - {fileID: 1185533407}
   - {fileID: 434634361}
+  - {fileID: 1185533407}
+  - {fileID: 1341808400}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1179245880
@@ -10550,7 +10553,7 @@ GameObject:
   - component: {fileID: 1185533405}
   m_Layer: 0
   m_Name: TowerManager
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10567,8 +10570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c924cb2fd8af8ca4c92ae860c32be498, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotManager: {fileID: 1341808401}
-  towerManager: {fileID: 1185533406}
+  gameManager: {fileID: 941585311}
 --- !u!114 &1185533406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10581,6 +10583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05c17a17b1f3a5e4b90d8b685d9e83af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   towerPrefabs:
   - {fileID: 3503033444322115339, guid: 2a742bea9da63bf468a803288932ac10, type: 3}
   - {fileID: 2557745044567129735, guid: 0739a95f6f2d5084cbc36fda5e8c66e3, type: 3}
@@ -10705,7 +10708,7 @@ GameObject:
   - component: {fileID: 1341808401}
   m_Layer: 0
   m_Name: SlotManager
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10737,6 +10740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2810288851aef32438302186c50b8d85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   slotPrefab: {fileID: 5456590307634458881, guid: 33e867c468bd10245a8bef2f5f8e6764, type: 3}
   columnCount: 6
   rowCount: 4

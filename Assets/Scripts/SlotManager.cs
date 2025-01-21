@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class SlotManager : MonoBehaviour
 {
+    public GameManager gameManager;
+
     public GameObject slotPrefab;
 
     public List<Slot[]> slots = new();

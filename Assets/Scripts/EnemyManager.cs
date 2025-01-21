@@ -8,6 +8,8 @@ using static Enemy;
 
 public class EnemyManager : MonoBehaviour
 {
+    public GameManager gameManager;
+
     [Serializable]
     public struct EnemyPrefab
     {
@@ -15,11 +17,11 @@ public class EnemyManager : MonoBehaviour
         public GameObject prefab;
     }
     public List<EnemyPrefab> enemyPrefabs = new();
-    //public List<EnemyType, GameObject> enemyPrefabs = new();
     private Dictionary<EnemyType, ObjectPool<Enemy>> enemyPools = new();
 
     [SerializeField]
     private WayPointData wayPointData;
+
 
     public int CurrEnemyCount
     {

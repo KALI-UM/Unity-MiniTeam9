@@ -4,17 +4,26 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public EnemyManager enemyManager;
-
     public float enemySpwanInterval = 5f;
     public int wave = 0;
     public int waveEnemyCount = 35;
     private Coroutine coSpawnEnemy;
 
+    public  EnemyManager enemyManager;
+    public  TowerManager towerManager;
+    public  SlotManager slotManager;
+
+    private void Awake()
+    {
+        enemyManager.gameManager = this;
+        towerManager.gameManager = this;
+        slotManager.gameManager = this;
+    }
 
     private void Start()
     {
-        coSpawnEnemy = StartCoroutine(CoSpawnEnemy(35));
+        coSpawnEnemy = StartCoroutine(CoSpawnEnemy(waveEnemyCount));
+        //StartCoroutine(CoSpawnEnemy(waveEnemyCount));
     }
 
     private IEnumerator CoSpawnEnemy(int spawnCount)
@@ -24,7 +33,6 @@ public class GameManager : MonoBehaviour
             enemyManager.SpawnEnemy(Enemy.EnemyType.SoldierA);
             yield return new WaitForSeconds(enemySpwanInterval);
         }
-
         wave++;
     }
 }
