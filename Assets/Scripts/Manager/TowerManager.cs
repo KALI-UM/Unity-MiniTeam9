@@ -11,6 +11,15 @@ public class TowerManager : MonoBehaviour
     private List<GameObject> towerPrefabs = new List<GameObject>();
     //private Dictionary<string, GameObject> towerPrefabsDictionary = new();
 
+    public static float RadiusCoefficient
+    {
+        get;
+        set;
+    }
+
+    private void Awake()
+    {
+    }
 
     public GameObject GetTower()
     {

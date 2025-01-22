@@ -6,6 +6,8 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public EnemyMovement movement;
+    public EnemyHpBar hpBar;
+
     public Action onDie;
 
     public enum EnemyType
@@ -36,7 +38,9 @@ public class Enemy : MonoBehaviour
 
     private void Awake()
     {
-        movement = GetComponent<EnemyMovement>();
+        //movement = GetComponent<EnemyMovement>();
+        //hpBar = GetComponent<EnemyHpBar>();
+
         data.maxHp = 100;
         data.type = EnemyType.SoldierA;
 
@@ -52,6 +56,7 @@ public class Enemy : MonoBehaviour
     {
         IsDead = false;
         Hp = data.maxHp;
+        hpBar.OnHpChanged(Hp);
     }
 
     public void OnDamaged(int damage)
@@ -61,6 +66,7 @@ public class Enemy : MonoBehaviour
         {
             OnDie();
         }
+        hpBar.OnHpChanged((float)Hp/data.maxHp);
     }
 
     public void OnDie()
@@ -70,7 +76,6 @@ public class Enemy : MonoBehaviour
         movement.enabled = false;
 
         KALLogger.Log("enemy - die", this);
-
         onDie?.Invoke();
     }
 }

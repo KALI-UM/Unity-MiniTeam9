@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Pool;
@@ -19,20 +20,48 @@ public class EnemyManager : MonoBehaviour
     public List<EnemyPrefab> enemyPrefabs = new();
     private Dictionary<EnemyType, ObjectPool<Enemy>> enemyPools = new();
 
+    //Valid = 공격가능한 enemy 목록을 관리
+    private List<Enemy> validEnemies = new();
+    public List<Enemy> ValidEnemies
+    {
+        get => validEnemies;
+    }
+
     [SerializeField]
     private WayPointData wayPointData;
-
-
-    public int CurrEnemyCount
+    static public WayPointData WayPointData
     {
         get;
         private set;
     }
 
+    [Serializable]
+    public struct ColorValue
+    {
+        public Color color;
+        public float value;
+    }
+
+    [SerializeField]
+    private ColorValue[] hpColors = new ColorValue[3];
+    static public ColorValue[] HpColors
+    {
+        get;
+        private set;
+    }
+
+    public int CurrEnemyCount
+    {
+        get
+        {
+            return enemyPools.Count;
+        }
+    }
+
     private void Awake()
     {
+        InitializeEnemyInitData();
         InitializeEnemyPool();
-        CurrEnemyCount = 0;
     }
 
     private void InitializeEnemyPool()
@@ -55,19 +84,26 @@ public class EnemyManager : MonoBehaviour
         );
     }
 
+    private void InitializeEnemyInitData()
+    {
+        WayPointData = wayPointData;
+        HpColors = hpColors.OrderByDescending(c => c.value).ToArray();
+    }
+
     public void SpawnEnemy(EnemyType type)
     {
         Enemy enemy = enemyPools[type].Get();
         enemy.transform.SetParent(gameObject.transform);
+        validEnemies.Add(enemy);
     }
 
     private Enemy CreateEnemy(GameObject gobj)
     {
         Enemy enemy = gobj.GetComponent<Enemy>();
-        enemy.movement.wayPointData = wayPointData;
-        enemy.onDie += () => { 
+        enemy.onDie += () =>
+        {
             enemyPools[enemy.data.type].Release(enemy);
-            CurrEnemyCount--;
+            validEnemies.Remove(enemy);
         };
         return enemy;
     }
@@ -77,7 +113,6 @@ public class EnemyManager : MonoBehaviour
         enemy.gameObject.SetActive(true);
         enemy.OnReset();
         enemy.Spawn();
-        CurrEnemyCount++;
     }
 
     private void OnReleaseEnemy(Enemy enemy)

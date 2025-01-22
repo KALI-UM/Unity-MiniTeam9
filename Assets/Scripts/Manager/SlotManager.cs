@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -7,8 +8,8 @@ using UnityEngine;
 public class SlotManager : MonoBehaviour
 {
     public GameManager gameManager;
-
-    public GameObject slotPrefab;
+    [SerializeField]
+    private GameObject slotPrefab;
 
     public List<Slot[]> slots = new();
     [SerializeField]
@@ -23,6 +24,21 @@ public class SlotManager : MonoBehaviour
     public float colDistance = 1f;
     public float rowDistance = 0.9f;
 
+    [Serializable]
+    public struct TowerPosition
+    {
+        public int count;
+        public Transform[] positions;
+    }
+
+    [SerializeField]
+    private List<TowerPosition> towerPositions = new();
+    static public List<TowerPosition> TowerPositions
+    {
+        get;
+        private set;
+    }
+
     public bool IsPossibleToAdd
     {
         get
@@ -33,6 +49,8 @@ public class SlotManager : MonoBehaviour
 
     private void Awake()
     {
+        TowerPositions = towerPositions;
+
         for (int i = 0; i < columnCount; i++)
         {
             Slot[] slotRow = new Slot[rowCount];
@@ -72,11 +90,14 @@ public class SlotManager : MonoBehaviour
                 if (slot.IsPossibleToAdd(tower.TowerId))
                 {
                     slot.AddTower(tower);
-                    tower.transform.position = slot.transform.position;
                     return;
                 }
             }
         }
     }
 
+    static public Vector3 GetTowerPosition(int towerCount, int towerIndex)
+    {
+        return TowerPositions[towerCount].positions[towerIndex].localPosition;
+    }
 }

@@ -9,42 +9,87 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    public WayPointData wayPointData;
-
-    private int currentIndex = 0;
     public float speed;
     private Vector3 direction;
 
-    public int CurrentIndex
+    private int currentIndex = 0;
+    public int CurrentInex
     {
         get => currentIndex;
         private set
         {
-            currentIndex = value % wayPointData.wayPoints.Count();
+            currentIndex = value % EnemyManager.WayPointData.wayPoints.Count();
         }
     }
 
+    public bool IsMovingToWaypoint
+    {
+        get;
+        private set;
+    } = false;
+
     private void Update()
     {
-        if (Vector3.Distance(transform.position, wayPointData.wayPoints[CurrentIndex].position) < 0.1f)
+        if (Vector3.Distance(transform.position, EnemyManager.WayPointData.wayPoints[CurrentInex].position) < 0.1f)
         {
-            transform.position = wayPointData.wayPoints[CurrentIndex].position;
-            CurrentIndex++;
-            direction = (wayPointData.wayPoints[CurrentIndex].position - transform.position).normalized;
+            transform.position = EnemyManager.WayPointData.wayPoints[CurrentInex].position;
+            CurrentInex++;
+            direction = (EnemyManager.WayPointData.wayPoints[CurrentInex].position - transform.position).normalized;
+
+            if (IsMovingToWaypoint)
+            {
+                IsMovingToWaypoint = false;
+            }
         }
-        MoveTo();
+
+        if (!IsMovingToWaypoint)
+        {
+            if (Vector3.Distance(transform.position, EnemyManager.WayPointData.wayPoints[CurrentInex].position) < 0.05f)
+            {
+                transform.position = EnemyManager.WayPointData.wayPoints[CurrentInex].position;
+                CurrentInex++;
+                direction = (EnemyManager.WayPointData.wayPoints[CurrentInex].position - transform.position).normalized;
+            }
+            MoveTo();
+        }
+        else
+        {
+            if (Vector3.Distance(transform.position, EnemyManager.WayPointData.wayPoints[CurrentInex].position) < 0.05f)
+            {
+                transform.position = EnemyManager.WayPointData.wayPoints[CurrentInex].position;
+                CurrentInex++;
+                direction = (EnemyManager.WayPointData.wayPoints[CurrentInex].position - transform.position).normalized;
+
+                IsMovingToWaypoint = false;
+                MoveTo();
+            }
+            else
+            {
+                MoveToWayPoints();
+            }
+        }
     }
 
     public void Spawn()
     {
-        transform.position = wayPointData.spawnPoint.position;
-        direction = (wayPointData.wayPoints[CurrentIndex].position - transform.position).normalized;
+        IsMovingToWaypoint = true;
+        transform.position = EnemyManager.WayPointData.spawnPoint.position;
+        direction = (EnemyManager.WayPointData.wayPoints[currentIndex].position - transform.position).normalized;
     }
 
     private void MoveTo()
     {
         transform.position += direction * speed * Time.deltaTime;
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, wayPointData.MinPoint.x, wayPointData.MaxPoint.x),
-                                        Mathf.Clamp(transform.position.y, wayPointData.MinPoint.y, wayPointData.MaxPoint.y), 0);
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, EnemyManager.WayPointData.MinPoint.x, EnemyManager.WayPointData.MaxPoint.x),
+                                        Mathf.Clamp(transform.position.y, EnemyManager.WayPointData.MinPoint.y, EnemyManager.WayPointData.MaxPoint.y), 0);
+
+    }
+
+    private void MoveToWayPoints()
+    {
+        transform.position += direction * speed * Time.deltaTime;
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, EnemyManager.WayPointData.SpawnMinPoint.x, EnemyManager.WayPointData.SpawnMaxPoint.x),
+                                        Mathf.Clamp(transform.position.y, EnemyManager.WayPointData.SpawnMinPoint.y, EnemyManager.WayPointData.SpawnMaxPoint.y), 0);
+
     }
 }

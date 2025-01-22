@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
-    private EnemyManager enemyManager;
 
     public enum AttackType
     {
@@ -17,69 +16,32 @@ public class Tower : MonoBehaviour
     public float attackInterval = 1f;
     public int damage = 10;
     public string TowerId;
-    public Enemy Target;
+    private Enemy target;
 
     public bool IsValidTarget
     {
         get
         {
-            return Target != null && !Target.IsDead && Vector3.Distance(Target.transform.position, transform.position) <= attackRadius;
+            return target != null && !target.IsDead && Vector3.Distance(target.transform.position, transform.position) <= attackRadius;
         }
     }
 
-    private Coroutine coAttack;
-
-    private void Awake()
+    public void AttackTarget()
     {
-        enemyManager = GameObject.FindGameObjectsWithTag("GameController").First(obj => obj.name.Equals("EnemyManager")).GetComponent<EnemyManager>();
+        target.OnDamaged(damage);
     }
 
-    private void Update()
+    public void SetTarget(Enemy target)
     {
-        if (!IsValidTarget)
-        {
-            FindTarget();
-        }
-
-    }
-
-    private void AttackTarget()
-    {
-        Target.OnDamaged(damage);
-        KALLogger.Log("АјАн", this);
-    }
-
-    private IEnumerator CoAttack()
-    {
-        while (IsValidTarget)
-        {
-            AttackTarget();
-            yield return new WaitForSeconds(attackInterval);
-        }
-    }
-
-    private void FindTarget()
-    {
-        var closestEnemy = enemyManager.GetComponentsInChildren<Enemy>().Where(e => !e.IsDead).
-            OrderBy(e => Vector3.Distance(e.transform.position, transform.position)).FirstOrDefault();
-
-        if (closestEnemy != null && Vector3.Distance(closestEnemy.transform.position, transform.position) <= attackRadius)
-        {
-            Target = closestEnemy;
-            coAttack = StartCoroutine(CoAttack());
-        }
+        this.target = target;
     }
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, attackRadius);
-
-
         if (!IsValidTarget)
             return;
 
         Gizmos.color = Color.blue;
-        Gizmos.DrawLine(transform.position, Target.transform.position);
+        Gizmos.DrawLine(transform.position, target.transform.position);
     }
 }

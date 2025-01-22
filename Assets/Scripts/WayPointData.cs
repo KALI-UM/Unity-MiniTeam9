@@ -18,6 +18,16 @@ public class WayPointData : MonoBehaviour
         get;
         private set;
     }
+    public Vector3 SpawnMinPoint
+    {
+        get;
+        private set;
+    }
+    public Vector3 SpawnMaxPoint
+    {
+        get;
+        private set;
+    }
 
     private void Awake()
     {
@@ -31,6 +41,15 @@ public class WayPointData : MonoBehaviour
 
         MinPoint = min;
         MaxPoint = max;
+
+        min.x = Mathf.Min(min.x, spawnPoint.transform.position.x);
+        min.y = Mathf.Min(min.y, spawnPoint.transform.position.y);
+        max.x = Mathf.Max(max.x, spawnPoint.transform.position.x);
+        max.y = Mathf.Max(max.y, spawnPoint.transform.position.y);
+
+        SpawnMinPoint = min;
+        SpawnMaxPoint = max;
+
     }
 
     private void OnDrawGizmos()

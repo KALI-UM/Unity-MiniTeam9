@@ -46,8 +46,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRadius: 1
+  attackInterval: 1
+  damage: 10
   TowerId: 2
-  Target: {fileID: 0}
 --- !u!1 &4683676720398141468
 GameObject:
   m_ObjectHideFlags: 0
