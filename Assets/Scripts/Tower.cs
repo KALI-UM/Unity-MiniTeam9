@@ -13,7 +13,7 @@ public class Tower : MonoBehaviour
         Far,    //¿ø°Å¸®
     }
 
-    public float attackRadius=2f;
+    public float attackRadius = 2f;
     public float attackInterval = 1f;
     public int damage = 10;
     public string TowerId;
