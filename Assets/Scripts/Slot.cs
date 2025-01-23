@@ -105,7 +105,7 @@ public class Slot : MonoBehaviour
                 }
 
             }
-            yield return new WaitForSeconds(towers[0].attackInterval);
+            yield return new WaitForSeconds(TowerManager.SpeedFactor*towers[0].Data.AttackSpeed);
         }
     }
 
@@ -113,7 +113,7 @@ public class Slot : MonoBehaviour
     {
         var closestEnemy = enemyManager.ValidEnemies.OrderBy(e => Vector3.Distance(e.transform.position, transform.position)).FirstOrDefault();
 
-        if (closestEnemy != null && Vector3.Distance(closestEnemy.transform.position, transform.position) <= tower.Data.AttackRange)
+        if (closestEnemy != null && Vector3.Distance(closestEnemy.transform.position, transform.position) <= tower.AttackRange)
         {
             tower.SetTarget(closestEnemy);
             return true;
@@ -126,7 +126,7 @@ public class Slot : MonoBehaviour
         if (!IsEmpty)
         {
             Gizmos.color = Color.yellow;
-            Gizmos.DrawWireSphere(transform.position, towers[0].Data.AttackRange);
+            Gizmos.DrawWireSphere(transform.position, towers[0].AttackRange);
         }
     }
 }

@@ -23,7 +23,7 @@ public class TowerTable : DataTable
         public float Tower_AttackRange { get; set; }
         public int Tower_SaleGold { get; set; }
         public int Tower_SaleGem { get; set; }
-        public string? Tower_Resource { get; set; }
+        public string Tower_Resource { get; set; }
     }
 
     public class TowerData

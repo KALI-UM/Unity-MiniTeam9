@@ -11,8 +11,6 @@ public class Tower : MonoBehaviour
 
     private Enemy target;
 
-    public float attackInterval = 1f;
-
     public eTower TowerId
     {
         get;
@@ -31,6 +29,14 @@ public class Tower : MonoBehaviour
         get
         {
             return target != null && !target.IsDead && Vector3.Distance(target.transform.position, transform.position) <= Data.AttackRange;
+        }
+    }
+
+    public float AttackRange
+    {
+        get
+        {
+            return Data.AttackRange*TowerManager.RangeFactor;
         }
     }
 

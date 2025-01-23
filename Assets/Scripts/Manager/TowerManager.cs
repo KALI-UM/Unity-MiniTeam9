@@ -10,13 +10,8 @@ public class TowerManager : MonoBehaviour
     public GameObject defaultTowerPrefab;
     private readonly Dictionary<eTower, GameObject> towerPrefabs = new();
 
-    [Range(0.1f, 5f)]
-    public float rangeFactor = 1f;
-
-    public static float RangeFactor
-    {
-        get;
-    }
+    public static float RangeFactor = 1f;
+    public static float SpeedFactor= 1f;
 
     private void Awake()
     {

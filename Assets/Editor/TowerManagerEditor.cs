@@ -9,6 +9,7 @@ using System.Text;
 using UnityEngine.TextCore.Text;
 using DG.DemiEditor;
 using System;
+using UnityEditor.TerrainTools;
 
 [ExecuteInEditMode]
 [CustomEditor(typeof(TowerManager))]
@@ -36,8 +37,24 @@ public class TowerManagerEditor : Editor
             UpdateTowerPrefabs(towerManager.defaultTowerPrefab, list);
         }
 
-        DrawDefaultInspector();
+        EditorGUILayout.LabelField("RangeFactor");
+        float currRangeFactor = EditorGUILayout.Slider(TowerManager.RangeFactor, 0.1f, 5f);
+        if(TowerManager.RangeFactor!= currRangeFactor)
+        {
+            TowerManager.RangeFactor = currRangeFactor;
+        }
+
+        EditorGUILayout.LabelField("SpeedFactor");
+        float currSpeedFactor = EditorGUILayout.Slider(TowerManager.SpeedFactor, 0.1f, 5f);
+        if (TowerManager.SpeedFactor != currSpeedFactor)
+        {
+            TowerManager.SpeedFactor = currSpeedFactor;
+        }
+
+        base.OnInspectorGUI();
     }
+
+
 
     private void UpdateTowerEnum(List<TowerRawData> list)
     {
