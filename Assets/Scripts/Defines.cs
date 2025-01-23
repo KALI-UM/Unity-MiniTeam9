@@ -17,6 +17,7 @@ public static class DataTableIds
         "StringTableEn",
     };
 
+    public static readonly string Tower = "TowerTable";
 }
 
 public static class Variables

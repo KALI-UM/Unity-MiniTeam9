@@ -2,33 +2,47 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using static TowerTable;
+
 
 public class Tower : MonoBehaviour
 {
+    public SpriteRenderer spriteRenderer;
 
-    public enum AttackType
+    private Enemy target;
+
+    public float attackInterval = 1f;
+
+    public eTower TowerId
     {
-        Near,   //근거리
-        Far,    //원거리
+        get;
+        private set;
     }
 
-    public float attackRadius = 2f;
-    public float attackInterval = 1f;
-    public int damage = 10;
-    public string TowerId;
-    private Enemy target;
+
+    public TowerData Data
+    {
+        get;
+        private set;
+    }
 
     public bool IsValidTarget
     {
         get
         {
-            return target != null && !target.IsDead && Vector3.Distance(target.transform.position, transform.position) <= attackRadius;
+            return target != null && !target.IsDead && Vector3.Distance(target.transform.position, transform.position) <= Data.AttackRange;
         }
+    }
+
+    public void InitializeData(eTower id, TowerData data)
+    {
+        TowerId = id;
+        Data = data;
     }
 
     public void AttackTarget()
     {
-        target.OnDamaged(damage);
+        target.OnDamaged(Data.AttackPower);
     }
 
     public void SetTarget(Enemy target)

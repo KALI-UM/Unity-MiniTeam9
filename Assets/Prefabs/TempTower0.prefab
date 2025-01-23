@@ -45,10 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d90dbdc7f36a3484fad66f3713b7f36c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRadius: 2
+  spriteRenderer: {fileID: 3827609716211199721}
   attackInterval: 1
-  damage: 10
-  TowerId: 1
 --- !u!1 &5653558001053771269
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public static class DataTableManager
@@ -8,7 +9,9 @@ public static class DataTableManager
 
     static DataTableManager()
     {
-        
+        var towerTable = new TowerTable();
+        towerTable.Load(DataTableIds.Tower);
+        tables.Add(DataTableIds.Tower, towerTable);
     }
 
     public static StringTable StringTable
@@ -16,6 +19,14 @@ public static class DataTableManager
         get
         {
             return Get<StringTable>(DataTableIds.String[(int)Variables.currentLang]);
+        }
+    }
+
+    public static TowerTable TowerTable
+    {
+        get
+        {
+            return Get<TowerTable>(DataTableIds.Tower);
         }
     }
 

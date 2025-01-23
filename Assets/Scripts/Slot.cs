@@ -8,7 +8,7 @@ public class Slot : MonoBehaviour
 {
     private EnemyManager enemyManager;
 
-    public string TowerId;
+    public eTower TowerId;
     private List<Tower> towers = new();
 
     private int columnIndex;
@@ -43,12 +43,12 @@ public class Slot : MonoBehaviour
         this.rowIndex = rowIndex;
     }
 
-    public bool IsPossibleToAdd(string towerId)
+    public bool IsPossibleToAdd(eTower towerId)
     {
         if (IsEmpty)
             return true;
 
-        return (TowerId.Equals(towerId) && !IsFull);
+        return (TowerId==towerId) && (!IsFull);
     }
 
     public void AddTower(Tower tower)
@@ -82,6 +82,7 @@ public class Slot : MonoBehaviour
     {
 
     }
+
     public void RemoveAllTower()
     {
 
@@ -112,7 +113,7 @@ public class Slot : MonoBehaviour
     {
         var closestEnemy = enemyManager.ValidEnemies.OrderBy(e => Vector3.Distance(e.transform.position, transform.position)).FirstOrDefault();
 
-        if (closestEnemy != null && Vector3.Distance(closestEnemy.transform.position, transform.position) <= tower.attackRadius)
+        if (closestEnemy != null && Vector3.Distance(closestEnemy.transform.position, transform.position) <= tower.Data.AttackRange)
         {
             tower.SetTarget(closestEnemy);
             return true;
@@ -125,7 +126,7 @@ public class Slot : MonoBehaviour
         if (!IsEmpty)
         {
             Gizmos.color = Color.yellow;
-            Gizmos.DrawWireSphere(transform.position, towers[0].attackRadius);
+            Gizmos.DrawWireSphere(transform.position, towers[0].Data.AttackRange);
         }
     }
 }

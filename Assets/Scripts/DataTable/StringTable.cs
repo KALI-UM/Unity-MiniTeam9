@@ -7,7 +7,7 @@ using Unity.Collections;
 
 public class StringTable : DataTable
 {
-    public class Data
+    public class StringData
     {
         public string Id { get; set; }
         public string String { get; set; }
@@ -19,7 +19,7 @@ public class StringTable : DataTable
     {
         var path = string.Format(FormatPath, filename);
         var textAsset = Resources.Load<TextAsset>(path);
-        var list = LoadCSV<Data>(textAsset.text);
+        var list = LoadCSV<StringData>(textAsset.text);
         dictionary.Clear();
         foreach (var item in list)
         {
@@ -38,7 +38,8 @@ public class StringTable : DataTable
     {
         if (!dictionary.ContainsKey(key))
         {
-            return "Å° ¾ø´Ù.";
+            KALLogger.Log("None Key", this);
+            return "";
         }
         return dictionary[key];
     }

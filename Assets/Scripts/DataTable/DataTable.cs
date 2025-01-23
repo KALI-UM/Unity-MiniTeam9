@@ -8,7 +8,7 @@ using System.Linq;
 
 public abstract class DataTable
 {
-    public static readonly string FormatPath = "tables/{0}";
+    public static readonly string FormatPath = "Tables/{0}";
 
     public abstract void Load(string filename);
 

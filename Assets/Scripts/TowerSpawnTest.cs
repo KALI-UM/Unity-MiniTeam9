@@ -8,10 +8,10 @@ public class TowerSpawnTest : MonoBehaviour
 
     public void OnClickSpawnTower()
     {
-        if (gameManager.slotManager.IsEmptySlotExist())
+        if (gameManager.SlotManager.IsEmptySlotExist())
         {
-            GameObject tower = gameManager.towerManager.GetTower();
-            gameManager.slotManager.AddTower(tower.GetComponent<Tower>());
+            GameObject tower = gameManager.TowerManager.GetRandomTower(1);
+            gameManager.SlotManager.AddTower(tower.GetComponent<Tower>());
         }
     }
 }

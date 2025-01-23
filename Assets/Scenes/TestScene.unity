@@ -10849,6 +10849,7 @@ MonoBehaviour:
   enemyManager: {fileID: 434634360}
   towerManager: {fileID: 1185533406}
   slotManager: {fileID: 1341808401}
+  windowManager: {fileID: 0}
   waveDatas:
   - nextWaveInterval: 1
     spawnInterval: 0
@@ -11032,9 +11033,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
-  towerPrefabs:
-  - {fileID: 3503033444322115339, guid: 2a742bea9da63bf468a803288932ac10, type: 3}
-  - {fileID: 2557745044567129735, guid: 0739a95f6f2d5084cbc36fda5e8c66e3, type: 3}
+  defaultTowerPrefab: {fileID: 3503033444322115339, guid: 2a742bea9da63bf468a803288932ac10, type: 3}
 --- !u!4 &1185533407
 Transform:
   m_ObjectHideFlags: 0
