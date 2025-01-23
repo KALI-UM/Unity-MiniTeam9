@@ -4,33 +4,47 @@ using UnityEngine;
 
 public class WindowManager : MonoBehaviour
 {
-    public GenericWindow[] windows;
+    public GameManager gameManager;
 
-    public Windows defaultWindow = 0;
-    public Windows currentWindow { get; private set; }
+    public GenericWindow[] genericWindows;
+    public PopWindow[] popWindows;
+
+    public GenericWindows currentWindow { get; private set; }
 
     private void Start()
     {
-        foreach (var window in windows)
+        foreach (var window in genericWindows)
         {
-            window.Init(this);
-            //window.Close();
+            window.Initialize(this);
             window.gameObject.SetActive(false);
         }
 
-        currentWindow = defaultWindow;
-        windows[(int)currentWindow].Open();
+        foreach (var window in popWindows)
+        {
+            window.Initialize(this);
+            window.gameObject.SetActive(false);
+        }
     }
 
-    public void Open(int windowId)
+    public void OpenGenericWindow(int windowId)
     {
-        Open((Windows)windowId);
+        Open((GenericWindows)windowId);
     }
 
-    public void Open(Windows window)
+    public void Open(GenericWindows window)
     {
-        windows[(int)currentWindow].Close();
+        genericWindows[(int)currentWindow].Close();
         currentWindow = window;
-        windows[(int)currentWindow].Open();
+        genericWindows[(int)currentWindow].Open();
+    }
+
+    public void OpenPopWindow(int windowId)
+    {
+        Open((PopWindows)windowId);
+    }
+
+    public void Open(PopWindows window)
+    {
+        popWindows[(int)currentWindow].Open();
     }
 }

@@ -11,11 +11,10 @@ using DG.DemiEditor;
 using System;
 using UnityEditor.TerrainTools;
 
-[ExecuteInEditMode]
+//[ExecuteInEditMode]
 [CustomEditor(typeof(TowerManager))]
 public class TowerManagerEditor : Editor
 {
-
     public override void OnInspectorGUI()
     {
         if (GUILayout.Button("Update Tower Enum"))
@@ -53,7 +52,6 @@ public class TowerManagerEditor : Editor
 
         base.OnInspectorGUI();
     }
-
 
 
     private void UpdateTowerEnum(List<TowerRawData> list)

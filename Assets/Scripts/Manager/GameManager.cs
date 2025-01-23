@@ -61,6 +61,7 @@ public class GameManager : MonoBehaviour
         get => CurrentWave >= waveDatas.Count;
     }
 
+    public Action onWaveStart;
 
     private Coroutine coSpawnEnemy;
     private void Awake()
@@ -68,6 +69,11 @@ public class GameManager : MonoBehaviour
         EnemyManager.gameManager = this;
         TowerManager.gameManager = this;
         SlotManager.gameManager = this;
+        WindowManager.gameManager = this;
+
+        onWaveStart += () => WindowManager.Open(PopWindows.WavePop);
+        onGameOver += () => WindowManager.Open(GenericWindows.GameOver);
+        onGameClear += () => WindowManager.Open(GenericWindows.GameClear);
     }
 
     private void Start()
@@ -80,7 +86,6 @@ public class GameManager : MonoBehaviour
     {
         if (IsWaveEnded && EnemyManager.ValidEnemies.Count == 0)
         {
-            KALLogger.Log("Game Clear");
         }
     }
 
@@ -95,6 +100,7 @@ public class GameManager : MonoBehaviour
             }
             yield return new WaitForSeconds(waveDatas[CurrentWave].nextWaveInterval);
             CurrentWave++;
+            onWaveStart?.Invoke();
             KALLogger.Log($"ÇöÀç Wave{CurrentWave}");
         }
 
@@ -108,7 +114,7 @@ public class GameManager : MonoBehaviour
 
     public void OnGameClear()
     {
-
         onGameClear?.Invoke();
+        KALLogger.Log("Game Clear");
     }
 }

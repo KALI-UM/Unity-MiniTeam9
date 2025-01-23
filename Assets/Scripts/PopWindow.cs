@@ -1,13 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-
-public class GenericWindow : MonoBehaviour
+public class PopWindow : MonoBehaviour
 {
-    public GameObject firstSelected;
-
     protected WindowManager windowManager;
 
     public void Initialize(WindowManager mgr)
@@ -15,15 +11,12 @@ public class GenericWindow : MonoBehaviour
         windowManager = mgr;
     }
 
-    public void OnFocus()
-    {
-        EventSystem.current.SetSelectedGameObject(firstSelected);
-    }
+    public float popTime = 1f;
 
     public virtual void Open()
     {
         gameObject.SetActive(true);
-        OnFocus();
+        StartCoroutine(CoPop());
     }
 
     public virtual void Close()
@@ -31,4 +24,9 @@ public class GenericWindow : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    private IEnumerator CoPop()
+    {
+        yield return new WaitForSeconds(popTime);
+        Close();
+    }
 }
