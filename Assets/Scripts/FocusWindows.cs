@@ -1,4 +1,4 @@
-public enum GenericWindows
+public enum FocusWindows
 {
 	GameOver,
 	GameClear,

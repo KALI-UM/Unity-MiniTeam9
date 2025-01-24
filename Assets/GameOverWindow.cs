@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class GameOverWindow : GenericWindow
+public class GameOverWindow : FocusWindow
 {
     public Button restartButton;
 

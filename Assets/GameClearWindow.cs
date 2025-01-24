@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class GameClearWindow : GenericWindow
+public class GameClearWindow : FocusWindow
 {
     public Button restartButton;
 

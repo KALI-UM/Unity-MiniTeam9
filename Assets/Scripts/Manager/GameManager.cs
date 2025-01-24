@@ -71,9 +71,9 @@ public class GameManager : MonoBehaviour
         SlotManager.gameManager = this;
         WindowManager.gameManager = this;
 
-        onWaveStart += () => WindowManager.Open(PopWindows.WavePop);
-        onGameOver += () => WindowManager.Open(GenericWindows.GameOver);
-        onGameClear += () => WindowManager.Open(GenericWindows.GameClear);
+        onWaveStart += () => WindowManager.Open(PopWindows.Wave);
+        onGameOver += () => WindowManager.Open(FocusWindows.GameOver);
+        onGameClear += () => WindowManager.Open(FocusWindows.GameClear);
     }
 
     private void Start()
@@ -86,6 +86,7 @@ public class GameManager : MonoBehaviour
     {
         if (IsWaveEnded && EnemyManager.ValidEnemies.Count == 0)
         {
+            OnGameClear();
         }
     }
 
@@ -99,9 +100,7 @@ public class GameManager : MonoBehaviour
                 yield return new WaitForSeconds(waveDatas[CurrentWave].spawnInterval);
             }
             yield return new WaitForSeconds(waveDatas[CurrentWave].nextWaveInterval);
-            CurrentWave++;
-            onWaveStart?.Invoke();
-            KALLogger.Log($"현재 Wave{CurrentWave}");
+            OnWaveStart();
         }
 
     }
@@ -116,5 +115,12 @@ public class GameManager : MonoBehaviour
     {
         onGameClear?.Invoke();
         KALLogger.Log("Game Clear");
+    }
+
+    public void OnWaveStart()
+    {
+        CurrentWave++;
+        onWaveStart?.Invoke();
+        KALLogger.Log($"현재 Wave{CurrentWave}");
     }
 }

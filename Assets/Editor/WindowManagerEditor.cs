@@ -12,20 +12,20 @@ public class WindowManagerEditor : Editor
     public override void OnInspectorGUI()
     {
 
-        if (GUILayout.Button("Generate Window Enum"))
+        if (GUILayout.Button("Generate FocusWindow Enum"))
         {
             var sb = new StringBuilder();
-            sb.AppendLine(@"public enum GenericWindows");
+            sb.AppendLine(@"public enum FocusWindows");
             sb.AppendLine(@"{");
             var windowManager = (WindowManager)target;
             //sb.AppendLine($"\tNone,");
-            for (int i = 0; i < windowManager.genericWindows.Length; i++)
+            for (int i = 0; i < windowManager.focusWindows.Length; i++)
             {
-                sb.AppendLine($"\t{windowManager.genericWindows[i].name},");
+                sb.AppendLine($"\t{windowManager.focusWindows[i].name},");
             }
             sb.AppendLine(@"}");
 
-            var path = EditorUtility.SaveFilePanel("Save", "Assets/Scripts", "GenericWindows.cs", "cs");
+            var path = EditorUtility.SaveFilePanel("Save", "Assets/Scripts", "FocusWindows.cs", "cs");
             using (var fs = new FileStream(path, FileMode.Create))
             {
                 using (var writer = new StreamWriter(fs))

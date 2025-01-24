@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 
-public class GenericWindow : MonoBehaviour
+public class FocusWindow : MonoBehaviour
 {
     public GameObject firstSelected;
 

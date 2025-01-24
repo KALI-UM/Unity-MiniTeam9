@@ -6,14 +6,14 @@ public class WindowManager : MonoBehaviour
 {
     public GameManager gameManager;
 
-    public GenericWindow[] genericWindows;
+    public FocusWindow[] focusWindows;
     public PopWindow[] popWindows;
 
-    public GenericWindows currentWindow { get; private set; }
+    public FocusWindows currentWindow { get; private set; }
 
     private void Start()
     {
-        foreach (var window in genericWindows)
+        foreach (var window in focusWindows)
         {
             window.Initialize(this);
             window.gameObject.SetActive(false);
@@ -28,14 +28,14 @@ public class WindowManager : MonoBehaviour
 
     public void OpenGenericWindow(int windowId)
     {
-        Open((GenericWindows)windowId);
+        Open((FocusWindows)windowId);
     }
 
-    public void Open(GenericWindows window)
+    public void Open(FocusWindows window)
     {
-        genericWindows[(int)currentWindow].Close();
+        focusWindows[(int)currentWindow].Close();
         currentWindow = window;
-        genericWindows[(int)currentWindow].Open();
+        focusWindows[(int)currentWindow].Open();
     }
 
     public void OpenPopWindow(int windowId)
