@@ -17,7 +17,7 @@ public class WaveWindow : PopWindow
 
     public override void Open()
     {
-        WaveUpdate(windowManager.gameManager.CurrentWave);
+        WaveUpdate(windowManager.GameManager.CurrentWave);
         base.Open();
     }
 }

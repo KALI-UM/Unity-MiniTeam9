@@ -8,7 +8,7 @@ public class Slot : MonoBehaviour
 {
     private EnemyManager enemyManager;
 
-    public eTower TowerId;
+    public int TowerId;
     private List<Tower> towers = new();
 
     private int columnIndex;
@@ -20,7 +20,7 @@ public class Slot : MonoBehaviour
         private set;
     }
 
-    public int maxSlotTowerCount = 3;
+    public readonly int maxSlotTowerCount = 3;
     public bool IsFull
     {
         get;
@@ -43,7 +43,7 @@ public class Slot : MonoBehaviour
         this.rowIndex = rowIndex;
     }
 
-    public bool IsPossibleToAdd(eTower towerId)
+    public bool IsPossibleToAdd(int towerId)
     {
         if (IsEmpty)
             return true;
@@ -105,7 +105,7 @@ public class Slot : MonoBehaviour
                 }
 
             }
-            yield return new WaitForSeconds(TowerManager.SpeedFactor*towers[0].Data.AttackSpeed);
+            yield return new WaitForSeconds(TowerManager.SpeedFactor*towers[0].AttackSpeed);
         }
     }
 

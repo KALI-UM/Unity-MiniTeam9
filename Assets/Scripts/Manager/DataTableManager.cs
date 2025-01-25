@@ -12,6 +12,14 @@ public static class DataTableManager
         var towerTable = new TowerTable();
         towerTable.Load(DataTableIds.Tower);
         tables.Add(DataTableIds.Tower, towerTable);
+
+        var enemyTable = new EnemyTable();
+        enemyTable.Load(DataTableIds.Enemy);
+        tables.Add(DataTableIds.Enemy, enemyTable);
+
+        var waveTable = new WaveTable();
+        waveTable.Load(DataTableIds.Wave);
+        tables.Add(DataTableIds.Wave, waveTable);
     }
 
     public static StringTable StringTable
@@ -30,6 +38,21 @@ public static class DataTableManager
         }
     }
 
+    public static EnemyTable EnemyTable
+    {
+        get
+        {
+            return Get<EnemyTable>(DataTableIds.Enemy);
+        }
+    }
+
+    public static WaveTable WaveTable
+    {
+        get
+        {
+            return Get<WaveTable>(DataTableIds.Wave);
+        }
+    }
 
     public static T Get<T>(string id) where T : DataTable
     {

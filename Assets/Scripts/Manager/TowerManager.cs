@@ -3,12 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TowerManager : MonoBehaviour
+public class TowerManager : InGameManager
 {
-    public GameManager gameManager;
-
     public GameObject defaultTowerPrefab;
-    private readonly Dictionary<eTower, GameObject> towerPrefabs = new();
+    private readonly Dictionary<int, GameObject> towerPrefabs = new();
 
     public static float RangeFactor = 1f;
     public static float SpeedFactor= 1f;
@@ -23,7 +21,7 @@ public class TowerManager : MonoBehaviour
         GameObject[] prefabs = Resources.LoadAll<GameObject>("Prefabs/Tower");
         foreach (var tower in prefabs)
         {
-            eTower id = Enum.Parse<eTower>(tower.name);
+            int id = (int)Enum.Parse<eTower>(tower.name);
             tower.GetComponent<Tower>().InitializeData(id, DataTableManager.TowerTable.Get(id));
 
             towerPrefabs.Add(id, tower);
@@ -38,11 +36,11 @@ public class TowerManager : MonoBehaviour
         return GetTower(list[index]);
     }
 
-    public GameObject GetTower(eTower id)
+    public GameObject GetTower(int id)
     {
         var go = Instantiate(towerPrefabs[id]);
-        var origin = towerPrefabs[id].GetComponent<Tower>();
-        go.GetComponent<Tower>().InitializeData(origin.TowerId, origin.Data);
+        //var origin = towerPrefabs[id].GetComponent<Tower>();
+        //go.GetComponent<Tower>().InitializeData(origin.TowerId, origin.Data);
         return go;
     }
 }

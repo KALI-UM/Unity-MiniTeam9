@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WindowManager : MonoBehaviour
+public class WindowManager : InGameManager
 {
-    public GameManager gameManager;
-
     public FocusWindow[] focusWindows;
     public PopWindow[] popWindows;
 
@@ -45,6 +43,14 @@ public class WindowManager : MonoBehaviour
 
     public void Open(PopWindows window)
     {
-        popWindows[(int)currentWindow].Open();
+        popWindows[(int)window].Open();
+    }
+
+    public void CloseAllPopWindow()
+    {
+        foreach(var window in popWindows)
+        {
+            window.Close();
+        }
     }
 }

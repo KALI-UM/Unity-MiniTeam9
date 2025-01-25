@@ -5,18 +5,13 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField]
+    public InGameManager[] managers;
+
     private EnemyManager enemyManager;
-
-    [SerializeField]
     private TowerManager towerManager;
-
-    [SerializeField]
     private SlotManager slotManager;
-
-    [SerializeField]
     private WindowManager windowManager;
-
+    private UIManager uiManager;
 
     public EnemyManager EnemyManager
     {
@@ -27,13 +22,20 @@ public class GameManager : MonoBehaviour
     {
         get => towerManager;
     }
+
     public SlotManager SlotManager
     {
         get => slotManager;
     }
+
     public WindowManager WindowManager
     {
         get => windowManager;
+    }
+
+    public UIManager UIManager
+    {
+        get => uiManager;
     }
 
     public Action onGameClear;
@@ -56,9 +58,10 @@ public class GameManager : MonoBehaviour
         private set;
     }
 
-    public bool IsWaveEnded
+    public int lastWave = 10;
+    public bool IsLastWave
     {
-        get => CurrentWave >= waveDatas.Count;
+        get => CurrentWave >= lastWave;
     }
 
     public Action onWaveStart;
@@ -66,15 +69,23 @@ public class GameManager : MonoBehaviour
     private Coroutine coSpawnEnemy;
     private void Awake()
     {
-        EnemyManager.gameManager = this;
-        TowerManager.gameManager = this;
-        SlotManager.gameManager = this;
-        WindowManager.gameManager = this;
+        foreach (var manager in managers)
+        {
+            manager.Initialize(this, Enum.Parse<InGameManagers>(manager.name));
+        }
 
-        onWaveStart += () => WindowManager.Open(PopWindows.Wave);
+        onWaveStart += () =>
+        {
+            WindowManager.Open(PopWindows.Wave);
+        };
         onGameOver += () => WindowManager.Open(FocusWindows.GameOver);
         onGameClear += () => WindowManager.Open(FocusWindows.GameClear);
     }
+
+    //public T GetManager<T>()
+    //{
+
+    //}
 
     private void Start()
     {
@@ -84,7 +95,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (IsWaveEnded && EnemyManager.ValidEnemies.Count == 0)
+        if (IsLastWave && EnemyManager.ValidEnemies.Count == 0)
         {
             OnGameClear();
         }
@@ -92,7 +103,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator CoSpawnEnemy()
     {
-        while (!IsWaveEnded)
+        while (!IsLastWave)
         {
             for (int i = 0; i < waveDatas[CurrentWave].enemyCount; i++)
             {

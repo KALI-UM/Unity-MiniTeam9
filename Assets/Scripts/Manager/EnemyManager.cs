@@ -7,9 +7,8 @@ using UnityEngine;
 using UnityEngine.Pool;
 using static Enemy;
 
-public class EnemyManager : MonoBehaviour
+public class EnemyManager : InGameManager
 {
-    public GameManager gameManager;
 
     [Serializable]
     public struct EnemyPrefab
@@ -26,6 +25,9 @@ public class EnemyManager : MonoBehaviour
     {
         get => validEnemies;
     }
+
+
+    #region EnemyData
 
     [SerializeField]
     private WayPointData wayPointData;
@@ -50,13 +52,23 @@ public class EnemyManager : MonoBehaviour
         private set;
     }
 
+    #endregion
+
+
+    #region EnemyCount
+
+    [SerializeField]
+    private EnemyCountBar enemyCountBar;
+
     public int CurrEnemyCount
     {
         get
         {
-            return enemyPools.Count;
+            return validEnemies.Count;
         }
     }
+
+    #endregion
 
     private void Awake()
     {
@@ -88,6 +100,8 @@ public class EnemyManager : MonoBehaviour
     {
         WayPointData = wayPointData;
         HpColors = hpColors.OrderByDescending(c => c.value).ToArray();
+        enemyCountBar.SetMaxValue(100);
+
     }
 
     public void SpawnEnemy(EnemyType type)
@@ -95,6 +109,7 @@ public class EnemyManager : MonoBehaviour
         Enemy enemy = enemyPools[type].Get();
         enemy.transform.SetParent(gameObject.transform);
         validEnemies.Add(enemy);
+        enemyCountBar.OnCountChanged(CurrEnemyCount);
     }
 
     private Enemy CreateEnemy(GameObject gobj)
@@ -104,6 +119,7 @@ public class EnemyManager : MonoBehaviour
         {
             enemyPools[enemy.data.type].Release(enemy);
             validEnemies.Remove(enemy);
+            enemyCountBar.OnCountChanged(CurrEnemyCount);
         };
         return enemy;
     }

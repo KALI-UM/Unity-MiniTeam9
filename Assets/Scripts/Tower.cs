@@ -11,24 +11,23 @@ public class Tower : MonoBehaviour
 
     private Enemy target;
 
-    public eTower TowerId
+    public int TowerId
     {
         get;
         private set;
     }
 
-
-    public TowerData Data
+    private TowerRawData data;
+    public TowerRawData Data
     {
-        get;
-        private set;
+        get=>data;
     }
 
     public bool IsValidTarget
     {
         get
         {
-            return target != null && !target.IsDead && Vector3.Distance(target.transform.position, transform.position) <= Data.AttackRange;
+            return target != null && !target.IsDead && Vector3.Distance(target.transform.position, transform.position) <= AttackRange;
         }
     }
 
@@ -36,19 +35,33 @@ public class Tower : MonoBehaviour
     {
         get
         {
-            return Data.AttackRange*TowerManager.RangeFactor;
+            return Data.Tower_AttackRange*TowerManager.RangeFactor;
+        }
+    }
+    public int AttackPower
+    {
+        get
+        {
+            return Data.Tower_AttackPower ;
+        }
+    }
+    public int AttackSpeed
+    {
+        get
+        {
+            return Data.Tower_AttackSpeed;
         }
     }
 
-    public void InitializeData(eTower id, TowerData data)
+    public void InitializeData(int id, TowerRawData data)
     {
         TowerId = id;
-        Data = data;
+        this.data = data;
     }
 
-    public void AttackTarget()
+    public void AttackTarget()  
     {
-        target.OnDamaged(Data.AttackPower);
+        target.OnDamaged(AttackPower);
     }
 
     public void SetTarget(Enemy target)

@@ -11,7 +11,6 @@ public class WindowManagerEditor : Editor
 {
     public override void OnInspectorGUI()
     {
-
         if (GUILayout.Button("Generate FocusWindow Enum"))
         {
             var sb = new StringBuilder();
@@ -25,7 +24,7 @@ public class WindowManagerEditor : Editor
             }
             sb.AppendLine(@"}");
 
-            var path = EditorUtility.SaveFilePanel("Save", "Assets/Scripts", "FocusWindows.cs", "cs");
+            var path = EditorUtility.SaveFilePanel("Save", "Assets/Scripts/UI", "FocusWindows.cs", "cs");
             using (var fs = new FileStream(path, FileMode.Create))
             {
                 using (var writer = new StreamWriter(fs))
@@ -49,7 +48,7 @@ public class WindowManagerEditor : Editor
             }
             sb.AppendLine(@"}");
 
-            var path = EditorUtility.SaveFilePanel("Save", "Assets/Scripts", "PopWindows.cs", "cs");
+            var path = EditorUtility.SaveFilePanel("Save", "Assets/Scripts/UI", "PopWindows.cs", "cs");
             using (var fs = new FileStream(path, FileMode.Create))
             {
                 using (var writer = new StreamWriter(fs))
