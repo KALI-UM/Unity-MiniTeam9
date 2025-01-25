@@ -7,18 +7,12 @@ using UnityEngine;
 using UnityEngine.Pool;
 using static Enemy;
 
-public class EnemyManager : MonoBehaviour
+public class EnemyManager : InGameManager
 {
-    public GameManager gameManager;
+    public GameObject defaultEnemyPrefab;
+    private readonly Dictionary<eEnemy, GameObject> enemyPrefabs = new();
 
-    [Serializable]
-    public struct EnemyPrefab
-    {
-        public EnemyType type;
-        public GameObject prefab;
-    }
-    public List<EnemyPrefab> enemyPrefabs = new();
-    private Dictionary<EnemyType, ObjectPool<Enemy>> enemyPools = new();
+    private Dictionary<eEnemy, ObjectPool<Enemy>> enemyPools = new();
 
     //Valid = 공격가능한 enemy 목록을 관리
     private List<Enemy> validEnemies = new();
@@ -26,6 +20,9 @@ public class EnemyManager : MonoBehaviour
     {
         get => validEnemies;
     }
+
+
+    #region EnemyData
 
     [SerializeField]
     private WayPointData wayPointData;
@@ -50,28 +47,51 @@ public class EnemyManager : MonoBehaviour
         private set;
     }
 
+    #endregion
+
+
+    #region EnemyCount
+
+    [SerializeField]
+    private EnemyCountBar enemyCountBar;
+
     public int CurrEnemyCount
     {
         get
         {
-            return enemyPools.Count;
+            return validEnemies.Count;
         }
     }
+
+    #endregion
 
     private void Awake()
     {
         InitializeEnemyInitData();
+        InitializeEnemyPrefabs();
         InitializeEnemyPool();
+
+        enemyCountBar.SetMaxValue(100);
+    }
+
+    private void InitializeEnemyPrefabs()
+    {
+        GameObject[] prefabs = Resources.LoadAll<GameObject>("Prefabs/Enemy");
+        foreach (var enmey in prefabs)
+        {
+            var id = Enum.Parse<eEnemy>(enmey.name);
+            enemyPrefabs.Add(id, enmey);
+        }
     }
 
     private void InitializeEnemyPool()
     {
         enemyPools.Clear();
-        enemyPrefabs.ForEach(enemy =>
+        enemyPrefabs.ToList().ForEach(enemy =>
         {
             ObjectPool<Enemy> pool = new
             (
-                createFunc: () => CreateEnemy(Instantiate(enemy.prefab)),
+                createFunc: () => CreateEnemy(Instantiate(enemy.Value)),
                 actionOnGet: e => OnGetEnemy(e),
                 actionOnRelease: e => OnReleaseEnemy(e),
                 //actionOnDestroy: obj => obj.Dispose(),
@@ -79,7 +99,7 @@ public class EnemyManager : MonoBehaviour
                 defaultCapacity: 35,
                 maxSize: 100
             );
-            enemyPools.Add(enemy.type, pool);
+            enemyPools.Add(enemy.Key, pool);
         }
         );
     }
@@ -90,11 +110,12 @@ public class EnemyManager : MonoBehaviour
         HpColors = hpColors.OrderByDescending(c => c.value).ToArray();
     }
 
-    public void SpawnEnemy(EnemyType type)
+    public void SpawnEnemy(eEnemy type)
     {
         Enemy enemy = enemyPools[type].Get();
         enemy.transform.SetParent(gameObject.transform);
         validEnemies.Add(enemy);
+        enemyCountBar.OnCountChanged(CurrEnemyCount);
     }
 
     private Enemy CreateEnemy(GameObject gobj)
@@ -102,8 +123,9 @@ public class EnemyManager : MonoBehaviour
         Enemy enemy = gobj.GetComponent<Enemy>();
         enemy.onDie += () =>
         {
-            enemyPools[enemy.data.type].Release(enemy);
+            enemyPools[enemy.EnemyId].Release(enemy);
             validEnemies.Remove(enemy);
+            enemyCountBar.OnCountChanged(CurrEnemyCount);
         };
         return enemy;
     }

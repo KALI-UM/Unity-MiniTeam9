@@ -5,9 +5,8 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class SlotManager : MonoBehaviour
+public class SlotManager : InGameManager
 {
-    public GameManager gameManager;
     [SerializeField]
     private GameObject slotPrefab;
 

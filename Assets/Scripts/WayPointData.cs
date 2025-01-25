@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class WayPointData : MonoBehaviour
 {
     public Transform spawnPoint;
     public List<Transform> wayPoints;
+    public Vector3 initialDirection;
+    public List<Vector3> directions;
 
     public Vector3 MinPoint
     {
@@ -50,6 +53,14 @@ public class WayPointData : MonoBehaviour
         SpawnMinPoint = min;
         SpawnMaxPoint = max;
 
+        initialDirection = (wayPoints[0].position-spawnPoint.position).normalized;
+        Vector3 prev = wayPoints[0].position;
+        for (int i=1; i<wayPoints.Count; i++)
+        {
+            directions.Add((wayPoints[i].position - prev).normalized);
+            prev = wayPoints[i].position;
+        }
+        directions.Add((wayPoints[0].position - prev).normalized);
     }
 
     private void OnDrawGizmos()

@@ -17,18 +17,19 @@ public class Tower : MonoBehaviour
         private set;
     }
 
+    [ReadOnly, SerializeField]
+    private TowerData data;
 
     public TowerData Data
     {
-        get;
-        private set;
+        get => data;
     }
 
     public bool IsValidTarget
     {
         get
         {
-            return target != null && !target.IsDead && Vector3.Distance(target.transform.position, transform.position) <= Data.AttackRange;
+            return target != null && !target.IsDead && Vector3.Distance(target.transform.position, transform.position) <= AttackRange;
         }
     }
 
@@ -36,19 +37,38 @@ public class Tower : MonoBehaviour
     {
         get
         {
-            return Data.AttackRange*TowerManager.RangeFactor;
+            return Data.attackRange*TowerManager.RangeFactor;
+        }
+    }
+    public int AttackPower
+    {
+        get
+        {
+            return Data.attackPower ;
+        }
+    }
+    public float AttackSpeed
+    {
+        get
+        {
+            return Data.attackSpeed;
         }
     }
 
-    public void InitializeData(eTower id, TowerData data)
+    private void Awake()
     {
-        TowerId = id;
-        Data = data;
+        TowerId = Data.Id;
     }
 
-    public void AttackTarget()
+    public void InitializeData(TowerData data)
     {
-        target.OnDamaged(Data.AttackPower);
+        TowerId = data.Id;
+        this.data = data;
+    }
+
+    public void AttackTarget()  
+    {
+        target.OnDamaged(AttackPower);
     }
 
     public void SetTarget(Enemy target)

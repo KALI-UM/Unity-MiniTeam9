@@ -61,6 +61,8 @@ public static class KALLogger
 
 
     //에디터 상에서만 동작
+    [System.Diagnostics.Conditional("UNITY_EDITOR")]
+
     public static void Log(string message, object obj,
         [CallerMemberName] string memberName = null,
         [CallerFilePath] string callerFilePath = null)

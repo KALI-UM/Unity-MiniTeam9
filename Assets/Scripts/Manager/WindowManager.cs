@@ -2,35 +2,67 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WindowManager : MonoBehaviour
+public class WindowManager : InGameManager
 {
-    public GenericWindow[] windows;
+    public FocusWindow[] focusWindows;
+    public PopWindow[] popWindows;
 
-    public Windows defaultWindow = 0;
-    public Windows currentWindow { get; private set; }
+    public FocusWindows currentWindow { get; private set; }
 
-    private void Start()
+    private void Awake()
     {
-        foreach (var window in windows)
+        foreach (var window in focusWindows)
         {
-            window.Init(this);
-            //window.Close();
+            window.Initialize(this);
             window.gameObject.SetActive(false);
         }
 
-        currentWindow = defaultWindow;
-        windows[(int)currentWindow].Open();
+        foreach (var window in popWindows)
+        {
+            window.Initialize(this);
+            window.gameObject.SetActive(false);
+        }
+
+        GameManager.onWaveStart += () =>
+        {
+            Open(PopWindows.Wave);
+        };
+        GameManager.onGameOver += () => Open(FocusWindows.GameOver);
+        GameManager.onGameClear += () => Open(FocusWindows.GameClear);
     }
 
-    public void Open(int windowId)
+    private void Start()
     {
-        Open((Windows)windowId);
+
     }
 
-    public void Open(Windows window)
+    public void OpenGenericWindow(int windowId)
     {
-        windows[(int)currentWindow].Close();
+        Open((FocusWindows)windowId);
+    }
+
+    public void Open(FocusWindows window)
+    {
+        focusWindows[(int)currentWindow].Close();
         currentWindow = window;
-        windows[(int)currentWindow].Open();
+        focusWindows[(int)currentWindow].Open();
+    }
+
+    public void OpenPopWindow(int windowId)
+    {
+        Open((PopWindows)windowId);
+    }
+
+    public void Open(PopWindows window)
+    {
+        popWindows[(int)window].Open();
+    }
+
+    public void CloseAllPopWindow()
+    {
+        foreach (var window in popWindows)
+        {
+            window.Close();
+        }
     }
 }

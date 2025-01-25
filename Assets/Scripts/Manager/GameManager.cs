@@ -2,21 +2,26 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static WaveTable;
 
 public class GameManager : MonoBehaviour
 {
+    #region Managers
+    //public InGameManager[] managers;
     [SerializeField]
-    private EnemyManager enemyManager;
+    private SlotManager slotManager;
 
     [SerializeField]
     private TowerManager towerManager;
 
     [SerializeField]
-    private SlotManager slotManager;
+    private EnemyManager enemyManager;
 
     [SerializeField]
     private WindowManager windowManager;
 
+    [SerializeField]
+    private UIManager uiManager;
 
     public EnemyManager EnemyManager
     {
@@ -27,88 +32,121 @@ public class GameManager : MonoBehaviour
     {
         get => towerManager;
     }
+
     public SlotManager SlotManager
     {
         get => slotManager;
     }
+
     public WindowManager WindowManager
     {
         get => windowManager;
     }
 
+    public UIManager UIManager
+    {
+        get => uiManager;
+    }
+
+    #endregion
+
     public Action onGameClear;
     public Action onGameOver;
 
-    [Serializable]
-    public struct WaveData
-    {
-        public float nextWaveInterval;
-        public float spawnInterval;
-        public int enemyCount;
-        public Enemy.EnemyType type;
-    }
-
     [SerializeField]
     private List<WaveData> waveDatas;
+
     public int CurrentWave
     {
         get;
         private set;
     }
 
-    public bool IsWaveEnded
+    public int lastWave = 10;
+    public bool IsLastWave
     {
-        get => CurrentWave >= waveDatas.Count;
+        get => CurrentWave >= lastWave;
     }
 
+    public Action onWaveStart;
 
-    private Coroutine coSpawnEnemy;
+    private Coroutine coWave;
+    private Coroutine coWaveSpawnEnemy;
+
     private void Awake()
     {
-        EnemyManager.gameManager = this;
-        TowerManager.gameManager = this;
-        SlotManager.gameManager = this;
+        //foreach (var manager in managers)
+        //{
+        //    manager.Initialize(this, Enum.Parse<InGameManagers>(manager.name));
+        //}
+
+        InitializeManagers();
+
+        waveDatas = DataTableManager.WaveTable.GetWaveDatas();
+
+        CurrentWave = 0;
+    }
+
+    private void InitializeManagers()
+    {
+        SlotManager.Initialize(this);
+        TowerManager.Initialize(this);
+        EnemyManager.Initialize(this);
+        WindowManager.Initialize(this);
+        UIManager.Initialize(this);
     }
 
     private void Start()
     {
-        coSpawnEnemy = StartCoroutine(CoSpawnEnemy());
-        //StartCoroutine(CoSpawnEnemy(waveEnemyCount));
+        coWave = StartCoroutine(CoWave());
     }
 
     private void Update()
     {
-        if (IsWaveEnded && EnemyManager.ValidEnemies.Count == 0)
+        if (IsLastWave && EnemyManager.ValidEnemies.Count == 0)
         {
-            KALLogger.Log("Game Clear");
+            OnGameClear();
         }
     }
 
-    private IEnumerator CoSpawnEnemy()
+    private IEnumerator CoSpawnEnemy(int waveNumber)
     {
-        while (!IsWaveEnded)
+        for (int i = 0; i < waveDatas[waveNumber].enemyCount; i++)
         {
-            for (int i = 0; i < waveDatas[CurrentWave].enemyCount; i++)
-            {
-                EnemyManager.SpawnEnemy(Enemy.EnemyType.SoldierA);
-                yield return new WaitForSeconds(waveDatas[CurrentWave].spawnInterval);
-            }
-            yield return new WaitForSeconds(waveDatas[CurrentWave].nextWaveInterval);
-            CurrentWave++;
-            KALLogger.Log($"현재 Wave{CurrentWave}");
+            EnemyManager.SpawnEnemy(waveDatas[waveNumber].enemyId);
+            yield return new WaitForSeconds(waveDatas[CurrentWave].spawnInterval);
         }
+    }
 
+    private IEnumerator CoWave()
+    {
+        while (!IsLastWave)
+        {
+            OnWaveStart();
+            coWaveSpawnEnemy = StartCoroutine(CoSpawnEnemy(CurrentWave));
+            yield return new WaitForSeconds(waveDatas[CurrentWave].spawnDuration);
+            StopCoroutine(coWaveSpawnEnemy);
+        }
     }
 
     public void OnGameOver()
     {
-        StopCoroutine(coSpawnEnemy);
+        StopCoroutine(coWave);
+        StopCoroutine(coWaveSpawnEnemy);
+
         onGameOver?.Invoke();
     }
 
     public void OnGameClear()
     {
-
         onGameClear?.Invoke();
+        KALLogger.Log("Game Clear");
+    }
+
+    public void OnWaveStart()
+    {
+        CurrentWave++;
+        onWaveStart?.Invoke();
+        KALLogger.Log($"현재 Wave{CurrentWave}");
     }
 }
