@@ -9,8 +9,24 @@ public class Tower : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer;
 
+    [ReadOnly, SerializeField]
     private Enemy target;
 
+    public TowerGroup TowerGroup
+    {
+        get;
+        private set;
+    }
+
+    public bool IsValidTarget
+    {
+        get
+        {
+            return target != null && !target.IsDead && Vector3.Distance(target.transform.position, TowerGroup.transform.position) <= AttackRange;
+        }
+    }
+
+    #region TowerData
     public eTower TowerId
     {
         get;
@@ -25,35 +41,29 @@ public class Tower : MonoBehaviour
         get => data;
     }
 
-    public bool IsValidTarget
-    {
-        get
-        {
-            return target != null && !target.IsDead && Vector3.Distance(target.transform.position, transform.position) <= AttackRange;
-        }
-    }
-
     public float AttackRange
     {
-        get
-        {
-            return Data.attackRange*TowerManager.RangeFactor;
-        }
+        get => Data.attackRange * TowerManager.RangeFactor;
     }
+
     public int AttackPower
     {
-        get
-        {
-            return Data.attackPower ;
-        }
+        get => Data.attackPower;
     }
+
     public float AttackSpeed
     {
-        get
-        {
-            return Data.attackSpeed;
-        }
+        get => Data.attackSpeed * TowerManager.SpeedFactor;
     }
+
+    public float AttackInterval
+    {
+        get => 1f / AttackSpeed;
+    }
+
+    #endregion
+
+    private Coroutine coAttack;
 
     private void Awake()
     {
@@ -66,14 +76,46 @@ public class Tower : MonoBehaviour
         this.data = data;
     }
 
-    public void AttackTarget()  
+    public void OnSpawn(TowerGroup group)
+    {
+        TowerGroup = group;
+        transform.SetParent(TowerGroup.transform);
+        coAttack = StartCoroutine(CoAttack());
+    }
+
+    public void AttackTarget()
     {
         target.OnDamaged(AttackPower);
     }
 
-    public void SetTarget(Enemy target)
+    private IEnumerator CoAttack()
     {
-        this.target = target;
+        while (true)
+        {
+            if (!IsValidTarget)
+            {
+                FindTarget();
+            }
+
+            if (IsValidTarget)
+            {
+                AttackTarget();
+            }
+
+            yield return new WaitForSeconds(AttackInterval);
+        }
+    }
+
+    private bool FindTarget()
+    {
+        var closestEnemy = TowerGroup.enemyManager.ValidEnemies.OrderBy(e => Vector3.Distance(e.transform.position, TowerGroup.transform.position)).FirstOrDefault();
+
+        if (closestEnemy != null && Vector3.Distance(closestEnemy.transform.position, TowerGroup.transform.position) <= AttackRange)
+        {
+            target = closestEnemy;
+            return true;
+        }
+        return false;
     }
 
     private void OnDrawGizmos()

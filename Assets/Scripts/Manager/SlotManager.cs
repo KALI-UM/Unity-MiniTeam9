@@ -10,6 +10,9 @@ public class SlotManager : InGameManager
     [SerializeField]
     private GameObject slotPrefab;
 
+    [SerializeField]
+    private GameObject towerGroupPrefab;
+
     public List<Slot[]> slots = new();
     [SerializeField]
     private int columnCount = 6;
@@ -63,6 +66,16 @@ public class SlotManager : InGameManager
             }
             slots.Add(slotRow);
         }
+
+        for (int i = 0; i < columnCount; i++)
+        {
+            for (int j = 0; j < rowCount; j++)
+            {
+                TowerGroup group = Instantiate(towerGroupPrefab).GetComponent<TowerGroup>();
+                slots[i][j].Initialize(group);
+                group.transform.SetParent(gameObject.transform);
+            }
+        }
     }
 
     public bool IsEmptySlotExist()
@@ -71,7 +84,7 @@ public class SlotManager : InGameManager
         {
             foreach (var slot in slotRow)
             {
-                if (slot.IsEmpty)
+                if (slot.TowerGroup.IsEmpty)
                 {
                     return true;
                 }
