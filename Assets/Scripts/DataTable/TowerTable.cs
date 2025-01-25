@@ -26,6 +26,7 @@ public class TowerTable : DataTable
         public string Tower_Resource { get; set; }
     }
 
+
     //public class TowerData
     //{
     //    public int Id { get; set; }
@@ -42,8 +43,8 @@ public class TowerTable : DataTable
     //private readonly Dictionary<eTower, TowerData> dictionary = new();
     //private readonly List<List<eTower>> towerGrade = new();
 
-    private readonly Dictionary<int, TowerRawData> dictionary = new();
-    private readonly List<List<int>> towerGrade = new();
+    private readonly Dictionary<eTower, TowerRawData> dictionary = new();
+    private readonly List<List<eTower>> towerGrade = new();
 
     public int MaxGrade
     {
@@ -61,15 +62,15 @@ public class TowerTable : DataTable
         MaxGrade = list.Max(data => data.Tower_Grade);
         for (int i = 0; i <= MaxGrade; i++)
         {
-            towerGrade.Add(new List<int>());
+            towerGrade.Add(new List<eTower>());
         }
 
         foreach (var raw in list)
         {
-            if (!dictionary.ContainsKey(raw.Tower_ID))
+            if (!dictionary.ContainsKey((eTower)raw.Tower_ID))
             {
-                dictionary.Add(raw.Tower_ID, raw);
-                towerGrade[raw.Tower_Grade].Add(raw.Tower_ID);
+                dictionary.Add((eTower)raw.Tower_ID, raw);
+                towerGrade[raw.Tower_Grade].Add((eTower)raw.Tower_ID);
             }
             else
             {
@@ -104,8 +105,7 @@ public class TowerTable : DataTable
         //    }
         //}
     }
-
-    public TowerRawData Get(int key)
+    public TowerRawData Get(eTower key)
     {
         if (!dictionary.ContainsKey(key))
         {
@@ -115,7 +115,13 @@ public class TowerTable : DataTable
         return dictionary[key];
     }
 
-    public List<int> GetTowerList(int grade)
+    public TowerRawData Get(int key)
+    {
+        return Get((eTower)key);
+    }
+
+
+    public List<eTower> GetTowerList(int grade)
     {
         return towerGrade[grade];
     }

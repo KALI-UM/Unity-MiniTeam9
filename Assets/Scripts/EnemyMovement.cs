@@ -5,11 +5,22 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
+using static EnemyTable;
 
 
 public class EnemyMovement : MonoBehaviour
 {
-    public float speed;
+    private EnemyData data;
+    public EnemyData Data
+    {
+        get => data;
+    }
+
+    public float Speed
+    {
+        get => Data.moveSpeed;
+    }
+
     private Vector3 direction;
 
     private int currentIndex = 0;
@@ -79,7 +90,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void MoveTo()
     {
-        transform.position += direction * speed * Time.deltaTime;
+        transform.position += direction * Speed * Time.deltaTime;
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, EnemyManager.WayPointData.MinPoint.x, EnemyManager.WayPointData.MaxPoint.x),
                                         Mathf.Clamp(transform.position.y, EnemyManager.WayPointData.MinPoint.y, EnemyManager.WayPointData.MaxPoint.y), 0);
 
@@ -87,9 +98,14 @@ public class EnemyMovement : MonoBehaviour
 
     private void MoveToWayPoints()
     {
-        transform.position += direction * speed * Time.deltaTime;
+        transform.position += direction * Speed * Time.deltaTime;
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, EnemyManager.WayPointData.SpawnMinPoint.x, EnemyManager.WayPointData.SpawnMaxPoint.x),
                                         Mathf.Clamp(transform.position.y, EnemyManager.WayPointData.SpawnMinPoint.y, EnemyManager.WayPointData.SpawnMaxPoint.y), 0);
 
+    }
+
+    public void InitializeData(EnemyData data)
+    {
+        this.data = data;
     }
 }

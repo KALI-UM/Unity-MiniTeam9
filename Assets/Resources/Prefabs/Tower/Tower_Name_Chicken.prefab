@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7170495558440675567
+--- !u!1 &3693920224338254527
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6566626832733394021}
-  - component: {fileID: 8022634528810273420}
+  - component: {fileID: 6439724402197495336}
+  - component: {fileID: 3208854262645608767}
   m_Layer: 0
   m_Name: Tower_Name_Chicken
   m_TagString: Untagged
@@ -17,37 +17,37 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6566626832733394021
+--- !u!4 &6439724402197495336
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7170495558440675567}
+  m_GameObject: {fileID: 3693920224338254527}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5304418717780715117}
+  - {fileID: 3797055203454423703}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8022634528810273420
+--- !u!114 &3208854262645608767
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7170495558440675567}
+  m_GameObject: {fileID: 3693920224338254527}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d90dbdc7f36a3484fad66f3713b7f36c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 655028298542457710}
-  attackInterval: 1
---- !u!1 &8482307333322992443
+  spriteRenderer: {fileID: 8549672458060068145}
+  data: {fileID: 11400000, guid: 9fb97f0ff33ca064db68bf0acdb8ec67, type: 2}
+--- !u!1 &8570431653821546214
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -55,8 +55,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5304418717780715117}
-  - component: {fileID: 655028298542457710}
+  - component: {fileID: 3797055203454423703}
+  - component: {fileID: 8549672458060068145}
   m_Layer: 0
   m_Name: sactx-0-2048x2048-ASTC 6x6-Atlas_Character_001-0c546548_0
   m_TagString: Untagged
@@ -64,28 +64,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5304418717780715117
+--- !u!4 &3797055203454423703
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8482307333322992443}
+  m_GameObject: {fileID: 8570431653821546214}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6566626832733394021}
+  m_Father: {fileID: 6439724402197495336}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &655028298542457710
+--- !u!212 &8549672458060068145
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8482307333322992443}
+  m_GameObject: {fileID: 8570431653821546214}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0

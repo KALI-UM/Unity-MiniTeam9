@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,21 +14,52 @@ public class WaveTable : DataTable
         public int Monster_Count { get; set; }
         public float Spawn_Interval { get; set; }
         public float Spawn_Duration { get; set; }
-        public int Wave_Text_Key { get; set; }
+        public string Wave_Text_Key { get; set; }
     }
 
     private readonly List<WaveRawData> list = new List<WaveRawData>();
 
-   public override void Load(string filename)
+
+    [Serializable]
+    public class WaveData
+    {
+        public eEnemy enemyId;
+        public int enemyCount;
+        public float spawnInterval;
+        public float spawnDuration;
+    }
+
+    public override void Load(string filename)
     {
         var path = string.Format(FormatPath, filename);
         var textAsset = Resources.Load<TextAsset>(path);
-        var list = LoadCSV<EnemyRawData>(textAsset.text);
-      
+        var list = LoadCSV<WaveRawData>(textAsset.text);
+
         foreach (var raw in list)
         {
-            list.Add(raw);
+            this.list.Add(raw);
         }
     }
 
+    public List<WaveData> GetWaveDatas()
+    {
+        List<WaveData> datas = new List<WaveData>();
+        datas.Add(new WaveData());
+        foreach (var raw in list)
+        {
+            datas.Add(ConvertToWaveData(raw));
+        }
+        return datas;
+    }
+
+    private WaveData ConvertToWaveData(WaveRawData raw)
+    {
+        WaveData data = new WaveData();
+        data.enemyId = (eEnemy)raw.Monster_ID;
+        data.enemyCount = raw.Monster_Count;
+        data.spawnInterval = raw.Spawn_Interval;
+        data.spawnDuration = raw.Spawn_Duration;
+        
+        return data;
+    }
 }

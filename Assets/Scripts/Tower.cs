@@ -11,16 +11,18 @@ public class Tower : MonoBehaviour
 
     private Enemy target;
 
-    public int TowerId
+    public eTower TowerId
     {
         get;
         private set;
     }
 
-    private TowerRawData data;
-    public TowerRawData Data
+    [ReadOnly, SerializeField]
+    private TowerData data;
+
+    public TowerData Data
     {
-        get=>data;
+        get => data;
     }
 
     public bool IsValidTarget
@@ -35,27 +37,32 @@ public class Tower : MonoBehaviour
     {
         get
         {
-            return Data.Tower_AttackRange*TowerManager.RangeFactor;
+            return Data.attackRange*TowerManager.RangeFactor;
         }
     }
     public int AttackPower
     {
         get
         {
-            return Data.Tower_AttackPower ;
+            return Data.attackPower ;
         }
     }
-    public int AttackSpeed
+    public float AttackSpeed
     {
         get
         {
-            return Data.Tower_AttackSpeed;
+            return Data.attackSpeed;
         }
     }
 
-    public void InitializeData(int id, TowerRawData data)
+    private void Awake()
     {
-        TowerId = id;
+        TowerId = Data.Id;
+    }
+
+    public void InitializeData(TowerData data)
+    {
+        TowerId = data.Id;
         this.data = data;
     }
 

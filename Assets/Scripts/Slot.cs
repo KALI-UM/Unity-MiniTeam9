@@ -8,7 +8,7 @@ public class Slot : MonoBehaviour
 {
     private EnemyManager enemyManager;
 
-    public int TowerId;
+    public eTower TowerId;
     private List<Tower> towers = new();
 
     private int columnIndex;
@@ -43,7 +43,7 @@ public class Slot : MonoBehaviour
         this.rowIndex = rowIndex;
     }
 
-    public bool IsPossibleToAdd(int towerId)
+    public bool IsPossibleToAdd(eTower towerId)
     {
         if (IsEmpty)
             return true;

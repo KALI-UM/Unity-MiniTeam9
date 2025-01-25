@@ -9,7 +9,7 @@ public class WindowManager : InGameManager
 
     public FocusWindows currentWindow { get; private set; }
 
-    private void Start()
+    private void Awake()
     {
         foreach (var window in focusWindows)
         {
@@ -22,6 +22,18 @@ public class WindowManager : InGameManager
             window.Initialize(this);
             window.gameObject.SetActive(false);
         }
+
+        GameManager.onWaveStart += () =>
+        {
+            Open(PopWindows.Wave);
+        };
+        GameManager.onGameOver += () => Open(FocusWindows.GameOver);
+        GameManager.onGameClear += () => Open(FocusWindows.GameClear);
+    }
+
+    private void Start()
+    {
+
     }
 
     public void OpenGenericWindow(int windowId)
@@ -48,7 +60,7 @@ public class WindowManager : InGameManager
 
     public void CloseAllPopWindow()
     {
-        foreach(var window in popWindows)
+        foreach (var window in popWindows)
         {
             window.Close();
         }

@@ -10,6 +10,8 @@ using UnityEngine.TextCore.Text;
 using DG.DemiEditor;
 using System;
 using UnityEditor.TerrainTools;
+using static EnemyTable;
+using static UnityEngine.EventSystems.EventTrigger;
 
 //[ExecuteInEditMode]
 [CustomEditor(typeof(TowerManager))]
@@ -25,7 +27,6 @@ public class TowerManagerEditor : Editor
             UpdateTowerEnum(list);
         }
 
-        
         if (GUILayout.Button("Update Tower Prefabs"))
         {
             var path = string.Format(DataTable.FormatPath, DataTableIds.Tower);
@@ -66,7 +67,7 @@ public class TowerManagerEditor : Editor
         }
         sb.AppendLine(@"}");
 
-        var path = EditorUtility.SaveFilePanel("Save", "Assets/Scripts/DataTable/Data", "eTower.cs", "cs");
+        var path = EditorUtility.SaveFilePanel("Save", "Assets/Scripts/Enums", "eTower.cs", "cs");
         using (var fs = new FileStream(path, FileMode.Create))
         {
             using (var writer = new StreamWriter(fs))
@@ -76,15 +77,43 @@ public class TowerManagerEditor : Editor
         }
     }
 
+    private void UpdateTowerDatas(List<TowerRawData> list)
+    {
+        string dataPath = "Assets/Resources/Datas/Tower/{0}.asset";
+        foreach (var data in list)
+        {
+            //이미 있으면 삭제
+            AssetDatabase.DeleteAsset(string.Format(dataPath, data.String_Key));
+
+            //해당 데이터 ScriptableObject생성
+            TowerData scriptableData = ScriptableObject.CreateInstance<TowerData>();
+            scriptableData.SetData(data);
+
+            AssetDatabase.CreateAsset(scriptableData, string.Format(dataPath, data.String_Key));
+            AssetDatabase.SaveAssets();
+        }
+    }
+
+
     private void UpdateTowerPrefabs(GameObject defaultPrefab, List<TowerRawData> list)
     {
         string prefabPath = "Assets/Resources/Prefabs/Tower/{0}.prefab";
+        string dataPath = "Assets/Resources/Datas/Tower/{0}.asset";
+
+        UpdateTowerDatas(list);
+
         foreach (var data in list)
         {
             //이미 있으면 삭제
             AssetDatabase.DeleteAsset(string.Format(prefabPath, data.String_Key));
             GameObject newPrefab = Instantiate(defaultPrefab);
             var tower = newPrefab.GetComponent<Tower>();
+
+            //해당 데이터 ScriptableObject
+            TowerData scriptableData = AssetDatabase.LoadAssetAtPath<TowerData>(string.Format(dataPath, data.String_Key));
+            tower.InitializeData(scriptableData);
+
+
             if (!data.Tower_Resource.IsNullOrEmpty())
             {
                 var sprite = AssetDatabase.LoadAssetAtPath<Sprite>(data.Tower_Resource);

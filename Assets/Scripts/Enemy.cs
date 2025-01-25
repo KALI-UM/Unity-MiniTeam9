@@ -1,28 +1,32 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
+using static EnemyTable;
+using static TowerTable;
 
 public class Enemy : MonoBehaviour
 {
     public EnemyMovement movement;
     public EnemyHpBar hpBar;
+    public SpriteRenderer spriteRenderer;
 
     public Action onDie;
 
-    public enum EnemyType
+    public eEnemy EnemyId
     {
-        SoldierA,
-        SoldierB,
+        get;
+        private set;
     }
 
-    public struct EnemyData
-    {
-        public EnemyType type;
-        public int maxHp;
-    }
+    [ReadOnly, SerializeField]
+    private EnemyData data;
 
-    public EnemyData data;
+    public EnemyData Data
+    {
+        get => data;
+    }
 
     public int Hp
     {
@@ -38,14 +42,16 @@ public class Enemy : MonoBehaviour
 
     private void Awake()
     {
-        //movement = GetComponent<EnemyMovement>();
-        //hpBar = GetComponent<EnemyHpBar>();
-
-        data.maxHp = 100;
-        data.type = EnemyType.SoldierA;
-
-        OnReset();
+        EnemyId=Data.Id;
+        movement.InitializeData(data);
     }
+
+    public void InitializeData(EnemyData data)
+    {
+        EnemyId = data.Id;
+        this.data = data;
+    }
+
     public void Spawn()
     {
         movement.enabled = true;
@@ -55,7 +61,8 @@ public class Enemy : MonoBehaviour
     public void OnReset()
     {
         IsDead = false;
-        Hp = data.maxHp;
+        
+        Hp = Data.maxHp;
         hpBar.OnHpChanged(Hp);
     }
 
@@ -66,7 +73,7 @@ public class Enemy : MonoBehaviour
         {
             OnDie();
         }
-        hpBar.OnHpChanged((float)Hp/data.maxHp);
+        hpBar.OnHpChanged((float)Hp / Data.maxHp);
     }
 
     public void OnDie()

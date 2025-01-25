@@ -289,6 +289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movement: {fileID: 9078676883207702622}
   hpBar: {fileID: 6358746299593617960}
+  spriteRenderer: {fileID: 7372857081347346149}
 --- !u!114 &9078676883207702622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,7 +302,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c55de4fff3ed63428d06404ec3430c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
 --- !u!114 &6358746299593617960
 MonoBehaviour:
   m_ObjectHideFlags: 0

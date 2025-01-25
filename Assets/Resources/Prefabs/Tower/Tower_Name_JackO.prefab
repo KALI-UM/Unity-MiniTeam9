@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4138045625953982096
+--- !u!1 &3160787205499716784
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2122505580532869078}
-  - component: {fileID: 3033398307448632437}
+  - component: {fileID: 8226936880750582641}
+  - component: {fileID: 9211866161813248185}
   m_Layer: 0
   m_Name: sactx-0-2048x2048-ASTC 6x6-Atlas_Character_001-0c546548_0
   m_TagString: Untagged
@@ -17,28 +17,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2122505580532869078
+--- !u!4 &8226936880750582641
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4138045625953982096}
+  m_GameObject: {fileID: 3160787205499716784}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3527201560780136567}
+  m_Father: {fileID: 1099680098082401071}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &3033398307448632437
+--- !u!212 &9211866161813248185
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4138045625953982096}
+  m_GameObject: {fileID: 3160787205499716784}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &6329534608564547024
+--- !u!1 &6367980549615115569
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,8 +92,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3527201560780136567}
-  - component: {fileID: 6812141875624843677}
+  - component: {fileID: 1099680098082401071}
+  - component: {fileID: 2907950047181128518}
   m_Layer: 0
   m_Name: Tower_Name_JackO
   m_TagString: Untagged
@@ -101,33 +101,33 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3527201560780136567
+--- !u!4 &1099680098082401071
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6329534608564547024}
+  m_GameObject: {fileID: 6367980549615115569}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2122505580532869078}
+  - {fileID: 8226936880750582641}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6812141875624843677
+--- !u!114 &2907950047181128518
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6329534608564547024}
+  m_GameObject: {fileID: 6367980549615115569}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d90dbdc7f36a3484fad66f3713b7f36c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 3033398307448632437}
-  attackInterval: 1
+  spriteRenderer: {fileID: 9211866161813248185}
+  data: {fileID: 11400000, guid: df57f610951e2dc418f4e3298307c587, type: 2}

@@ -6,7 +6,7 @@ using UnityEngine;
 public class InGameManager : MonoBehaviour
 {
     protected GameManager gameManager;
-    public GameManager GameManager { get { return gameManager; } }
+    public GameManager GameManager { get => gameManager; }
 
     private static InGameManagers managerId;
     public InGameManagers Id
@@ -17,9 +17,16 @@ public class InGameManager : MonoBehaviour
         }
     }
 
-    public virtual void Initialize(GameManager gm, InGameManagers id)
+    public virtual void Initialize(GameManager gm)
     {
         gameManager = gm;
-        managerId = id;
     }
+
+    //public virtual void Initialize(GameManager gm, InGameManagers id)
+    //{
+    //    gameManager = gm;
+    //    managerId = id;
+    //}
+
+
 }

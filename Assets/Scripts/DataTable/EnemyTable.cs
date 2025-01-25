@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,6 +7,7 @@ using static TowerTable;
 
 public class EnemyTable : DataTable
 {
+    
     public class EnemyRawData
     {
         public int Monster_ID { get; set; }
@@ -16,10 +18,9 @@ public class EnemyTable : DataTable
         public int DropGold { get; set; }
         public int DropGem { get; set; }
         public string Monster_Resource { get; set; }
-
     }
 
-    private readonly Dictionary<int, EnemyRawData> dictionary = new();
+    private readonly Dictionary<eEnemy, EnemyRawData> dictionary = new();
 
     public override void Load(string filename)
     {
@@ -30,14 +31,29 @@ public class EnemyTable : DataTable
 
         foreach (var raw in list)
         {
-            if (!dictionary.ContainsKey(raw.Monster_ID))
+            if (!dictionary.ContainsKey((eEnemy)raw.Monster_ID))
             {
-                dictionary.Add(raw.Monster_ID, raw);
+                dictionary.Add((eEnemy)raw.Monster_ID, raw);
             }
             else
             {
                 Debug.LogError($"Å° Áßº¹: {raw.Monster_ID}");
             }
         }
+    }
+
+    public EnemyRawData Get(eEnemy key)
+    {
+        if (!dictionary.ContainsKey(key))
+        {
+            KALLogger.Log("None Key", this);
+            return null;
+        }
+        return dictionary[key];
+    }
+
+    public EnemyRawData Get(int key)
+    {
+        return Get((eEnemy)key);
     }
 }

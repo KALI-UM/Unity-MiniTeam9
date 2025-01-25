@@ -6,7 +6,7 @@ using UnityEngine;
 public class TowerManager : InGameManager
 {
     public GameObject defaultTowerPrefab;
-    private readonly Dictionary<int, GameObject> towerPrefabs = new();
+    private readonly Dictionary<eTower, GameObject> towerPrefabs = new();
 
     public static float RangeFactor = 1f;
     public static float SpeedFactor= 1f;
@@ -21,9 +21,7 @@ public class TowerManager : InGameManager
         GameObject[] prefabs = Resources.LoadAll<GameObject>("Prefabs/Tower");
         foreach (var tower in prefabs)
         {
-            int id = (int)Enum.Parse<eTower>(tower.name);
-            tower.GetComponent<Tower>().InitializeData(id, DataTableManager.TowerTable.Get(id));
-
+            var id = Enum.Parse<eTower>(tower.name);
             towerPrefabs.Add(id, tower);
         }
     }
@@ -36,7 +34,7 @@ public class TowerManager : InGameManager
         return GetTower(list[index]);
     }
 
-    public GameObject GetTower(int id)
+    public GameObject GetTower(eTower id)
     {
         var go = Instantiate(towerPrefabs[id]);
         //var origin = towerPrefabs[id].GetComponent<Tower>();
