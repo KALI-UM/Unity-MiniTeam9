@@ -5,9 +5,9 @@ using System.Text;
 using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(WindowManager))]
+[CustomEditor(typeof(UIManager))]
 
-public class WindowManagerEditor : Editor
+public class UIManagerEditor : Editor
 {
     public override void OnInspectorGUI()
     {
@@ -16,11 +16,11 @@ public class WindowManagerEditor : Editor
             var sb = new StringBuilder();
             sb.AppendLine(@"public enum FocusWindows");
             sb.AppendLine(@"{");
-            var windowManager = (WindowManager)target;
+            var uiManager = (UIManager)target;
             //sb.AppendLine($"\tNone,");
-            for (int i = 0; i < windowManager.focusWindows.Length; i++)
+            for (int i = 0; i < uiManager.focusWindows.Length; i++)
             {
-                sb.AppendLine($"\t{windowManager.focusWindows[i].name},");
+                sb.AppendLine($"\t{uiManager.focusWindows[i].name},");
             }
             sb.AppendLine(@"}");
 
@@ -41,10 +41,10 @@ public class WindowManagerEditor : Editor
             var sb = new StringBuilder();
             sb.AppendLine(@"public enum PopWindows");
             sb.AppendLine(@"{");
-            var windowManager = (WindowManager)target;
-            for (int i = 0; i < windowManager.popWindows.Length; i++)
+            var uiManager = (UIManager)target;
+            for (int i = 0; i < uiManager.popWindows.Length; i++)
             {
-                sb.AppendLine($"\t{windowManager.popWindows[i].name},");
+                sb.AppendLine($"\t{uiManager.popWindows[i].name},");
             }
             sb.AppendLine(@"}");
 

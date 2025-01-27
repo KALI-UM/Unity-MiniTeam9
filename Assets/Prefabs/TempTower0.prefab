@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3480926647269102603}
   - component: {fileID: 1287955532138463276}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TempTower0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 3827609716211199721}
-  attackInterval: 1
+  target: {fileID: 0}
+  data: {fileID: 0}
 --- !u!1 &5653558001053771269
 GameObject:
   m_ObjectHideFlags: 0

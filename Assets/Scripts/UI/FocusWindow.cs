@@ -6,29 +6,33 @@ using UnityEngine.EventSystems;
 
 public class FocusWindow : MonoBehaviour
 {
-    public GameObject firstSelected;
+    protected UIManager uiManager;
 
-    protected WindowManager windowManager;
-
-    public void Initialize(WindowManager mgr)
+    public virtual void Initialize(UIManager mgr)
     {
-        windowManager = mgr;
+        uiManager = mgr;
     }
 
-    public void OnFocus()
+    public virtual void OnFocus()
     {
-        EventSystem.current.SetSelectedGameObject(firstSelected);
+   
+    }
+
+    public virtual void OnOutFocus()
+    {
+
     }
 
     public virtual void Open()
     {
-        gameObject.SetActive(true);
         OnFocus();
+        gameObject.SetActive(true);
     }
 
     public virtual void Close()
     {
         gameObject.SetActive(false);
     }
+
 
 }

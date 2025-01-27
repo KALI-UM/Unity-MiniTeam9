@@ -18,9 +18,6 @@ public class GameManager : MonoBehaviour
     private EnemyManager enemyManager;
 
     [SerializeField]
-    private WindowManager windowManager;
-
-    [SerializeField]
     private UIManager uiManager;
 
     public EnemyManager EnemyManager
@@ -36,11 +33,6 @@ public class GameManager : MonoBehaviour
     public SlotManager SlotManager
     {
         get => slotManager;
-    }
-
-    public WindowManager WindowManager
-    {
-        get => windowManager;
     }
 
     public UIManager UIManager
@@ -92,7 +84,6 @@ public class GameManager : MonoBehaviour
         SlotManager.Initialize(this);
         TowerManager.Initialize(this);
         EnemyManager.Initialize(this);
-        WindowManager.Initialize(this);
         UIManager.Initialize(this);
     }
 

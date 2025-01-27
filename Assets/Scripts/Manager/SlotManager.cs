@@ -2,29 +2,21 @@ using JetBrains.Annotations;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class SlotManager : InGameManager
 {
     [SerializeField]
-    private GameObject slotPrefab;
-
-    [SerializeField]
     private GameObject towerGroupPrefab;
 
-    public List<Slot[]> slots = new();
     [SerializeField]
-    private int columnCount = 6;
-    [SerializeField]
-    private int rowCount = 4;
+    private List<Slot> slots = new();
 
     [SerializeField]
     private int maxTowerCount = 50;
     private int currTowerCount;
-
-    public float colDistance = 1f;
-    public float rowDistance = 0.9f;
 
     [Serializable]
     public struct TowerPosition
@@ -41,69 +33,65 @@ public class SlotManager : InGameManager
         private set;
     }
 
-    public bool IsPossibleToAdd
+    [ReadOnly, SerializeField]
+    private int selectedSlotIndex;
+    public Slot SelectedSlot
     {
-        get
-        {
-            return (currTowerCount <= maxTowerCount && IsEmptySlotExist());
-        }
+        get => slots[selectedSlotIndex];
     }
+
 
     private void Awake()
     {
         TowerPositions = towerPositions;
 
-        for (int i = 0; i < columnCount; i++)
+        //slots = slots.OrderBy(s => transform.position.x).ThenByDescending(s => s.transform.position.y).ToList();
+        for (int i = 0; i < slots.Count; i++)
         {
-            Slot[] slotRow = new Slot[rowCount];
-            for (int j = 0; j < rowCount; j++)
+            TowerGroup group = Instantiate(towerGroupPrefab).GetComponent<TowerGroup>();
+            var currSlot = slots[i];
+            currSlot.Initialize(this, group, i);
+            currSlot.onSelected += () =>
             {
-                slotRow[j] = Instantiate(slotPrefab).GetComponent<Slot>();
-                slotRow[j].transform.SetParent(gameObject.transform);
-                slotRow[j].gameObject.name = slotPrefab.name + i + j;
-                slotRow[j].SetIndex(j, i);
-                slotRow[j].transform.localPosition = new Vector3(i * colDistance, -j * rowDistance, 0);
-            }
-            slots.Add(slotRow);
-        }
-
-        for (int i = 0; i < columnCount; i++)
-        {
-            for (int j = 0; j < rowCount; j++)
-            {
-                TowerGroup group = Instantiate(towerGroupPrefab).GetComponent<TowerGroup>();
-                slots[i][j].Initialize(group);
-                group.transform.SetParent(gameObject.transform);
-            }
+                selectedSlotIndex = currSlot.SlotIndex;
+                if (!currSlot.TowerGroup.IsEmpty)
+                {
+                    gameManager.UIManager.Open(FocusWindows.TowerInteraction);
+                }
+                else
+                {
+                    gameManager.UIManager.Close(FocusWindows.TowerInteraction);
+                }
+            };
+            group.transform.SetParent(gameObject.transform);
         }
     }
 
     public bool IsEmptySlotExist()
     {
-        foreach (var slotRow in slots)
+        foreach (var slot in slots)
         {
-            foreach (var slot in slotRow)
+            if (slot.TowerGroup.IsEmpty)
             {
-                if (slot.TowerGroup.IsEmpty)
-                {
-                    return true;
-                }
+                return true;
             }
         }
         return false;
     }
 
+    public bool IsPossibleToAdd()
+    {
+        return (currTowerCount <= maxTowerCount && IsEmptySlotExist());
+    }
+
     public void AddTower(Tower tower)
     {
-        foreach (var slotRow in slots)
+        foreach (var slot in slots)
         {
-            foreach (var slot in slotRow)
+            if (slot.IsPossibleToAdd(tower.TowerId))
             {
-                if (slot.IsPossibleToAdd(tower.TowerId))
-                {
-                    slot.AddTower(tower);
-                    return;
-                }
+                slot.AddTower(tower);
+                return;
             }
         }
     }

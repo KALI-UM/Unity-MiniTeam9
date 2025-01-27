@@ -1,34 +1,45 @@
+using DG.Tweening.Core.Easing;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using static UnityEngine.GraphicsBuffer;
 
-public class Slot : MonoBehaviour
+public class Slot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IEndDragHandler
 {
-    private EnemyManager enemyManager;
+    protected SlotManager slotManager;
+    public SlotManager SlotManager
+    {
+        get => slotManager;
+    }
 
     private List<Tower> towers = new();
 
-    private int columnIndex;
-    private int rowIndex;
 
-    public TowerGroup TowerGroup
+    public int SlotIndex
     {
-        get; 
+        get;
         private set;
     }
 
-    public void Initialize(TowerGroup group)
+    public Action onSelected;
+
+
+    public TowerGroup TowerGroup
     {
-        this.TowerGroup = group;
-        group.transform.position=transform.position;
+        get;
+        private set;
     }
 
-    public void SetIndex(int rowIndex, int colIndex)
+    public void Initialize(SlotManager manager, TowerGroup group, int index)
     {
-        this.columnIndex = colIndex;
-        this.rowIndex = rowIndex;
+        slotManager = manager;
+        this.TowerGroup = group;
+        group.transform.position = transform.position;
+
+        SlotIndex = index;
     }
 
     public bool IsPossibleToAdd(eTower towerId)
@@ -38,7 +49,7 @@ public class Slot : MonoBehaviour
             return true;
         }
 
-        return (!TowerGroup.IsFull)&&(TowerGroup.TowerId == towerId);
+        return (!TowerGroup.IsFull) && (TowerGroup.TowerId == towerId);
     }
 
     public void AddTower(Tower tower)
@@ -46,13 +57,43 @@ public class Slot : MonoBehaviour
         TowerGroup.AddTower(tower);
     }
 
+    public void FusionTower()
+    {
+        GameObject newTower = SlotManager.GameManager.TowerManager.GetRandomTower(TowerGroup.Data.grade + 1);
+        RemoveAllTower();
+        AddTower(newTower.GetComponent<Tower>());
+    }
+
     public void RemoveTower()
     {
-
+        TowerGroup.RemoveTower();
     }
 
     public void RemoveAllTower()
     {
+        while (!TowerGroup.IsEmpty)
+        {
+            TowerGroup.RemoveTower();
+        }
+    }
 
+    //드래그 시작시 호출
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    //드래그 끝날시 호출
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        onSelected?.Invoke();
+        KALLogger.Log("슬롯" + SlotIndex + "선택");
+
+        eventData.Use();
     }
 }

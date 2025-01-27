@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PopWindow : MonoBehaviour
 {
-    protected WindowManager windowManager;
+    protected UIManager uiManager;
 
-    public void Initialize(WindowManager mgr)
+    public void Initialize(UIManager mgr)
     {
-        windowManager = mgr;
+        uiManager = mgr;
     }
 
     public float popTime = 1f;

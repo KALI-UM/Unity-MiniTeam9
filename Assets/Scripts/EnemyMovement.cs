@@ -85,12 +85,15 @@ public class EnemyMovement : MonoBehaviour
     {
         IsMovingToWaypoint = true;
         transform.position = EnemyManager.WayPointData.spawnPoint.position;
-        direction = (EnemyManager.WayPointData.wayPoints[currentIndex].position - transform.position).normalized;
+        direction = EnemyManager.WayPointData.initialDirection;
     }
 
     private void MoveTo()
     {
-        transform.position += direction * Speed * Time.deltaTime;
+        Vector3 newPosition = transform.position +direction * Speed * Time.deltaTime;
+
+        //if()
+
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, EnemyManager.WayPointData.MinPoint.x, EnemyManager.WayPointData.MaxPoint.x),
                                         Mathf.Clamp(transform.position.y, EnemyManager.WayPointData.MinPoint.y, EnemyManager.WayPointData.MaxPoint.y), 0);
 
@@ -108,4 +111,12 @@ public class EnemyMovement : MonoBehaviour
     {
         this.data = data;
     }
+
+    //private bool MovePassed()
+    //{
+    //    Vector3 min;
+    //    Vector3 max;
+
+    //    if(transform.position>)
+    //}
 }

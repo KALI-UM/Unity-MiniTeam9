@@ -11,6 +11,11 @@ public class TowerGroup : MonoBehaviour
         private set;
     }
 
+    public TowerData Data
+    {
+        get => towers[0].Data;
+    }
+
     [ReadOnly, SerializeField]
     private List<Tower> towers = new();
 
@@ -29,6 +34,11 @@ public class TowerGroup : MonoBehaviour
     public bool IsFull
     {
         get => towers.Count >= maxSlotTowerCount;
+    }
+
+    public bool CanFusion
+    {
+        get => IsFull && Data.grade != DataTableManager.TowerTable.MaxGrade;
     }
 
     private void Awake()
