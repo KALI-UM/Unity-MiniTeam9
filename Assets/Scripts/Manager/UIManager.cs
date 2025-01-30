@@ -5,6 +5,7 @@ using UnityEditor.PackageManager.UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using static WaveTable;
 
 public class UIManager : InGameManager
 {
@@ -14,7 +15,6 @@ public class UIManager : InGameManager
     public PopWindow[] popWindows;
     public UIElement[] uiElements;
 
-    public WaveTimer timer;
 
     public FocusWindows currentWindow
     {
@@ -39,26 +39,31 @@ public class UIManager : InGameManager
             window.gameObject.SetActive(false);
         }
 
-        GameManager.onWaveStart += () =>
+        foreach (var ui in uiElements)
+        {
+            ui.Initialize(this);
+        }
+
+        GameManager.onWaveStart += (WaveData data) =>
         {
             Open(PopWindows.Wave);
 
             foreach (var ui in focusWindows)
             {
                 var currUI = ui;
-                currUI.SendMessage("OnWaveStart", gameManager.CurrentWaveData, SendMessageOptions.DontRequireReceiver);
+                currUI.SendMessage("OnWaveStart", data, SendMessageOptions.DontRequireReceiver);
             }
 
             foreach (var ui in popWindows)
             {
                 var currUI = ui;
-                currUI.SendMessage("OnWaveStart", gameManager.CurrentWaveData, SendMessageOptions.DontRequireReceiver);
+                currUI.SendMessage("OnWaveStart", data, SendMessageOptions.DontRequireReceiver);
             }
 
             foreach (var ui in uiElements)
             {
                 var currUI = ui;
-                currUI.SendMessage("OnWaveStart", gameManager.CurrentWaveData, SendMessageOptions.DontRequireReceiver);
+                currUI.SendMessage("OnWaveStart", data, SendMessageOptions.DontRequireReceiver);
             }
         };
 

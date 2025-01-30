@@ -45,6 +45,9 @@ public class TowerInteraction : FocusWindow
 
     public void OnClickSell()
     {
+        slotManager.GameManager.coinGemSystem.AddCoin(slotManager.SelectedSlot.TowerGroup.Data.saleGold);
+        slotManager.GameManager.coinGemSystem.AddGem(slotManager.SelectedSlot.TowerGroup.Data.saleGem);
+
         slotManager.SelectedSlot.RemoveTower();
         Close();
     }

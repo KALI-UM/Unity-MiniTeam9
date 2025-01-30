@@ -129,6 +129,9 @@ public class EnemyManager : InGameManager
             enemyPools[enemy.EnemyId].Release(enemy);
             validEnemies.Remove(enemy);
             enemyCountBar.OnCountChanged(CurrEnemyCount);
+
+            gameManager.coinGemSystem.AddCoin(enemy.Data.dropGold);
+            gameManager.coinGemSystem.AddGem(enemy.Data.dropGem);
         };
         return enemy;
     }

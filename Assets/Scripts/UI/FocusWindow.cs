@@ -4,15 +4,8 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 
-public class FocusWindow : MonoBehaviour
+public class FocusWindow : UIElement
 {
-    protected UIManager uiManager;
-
-    public virtual void Initialize(UIManager mgr)
-    {
-        uiManager = mgr;
-    }
-
     public virtual void OnFocus()
     {
    

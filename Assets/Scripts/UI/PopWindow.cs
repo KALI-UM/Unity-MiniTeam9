@@ -2,15 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PopWindow : MonoBehaviour
+public class PopWindow : UIElement
 {
-    protected UIManager uiManager;
-
-    public void Initialize(UIManager mgr)
-    {
-        uiManager = mgr;
-    }
-
     public float popTime = 1f;
 
     public virtual void Open()

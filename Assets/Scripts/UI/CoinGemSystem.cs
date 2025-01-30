@@ -20,14 +20,19 @@ public class CoinGemSystem
         get => gem;
     }
 
+    public Action<int> onCoinCountChange;
+    public Action<int> onGemCountChange;
+
     public void AddCoin(int amount)
     {
         coin += amount;
+        onCoinCountChange?.Invoke(Coin);
     }
 
     public void AddGem(int amount)
     {
         gem += amount;
+        onGemCountChange?.Invoke(Gem);
     }
 
     public bool CanPayCoin(int amount)
@@ -43,10 +48,12 @@ public class CoinGemSystem
     public void PayCoin(int amount)
     {
         coin-=amount;
+        onCoinCountChange?.Invoke(Coin);
     }
 
     public void PayGem(int amount)
     {
         gem-= amount;
+        onGemCountChange?.Invoke(Gem);
     }
 }

@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
 {
     [ReadOnly]
     public readonly CoinGemSystem coinGemSystem = new();
+    public int initialCoinCount = 200;
+    public int initialGemCount = 0;
 
     #region Managers
     //public InGameManager[] managers;
@@ -70,7 +72,7 @@ public class GameManager : MonoBehaviour
         get => CurrentWaveNumber >= lastWaveNumber;
     }
 
-    public Action onWaveStart;
+    public Action<WaveData> onWaveStart;
 
     private Coroutine coWave;
     private Coroutine coWaveSpawnEnemy;
@@ -78,15 +80,11 @@ public class GameManager : MonoBehaviour
     #endregion
 
 
-
     private void Awake()
     {
-
-
         InitializeManagers();
 
         waveDatas = DataTableManager.WaveTable.GetWaveDatas();
-
         CurrentWaveNumber = 0;
     }
 
@@ -96,6 +94,9 @@ public class GameManager : MonoBehaviour
         TowerManager.Initialize(this);
         EnemyManager.Initialize(this);
         UIManager.Initialize(this);
+
+        coinGemSystem.AddCoin(initialCoinCount);
+        coinGemSystem.AddGem(initialGemCount);
     }
 
     private void Start()
@@ -159,8 +160,10 @@ public class GameManager : MonoBehaviour
 
     public void OnWaveStart()
     {
+        coinGemSystem.AddCoin(CurrentWaveNumber * 10);
+
         CurrentWaveNumber++;
-        onWaveStart?.Invoke();
+        onWaveStart?.Invoke(CurrentWaveData);
         KALLogger.Log($"ÇöÀç Wave{CurrentWaveNumber}");
     }
 }

@@ -4,5 +4,9 @@ using UnityEngine;
 
 public class UIElement : MonoBehaviour
 {
-   
+    protected UIManager uiManager;
+    public virtual void Initialize(UIManager mgr)
+    {
+        uiManager = mgr;
+    }
 }
