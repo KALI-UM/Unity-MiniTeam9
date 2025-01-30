@@ -23,17 +23,17 @@ public class EnemyMovement : MonoBehaviour
 
     private Vector3 direction;
 
-    private int currentIndex = 0;
-    public int CurrentInex
+    private int nextIndex = 0;
+    public int NextIndex
     {
-        get => currentIndex;
+        get => nextIndex;
         private set
         {
-            currentIndex = value % EnemyManager.WayPointData.wayPoints.Count();
+            nextIndex = value % EnemyManager.WayPointData.wayPoints.Count();
         }
     }
 
-    public bool IsMovingToWaypoint
+    public bool IsOnWaypoints
     {
         get;
         private set;
@@ -41,70 +41,47 @@ public class EnemyMovement : MonoBehaviour
 
     private void Update()
     {
-        if (Vector3.Distance(transform.position, EnemyManager.WayPointData.wayPoints[CurrentInex].position) < 0.1f)
-        {
-            transform.position = EnemyManager.WayPointData.wayPoints[CurrentInex].position;
-            CurrentInex++;
-            direction = (EnemyManager.WayPointData.wayPoints[CurrentInex].position - transform.position).normalized;
-
-            if (IsMovingToWaypoint)
-            {
-                IsMovingToWaypoint = false;
-            }
-        }
-
-        if (!IsMovingToWaypoint)
-        {
-            if (Vector3.Distance(transform.position, EnemyManager.WayPointData.wayPoints[CurrentInex].position) < 0.05f)
-            {
-                transform.position = EnemyManager.WayPointData.wayPoints[CurrentInex].position;
-                CurrentInex++;
-                direction = (EnemyManager.WayPointData.wayPoints[CurrentInex].position - transform.position).normalized;
-            }
-            MoveTo();
-        }
-        else
-        {
-            if (Vector3.Distance(transform.position, EnemyManager.WayPointData.wayPoints[CurrentInex].position) < 0.05f)
-            {
-                transform.position = EnemyManager.WayPointData.wayPoints[CurrentInex].position;
-                CurrentInex++;
-                direction = (EnemyManager.WayPointData.wayPoints[CurrentInex].position - transform.position).normalized;
-
-                IsMovingToWaypoint = false;
-                MoveTo();
-            }
-            else
-            {
-                MoveToWayPoints();
-            }
-        }
+        MoveTo();
     }
 
     public void Spawn()
     {
-        IsMovingToWaypoint = true;
+        IsOnWaypoints = false;
         transform.position = EnemyManager.WayPointData.spawnPoint.position;
+        NextIndex = 0;
         direction = EnemyManager.WayPointData.initialDirection;
+
+        KALLogger.Log<EnemyMovement>();
     }
 
     private void MoveTo()
     {
-        Vector3 newPosition = transform.position +direction * Speed * Time.deltaTime;
+        Vector3 next;
 
-        //if()
+        float sqrDelta = Mathf.Pow(Speed * Time.deltaTime, 2);
+        float sqrMax = Vector3.SqrMagnitude(transform.position - EnemyManager.WayPointData.wayPoints[NextIndex].position);
 
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, EnemyManager.WayPointData.MinPoint.x, EnemyManager.WayPointData.MaxPoint.x),
-                                        Mathf.Clamp(transform.position.y, EnemyManager.WayPointData.MinPoint.y, EnemyManager.WayPointData.MaxPoint.y), 0);
+        if (sqrDelta >= sqrMax)
+        {
+            if (!IsOnWaypoints)
+            {
+                IsOnWaypoints = true;
+            }
 
-    }
+            NextIndex++;
+            float delta = Mathf.Sqrt(sqrDelta);
+            float max = Mathf.Sqrt(sqrMax);
 
-    private void MoveToWayPoints()
-    {
-        transform.position += direction * Speed * Time.deltaTime;
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, EnemyManager.WayPointData.SpawnMinPoint.x, EnemyManager.WayPointData.SpawnMaxPoint.x),
-                                        Mathf.Clamp(transform.position.y, EnemyManager.WayPointData.SpawnMinPoint.y, EnemyManager.WayPointData.SpawnMaxPoint.y), 0);
+            next = direction * max;
+            direction = EnemyManager.WayPointData.directions[NextIndex];
+            next += direction * (delta - max);
+        }
+        else
+        {
+            next = direction * Speed * Time.deltaTime;
+        }
 
+        transform.position = transform.position + next;
     }
 
     public void InitializeData(EnemyData data)
@@ -112,11 +89,4 @@ public class EnemyMovement : MonoBehaviour
         this.data = data;
     }
 
-    //private bool MovePassed()
-    //{
-    //    Vector3 min;
-    //    Vector3 max;
-
-    //    if(transform.position>)
-    //}
 }

@@ -23,10 +23,13 @@ public class WaveTable : DataTable
     [Serializable]
     public class WaveData
     {
+        public int waveNumber;
         public eEnemy enemyId;
         public int enemyCount;
         public float spawnInterval;
-        public float spawnDuration;
+        public float waveDuration;
+
+        public string waveTextFormat;
     }
 
     public override void Load(string filename)
@@ -55,10 +58,12 @@ public class WaveTable : DataTable
     private WaveData ConvertToWaveData(WaveRawData raw)
     {
         WaveData data = new WaveData();
+        data.waveNumber = raw.Wave_Number;
         data.enemyId = (eEnemy)raw.Monster_ID;
         data.enemyCount = raw.Monster_Count;
         data.spawnInterval = raw.Spawn_Interval;
-        data.spawnDuration = raw.Spawn_Duration;
+        data.waveDuration = raw.Spawn_Duration;
+        data.waveTextFormat = raw.Wave_Text_Key;
         
         return data;
     }

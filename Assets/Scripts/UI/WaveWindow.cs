@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using static WaveTable;
 
 public class WaveWindow : PopWindow
 {
@@ -10,14 +11,14 @@ public class WaveWindow : PopWindow
     private readonly string waveFormat = "Wave {0}";
 
 
-    public void WaveUpdate(int wave)
-    {
-        text.text=string.Format(waveFormat, wave);
-    }
-
     public override void Open()
     {
-        WaveUpdate(uiManager.GameManager.CurrentWave);
+        KALLogger.Log<WaveWindow>();
         base.Open();
+    }
+
+    public void OnWaveStart(WaveData data)
+    {
+        text.text = string.Format(waveFormat, data.waveNumber);
     }
 }

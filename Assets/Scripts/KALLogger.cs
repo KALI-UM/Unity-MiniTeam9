@@ -18,6 +18,8 @@ public static class KALLogger
     private static bool fileWrite;
     private static int fileWriteCount = 5;
 
+    public static readonly Dictionary<string, bool> logFilters = new();
+
     //public static Action<object, string, string> loglog;
 
     private static Queue<string> logs;
@@ -86,6 +88,29 @@ public static class KALLogger
         if (callerFilePath != null)
         {
             className = GetClassNameByFileName(callerFilePath);
+        }
+
+        string logMessage = string.Format(methodLogFormat, className, memberName, message);
+        UnityEngine.Debug.Log(logMessage);
+    }
+
+    [System.Diagnostics.Conditional("UNITY_EDITOR")]
+    public static void Log<T>(string message = null,
+        [CallerMemberName] string memberName = null,
+        [CallerFilePath] string callerFilePath = null)
+    {
+        string className = typeof(T).Name;
+
+        if (logFilters.ContainsKey(className))
+        {
+            if (!logFilters[className])
+            {
+                return;
+            }
+        }
+        else
+        {
+            logFilters.Add(className, true);
         }
 
         string logMessage = string.Format(methodLogFormat, className, memberName, message);

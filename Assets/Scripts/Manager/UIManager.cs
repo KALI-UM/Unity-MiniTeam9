@@ -10,17 +10,18 @@ public class UIManager : InGameManager
 {
     public Button screenArea;
 
-    [SerializeField]
-    private TextMeshProUGUI timeText;
-
     public FocusWindow[] focusWindows;
     public PopWindow[] popWindows;
+    public UIElement[] uiElements;
+
+    public WaveTimer timer;
 
     public FocusWindows currentWindow
     {
         get;
         private set;
     }
+
 
     public override void Initialize(GameManager gm)
     {
@@ -41,7 +42,26 @@ public class UIManager : InGameManager
         GameManager.onWaveStart += () =>
         {
             Open(PopWindows.Wave);
+
+            foreach (var ui in focusWindows)
+            {
+                var currUI = ui;
+                currUI.SendMessage("OnWaveStart", gameManager.CurrentWaveData, SendMessageOptions.DontRequireReceiver);
+            }
+
+            foreach (var ui in popWindows)
+            {
+                var currUI = ui;
+                currUI.SendMessage("OnWaveStart", gameManager.CurrentWaveData, SendMessageOptions.DontRequireReceiver);
+            }
+
+            foreach (var ui in uiElements)
+            {
+                var currUI = ui;
+                currUI.SendMessage("OnWaveStart", gameManager.CurrentWaveData, SendMessageOptions.DontRequireReceiver);
+            }
         };
+
         GameManager.onGameOver += () => Open(FocusWindows.GameOver);
         GameManager.onGameClear += () => Open(FocusWindows.GameClear);
     }

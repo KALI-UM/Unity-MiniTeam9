@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EnemyCountBar : MonoBehaviour
+public class EnemyCountBar : UIElement
 {
     [SerializeField]
     private Slider countBar;
