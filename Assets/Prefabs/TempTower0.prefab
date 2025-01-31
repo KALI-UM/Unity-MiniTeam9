@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3480926647269102603}
   - component: {fileID: 1287955532138463276}
+  - component: {fileID: 8076316081254337570}
   m_Layer: 6
   m_Name: TempTower0
   m_TagString: Untagged
@@ -45,9 +46,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d90dbdc7f36a3484fad66f3713b7f36c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  towerAttack: {fileID: 8076316081254337570}
   spriteRenderer: {fileID: 3827609716211199721}
-  target: {fileID: 0}
   data: {fileID: 0}
+--- !u!114 &8076316081254337570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3503033444322115339}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d62c860ec3f71e742b9dd036750f5384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tower: {fileID: 1287955532138463276}
+  target: {fileID: 0}
 --- !u!1 &5653558001053771269
 GameObject:
   m_ObjectHideFlags: 0

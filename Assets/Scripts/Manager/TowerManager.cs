@@ -8,8 +8,9 @@ public class TowerManager : InGameManager
     public GameObject defaultTowerPrefab;
     private readonly Dictionary<eTower, GameObject> towerPrefabs = new();
 
-    public static float RangeFactor = 1f;
-    public static float SpeedFactor= 1f;
+    public static float GlobalRangeFactor = 1f;
+    public static float GlobalAttackSpeedFactor= 1f;
+    public static float GlobalTowerMoveSpeed = 10f;
 
     private void Awake()
     {

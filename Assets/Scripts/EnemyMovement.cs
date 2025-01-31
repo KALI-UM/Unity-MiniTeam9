@@ -51,7 +51,7 @@ public class EnemyMovement : MonoBehaviour
         NextIndex = 0;
         direction = EnemyManager.WayPointData.initialDirection;
 
-        KALLogger.Log<EnemyMovement>();
+        //KALLogger.Log<EnemyMovement>();
     }
 
     private void MoveTo()

@@ -1,15 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
-using UnityEditor.PackageManager.UI;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using static WaveTable;
 
 public class UIManager : InGameManager
 {
     public Button screenArea;
+    public UIElement worldBackground;
 
     public FocusWindow[] focusWindows;
     public PopWindow[] popWindows;
@@ -22,10 +18,9 @@ public class UIManager : InGameManager
         private set;
     }
 
-
-    public override void Initialize(GameManager gm)
+    public override void Initialize()
     {
-        base.Initialize(gm);
+        worldBackground.Initialize(this);
 
         foreach (var window in focusWindows)
         {
@@ -116,9 +111,9 @@ public class UIManager : InGameManager
     public void OnClickNotUIArea()
     {
         KALLogger.Log("UI focus ¿“¿Ω");
-        //foreach (var window in focusWindows)
-        //{
-        //    window.OnOutFocus();
-        //}
+        foreach (var window in focusWindows)
+        {
+            window.OnOutFocus();
+        }
     }
 }

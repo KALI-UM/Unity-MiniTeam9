@@ -17,6 +17,9 @@ using static UnityEngine.EventSystems.EventTrigger;
 [CustomEditor(typeof(TowerManager))]
 public class TowerManagerEditor : Editor
 {
+    //public static float GlobalRangeFactor = 1f;
+    //public static float GlobalAttackSpeedFactor = 1f;
+    //public static float GlobalTowerMoveSpeed = 10f;
     public override void OnInspectorGUI()
     {
         if (GUILayout.Button("Update Tower Enum"))
@@ -37,18 +40,25 @@ public class TowerManagerEditor : Editor
             UpdateTowerPrefabs(towerManager.defaultTowerPrefab, list);
         }
 
-        EditorGUILayout.LabelField("RangeFactor");
-        float currRangeFactor = EditorGUILayout.Slider(TowerManager.RangeFactor, 0.1f, 5f);
-        if(TowerManager.RangeFactor!= currRangeFactor)
+        EditorGUILayout.LabelField("Range Factor");
+        float currRangeFactor = EditorGUILayout.Slider(TowerManager.GlobalRangeFactor, 0.1f, 5f);
+        if(TowerManager.GlobalRangeFactor!= currRangeFactor)
         {
-            TowerManager.RangeFactor = currRangeFactor;
+            TowerManager.GlobalRangeFactor = currRangeFactor;
         }
 
-        EditorGUILayout.LabelField("SpeedFactor");
-        float currSpeedFactor = EditorGUILayout.Slider(TowerManager.SpeedFactor, 0.1f, 5f);
-        if (TowerManager.SpeedFactor != currSpeedFactor)
+        EditorGUILayout.LabelField("Attack Speed Factor");
+        float currAttackSpeedFactor = EditorGUILayout.Slider(TowerManager.GlobalAttackSpeedFactor, 0.1f, 5f);
+        if (TowerManager.GlobalAttackSpeedFactor != currAttackSpeedFactor)
         {
-            TowerManager.SpeedFactor = currSpeedFactor;
+            TowerManager.GlobalAttackSpeedFactor = currAttackSpeedFactor;
+        }
+
+        EditorGUILayout.LabelField("Move Speed Factor");
+        float currMoveSpeedFactor = EditorGUILayout.Slider(TowerManager.GlobalTowerMoveSpeed, 0.1f, 10f);
+        if (TowerManager.GlobalTowerMoveSpeed != currMoveSpeedFactor)
+        {
+            TowerManager.GlobalTowerMoveSpeed = currMoveSpeedFactor;
         }
 
         base.OnInspectorGUI();

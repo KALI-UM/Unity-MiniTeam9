@@ -6,9 +6,11 @@ using UnityEngine.EventSystems;
 
 public class FocusWindow : UIElement
 {
+    public float inputThreshold = 0.5f;
+
     public virtual void OnFocus()
     {
-   
+
     }
 
     public virtual void OnOutFocus()
@@ -20,12 +22,18 @@ public class FocusWindow : UIElement
     {
         OnFocus();
         gameObject.SetActive(true);
+        StartCoroutine(CoInputThreshold());
     }
 
     public virtual void Close()
     {
-        gameObject.SetActive(false);
+        gameObject.SetActive(false); 
     }
 
-
+    private IEnumerator CoInputThreshold()
+    {
+        enabled = false;
+        yield return new WaitForSecondsRealtime(inputThreshold);
+        enabled = true;
+    }
 }

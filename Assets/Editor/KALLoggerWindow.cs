@@ -15,7 +15,7 @@ public class KALLoggerWindow : EditorWindow
     private void OnGUI()
     {
         // GUI ±¸¼º
-        GUILayout.Label("This is a custom editor window", EditorStyles.boldLabel);
+        GUILayout.Label("Filter List");
 
         foreach (var item in KALLogger.logFilters.ToList())
         {

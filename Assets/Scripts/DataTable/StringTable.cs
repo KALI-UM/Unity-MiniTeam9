@@ -9,8 +9,8 @@ public class StringTable : DataTable
 {
     public class StringData
     {
-        public string Id { get; set; }
-        public string String { get; set; }
+        public string String_Key { get; set; }
+        public string Ko { get; set; }
     }
 
     private readonly Dictionary<string, string> dictionary = new Dictionary<string, string>();
@@ -23,13 +23,13 @@ public class StringTable : DataTable
         dictionary.Clear();
         foreach (var item in list)
         {
-            if (!dictionary.ContainsKey(item.Id))
+            if (!dictionary.ContainsKey(item.String_Key))
             {
-                dictionary.Add(item.Id, item.String);
+                dictionary.Add(item.String_Key, item.Ko);
             }
             else
             {
-                Debug.LogError($"키 중복: {item.Id}");
+                Debug.LogError($"키 중복: {item.String_Key}");
             }
         }
     }

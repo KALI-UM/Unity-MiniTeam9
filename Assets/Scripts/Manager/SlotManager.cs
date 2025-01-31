@@ -40,6 +40,14 @@ public class SlotManager : InGameManager
         get => slots[selectedSlotIndex];
     }
 
+    [SerializeField]
+    private LineRenderer lineRenderer;
+
+    public bool IsSlotDragging
+    {
+        get;
+        private set;
+    }
 
     private void Awake()
     {
@@ -94,6 +102,26 @@ public class SlotManager : InGameManager
                 return;
             }
         }
+    }
+
+    public void OnBeginDragSlot(Vector3 dragStart)
+    {
+        IsSlotDragging=true;
+        lineRenderer.enabled = true;
+        lineRenderer.SetPosition(0, dragStart);
+        lineRenderer.SetPosition(1, dragStart);
+
+    }
+
+    public void OnDragSlot(Vector3 enterSlot)
+    {
+        lineRenderer.SetPosition(1, enterSlot);
+    }
+
+    public void OnEndDragSlot()
+    {
+        IsSlotDragging =false;
+        lineRenderer.enabled = false;
     }
 
     static public Vector3 GetTowerPosition(int towerCount, int towerIndex)

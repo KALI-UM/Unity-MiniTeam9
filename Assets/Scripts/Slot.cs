@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using static UnityEngine.GraphicsBuffer;
 
-public class Slot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IEndDragHandler
+public class Slot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     protected SlotManager slotManager;
     public SlotManager SlotManager
@@ -77,23 +77,59 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IEnd
         }
     }
 
-    //드래그 시작시 호출
-    public void OnBeginDrag(PointerEventData eventData)
+    public void ChangeTowerGroup(TowerGroup towerGroup)
     {
-        throw new System.NotImplementedException();
-    }
-
-    //드래그 끝날시 호출
-    public void OnEndDrag(PointerEventData eventData)
-    {
-        throw new System.NotImplementedException();
+        TowerGroup = towerGroup;
+        TowerGroup.MoveTo(transform.position);
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
         onSelected?.Invoke();
         KALLogger.Log("슬롯" + SlotIndex + "선택");
-
-        eventData.Use();
     }
+
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        if (!TowerGroup.IsEmpty)
+        {
+            slotManager.OnBeginDragSlot(transform.position);
+        }
+    }
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        KALLogger.Log("슬롯" + SlotIndex + "드래그->" + eventData.pointerEnter.name);
+        if (!TowerGroup.IsEmpty)
+        {
+            var slot = eventData.pointerEnter.GetComponent<Slot>();
+            if (slot != null)
+            {
+                slotManager.OnDragSlot(eventData.pointerEnter.transform.position);
+            }
+            else
+            {
+                eventData.dragging = false;
+                slotManager.OnEndDragSlot();
+            }
+        }
+    }
+
+    //드래그 끝날시 호출
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        KALLogger.Log("슬롯" + SlotIndex + "드래그끝");
+
+        var slot = eventData.pointerEnter.GetComponent<Slot>();
+        if (slot != null)
+        {
+            TowerGroup temp = TowerGroup;
+
+            ChangeTowerGroup(slot.TowerGroup);
+            slot.ChangeTowerGroup(temp);
+        }
+
+        slotManager.OnEndDragSlot();
+    }
+
 }

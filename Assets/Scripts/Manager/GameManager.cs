@@ -79,7 +79,6 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
-
     private void Awake()
     {
         InitializeManagers();
@@ -90,10 +89,15 @@ public class GameManager : MonoBehaviour
 
     private void InitializeManagers()
     {
-        SlotManager.Initialize(this);
-        TowerManager.Initialize(this);
-        EnemyManager.Initialize(this);
-        UIManager.Initialize(this);
+        SlotManager.InitializeManager(this);
+        TowerManager.InitializeManager(this);
+        EnemyManager.InitializeManager(this);
+        UIManager.InitializeManager(this);
+
+        SlotManager.Initialize();
+        TowerManager.Initialize();
+        EnemyManager.Initialize();
+        UIManager.Initialize();
 
         coinGemSystem.AddCoin(initialCoinCount);
         coinGemSystem.AddGem(initialGemCount);

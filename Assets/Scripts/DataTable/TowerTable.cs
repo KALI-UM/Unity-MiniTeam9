@@ -44,6 +44,12 @@ public class TowerTable : DataTable
     //private readonly List<List<eTower>> towerGrade = new();
 
     private readonly Dictionary<eTower, TowerRawData> dictionary = new();
+    public List<TowerRawData> List
+    {
+        get;
+        private set;
+    }
+
     private readonly List<List<eTower>> towerGrade = new();
 
     public int MaxGrade
@@ -56,16 +62,16 @@ public class TowerTable : DataTable
     {
         var path = string.Format(FormatPath, filename);
         var textAsset = Resources.Load<TextAsset>(path);
-        var list = LoadCSV<TowerRawData>(textAsset.text);
+        List = LoadCSV<TowerRawData>(textAsset.text);
         dictionary.Clear();
 
-        MaxGrade = list.Max(data => data.Tower_Grade);
+        MaxGrade = List.Max(data => data.Tower_Grade);
         for (int i = 0; i <= MaxGrade; i++)
         {
             towerGrade.Add(new List<eTower>());
         }
 
-        foreach (var raw in list)
+        foreach (var raw in List)
         {
             if (!dictionary.ContainsKey((eTower)raw.Tower_ID))
             {

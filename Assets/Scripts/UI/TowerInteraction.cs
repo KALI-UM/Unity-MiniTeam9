@@ -12,6 +12,7 @@ public class TowerInteraction : FocusWindow
 
     private SlotManager slotManager;
 
+
     public override void Initialize(UIManager mgr)
     {
         base.Initialize(mgr);

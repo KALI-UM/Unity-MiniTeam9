@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,6 +42,11 @@ public class TowerGroup : MonoBehaviour
         get => IsFull && Data.grade != DataTableManager.TowerTable.MaxGrade;
     }
 
+    #region Move
+    private Coroutine coMoveTo;
+
+    #endregion
+
     private void Awake()
     {
         enemyManager = GameObject.FindObjectOfType<GameManager>().EnemyManager;
@@ -62,7 +68,7 @@ public class TowerGroup : MonoBehaviour
     public void RemoveTower()
     {
         var tower = towers[towers.Count - 1];
-        towers.RemoveAt(towers.Count-1);
+        towers.RemoveAt(towers.Count - 1);
         GameObject.Destroy(tower.gameObject);
 
         UpdateTowerPosition();
@@ -73,6 +79,39 @@ public class TowerGroup : MonoBehaviour
         for (int i = 0; i < towers.Count; i++)
         {
             towers[i].transform.localPosition = SlotManager.GetTowerPosition(towers.Count, i);
+        }
+    }
+
+    public void MoveTo(Vector3 destination)
+    {
+        StartCoroutine(CoMoveTo(destination));
+    }
+
+    private IEnumerator CoMoveTo(Vector3 destination)
+    {
+        foreach (var tower in towers)
+        {
+            tower.towerAttack.enabled = false;
+        }
+
+        Vector3 dir = (destination - transform.position).normalized;
+        float distance = Vector3.Distance(destination, transform.position);
+        while (true)
+        {
+            Vector3 move = dir * Time.deltaTime * TowerManager.GlobalTowerMoveSpeed;
+            transform.position += move;
+            distance -= move.magnitude;
+            if (distance < 0)
+            {
+                transform.position = destination;
+                break;
+            }
+            yield return new WaitForFixedUpdate();
+        }
+
+        foreach (var tower in towers)
+        {
+            tower.towerAttack.enabled = true;
         }
     }
 

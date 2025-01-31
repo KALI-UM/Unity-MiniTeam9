@@ -7,8 +7,7 @@ using static WaveTable;
 
 public class WaveWindow : PopWindow
 {
-    public TextMeshProUGUI text;
-    private readonly string waveFormat = "Wave {0}";
+    public LocalizationText localizationText;
 
 
     public override void Open()
@@ -19,6 +18,7 @@ public class WaveWindow : PopWindow
 
     public void OnWaveStart(WaveData data)
     {
-        text.text = string.Format(waveFormat, data.waveNumber);
+        localizationText.OnStringIdChange(data.waveTextFormat);
+        localizationText.OnTextParamChange(data.waveNumber.ToString());
     }
 }
