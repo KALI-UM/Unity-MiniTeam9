@@ -52,7 +52,7 @@ public class Enemy : MonoBehaviour
         this.data = data;
     }
 
-    public void Spawn()
+    public virtual void Spawn()
     {
         movement.enabled = true;
         movement.Spawn();
@@ -76,7 +76,7 @@ public class Enemy : MonoBehaviour
         hpBar.OnHpChanged((float)Hp / Data.maxHp);
     }
 
-    public void OnDie()
+    public virtual void OnDie()
     {
         IsDead = true;
         Hp = 0;

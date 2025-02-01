@@ -47,6 +47,9 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
+    private Coroutine coStartThreshold;
+    public float startThresholdTime = 3f;
+
     public Action onGameClear;
     public Action onGameOver;
 
@@ -83,6 +86,8 @@ public class GameManager : MonoBehaviour
     {
         InitializeManagers();
 
+        EnemyManager.onBossEnemyDie += () => OnBossEnemyDie();
+
         waveDatas = DataTableManager.WaveTable.GetWaveDatas();
         CurrentWaveNumber = 0;
     }
@@ -105,7 +110,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        coWave = StartCoroutine(CoWave());
+        coStartThreshold = StartCoroutine(CoStartDelay());
     }
 
     private void Update()
@@ -143,9 +148,21 @@ public class GameManager : MonoBehaviour
         {
             OnWaveStart();
             coWaveSpawnEnemy = StartCoroutine(CoSpawnEnemy(CurrentWaveNumber));
+            
             yield return new WaitForSeconds(CurrentWaveData.waveDuration);
             StopCoroutine(coWaveSpawnEnemy);
+
+            if(CurrentWaveNumber!=0&&CurrentWaveNumber % 10==0)
+            {
+                OnGameOver();
+            }
         }
+    }
+
+    private IEnumerator CoStartDelay()
+    {
+        yield return new WaitForSecondsRealtime(startThresholdTime);
+        coWave = StartCoroutine(CoWave());
     }
 
     public void OnGameOver()
@@ -168,6 +185,11 @@ public class GameManager : MonoBehaviour
 
         CurrentWaveNumber++;
         onWaveStart?.Invoke(CurrentWaveData);
-        KALLogger.Log($"ÇöÀç Wave{CurrentWaveNumber}");
+    }
+
+    public void OnBossEnemyDie()
+    {
+        StopCoroutine(coWave);
+        coWave = StartCoroutine(CoWave());
     }
 }

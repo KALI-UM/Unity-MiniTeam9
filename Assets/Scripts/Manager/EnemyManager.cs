@@ -66,6 +66,8 @@ public class EnemyManager : InGameManager
         }
     }
 
+    public Action onBossEnemyDie;
+
     #endregion
 
     private void Awake()
@@ -124,21 +126,40 @@ public class EnemyManager : InGameManager
     private Enemy CreateEnemy(GameObject gobj)
     {
         Enemy enemy = gobj.GetComponent<Enemy>();
-        enemy.onDie += () =>
-        {
-            enemyPools[enemy.EnemyId].Release(enemy);
-            validEnemies.Remove(enemy);
-            enemyCountBar.OnCountChanged(CurrEnemyCount);
 
-            GameManager.coinGemSystem.AddCoin(enemy.Data.dropGold);
-            GameManager.coinGemSystem.AddGem(enemy.Data.dropGem);
-        };
+        if (enemy.Data.grade == 2)
+        {
+            enemy.onDie += () =>
+            {
+                enemyPools[enemy.EnemyId].Release(enemy);
+                validEnemies.Remove(enemy);
+                enemyCountBar.OnCountChanged(CurrEnemyCount);
+
+                GameManager.coinGemSystem.AddCoin(enemy.Data.dropGold);
+                GameManager.coinGemSystem.AddGem(enemy.Data.dropGem);
+
+                onBossEnemyDie?.Invoke();
+            };
+        }
+        else
+        {
+            enemy.onDie += () =>
+            {
+                enemyPools[enemy.EnemyId].Release(enemy);
+                validEnemies.Remove(enemy);
+                enemyCountBar.OnCountChanged(CurrEnemyCount);
+
+                GameManager.coinGemSystem.AddCoin(enemy.Data.dropGold);
+                GameManager.coinGemSystem.AddGem(enemy.Data.dropGem);
+            };
+        }
         return enemy;
     }
 
     private void OnGetEnemy(Enemy enemy)
     {
         enemy.gameObject.SetActive(true);
+
         enemy.OnReset();
         enemy.Spawn();
     }

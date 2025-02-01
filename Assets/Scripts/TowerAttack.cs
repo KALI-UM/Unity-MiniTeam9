@@ -52,7 +52,9 @@ public class TowerAttack : MonoBehaviour
 
     private bool FindTarget()
     {
-        var closestEnemy = tower.TowerGroup.enemyManager.ValidEnemies.OrderBy(e => Vector3.Distance(e.transform.position, tower.TowerGroup.transform.position)).FirstOrDefault();
+        var closestEnemy = tower.TowerGroup.enemyManager.ValidEnemies.
+            OrderBy(e => Vector3.Distance(e.transform.position, tower.TowerGroup.transform.position)).
+            FirstOrDefault();
 
         if (closestEnemy != null && Vector3.Distance(closestEnemy.transform.position, tower.TowerGroup.transform.position) <= tower.AttackRange)
         {
