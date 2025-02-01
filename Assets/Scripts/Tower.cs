@@ -10,6 +10,7 @@ public class Tower : MonoBehaviour
     public TowerAttack towerAttack;
 
     public SpriteRenderer spriteRenderer;
+    public SpriteRenderer shadowRenderer;
 
     public TowerGroup TowerGroup
     {
@@ -67,7 +68,7 @@ public class Tower : MonoBehaviour
         this.data = data;
     }
 
-    public void OnSpawn(TowerGroup group)
+    public void OnAddTowerGroup(TowerGroup group)
     {
         TowerGroup = group;
         transform.SetParent(TowerGroup.transform);

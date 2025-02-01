@@ -7,7 +7,8 @@ using static WaveTable;
 
 public class WaveWindow : PopWindow
 {
-    public LocalizationText localizationText;
+    [SerializeField]
+    private LocalizationText localizationText;
 
 
     public override void Open()

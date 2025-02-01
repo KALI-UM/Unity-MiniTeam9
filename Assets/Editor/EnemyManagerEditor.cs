@@ -64,13 +64,13 @@ public class EnemyManagerEditor : Editor
         {
             //이미 있으면 삭제
             AssetDatabase.DeleteAsset(string.Format(dataPath, data.String_Key));
-       
+
             //해당 데이터 ScriptableObject생성
             EnemyData scriptableData = ScriptableObject.CreateInstance<EnemyData>();
             scriptableData.SetData(data);
 
             AssetDatabase.CreateAsset(scriptableData, string.Format(dataPath, data.String_Key));
-            AssetDatabase.SaveAssets();           
+            AssetDatabase.SaveAssets();
         }
     }
 
@@ -97,6 +97,8 @@ public class EnemyManagerEditor : Editor
                 var sprite = AssetDatabase.LoadAssetAtPath<Sprite>(data.Monster_Resource);
                 enemy.spriteRenderer.sprite = sprite;
             }
+
+
             PrefabUtility.SaveAsPrefabAsset(newPrefab, string.Format(prefabPath, data.String_Key));
             GameObject.DestroyImmediate(newPrefab);
         }

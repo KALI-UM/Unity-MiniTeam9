@@ -1,4 +1,5 @@
 using DG.Tweening.Core.Easing;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -7,13 +8,13 @@ using UnityEngine.UI;
 
 public class TowerSpawn : UIElement
 {
-
     public Button spawnButton;
     public TextMeshProUGUI spawnCostText;
 
     public int initialSpawnCost;
     [ReadOnly]
     private int spawnCost;
+
 
     private void Awake()
     {
@@ -27,7 +28,6 @@ public class TowerSpawn : UIElement
 
         spawnCostText.text = spawnCost.ToString();
     }
-
 
     public void OnClickSpawn()
     {

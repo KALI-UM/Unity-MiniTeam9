@@ -20,7 +20,8 @@ public class WaveTimer : UIElement
     // Update is called once per frame
     void Update()
     {
-        timeText.text = string.Format(timeFormat, (int)waveTime/60, (int)waveTime%60);
+        int tempTime = Mathf.CeilToInt(waveTime);
+        timeText.text = string.Format(timeFormat, tempTime / 60, tempTime % 60);
         waveTime -= Time.deltaTime;
     }
 

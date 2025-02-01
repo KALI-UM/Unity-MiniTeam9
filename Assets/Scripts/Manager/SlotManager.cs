@@ -14,9 +14,6 @@ public class SlotManager : InGameManager
     [SerializeField]
     private List<Slot> slots = new();
 
-    [SerializeField]
-    private int maxTowerCount = 50;
-    private int currTowerCount;
 
     [Serializable]
     public struct TowerPosition
@@ -64,11 +61,11 @@ public class SlotManager : InGameManager
                 selectedSlotIndex = currSlot.SlotIndex;
                 if (!currSlot.TowerGroup.IsEmpty)
                 {
-                    gameManager.UIManager.Open(FocusWindows.TowerInteraction);
+                    GameManager.UIManager.Open(FocusWindows.TowerInteraction);
                 }
                 else
                 {
-                    gameManager.UIManager.Close(FocusWindows.TowerInteraction);
+                    GameManager.UIManager.Close(FocusWindows.TowerInteraction);
                 }
             };
             group.transform.SetParent(gameObject.transform);
@@ -89,7 +86,7 @@ public class SlotManager : InGameManager
 
     public bool IsPossibleToAdd()
     {
-        return (currTowerCount <= maxTowerCount && IsEmptySlotExist());
+        return (GameManager.TowerManager.TowerCount <= GameManager.TowerManager.MaxTowerCount && IsEmptySlotExist());
     }
 
     public void AddTower(Tower tower)
@@ -99,14 +96,57 @@ public class SlotManager : InGameManager
             if (slot.IsPossibleToAdd(tower.TowerId))
             {
                 slot.AddTower(tower);
-                return;
+                break;
+            }
+        }
+
+        //foreach (var slot in slots)
+        //{
+        //    if (slot.TowerGroup.IsEmpty)
+        //    {
+        //        slot.AddTower(tower);
+        //        break;
+        //    }
+        //}
+        //UpdateTowerSort();
+    }
+
+    public void UpdateTowerSort()
+    {
+        for (int i = 0; i < slots.Count; i++)
+        {
+            var slot = slots[i];
+
+            if (slot.TowerGroup.IsEmpty || slot.TowerGroup.IsFull)
+                continue;
+
+            for (int j = i + 1; j < slots.Count; j++)
+            {
+                var otherSlot = slots[j];
+                if (otherSlot.TowerGroup.IsEmpty || otherSlot.TowerGroup.IsFull)
+                    continue;
+
+                if (slot.TowerGroup.TowerId == otherSlot.TowerGroup.TowerId)
+                {
+                    while (!otherSlot.TowerGroup.IsEmpty)
+                    {
+                        var t = otherSlot.TowerGroup.SendToNewTowerGroup();
+                        slot.TowerGroup.ReceiveTower(t);
+
+                        if (slot.TowerGroup.IsFull)
+                        {
+                            break;
+                        }
+                    }
+                }
             }
         }
     }
 
+
     public void OnBeginDragSlot(Vector3 dragStart)
     {
-        IsSlotDragging=true;
+        IsSlotDragging = true;
         lineRenderer.enabled = true;
         lineRenderer.SetPosition(0, dragStart);
         lineRenderer.SetPosition(1, dragStart);
@@ -120,7 +160,7 @@ public class SlotManager : InGameManager
 
     public void OnEndDragSlot()
     {
-        IsSlotDragging =false;
+        IsSlotDragging = false;
         lineRenderer.enabled = false;
     }
 

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class InGameManager : MonoBehaviour
 {
-    protected GameManager gameManager;
+    private GameManager gameManager;
     public GameManager GameManager { get => gameManager; }
 
     private static InGameManagers managerId;

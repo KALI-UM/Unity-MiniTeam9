@@ -37,6 +37,8 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDra
     {
         slotManager = manager;
         this.TowerGroup = group;
+        this.TowerGroup.towerManager = SlotManager.GameManager.TowerManager;
+        this.TowerGroup.enemyManager= SlotManager.GameManager.EnemyManager;
         group.transform.position = transform.position;
 
         SlotIndex = index;
@@ -67,6 +69,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDra
     public void RemoveTower()
     {
         TowerGroup.RemoveTower();
+        slotManager.UpdateTowerSort();
     }
 
     public void RemoveAllTower()

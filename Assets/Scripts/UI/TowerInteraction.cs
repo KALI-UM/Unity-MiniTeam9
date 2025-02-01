@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,7 @@ public class TowerInteraction : FocusWindow
     [SerializeField]
     private Button fusionButton;
 
+    private TowerManager towerManager;
     private SlotManager slotManager;
 
 
@@ -17,6 +19,7 @@ public class TowerInteraction : FocusWindow
     {
         base.Initialize(mgr);
         slotManager = uiManager.GameManager.SlotManager;
+        towerManager = uiManager.GameManager.TowerManager;
     }
 
     private void Awake()

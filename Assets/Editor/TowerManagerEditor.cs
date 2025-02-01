@@ -42,7 +42,7 @@ public class TowerManagerEditor : Editor
 
         EditorGUILayout.LabelField("Range Factor");
         float currRangeFactor = EditorGUILayout.Slider(TowerManager.GlobalRangeFactor, 0.1f, 5f);
-        if(TowerManager.GlobalRangeFactor!= currRangeFactor)
+        if (TowerManager.GlobalRangeFactor != currRangeFactor)
         {
             TowerManager.GlobalRangeFactor = currRangeFactor;
         }
@@ -112,6 +112,22 @@ public class TowerManagerEditor : Editor
 
         UpdateTowerDatas(list);
 
+        //임시 컬러
+        var colorList = new List<Color>();
+        colorList.Add(Color.gray);
+        colorList.Add(Color.black);
+        colorList.Add(Color.green);
+        colorList.Add(Color.cyan);
+        colorList.Add(Color.red);
+        colorList.Add(Color.yellow);
+
+        for (int i = 0; i < colorList.Count; i++)
+        {
+            var color = colorList[i];
+            color.a = 0.5f;
+            colorList[i] = color;
+        }
+
         foreach (var data in list)
         {
             //이미 있으면 삭제
@@ -129,7 +145,9 @@ public class TowerManagerEditor : Editor
                 var sprite = AssetDatabase.LoadAssetAtPath<Sprite>(data.Tower_Resource);
                 tower.spriteRenderer.sprite = sprite;
             }
-            //newPrefab.GetComponent<Tower>().InitializeData((eTower)data.Tower_ID, DataTableManager.TowerTable.Get((eTower)data.Tower_ID));
+
+            tower.shadowRenderer.color = colorList[tower.Data.grade];
+
             PrefabUtility.SaveAsPrefabAsset(newPrefab, string.Format(prefabPath, data.String_Key));
             GameObject.DestroyImmediate(newPrefab);
         }

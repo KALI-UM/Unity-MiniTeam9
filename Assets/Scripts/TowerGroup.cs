@@ -20,11 +20,8 @@ public class TowerGroup : MonoBehaviour
     [ReadOnly, SerializeField]
     private List<Tower> towers = new();
 
-    public EnemyManager enemyManager
-    {
-        get;
-        private set;
-    }
+    public TowerManager towerManager;
+    public EnemyManager enemyManager;
 
     public readonly int maxSlotTowerCount = 3;
     public bool IsEmpty
@@ -47,12 +44,6 @@ public class TowerGroup : MonoBehaviour
 
     #endregion
 
-    private void Awake()
-    {
-        enemyManager = GameObject.FindObjectOfType<GameManager>().EnemyManager;
-    }
-
-
     public void AddTower(Tower tower)
     {
         if (IsEmpty)
@@ -60,8 +51,10 @@ public class TowerGroup : MonoBehaviour
             TowerId = tower.TowerId;
         }
 
-        tower.OnSpawn(this);
+        tower.OnAddTowerGroup(this);
         towers.Add(tower);
+        towerManager.TowerCountChange(1);
+
         UpdateTowerPosition();
     }
 
@@ -70,6 +63,24 @@ public class TowerGroup : MonoBehaviour
         var tower = towers[towers.Count - 1];
         towers.RemoveAt(towers.Count - 1);
         GameObject.Destroy(tower.gameObject);
+        towerManager.TowerCountChange(-1);
+
+        UpdateTowerPosition();
+    }
+
+    public Tower SendToNewTowerGroup()
+    {
+        var tower = towers[towers.Count - 1];
+        towers.RemoveAt(towers.Count - 1);
+
+        UpdateTowerPosition();
+        return tower;
+    }
+
+    public void ReceiveTower(Tower tower)
+    {
+        tower.OnAddTowerGroup(this);
+        towers.Add(tower);
 
         UpdateTowerPosition();
     }
