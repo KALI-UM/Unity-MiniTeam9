@@ -53,14 +53,13 @@ public class WayPointData : MonoBehaviour
         SpawnMinPoint = min;
         SpawnMaxPoint = max;
 
-        initialDirection = (wayPoints[0].position-spawnPoint.position).normalized;
-        Vector3 prev = wayPoints[0].position;
-        for (int i=1; i<wayPoints.Count; i++)
+        initialDirection = (wayPoints[0].position - spawnPoint.position).normalized;
+        Vector3 prev = wayPoints[wayPoints.Count - 1].position;
+        for (int i = 0; i < wayPoints.Count; i++)
         {
             directions.Add((wayPoints[i].position - prev).normalized);
             prev = wayPoints[i].position;
         }
-        directions.Add((wayPoints[0].position - prev).normalized);
     }
 
     private void OnDrawGizmos()

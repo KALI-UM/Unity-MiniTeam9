@@ -3,21 +3,23 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using static WaveTable;
 
 public class WaveWindow : PopWindow
 {
-    public TextMeshProUGUI text;
-    private readonly string waveFormat = "Wave {0}";
+    [SerializeField]
+    private LocalizationText localizationText;
 
-
-    public void WaveUpdate(int wave)
-    {
-        text.text=string.Format(waveFormat, wave);
-    }
 
     public override void Open()
     {
-        WaveUpdate(windowManager.GameManager.CurrentWave);
+        KALLogger.Log<WaveWindow>();
         base.Open();
+    }
+
+    public void OnWaveStart(WaveData data)
+    {
+        localizationText.OnStringIdChange(data.waveTextFormat);
+        localizationText.OnTextParamChange(data.waveNumber.ToString());
     }
 }

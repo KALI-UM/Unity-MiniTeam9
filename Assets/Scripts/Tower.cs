@@ -7,10 +7,18 @@ using static TowerTable;
 
 public class Tower : MonoBehaviour
 {
+    public TowerAttack towerAttack;
+
     public SpriteRenderer spriteRenderer;
+    public SpriteRenderer shadowRenderer;
 
-    private Enemy target;
+    public TowerGroup TowerGroup
+    {
+        get;
+        private set;
+    }
 
+    #region TowerData
     public eTower TowerId
     {
         get;
@@ -25,35 +33,29 @@ public class Tower : MonoBehaviour
         get => data;
     }
 
-    public bool IsValidTarget
-    {
-        get
-        {
-            return target != null && !target.IsDead && Vector3.Distance(target.transform.position, transform.position) <= AttackRange;
-        }
-    }
-
     public float AttackRange
     {
-        get
-        {
-            return Data.attackRange*TowerManager.RangeFactor;
-        }
+        get => Data.attackRange * TowerManager.GlobalRangeFactor;
     }
+
     public int AttackPower
     {
-        get
-        {
-            return Data.attackPower ;
-        }
+        get => Data.attackPower;
     }
+
     public float AttackSpeed
     {
-        get
-        {
-            return Data.attackSpeed;
-        }
+        get => Data.attackSpeed * TowerManager.GlobalAttackSpeedFactor;
     }
+
+    public float AttackInterval
+    {
+        get => 1f / AttackSpeed;
+    }
+
+    #endregion
+
+    private Coroutine coAttack;
 
     private void Awake()
     {
@@ -66,22 +68,11 @@ public class Tower : MonoBehaviour
         this.data = data;
     }
 
-    public void AttackTarget()  
+    public void OnAddTowerGroup(TowerGroup group)
     {
-        target.OnDamaged(AttackPower);
+        TowerGroup = group;
+        transform.SetParent(TowerGroup.transform);
+        towerAttack.enabled = true;
     }
-
-    public void SetTarget(Enemy target)
-    {
-        this.target = target;
-    }
-
-    private void OnDrawGizmos()
-    {
-        if (!IsValidTarget)
-            return;
-
-        Gizmos.color = Color.blue;
-        Gizmos.DrawLine(transform.position, target.transform.position);
-    }
+   
 }

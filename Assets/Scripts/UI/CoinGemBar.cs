@@ -1,0 +1,40 @@
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class CoinGemBar : UIElement
+{
+    public TextMeshProUGUI coinText;
+    public TextMeshProUGUI gemText;
+    public TextMeshProUGUI towerText;
+
+    private string towerCountFormat;
+
+    public override void Initialize(UIManager mgr)
+    {
+       base.Initialize(mgr);
+
+        uiManager.GameManager.coinGemSystem.onCoinCountChange += (int value) => OnChangeCoinValue(value);
+        uiManager.GameManager.coinGemSystem.onGemCountChange += (int value) => OnChangeGemValue(value);
+
+        towerCountFormat = "{0}/" + uiManager.GameManager.TowerManager.MaxTowerCount;
+        uiManager.GameManager.TowerManager.onTowerCountChange += (int value) => OnChangeTowerCountValue(value);
+    }
+
+    public void OnChangeCoinValue(int value)
+    {
+        coinText.text = value.ToString();
+    }
+
+    public void OnChangeGemValue(int value)
+    {
+        gemText.text = value.ToString();
+    }
+
+    public void OnChangeTowerCountValue(int value)
+    {
+        towerText.text =string.Format(towerCountFormat, value);
+    }
+}

@@ -3,31 +3,31 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using static WaveTable;
 
-public class WaveTimer : MonoBehaviour
+public class WaveTimer : UIElement
 {
     [SerializeField]
     private  TextMeshProUGUI timeText;
     [SerializeField]
     private  TextMeshProUGUI waveText;
 
-    private string timeFormat = "mm:ss";
+    private string timeFormat = "{0:D2}:{1:D2}";
     private string waveFormat = "WAVE {0:D2}";
 
-
-    void Start()
-    {
-        
-    }
-
+    private float waveTime;
+    
     // Update is called once per frame
     void Update()
     {
-        timeText.text = string.Format(timeFormat, Time.time);
+        int tempTime = Mathf.CeilToInt(waveTime);
+        timeText.text = string.Format(timeFormat, tempTime / 60, tempTime % 60);
+        waveTime -= Time.deltaTime;
     }
 
-    private void OnWaveStarted(int waveValue)
+    public void OnWaveStart(WaveData data)
     {
-        waveText.text = string.Format(waveFormat, waveValue);
+        waveText.text = string.Format(waveFormat, data.waveNumber);
+        waveTime = data.waveDuration;
     }
 }

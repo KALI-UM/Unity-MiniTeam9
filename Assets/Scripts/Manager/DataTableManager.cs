@@ -3,12 +3,18 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public static class DataTableManager
 {
     private static readonly Dictionary<string, DataTable> tables = new Dictionary<string, DataTable>();
 
     static DataTableManager()
     {
+        var stringTabale = new StringTable();
+        stringTabale.Load(DataTableIds.String[(int)Variables.currentLang]);
+        tables.Add(DataTableIds.String[(int)Variables.currentLang], stringTabale);
+
+
         var towerTable = new TowerTable();
         towerTable.Load(DataTableIds.Tower);
         tables.Add(DataTableIds.Tower, towerTable);
@@ -20,6 +26,7 @@ public static class DataTableManager
         var waveTable = new WaveTable();
         waveTable.Load(DataTableIds.Wave);
         tables.Add(DataTableIds.Wave, waveTable);
+
     }
 
     public static StringTable StringTable

@@ -6,6 +6,11 @@ using static WaveTable;
 
 public class GameManager : MonoBehaviour
 {
+    [ReadOnly]
+    public readonly CoinGemSystem coinGemSystem = new();
+    public int initialCoinCount = 200;
+    public int initialGemCount = 0;
+
     #region Managers
     //public InGameManager[] managers;
     [SerializeField]
@@ -16,9 +21,6 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private EnemyManager enemyManager;
-
-    [SerializeField]
-    private WindowManager windowManager;
 
     [SerializeField]
     private UIManager uiManager;
@@ -38,11 +40,6 @@ public class GameManager : MonoBehaviour
         get => slotManager;
     }
 
-    public WindowManager WindowManager
-    {
-        get => windowManager;
-    }
-
     public UIManager UIManager
     {
         get => uiManager;
@@ -53,47 +50,57 @@ public class GameManager : MonoBehaviour
     public Action onGameClear;
     public Action onGameOver;
 
+    #region Wave
+
     [SerializeField]
     private List<WaveData> waveDatas;
 
-    public int CurrentWave
+    public WaveData CurrentWaveData
+    {
+        get => waveDatas[CurrentWaveNumber];
+    }
+
+    public int CurrentWaveNumber
     {
         get;
         private set;
     }
 
-    public int lastWave = 10;
+    public int lastWaveNumber = 10;
     public bool IsLastWave
     {
-        get => CurrentWave >= lastWave;
+        get => CurrentWaveNumber >= lastWaveNumber;
     }
 
-    public Action onWaveStart;
+    public Action<WaveData> onWaveStart;
 
     private Coroutine coWave;
     private Coroutine coWaveSpawnEnemy;
 
+    #endregion
+
     private void Awake()
     {
-        //foreach (var manager in managers)
-        //{
-        //    manager.Initialize(this, Enum.Parse<InGameManagers>(manager.name));
-        //}
-
         InitializeManagers();
 
         waveDatas = DataTableManager.WaveTable.GetWaveDatas();
-
-        CurrentWave = 0;
+        CurrentWaveNumber = 0;
     }
 
     private void InitializeManagers()
     {
-        SlotManager.Initialize(this);
-        TowerManager.Initialize(this);
-        EnemyManager.Initialize(this);
-        WindowManager.Initialize(this);
-        UIManager.Initialize(this);
+        SlotManager.InitializeManager(this);
+        TowerManager.InitializeManager(this);
+        EnemyManager.InitializeManager(this);
+        UIManager.InitializeManager(this);
+
+        SlotManager.Initialize();
+        TowerManager.Initialize();
+        EnemyManager.Initialize();
+        UIManager.Initialize();
+
+        coinGemSystem.AddCoin(initialCoinCount);
+        coinGemSystem.AddGem(initialGemCount);
     }
 
     private void Start()
@@ -103,9 +110,21 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (IsLastWave && EnemyManager.ValidEnemies.Count == 0)
+        switch (EnemyManager.ValidEnemies.Count)
         {
-            OnGameClear();
+            case 0:
+                {
+                    if (IsLastWave)
+                    {
+                        OnGameClear();
+                    }
+                    break;
+                }
+            case 100:
+                {
+                    OnGameOver();
+                    break;
+                }
         }
     }
 
@@ -114,7 +133,7 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < waveDatas[waveNumber].enemyCount; i++)
         {
             EnemyManager.SpawnEnemy(waveDatas[waveNumber].enemyId);
-            yield return new WaitForSeconds(waveDatas[CurrentWave].spawnInterval);
+            yield return new WaitForSeconds(waveDatas[CurrentWaveNumber].spawnInterval);
         }
     }
 
@@ -123,8 +142,8 @@ public class GameManager : MonoBehaviour
         while (!IsLastWave)
         {
             OnWaveStart();
-            coWaveSpawnEnemy = StartCoroutine(CoSpawnEnemy(CurrentWave));
-            yield return new WaitForSeconds(waveDatas[CurrentWave].spawnDuration);
+            coWaveSpawnEnemy = StartCoroutine(CoSpawnEnemy(CurrentWaveNumber));
+            yield return new WaitForSeconds(CurrentWaveData.waveDuration);
             StopCoroutine(coWaveSpawnEnemy);
         }
     }
@@ -145,8 +164,10 @@ public class GameManager : MonoBehaviour
 
     public void OnWaveStart()
     {
-        CurrentWave++;
-        onWaveStart?.Invoke();
-        KALLogger.Log($"현재 Wave{CurrentWave}");
+        coinGemSystem.AddCoin(CurrentWaveNumber * 10);
+
+        CurrentWaveNumber++;
+        onWaveStart?.Invoke(CurrentWaveData);
+        KALLogger.Log($"현재 Wave{CurrentWaveNumber}");
     }
 }

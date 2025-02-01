@@ -1,132 +1,138 @@
+using DG.Tweening.Core.Easing;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using static UnityEngine.GraphicsBuffer;
 
-public class Slot : MonoBehaviour
+public class Slot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    private EnemyManager enemyManager;
+    protected SlotManager slotManager;
+    public SlotManager SlotManager
+    {
+        get => slotManager;
+    }
 
-    public eTower TowerId;
     private List<Tower> towers = new();
 
-    private int columnIndex;
-    private int rowIndex;
 
-    public bool IsEmpty
+    public int SlotIndex
     {
         get;
         private set;
     }
 
-    public readonly int maxSlotTowerCount = 3;
-    public bool IsFull
+    public Action onSelected;
+
+
+    public TowerGroup TowerGroup
     {
         get;
         private set;
     }
 
-    private Coroutine coTowerAttack;
-
-    private void Awake()
+    public void Initialize(SlotManager manager, TowerGroup group, int index)
     {
-        enemyManager = GameObject.FindGameObjectsWithTag("GameController").First(obj => obj.name.Equals("EnemyManager")).GetComponent<EnemyManager>();
+        slotManager = manager;
+        this.TowerGroup = group;
+        this.TowerGroup.towerManager = SlotManager.GameManager.TowerManager;
+        this.TowerGroup.enemyManager= SlotManager.GameManager.EnemyManager;
+        group.transform.position = transform.position;
 
-        IsEmpty = true;
-        IsFull = false;
-    }
-
-    public void SetIndex(int rowIndex, int colIndex)
-    {
-        this.columnIndex = colIndex;
-        this.rowIndex = rowIndex;
+        SlotIndex = index;
     }
 
     public bool IsPossibleToAdd(eTower towerId)
     {
-        if (IsEmpty)
+        if (TowerGroup.IsEmpty)
+        {
             return true;
+        }
 
-        return (TowerId==towerId) && (!IsFull);
+        return (!TowerGroup.IsFull) && (TowerGroup.TowerId == towerId);
     }
 
     public void AddTower(Tower tower)
     {
-        if (IsEmpty)
-        {
-            TowerId = tower.TowerId;
-            IsEmpty = false;
+        TowerGroup.AddTower(tower);
+    }
 
-            towers.Add(tower);
-            coTowerAttack = StartCoroutine(CoTowerAttack());
-        }
-        else
-        {
-            towers.Add(tower);
-        }
-
-        for (int i = 0; i < towers.Count; i++)
-        {
-            towers[i].transform.position = transform.position + SlotManager.GetTowerPosition(towers.Count, i);
-        }
-
-        //KALLogger.Log(tower.TowerId + $"삽입 slot({rowIndex},{columnIndex})", this);
-        if (towers.Count >= maxSlotTowerCount)
-        {
-            IsFull = true;
-        }
+    public void FusionTower()
+    {
+        GameObject newTower = SlotManager.GameManager.TowerManager.GetRandomTower(TowerGroup.Data.grade + 1);
+        RemoveAllTower();
+        AddTower(newTower.GetComponent<Tower>());
     }
 
     public void RemoveTower()
     {
-
+        TowerGroup.RemoveTower();
+        slotManager.UpdateTowerSort();
     }
 
     public void RemoveAllTower()
     {
-
+        while (!TowerGroup.IsEmpty)
+        {
+            TowerGroup.RemoveTower();
+        }
     }
 
-    private IEnumerator CoTowerAttack()
+    public void ChangeTowerGroup(TowerGroup towerGroup)
     {
-        while (true)
+        TowerGroup = towerGroup;
+        TowerGroup.MoveTo(transform.position);
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        onSelected?.Invoke();
+        KALLogger.Log("슬롯" + SlotIndex + "선택");
+    }
+
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        if (!TowerGroup.IsEmpty)
         {
-            foreach (Tower tower in towers)
+            slotManager.OnBeginDragSlot(transform.position);
+        }
+    }
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        KALLogger.Log("슬롯" + SlotIndex + "드래그->" + eventData.pointerEnter.name);
+        if (!TowerGroup.IsEmpty)
+        {
+            var slot = eventData.pointerEnter.GetComponent<Slot>();
+            if (slot != null)
             {
-                if (!tower.IsValidTarget)
-                {
-                    FindTowerTarget(tower);
-                }
-
-                if (tower.IsValidTarget)
-                {
-                    tower.AttackTarget();
-                }
-
+                slotManager.OnDragSlot(eventData.pointerEnter.transform.position);
             }
-            yield return new WaitForSeconds(TowerManager.SpeedFactor*towers[0].AttackSpeed);
+            else
+            {
+                eventData.dragging = false;
+                slotManager.OnEndDragSlot();
+            }
         }
     }
 
-    private bool FindTowerTarget(Tower tower)
+    //드래그 끝날시 호출
+    public void OnEndDrag(PointerEventData eventData)
     {
-        var closestEnemy = enemyManager.ValidEnemies.OrderBy(e => Vector3.Distance(e.transform.position, transform.position)).FirstOrDefault();
+        KALLogger.Log("슬롯" + SlotIndex + "드래그끝");
 
-        if (closestEnemy != null && Vector3.Distance(closestEnemy.transform.position, transform.position) <= tower.AttackRange)
+        var slot = eventData.pointerEnter.GetComponent<Slot>();
+        if (slot != null)
         {
-            tower.SetTarget(closestEnemy);
-            return true;
+            TowerGroup temp = TowerGroup;
+
+            ChangeTowerGroup(slot.TowerGroup);
+            slot.ChangeTowerGroup(temp);
         }
-        return false;
+
+        slotManager.OnEndDragSlot();
     }
 
-    private void OnDrawGizmos()
-    {
-        if (!IsEmpty)
-        {
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawWireSphere(transform.position, towers[0].AttackRange);
-        }
-    }
 }

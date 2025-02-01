@@ -17,6 +17,9 @@ using static UnityEngine.EventSystems.EventTrigger;
 [CustomEditor(typeof(TowerManager))]
 public class TowerManagerEditor : Editor
 {
+    //public static float GlobalRangeFactor = 1f;
+    //public static float GlobalAttackSpeedFactor = 1f;
+    //public static float GlobalTowerMoveSpeed = 10f;
     public override void OnInspectorGUI()
     {
         if (GUILayout.Button("Update Tower Enum"))
@@ -37,18 +40,25 @@ public class TowerManagerEditor : Editor
             UpdateTowerPrefabs(towerManager.defaultTowerPrefab, list);
         }
 
-        EditorGUILayout.LabelField("RangeFactor");
-        float currRangeFactor = EditorGUILayout.Slider(TowerManager.RangeFactor, 0.1f, 5f);
-        if(TowerManager.RangeFactor!= currRangeFactor)
+        EditorGUILayout.LabelField("Range Factor");
+        float currRangeFactor = EditorGUILayout.Slider(TowerManager.GlobalRangeFactor, 0.1f, 5f);
+        if (TowerManager.GlobalRangeFactor != currRangeFactor)
         {
-            TowerManager.RangeFactor = currRangeFactor;
+            TowerManager.GlobalRangeFactor = currRangeFactor;
         }
 
-        EditorGUILayout.LabelField("SpeedFactor");
-        float currSpeedFactor = EditorGUILayout.Slider(TowerManager.SpeedFactor, 0.1f, 5f);
-        if (TowerManager.SpeedFactor != currSpeedFactor)
+        EditorGUILayout.LabelField("Attack Speed Factor");
+        float currAttackSpeedFactor = EditorGUILayout.Slider(TowerManager.GlobalAttackSpeedFactor, 0.1f, 5f);
+        if (TowerManager.GlobalAttackSpeedFactor != currAttackSpeedFactor)
         {
-            TowerManager.SpeedFactor = currSpeedFactor;
+            TowerManager.GlobalAttackSpeedFactor = currAttackSpeedFactor;
+        }
+
+        EditorGUILayout.LabelField("Move Speed Factor");
+        float currMoveSpeedFactor = EditorGUILayout.Slider(TowerManager.GlobalTowerMoveSpeed, 0.1f, 10f);
+        if (TowerManager.GlobalTowerMoveSpeed != currMoveSpeedFactor)
+        {
+            TowerManager.GlobalTowerMoveSpeed = currMoveSpeedFactor;
         }
 
         base.OnInspectorGUI();
@@ -102,6 +112,22 @@ public class TowerManagerEditor : Editor
 
         UpdateTowerDatas(list);
 
+        //임시 컬러
+        var colorList = new List<Color>();
+        colorList.Add(Color.gray);
+        colorList.Add(Color.black);
+        colorList.Add(Color.green);
+        colorList.Add(Color.cyan);
+        colorList.Add(Color.red);
+        colorList.Add(Color.yellow);
+
+        for (int i = 0; i < colorList.Count; i++)
+        {
+            var color = colorList[i];
+            color.a = 0.5f;
+            colorList[i] = color;
+        }
+
         foreach (var data in list)
         {
             //이미 있으면 삭제
@@ -119,7 +145,9 @@ public class TowerManagerEditor : Editor
                 var sprite = AssetDatabase.LoadAssetAtPath<Sprite>(data.Tower_Resource);
                 tower.spriteRenderer.sprite = sprite;
             }
-            //newPrefab.GetComponent<Tower>().InitializeData((eTower)data.Tower_ID, DataTableManager.TowerTable.Get((eTower)data.Tower_ID));
+
+            tower.shadowRenderer.color = colorList[tower.Data.grade];
+
             PrefabUtility.SaveAsPrefabAsset(newPrefab, string.Format(prefabPath, data.String_Key));
             GameObject.DestroyImmediate(newPrefab);
         }

@@ -14,8 +14,11 @@ public class EnemyManager : InGameManager
 
     private Dictionary<eEnemy, ObjectPool<Enemy>> enemyPools = new();
 
+
+    [ReadOnly, SerializeField]
     //Valid = 공격가능한 enemy 목록을 관리
     private List<Enemy> validEnemies = new();
+
     public List<Enemy> ValidEnemies
     {
         get => validEnemies;
@@ -126,6 +129,9 @@ public class EnemyManager : InGameManager
             enemyPools[enemy.EnemyId].Release(enemy);
             validEnemies.Remove(enemy);
             enemyCountBar.OnCountChanged(CurrEnemyCount);
+
+            GameManager.coinGemSystem.AddCoin(enemy.Data.dropGold);
+            GameManager.coinGemSystem.AddGem(enemy.Data.dropGem);
         };
         return enemy;
     }

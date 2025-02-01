@@ -4,31 +4,36 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 
-public class FocusWindow : MonoBehaviour
+public class FocusWindow : UIElement
 {
-    public GameObject firstSelected;
+    public float inputThreshold = 0.5f;
 
-    protected WindowManager windowManager;
-
-    public void Initialize(WindowManager mgr)
+    public virtual void OnFocus()
     {
-        windowManager = mgr;
+
     }
 
-    public void OnFocus()
+    public virtual void OnOutFocus()
     {
-        EventSystem.current.SetSelectedGameObject(firstSelected);
+
     }
 
     public virtual void Open()
     {
-        gameObject.SetActive(true);
         OnFocus();
+        gameObject.SetActive(true);
+        StartCoroutine(CoInputThreshold());
     }
 
     public virtual void Close()
     {
-        gameObject.SetActive(false);
+        gameObject.SetActive(false); 
     }
 
+    private IEnumerator CoInputThreshold()
+    {
+        enabled = false;
+        yield return new WaitForSecondsRealtime(inputThreshold);
+        enabled = true;
+    }
 }
