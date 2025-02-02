@@ -1,8 +1,7 @@
 public enum UIElements
 {
-	Timer,
+	WaveTimer,
 	EnemyCount,
 	CoinGemBar,
 	TowerSpawn,
-	TowerInformation,
 }

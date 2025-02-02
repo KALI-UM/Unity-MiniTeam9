@@ -31,19 +31,19 @@ public class TowerSpawn : UIElement
 
     public void OnClickSpawn()
     {
-        if (!uiManager.GameManager.coinGemSystem.CanPayCoin(spawnCost))
+        if (!UIManager.GameManager.coinGemSystem.CanPayCoin(spawnCost))
         {
             return;
         }
 
-        if (!uiManager.GameManager.SlotManager.IsEmptySlotExist())
+        if (!UIManager.GameManager.SlotManager.IsEmptySlotExist())
         {
             return;
         }
 
-        uiManager.GameManager.coinGemSystem.PayCoin(spawnCost);
-        GameObject tower = uiManager.GameManager.TowerManager.GetRandomTower(1);
-        uiManager.GameManager.SlotManager.AddTower(tower.GetComponent<Tower>());
+        UIManager.GameManager.coinGemSystem.PayCoin(spawnCost);
+        GameObject tower = UIManager.GameManager.TowerManager.GetRandomTower(1);
+        UIManager.GameManager.SlotManager.AddTower(tower.GetComponent<Tower>());
 
         spawnCost += 2;
         spawnCostText.text = spawnCost.ToString();

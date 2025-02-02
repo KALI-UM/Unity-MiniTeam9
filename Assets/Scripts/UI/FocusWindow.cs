@@ -27,13 +27,23 @@ public class FocusWindow : UIElement
 
     public virtual void Close()
     {
-        gameObject.SetActive(false); 
+        gameObject.SetActive(false);
+    }
+
+    protected virtual void EnableInput()
+    {
+        UIManager.eventSystem.enabled = true;
+    }
+
+    protected virtual void DisableInput()
+    {
+        UIManager.eventSystem.enabled = false;
     }
 
     private IEnumerator CoInputThreshold()
     {
-        enabled = false;
+        DisableInput();
         yield return new WaitForSecondsRealtime(inputThreshold);
-        enabled = true;
+        EnableInput();
     }
 }

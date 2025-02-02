@@ -29,7 +29,7 @@ public class EnemyManagerEditor : Editor
             var list = DataTable.LoadCSV<EnemyRawData>(textAsset.text);
 
             var enemyManager = (EnemyManager)target;
-            UpdateEnemyPrefabs(enemyManager.defaultEnemyPrefab, list);
+            UpdateEnemyPrefabs(enemyManager.defaultEnemyPrefab, enemyManager.bossEnemyPrefab, list);
         }
 
         base.OnInspectorGUI();
@@ -74,7 +74,7 @@ public class EnemyManagerEditor : Editor
         }
     }
 
-    private void UpdateEnemyPrefabs(GameObject defaultPrefab, List<EnemyRawData> list)
+    private void UpdateEnemyPrefabs(GameObject defaultPrefab, GameObject bossPrefab, List<EnemyRawData> list)
     {
         string prefabPath = "Assets/Resources/Prefabs/Enemy/{0}.prefab";
         string dataPath = "Assets/Resources/Datas/Enemy/{0}.asset";
@@ -85,7 +85,7 @@ public class EnemyManagerEditor : Editor
         {
             //이미 있으면 삭제
             AssetDatabase.DeleteAsset(string.Format(prefabPath, data.String_Key));
-            GameObject newPrefab = Instantiate(defaultPrefab);
+            GameObject newPrefab = data.Monster_Grade == 2 ? Instantiate(bossPrefab) : Instantiate(defaultPrefab);
             var enemy = newPrefab.GetComponent<Enemy>();
 
             //해당 데이터 ScriptableObject
@@ -97,7 +97,6 @@ public class EnemyManagerEditor : Editor
                 var sprite = AssetDatabase.LoadAssetAtPath<Sprite>(data.Monster_Resource);
                 enemy.spriteRenderer.sprite = sprite;
             }
-
 
             PrefabUtility.SaveAsPrefabAsset(newPrefab, string.Format(prefabPath, data.String_Key));
             GameObject.DestroyImmediate(newPrefab);

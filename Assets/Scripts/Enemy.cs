@@ -28,10 +28,12 @@ public class Enemy : MonoBehaviour
         get => data;
     }
 
+    [ReadOnly, SerializeField]
+    private int hp;
     public int Hp
     {
-        get;
-        private set;
+        get => hp;
+        private set => hp = value;
     }
 
     public bool IsDead
@@ -42,7 +44,7 @@ public class Enemy : MonoBehaviour
 
     private void Awake()
     {
-        EnemyId=Data.Id;
+        EnemyId = Data.Id;
         movement.InitializeData(data);
     }
 
@@ -61,9 +63,9 @@ public class Enemy : MonoBehaviour
     public void OnReset()
     {
         IsDead = false;
-        
+
         Hp = Data.maxHp;
-        hpBar.OnHpChanged(Hp);
+        hpBar.OnHpChanged(Hp, Data.maxHp);
     }
 
     public void OnDamaged(int damage)
@@ -73,7 +75,7 @@ public class Enemy : MonoBehaviour
         {
             OnDie();
         }
-        hpBar.OnHpChanged((float)Hp / Data.maxHp);
+        hpBar.OnHpChanged(Hp, Data.maxHp);
     }
 
     public virtual void OnDie()

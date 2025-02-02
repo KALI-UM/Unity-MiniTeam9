@@ -43,11 +43,11 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDra
         SlotIndex = index;
     }
 
-    public bool IsPossibleToAdd(eTower towerId)
+    public bool IsNotEmptyAndPossibleToAdd(eTower towerId)
     {
         if (TowerGroup.IsEmpty)
         {
-            return true;
+            return false;
         }
 
         return (!TowerGroup.IsFull) && (TowerGroup.TowerId == towerId);
@@ -62,7 +62,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDra
     {
         GameObject newTower = SlotManager.GameManager.TowerManager.GetRandomTower(TowerGroup.Data.grade + 1);
         RemoveAllTower();
-        AddTower(newTower.GetComponent<Tower>());
+        SlotManager.AddTower(newTower.GetComponent<Tower>(), SlotIndex);
     }
 
     public void RemoveTower()

@@ -151,6 +151,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-Atlas_Character_001-0c546548_2
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 308
+        width: 67
+        height: 75
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b308674889717f4881125d8134ec349
+      internalID: 310831201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -164,6 +185,7 @@ TextureImporter:
     nameFileIdTable:
       sactx-0-2048x2048-ASTC 6x6-Atlas_Character_001-0c546548_0: -1123630478
       sactx-0-2048x2048-ASTC 6x6-Atlas_Character_001-0c546548_1: -833136881
+      sactx-0-2048x2048-ASTC 6x6-Atlas_Character_001-0c546548_2: 310831201
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

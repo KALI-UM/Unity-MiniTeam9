@@ -4,12 +4,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TowerInteraction : FocusWindow
+public class SlotInteraction : FocusWindow
 {
+    [SerializeField]
+    private
+    GameObject towerInteraction;
+
     [SerializeField]
     private Button sellButton;
     [SerializeField]
     private Button fusionButton;
+
+    [SerializeField]
+    private LocalizationText localizationTowerName;
 
     private TowerManager towerManager;
     private SlotManager slotManager;
@@ -18,10 +25,11 @@ public class TowerInteraction : FocusWindow
     public override void Initialize(UIManager mgr)
     {
         base.Initialize(mgr);
-        slotManager = uiManager.GameManager.SlotManager;
-        towerManager = uiManager.GameManager.TowerManager;
+        slotManager = UIManager.GameManager.SlotManager;
+        towerManager = UIManager.GameManager.TowerManager;
     }
 
+   
     private void Awake()
     {
         sellButton.onClick.AddListener(() => OnClickSell());
@@ -30,15 +38,21 @@ public class TowerInteraction : FocusWindow
 
     public override void Open()
     {
-        UpdateWindowPosition();
+        UpdateTowerInteractionPosition();
         fusionButton.interactable = slotManager.SelectedSlot.TowerGroup.CanFusion;
         base.Open();
+        UpdateTowerInformation();
     }
 
-    public void UpdateWindowPosition()
+    public void UpdateTowerInteractionPosition()
     {
         Vector3 screenPosition = Camera.main.WorldToScreenPoint(slotManager.SelectedSlot.transform.position);
-        transform.position = screenPosition;
+        towerInteraction.transform.position = screenPosition;
+    }
+
+    public void UpdateTowerInformation()
+    {
+        localizationTowerName.OnStringIdChange(slotManager.SelectedSlot.TowerGroup.Data.key);
     }
 
     public override void OnOutFocus()
