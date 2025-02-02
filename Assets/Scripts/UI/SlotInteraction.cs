@@ -42,6 +42,8 @@ public class SlotInteraction : FocusWindow
         fusionButton.interactable = slotManager.SelectedSlot.TowerGroup.CanFusion;
         base.Open();
         UpdateTowerInformation();
+
+        StartCoroutine(CoInputThreshold());
     }
 
     public void UpdateTowerInteractionPosition()
