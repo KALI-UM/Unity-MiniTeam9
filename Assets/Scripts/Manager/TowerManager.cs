@@ -12,6 +12,10 @@ public class TowerManager : InGameManager
     public static float GlobalAttackSpeedFactor = 1f;
     public static float GlobalTowerMoveSpeed = 10f;
 
+    public class AdditionalAttackData
+    {
+       
+    }
 
     public Action<int> onTowerCountChange;
 

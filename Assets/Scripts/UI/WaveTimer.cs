@@ -22,7 +22,7 @@ public class WaveTimer : UIElement
     {
         int tempTime = Mathf.CeilToInt(waveTime);
         int min = tempTime <= 0 ? 0 : tempTime / 60;
-        int sec = tempTime % 60;
+        int sec = Mathf.Clamp(tempTime % 60, 0, int.MaxValue);
 
         timeText.text = string.Format(timeFormat, min, sec);
         waveTime -= Time.deltaTime;

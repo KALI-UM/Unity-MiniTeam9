@@ -10,6 +10,8 @@ using static Enemy;
 public class EnemyManager : InGameManager
 {
     public GameObject defaultEnemyPrefab;
+    public GameObject bossEnemyPrefab;
+
     private readonly Dictionary<eEnemy, GameObject> enemyPrefabs = new();
 
     private Dictionary<eEnemy, ObjectPool<Enemy>> enemyPools = new();

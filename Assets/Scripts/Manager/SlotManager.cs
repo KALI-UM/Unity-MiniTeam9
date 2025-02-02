@@ -62,10 +62,13 @@ public class SlotManager : InGameManager
                 if (!currSlot.TowerGroup.IsEmpty)
                 {
                     GameManager.UIManager.Open(FocusWindows.TowerInteraction);
+                    GameManager.UIManager.uiElements[(int)UIElements.TowerInformation].gameObject.SetActive(true);
                 }
                 else
                 {
                     GameManager.UIManager.Close(FocusWindows.TowerInteraction);
+                    GameManager.UIManager.uiElements[(int)UIElements.TowerInformation].gameObject.SetActive(false);
+
                 }
             };
             group.transform.SetParent(gameObject.transform);

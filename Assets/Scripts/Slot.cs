@@ -26,7 +26,6 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDra
 
     public Action onSelected;
 
-
     public TowerGroup TowerGroup
     {
         get;
