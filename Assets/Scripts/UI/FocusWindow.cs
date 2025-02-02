@@ -22,7 +22,7 @@ public class FocusWindow : UIElement
     {
         OnFocus();
         gameObject.SetActive(true);
-        StartCoroutine(CoInputThreshold());
+        //StartCoroutine(CoInputThreshold());
     }
 
     public virtual void Close()
@@ -40,7 +40,7 @@ public class FocusWindow : UIElement
         UIManager.eventSystem.enabled = false;
     }
 
-    private IEnumerator CoInputThreshold()
+    protected IEnumerator CoInputThreshold()
     {
         DisableInput();
         yield return new WaitForSecondsRealtime(inputThreshold);
