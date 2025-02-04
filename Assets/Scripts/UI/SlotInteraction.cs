@@ -65,7 +65,7 @@ public class SlotInteraction : FocusWindow
 
     public void OnClickSell()
     {
-        slotManager.GameManager.coinGemSystem.AddCoin(slotManager.SelectedSlot.TowerGroup.Data.saleGold);
+        slotManager.GameManager.coinGemSystem.AddGold(slotManager.SelectedSlot.TowerGroup.Data.saleGold);
         slotManager.GameManager.coinGemSystem.AddGem(slotManager.SelectedSlot.TowerGroup.Data.saleGem);
 
         slotManager.SelectedSlot.RemoveTower();
@@ -76,5 +76,17 @@ public class SlotInteraction : FocusWindow
     {
         slotManager.SelectedSlot.FusionTower();
         Close();
+    }
+
+    protected override void EnableInput()
+    {
+        sellButton.enabled = true;
+        fusionButton.enabled = true;
+    }
+
+    protected override void DisableInput()
+    {
+        sellButton.enabled = false;
+        fusionButton.enabled=false;
     }
 }

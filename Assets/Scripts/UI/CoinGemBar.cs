@@ -16,7 +16,7 @@ public class CoinGemBar : UIElement
     {
        base.Initialize(mgr);
 
-        UIManager.GameManager.coinGemSystem.onCoinCountChange += (int value) => OnChangeCoinValue(value);
+        UIManager.GameManager.coinGemSystem.onGoldCountChange += (int value) => OnChangeCoinValue(value);
         UIManager.GameManager.coinGemSystem.onGemCountChange += (int value) => OnChangeGemValue(value);
 
         towerCountFormat = "{0}/" + UIManager.GameManager.TowerManager.MaxTowerCount;
