@@ -31,12 +31,22 @@ public class TowerGroup : MonoBehaviour
 
     public bool IsFull
     {
-        get => towers.Count >= maxSlotTowerCount;
+        get
+        {
+            if (Data.grade == towerManager.MaxGrade)
+            {
+                return towers.Count >= 1;
+            }
+            else
+            {
+                return towers.Count >= maxSlotTowerCount;
+            }
+        }
     }
 
     public bool CanFusion
     {
-        get => IsFull && Data.grade != DataTableManager.TowerTable.MaxGrade;
+        get => IsFull && Data.grade < towerManager.MaxGrade-1;
     }
 
     #region Move

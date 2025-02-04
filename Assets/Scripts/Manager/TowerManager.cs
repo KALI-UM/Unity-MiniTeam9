@@ -13,6 +13,12 @@ public class TowerManager : InGameManager
     public static float GlobalAttackSpeedFactor = 1f;
     public static float GlobalTowerMoveSpeed = 10f;
 
+    public int MaxGrade
+    {
+        get;
+        private set;
+    }
+
     public float AttackPowerUpgradeRate
     {
         get;
@@ -46,6 +52,7 @@ public class TowerManager : InGameManager
     {
         InitializeTowerPrefabs();
 
+        MaxGrade = DataTableManager.TowerTable.MaxGrade;
         TowerCountChange(0);
     }
 

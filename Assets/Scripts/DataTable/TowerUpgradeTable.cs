@@ -17,7 +17,7 @@ public class TowerUpgradeTable : DataTable
 
     private readonly List<TowerUpgradeRawData> list = new();
 
-    public int MaxUpgrade
+    public int MaxUpgradeLv
     {
         get;
         private set;
@@ -29,7 +29,7 @@ public class TowerUpgradeTable : DataTable
         var textAsset = Resources.Load<TextAsset>(path);
         var list = LoadCSV<TowerUpgradeRawData>(textAsset.text);
 
-        MaxUpgrade = list.Count;
+        MaxUpgradeLv = list.Count;
         foreach (var raw in list)
         {
             this.list.Add(raw);

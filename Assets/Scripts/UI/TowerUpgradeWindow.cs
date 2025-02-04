@@ -41,6 +41,8 @@ public class TowerUpgradeWindow : FocusWindow
     //private LocalizationText localizationAttackSpeed;
 
     private TowerManager towerManager;
+   
+    private int maxUpgradeLv;
 
 
     private int towerUpgradeLevel = 1;
@@ -56,8 +58,9 @@ public class TowerUpgradeWindow : FocusWindow
     }
     private void Awake()
     {
-        towerUpgradeRawDatas = DataTableManager.Get<TowerUpgradeTable>(DataTableIds.TowerUpgrade).GetTowerUpgradeDatas();
-
+        var dataTable = DataTableManager.Get<TowerUpgradeTable>(DataTableIds.TowerUpgrade);
+        towerUpgradeRawDatas = dataTable.GetTowerUpgradeDatas();
+        maxUpgradeLv = dataTable.MaxUpgradeLv;
 
         attackPowerButton.onClick.AddListener(() => OnClickAttackPowerButton());
         attackSpeedButton.onClick.AddListener(() => OnClickAttackSpeedButton());
@@ -78,24 +81,26 @@ public class TowerUpgradeWindow : FocusWindow
     public void OnClickAttackPowerButton()
     {
         var goldGemSystem = uiManager.GameManager.goldGemSystem;
-        bool canPayGold = goldGemSystem.CanPayGold(towerUpgradeRawDatas[attackPowerLv + 1].GoldCost);
-        bool canPayGem = goldGemSystem.CanPayGem(towerUpgradeRawDatas[attackPowerLv + 1].GemCost);
+        bool canPayGold = goldGemSystem.PayGold(towerUpgradeRawDatas[attackPowerLv + 1].GoldCost);
+        bool canPayGem = goldGemSystem.PayGem(towerUpgradeRawDatas[attackPowerLv + 1].GemCost);
         if (canPayGold && canPayGem)
         {
             attackPowerLv++;
 
-            goldGemSystem.PayGold(towerUpgradeRawDatas[attackPowerLv].GoldCost);
-            goldGemSystem.PayGem(towerUpgradeRawDatas[attackPowerLv].GemCost);
-
             uiManager.GameManager.TowerManager.SetAttackPowerUpgradeRate(towerUpgradeRawDatas[attackPowerLv].PowerBonus);
+            UpdateAttackPowerText(attackPowerLv);
         }
-
-        UpdateAttackPowerText(attackPowerLv);
     }
 
     public void UpdateAttackPowerText(int lv)
     {
         attackPowerLvText.text = lv.ToString();
+
+        if (lv == maxUpgradeLv)
+        {
+            attackPowerButton.interactable = false;
+            return;
+        }
 
         int nextLv = lv + 1;
         if (towerUpgradeRawDatas[nextLv].GoldCost == 0)
@@ -122,24 +127,26 @@ public class TowerUpgradeWindow : FocusWindow
     public void OnClickAttackSpeedButton()
     {
         var goldGemSystem = uiManager.GameManager.goldGemSystem;
-        bool canPayGold = goldGemSystem.CanPayGold(towerUpgradeRawDatas[attackSpeedLv + 1].GoldCost);
-        bool canPayGem = goldGemSystem.CanPayGem(towerUpgradeRawDatas[attackSpeedLv + 1].GemCost);
+        bool canPayGold = goldGemSystem.PayGold(towerUpgradeRawDatas[attackSpeedLv + 1].GoldCost);
+        bool canPayGem = goldGemSystem.PayGem(towerUpgradeRawDatas[attackSpeedLv + 1].GemCost);
         if (canPayGold && canPayGem)
         {
             attackSpeedLv++;
-
-            goldGemSystem.PayGold(towerUpgradeRawDatas[attackSpeedLv].GoldCost);
-            goldGemSystem.PayGem(towerUpgradeRawDatas[attackSpeedLv].GemCost);
-
             uiManager.GameManager.TowerManager.SetAttackSpeedUpgradeRate(towerUpgradeRawDatas[attackSpeedLv].PowerBonus);
+            UpdateAttackSpeedText(attackSpeedLv);
         }
-
-        UpdateAttackSpeedText(attackSpeedLv);
     }
 
     public void UpdateAttackSpeedText(int lv)
     {
         attackSpeedLvText.text = lv.ToString();
+
+        if(lv== maxUpgradeLv)
+        {
+            attackSpeedButton.interactable = false;
+            return;
+        }
+        
 
         int nextLv = lv + 1;
         if (towerUpgradeRawDatas[nextLv].GoldCost == 0)
