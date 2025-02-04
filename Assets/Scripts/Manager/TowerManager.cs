@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static TowerUpgradeTable;
 
 public class TowerManager : InGameManager
 {
@@ -12,6 +13,17 @@ public class TowerManager : InGameManager
     public static float GlobalAttackSpeedFactor = 1f;
     public static float GlobalTowerMoveSpeed = 10f;
 
+    public float AttackPowerUpgradeRate
+    {
+        get;
+        private set;
+    }
+
+    public float AttackSpeedUpgradeRate
+    {
+        get;
+        private set;
+    }
 
     public Action<int> onTowerCountChange;
 
@@ -33,6 +45,7 @@ public class TowerManager : InGameManager
     private void Awake()
     {
         InitializeTowerPrefabs();
+
         TowerCountChange(0);
     }
 
@@ -57,7 +70,7 @@ public class TowerManager : InGameManager
     public GameObject GetTower(eTower id)
     {
         var go = Instantiate(towerPrefabs[id]);
-
+        go.GetComponent<Tower>().Initialize(this);
         //var origin = towerPrefabs[id].GetComponent<Tower>();
         //go.GetComponent<Tower>().InitializeData(origin.TowerId, origin.Data);
         return go;
@@ -67,5 +80,15 @@ public class TowerManager : InGameManager
     {
         TowerCount += amount;
         onTowerCountChange?.Invoke(TowerCount);
+    }
+
+    public void SetAttackPowerUpgradeRate(float data)
+    {
+        AttackPowerUpgradeRate = data;
+    }
+
+    public void SetAttackSpeedUpgradeRate(float data)
+    {
+        AttackSpeedUpgradeRate = data;
     }
 }

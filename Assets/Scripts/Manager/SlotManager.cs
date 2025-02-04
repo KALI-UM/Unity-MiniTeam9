@@ -61,11 +61,11 @@ public class SlotManager : InGameManager
                 selectedSlotIndex = currSlot.SlotIndex;
                 if (!currSlot.TowerGroup.IsEmpty)
                 {
-                    GameManager.UIManager.Open(FocusWindows.TowerInteraction);
+                    GameManager.UIManager.Open(FocusWindows.SlotInteraction);
                 }
                 else
                 {
-                    GameManager.UIManager.Close(FocusWindows.TowerInteraction);
+                    GameManager.UIManager.Close(FocusWindows.SlotInteraction);
                 }
             };
             group.transform.SetParent(gameObject.transform);
@@ -84,19 +84,47 @@ public class SlotManager : InGameManager
         return false;
     }
 
-    public bool IsPossibleToAdd()
+    public bool IsPossibleToSpawnTower()
     {
         return (GameManager.TowerManager.TowerCount <= GameManager.TowerManager.MaxTowerCount && IsEmptySlotExist());
     }
 
-    public void AddTower(Tower tower)
+
+    public void AddTower(Tower tower, int index)
     {
+        //ÁßÃ¸ÇÒ ¼ö ÀÖ´Â ½½·ÔÀÌ ÀÖ´Ù¸é ÁßÃ¸
         foreach (var slot in slots)
         {
-            if (slot.IsPossibleToAdd(tower.TowerId))
+            if (slot.IsNotEmptyAndPossibleToAdd(tower.TowerId))
             {
                 slot.AddTower(tower);
-                break;
+                return;
+            }
+        }
+
+        //¾ø´Ù¸é index ½½·Ô¿¡ »ðÀÔÇÑ´Ù
+        slots[index].AddTower(tower);
+    }
+
+    public void AddTower(Tower tower)
+    {
+        //ÁßÃ¸ÇÒ ¼ö ÀÖ´Â ½½·ÔÀÌ ÀÖ´Ù¸é ÁßÃ¸
+        foreach (var slot in slots)
+        {
+            if (slot.IsNotEmptyAndPossibleToAdd(tower.TowerId))
+            {
+                slot.AddTower(tower);
+                return;
+            }
+        }
+
+        //¾ø´Ù¸é ºñ¾îÀÖ´Â ½½·Ô¿¡ »ðÀÔÇÑ´Ù
+        foreach (var slot in slots)
+        {
+            if (slot.TowerGroup.IsEmpty)
+            {
+                slot.AddTower(tower);
+                return;
             }
         }
 

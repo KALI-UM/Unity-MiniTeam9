@@ -1,16 +1,20 @@
+using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using static WaveTable;
 
 public class UIManager : InGameManager
 {
+    public EventSystem eventSystem;
+
+
     public Button screenArea;
     public UIElement worldBackground;
 
     public FocusWindow[] focusWindows;
     public PopWindow[] popWindows;
     public UIElement[] uiElements;
-
 
     public FocusWindows currentWindow
     {
@@ -64,11 +68,14 @@ public class UIManager : InGameManager
 
         GameManager.onGameOver += () => Open(FocusWindows.GameOver);
         GameManager.onGameClear += () => Open(FocusWindows.GameClear);
+
+        GameManager.goldGemSystem.onGoldPayFail += () => Open(PopWindows.Alert);
+        GameManager.goldGemSystem.onGemPayFail += () => Open(PopWindows.Alert);
     }
 
     private void Awake()
     {
-        screenArea.onClick.AddListener(()=> OnClickNotUIArea());
+        screenArea.onClick.AddListener(() => OnClickNotUIArea());
     }
 
     public void OpenFocusWindow(int windowId)

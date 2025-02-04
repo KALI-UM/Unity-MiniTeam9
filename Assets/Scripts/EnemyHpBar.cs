@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,11 +14,27 @@ public class EnemyHpBar : MonoBehaviour
     [SerializeField]
     private Image barImage;
 
-    public void OnHpChanged(float value)
+    [SerializeField]
+    private TextMeshProUGUI hpText;
+
+    private Action<int> onHpChange;
+
+    private void Awake()
     {
-        hpBar.value = value;
-        SetColor();
+        onHpChange = (int value) => SetColor();
+
+        if (hpText!=null)
+        {
+            onHpChange += (int value) => hpText.text = value.ToString();
+        }
     }
+
+    public void OnHpChanged(int value, int max)
+    {
+        hpBar.value = (float)value/ max;
+        onHpChange(value);
+    }
+    
 
     private void SetColor()
     {

@@ -5,10 +5,10 @@
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
-/[Bb]uild/
 /[Bb]uilds/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
+/Assets/SPUM/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
@@ -54,13 +54,6 @@ ExportedObj/
 
 # Unity3D generated file on crash reports
 sysinfo.txt
-
-# Builds
-*.apk
-*.aab
-*.unitypackage
-*.unitypackage.meta
-*.app
 
 # Crashlytics generated file
 crashlytics-build.properties

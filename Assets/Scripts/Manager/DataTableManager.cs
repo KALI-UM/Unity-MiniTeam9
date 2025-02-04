@@ -27,6 +27,9 @@ public static class DataTableManager
         waveTable.Load(DataTableIds.Wave);
         tables.Add(DataTableIds.Wave, waveTable);
 
+        var towerUpgradeTable = new TowerUpgradeTable();
+        towerUpgradeTable.Load(DataTableIds.TowerUpgrade);
+        tables.Add(DataTableIds.TowerUpgrade, towerUpgradeTable);
     }
 
     public static StringTable StringTable
@@ -53,13 +56,6 @@ public static class DataTableManager
         }
     }
 
-    public static WaveTable WaveTable
-    {
-        get
-        {
-            return Get<WaveTable>(DataTableIds.Wave);
-        }
-    }
 
     public static T Get<T>(string id) where T : DataTable
     {

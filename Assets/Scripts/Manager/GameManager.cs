@@ -7,7 +7,7 @@ using static WaveTable;
 public class GameManager : MonoBehaviour
 {
     [ReadOnly]
-    public readonly CoinGemSystem coinGemSystem = new();
+    public readonly GoldGemSystem goldGemSystem = new();
     public int initialCoinCount = 200;
     public int initialGemCount = 0;
 
@@ -47,6 +47,9 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
+    private Coroutine coStartThreshold;
+    public float startThresholdTime = 3f;
+
     public Action onGameClear;
     public Action onGameOver;
 
@@ -81,11 +84,17 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+
+
+
         InitializeManagers();
 
-        waveDatas = DataTableManager.WaveTable.GetWaveDatas();
+        EnemyManager.onBossEnemyDie += () => OnBossEnemyDie();
+
+        waveDatas = DataTableManager.Get<WaveTable>(DataTableIds.Wave).GetWaveDatas();
         CurrentWaveNumber = 0;
     }
+
 
     private void InitializeManagers()
     {
@@ -99,13 +108,17 @@ public class GameManager : MonoBehaviour
         EnemyManager.Initialize();
         UIManager.Initialize();
 
-        coinGemSystem.AddCoin(initialCoinCount);
-        coinGemSystem.AddGem(initialGemCount);
+        goldGemSystem.AddGold(initialCoinCount);
+        goldGemSystem.AddGem(initialGemCount);
     }
 
     private void Start()
     {
-        coWave = StartCoroutine(CoWave());
+#if UNITY_EDITOR
+        //프레임제한 풀기
+        Application.targetFrameRate = -1;
+#endif
+        coStartThreshold = StartCoroutine(CoStartDelay());
     }
 
     private void Update()
@@ -143,9 +156,21 @@ public class GameManager : MonoBehaviour
         {
             OnWaveStart();
             coWaveSpawnEnemy = StartCoroutine(CoSpawnEnemy(CurrentWaveNumber));
+            
             yield return new WaitForSeconds(CurrentWaveData.waveDuration);
             StopCoroutine(coWaveSpawnEnemy);
+
+            if(CurrentWaveNumber!=0&&CurrentWaveNumber % 10==0)
+            {
+                OnGameOver();
+            }
         }
+    }
+
+    private IEnumerator CoStartDelay()
+    {
+        yield return new WaitForSecondsRealtime(startThresholdTime);
+        coWave = StartCoroutine(CoWave());
     }
 
     public void OnGameOver()
@@ -164,10 +189,15 @@ public class GameManager : MonoBehaviour
 
     public void OnWaveStart()
     {
-        coinGemSystem.AddCoin(CurrentWaveNumber * 10);
+        goldGemSystem.AddGold(CurrentWaveNumber * 10);
 
         CurrentWaveNumber++;
         onWaveStart?.Invoke(CurrentWaveData);
-        KALLogger.Log($"현재 Wave{CurrentWaveNumber}");
+    }
+
+    public void OnBossEnemyDie()
+    {
+        StopCoroutine(coWave);
+        coWave = StartCoroutine(CoWave());
     }
 }

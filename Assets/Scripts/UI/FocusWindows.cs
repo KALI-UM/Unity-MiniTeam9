@@ -2,5 +2,8 @@ public enum FocusWindows
 {
 	GameOver,
 	GameClear,
-	TowerInteraction,
+	SlotInteraction,
+	Menu,
+	TowerUpgrade,
+	EmergencySpawn,
 }
