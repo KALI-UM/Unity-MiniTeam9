@@ -16,10 +16,6 @@ public class UIManager : InGameManager
     public PopWindow[] popWindows;
     public UIElement[] uiElements;
 
-    public RectTransform topUI;
-    public RectTransform bottomUI;
-
-
     public FocusWindows currentWindow
     {
         get;
@@ -77,15 +73,6 @@ public class UIManager : InGameManager
     private void Awake()
     {
         screenArea.onClick.AddListener(() => OnClickNotUIArea());
-
-        Vector3 topPos = topUI.position;
-        topPos.y = Screen.safeArea.yMax;
-
-        Vector3 bottomPos = bottomUI.position;
-        bottomPos.y = Screen.safeArea.y;
-
-        topUI.position = topPos;
-        bottomUI.position = bottomPos;
     }
 
     public void OpenFocusWindow(int windowId)

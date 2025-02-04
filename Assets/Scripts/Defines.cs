@@ -20,6 +20,7 @@ public static class DataTableIds
     public static readonly string Tower = "TowerTable";
     public static readonly string Enemy= "MonsterTable";
     public static readonly string Wave= "WaveTable";
+    public static readonly string TowerUpgrade= "TowerUpgradeTable";
 }
 
 public static class Variables

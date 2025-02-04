@@ -12,6 +12,8 @@ public class Tower : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public SpriteRenderer shadowRenderer;
 
+    private TowerManager towerManager;
+
     public TowerGroup TowerGroup
     {
         get;
@@ -40,12 +42,12 @@ public class Tower : MonoBehaviour
 
     public int AttackPower
     {
-        get => Data.attackPower;
+        get => Data.attackPower + (int)(Data.attackPower * towerManager.AttackPowerUpgradeRate);
     }
 
     public float AttackSpeed
     {
-        get => Data.attackSpeed * TowerManager.GlobalAttackSpeedFactor;
+        get => (Data.attackSpeed + Data.attackSpeed * towerManager.AttackSpeedUpgradeRate) * TowerManager.GlobalAttackSpeedFactor;
     }
 
     public float AttackInterval
@@ -62,6 +64,11 @@ public class Tower : MonoBehaviour
         TowerId = Data.Id;
     }
 
+    public void Initialize(TowerManager towerManager)
+    {
+        this.towerManager = towerManager;
+    }
+
     public void InitializeData(TowerData data)
     {
         TowerId = data.Id;
@@ -74,5 +81,5 @@ public class Tower : MonoBehaviour
         transform.SetParent(TowerGroup.transform);
         towerAttack.enabled = true;
     }
-   
+
 }
