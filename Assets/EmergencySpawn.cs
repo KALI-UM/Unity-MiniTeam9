@@ -23,5 +23,9 @@ public class EmergencySpawn : FocusWindow
             button.Initialize(mgr);
         }
     }
-
+    public override void OnOutFocus()
+    {
+        base.OnOutFocus();
+        Close();
+    }
 }

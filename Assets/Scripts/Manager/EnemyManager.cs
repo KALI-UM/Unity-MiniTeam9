@@ -137,8 +137,8 @@ public class EnemyManager : InGameManager
                 validEnemies.Remove(enemy);
                 enemyCountBar.OnCountChanged(CurrEnemyCount);
 
-                GameManager.coinGemSystem.AddGold(enemy.Data.dropGold);
-                GameManager.coinGemSystem.AddGem(enemy.Data.dropGem);
+                GameManager.goldGemSystem.AddGold(enemy.Data.dropGold);
+                GameManager.goldGemSystem.AddGem(enemy.Data.dropGem);
 
                 onBossEnemyDie?.Invoke();
             };
@@ -151,8 +151,8 @@ public class EnemyManager : InGameManager
                 validEnemies.Remove(enemy);
                 enemyCountBar.OnCountChanged(CurrEnemyCount);
 
-                GameManager.coinGemSystem.AddGold(enemy.Data.dropGold);
-                GameManager.coinGemSystem.AddGem(enemy.Data.dropGem);
+                GameManager.goldGemSystem.AddGold(enemy.Data.dropGold);
+                GameManager.goldGemSystem.AddGem(enemy.Data.dropGem);
             };
         }
         return enemy;

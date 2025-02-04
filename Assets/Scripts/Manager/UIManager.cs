@@ -68,6 +68,9 @@ public class UIManager : InGameManager
 
         GameManager.onGameOver += () => Open(FocusWindows.GameOver);
         GameManager.onGameClear += () => Open(FocusWindows.GameClear);
+
+        GameManager.goldGemSystem.onGoldPayFail += () => Open(PopWindows.Alert);
+        GameManager.goldGemSystem.onGemPayFail += () => Open(PopWindows.Alert);
     }
 
     private void Awake()

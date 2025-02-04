@@ -7,7 +7,7 @@ using static WaveTable;
 public class GameManager : MonoBehaviour
 {
     [ReadOnly]
-    public readonly GoldGemSystem coinGemSystem = new();
+    public readonly GoldGemSystem goldGemSystem = new();
     public int initialCoinCount = 200;
     public int initialGemCount = 0;
 
@@ -108,8 +108,8 @@ public class GameManager : MonoBehaviour
         EnemyManager.Initialize();
         UIManager.Initialize();
 
-        coinGemSystem.AddGold(initialCoinCount);
-        coinGemSystem.AddGem(initialGemCount);
+        goldGemSystem.AddGold(initialCoinCount);
+        goldGemSystem.AddGem(initialGemCount);
     }
 
     private void Start()
@@ -189,7 +189,7 @@ public class GameManager : MonoBehaviour
 
     public void OnWaveStart()
     {
-        coinGemSystem.AddGold(CurrentWaveNumber * 10);
+        goldGemSystem.AddGold(CurrentWaveNumber * 10);
 
         CurrentWaveNumber++;
         onWaveStart?.Invoke(CurrentWaveData);

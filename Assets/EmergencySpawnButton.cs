@@ -7,6 +7,8 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Button))]
 public class EmergencySpawnButton : UIElement
 {
+    //private EmergencySpawn emergencySpawnWindow;
+
     [SerializeField]
     private TextMeshProUGUI gemCostText;
 
@@ -25,9 +27,14 @@ public class EmergencySpawnButton : UIElement
         spwanButton.onClick.AddListener(() => OnClickSpawnGrade(spawnGrade, gemCost));
     }
 
+    //public void Initialize(EmergencySpawn window)
+    //{
+    //    emergencySpawnWindow= window;
+    //}
+
     public void OnClickSpawnGrade(int grade, int gemCost)
     {
-        if (!UIManager.GameManager.coinGemSystem.CanPayGem(gemCost))
+        if (!UIManager.GameManager.goldGemSystem.PayGem(gemCost))
         {
             return;
         }
@@ -37,7 +44,6 @@ public class EmergencySpawnButton : UIElement
             return;
         }
 
-        UIManager.GameManager.coinGemSystem.PayGem(gemCost);
         GameObject tower = UIManager.GameManager.TowerManager.GetRandomTower(grade);
         UIManager.GameManager.SlotManager.AddTower(tower.GetComponent<Tower>());
     }

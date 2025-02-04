@@ -31,7 +31,7 @@ public class TowerSpawn : UIElement
 
     public void OnClickSpawn()
     {
-        if (!UIManager.GameManager.coinGemSystem.CanPayGold(spawnCost))
+        if (!UIManager.GameManager.goldGemSystem.CanPayGold(spawnCost))
         {
             return;
         }
@@ -41,7 +41,7 @@ public class TowerSpawn : UIElement
             return;
         }
 
-        UIManager.GameManager.coinGemSystem.PayGold(spawnCost);
+        UIManager.GameManager.goldGemSystem.PayGold(spawnCost);
         GameObject tower = UIManager.GameManager.TowerManager.GetRandomTower(1);
         UIManager.GameManager.SlotManager.AddTower(tower.GetComponent<Tower>());
 
