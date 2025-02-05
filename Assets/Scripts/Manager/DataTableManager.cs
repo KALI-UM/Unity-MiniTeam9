@@ -30,6 +30,10 @@ public static class DataTableManager
         var towerUpgradeTable = new TowerUpgradeTable();
         towerUpgradeTable.Load(DataTableIds.TowerUpgrade);
         tables.Add(DataTableIds.TowerUpgrade, towerUpgradeTable);
+
+        var towerRecipeTable = new TowerRecipeTable();
+        towerRecipeTable.Load(DataTableIds.TowerRecipe);
+        tables.Add(DataTableIds.TowerRecipe, towerRecipeTable);
     }
 
     public static StringTable StringTable

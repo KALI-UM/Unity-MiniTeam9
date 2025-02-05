@@ -127,16 +127,6 @@ public class SlotManager : InGameManager
                 return;
             }
         }
-
-        //foreach (var slot in slots)
-        //{
-        //    if (slot.TowerGroup.IsEmpty)
-        //    {
-        //        slot.AddTower(tower);
-        //        break;
-        //    }
-        //}
-        //UpdateTowerSort();
     }
 
     public void UpdateTowerSort()
@@ -171,6 +161,18 @@ public class SlotManager : InGameManager
         }
     }
 
+    public Slot FindSlot(eTower id)
+    {
+        foreach (Slot slot in slots)
+        {
+            if (!slot.TowerGroup.IsEmpty&&slot.TowerGroup.TowerId==id)
+            {
+                return slot;
+            }
+        }
+
+        return null;
+    }
 
     public void OnBeginDragSlot(Vector3 dragStart)
     {

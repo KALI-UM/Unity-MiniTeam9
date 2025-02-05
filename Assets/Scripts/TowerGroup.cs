@@ -72,9 +72,7 @@ public class TowerGroup : MonoBehaviour
     {
         var tower = towers[towers.Count - 1];
         towers.RemoveAt(towers.Count - 1);
-        GameObject.Destroy(tower.gameObject);
-        towerManager.TowerCountChange(-1);
-
+        towerManager.DestoryTower(tower);
         UpdateTowerPosition();
     }
 

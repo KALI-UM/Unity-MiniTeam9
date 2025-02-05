@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EmergencySpawn : FocusWindow
+public class EmergencySpawnWindow : FocusWindow
 {
     [SerializeField]
     private Button windowOpen;
