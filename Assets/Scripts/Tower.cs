@@ -57,7 +57,6 @@ public class Tower : MonoBehaviour
 
     #endregion
 
-    private Coroutine coAttack;
 
     private void Awake()
     {

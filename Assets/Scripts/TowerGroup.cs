@@ -17,6 +17,11 @@ public class TowerGroup : MonoBehaviour
         get => towers[0].Data;
     }
 
+    public Tower Tower
+    {
+        get => towers[0];
+    }
+
     [ReadOnly, SerializeField]
     private List<Tower> towers = new();
 

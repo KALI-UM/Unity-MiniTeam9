@@ -56,16 +56,19 @@ public class SlotManager : InGameManager
             TowerGroup group = Instantiate(towerGroupPrefab).GetComponent<TowerGroup>();
             var currSlot = slots[i];
             currSlot.Initialize(this, group, i);
-            currSlot.onSelected += () =>
+            currSlot.onClicked += () =>
             {
+                SelectedSlot.OnDeselected();
                 selectedSlotIndex = currSlot.SlotIndex;
                 if (!currSlot.TowerGroup.IsEmpty)
                 {
                     GameManager.UIManager.Open(FocusWindows.SlotInteraction);
+                    currSlot.OnSelected();
                 }
                 else
                 {
                     GameManager.UIManager.Close(FocusWindows.SlotInteraction);
+                    currSlot.OnDeselected();
                 }
             };
             group.transform.SetParent(gameObject.transform);

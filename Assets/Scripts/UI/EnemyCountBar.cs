@@ -19,6 +19,12 @@ public class EnemyCountBar : UIElement
         SetMaxValue(100);
     }
 
+    public override void Initialize(UIManager mgr)
+    {
+        base.Initialize(mgr);
+        uiManager.GameManager.EnemyManager.onEnemyCountChange += (int value) => OnCountChanged(value);
+    }
+
     public void SetMaxValue(int max)
     {
         countBar.maxValue = max;

@@ -105,21 +105,21 @@ public class TowerUpgradeWindow : FocusWindow
         int nextLv = lv + 1;
         if (towerUpgradeRawDatas[nextLv].GoldCost == 0)
         {
-            attackPowerGoldCostText.gameObject.SetActive(false);
+            attackPowerGoldCostText.transform.parent.gameObject.SetActive(false);
         }
         else
         {
-            attackPowerGoldCostText.gameObject.SetActive(true);
+            attackPowerGoldCostText.transform.parent.gameObject.SetActive(true);
             attackPowerGoldCostText.text = towerUpgradeRawDatas[nextLv].GoldCost.ToString();
         }
 
         if (towerUpgradeRawDatas[nextLv].GemCost == 0)
         {
-            attackPowerGemCostText.gameObject.SetActive(false);
+            attackPowerGemCostText.transform.parent.gameObject.SetActive(false);
         }
         else
         {
-            attackPowerGemCostText.gameObject.SetActive(true);
+            attackPowerGemCostText.transform.parent.gameObject.SetActive(true);
             attackPowerGemCostText.text = towerUpgradeRawDatas[nextLv].GemCost.ToString();
         }
     }
@@ -151,21 +151,21 @@ public class TowerUpgradeWindow : FocusWindow
         int nextLv = lv + 1;
         if (towerUpgradeRawDatas[nextLv].GoldCost == 0)
         {
-            attackSpeedGoldCostText.gameObject.SetActive(false);
+            attackSpeedGoldCostText.transform.parent.gameObject.SetActive(false);
         }
         else
         {
-            attackSpeedGoldCostText.gameObject.SetActive(true);
+            attackSpeedGoldCostText.transform.parent.gameObject.SetActive(true);
             attackSpeedGoldCostText.text = towerUpgradeRawDatas[nextLv].GoldCost.ToString();
         }
 
         if (towerUpgradeRawDatas[nextLv].GemCost == 0)
         {
-            attackSpeedGemCostText.gameObject.SetActive(false);
+            attackSpeedGemCostText.transform.parent.gameObject.SetActive(false);
         }
         else
         {
-            attackSpeedGemCostText.gameObject.SetActive(true);
+            attackSpeedGemCostText.transform.parent.gameObject.SetActive(true);
             attackSpeedGemCostText.text = towerUpgradeRawDatas[nextLv].GemCost.ToString();
         }
     }

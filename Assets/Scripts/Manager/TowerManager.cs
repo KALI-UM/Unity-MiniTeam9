@@ -43,12 +43,16 @@ public class TowerManager : InGameManager
         get => maxTowerCount;
     }
 
+    public bool IsMaxTowrCount
+    {
+        get => TowerCount >= MaxTowerCount;
+    }
+
     public int TowerCount
     {
         get;
         private set;
     }
-
 
     private void Awake()
     {

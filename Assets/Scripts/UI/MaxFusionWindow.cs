@@ -97,7 +97,7 @@ public class MaxFusionWindow : FocusWindow
 
     public void OnSpawnTower()
     {
-        if (!currentRecipe.CanFusion && !UIManager.GameManager.SlotManager.IsEmptySlotExist())
+        if (!currentRecipe.CanFusion || !UIManager.GameManager.SlotManager.IsEmptySlotExist())
         {
             return;
         }
