@@ -7,7 +7,6 @@ using static TowerTable;
 
 public class EnemyTable : DataTable
 {
-    
     public class EnemyRawData
     {
         public int Monster_ID { get; set; }

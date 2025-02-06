@@ -127,7 +127,7 @@ public class TowerTable : DataTable
     }
 
 
-    public List<eTower> GetTowerList(int grade)
+    public List<eTower> GetTowerGradeList(int grade)
     {
         return towerGrade[grade];
     }

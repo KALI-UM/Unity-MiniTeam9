@@ -8,10 +8,18 @@ public class TowerManager : InGameManager
 {
     public GameObject defaultTowerPrefab;
     private readonly Dictionary<eTower, GameObject> towerPrefabs = new();
+    private readonly Dictionary<eTower, int> towerCounts = new();
+
 
     public static float GlobalRangeFactor = 1f;
     public static float GlobalAttackSpeedFactor = 1f;
     public static float GlobalTowerMoveSpeed = 10f;
+
+    public int MaxGrade
+    {
+        get;
+        private set;
+    }
 
     public float AttackPowerUpgradeRate
     {
@@ -45,6 +53,7 @@ public class TowerManager : InGameManager
     private void Awake()
     {
         InitializeTowerPrefabs();
+        InitializeTowerDatas();
 
         TowerCountChange(0);
     }
@@ -59,9 +68,19 @@ public class TowerManager : InGameManager
         }
     }
 
+    private void InitializeTowerDatas()
+    {
+        foreach (eTower id in Enum.GetValues(typeof(eTower)))
+        {
+            towerCounts.Add(id, 0);
+        }
+
+        MaxGrade = DataTableManager.TowerTable.MaxGrade;
+    }
+
     public GameObject GetRandomTower(int grade)
     {
-        var list = DataTableManager.TowerTable.GetTowerList(grade);
+        var list = DataTableManager.TowerTable.GetTowerGradeList(grade);
         int index = UnityEngine.Random.Range(0, list.Count);
 
         return GetTower(list[index]);
@@ -73,7 +92,20 @@ public class TowerManager : InGameManager
         go.GetComponent<Tower>().Initialize(this);
         //var origin = towerPrefabs[id].GetComponent<Tower>();
         //go.GetComponent<Tower>().InitializeData(origin.TowerId, origin.Data);
+        towerCounts[id]++;
         return go;
+    }
+
+    public void DestoryTower(Tower tower)
+    {
+        towerCounts[tower.TowerId]--;
+        GameObject.Destroy(tower.gameObject);
+        TowerCountChange(-1);
+    }
+
+    public int GetTowerCount(eTower id)
+    {
+        return towerCounts[id];
     }
 
     public void TowerCountChange(int amount)

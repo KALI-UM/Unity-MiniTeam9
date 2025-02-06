@@ -6,4 +6,5 @@ public enum FocusWindows
 	Menu,
 	TowerUpgrade,
 	EmergencySpawn,
+	MaxLvFusion,
 }
