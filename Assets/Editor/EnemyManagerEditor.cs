@@ -6,6 +6,7 @@ using System.Text;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 using static EnemyTable;
 using static TowerTable;
 
@@ -78,6 +79,8 @@ public class EnemyManagerEditor : Editor
     {
         string prefabPath = "Assets/Resources/Prefabs/Enemy/{0}.prefab";
         string dataPath = "Assets/Resources/Datas/Enemy/{0}.asset";
+        string spumpath = "Assets/Resources/Prefabs/Units/{0}.prefab";
+
 
         UpdateEnemyDatas(list);
 
@@ -94,8 +97,21 @@ public class EnemyManagerEditor : Editor
 
             if (!data.Monster_Resource.IsNullOrEmpty())
             {
-                var sprite = AssetDatabase.LoadAssetAtPath<Sprite>(data.Monster_Resource);
-                enemy.spriteRenderer.sprite = sprite;
+                KALLogger.Log(string.Format(spumpath, data.Monster_Resource));
+                GameObject spumprefab = AssetDatabase.LoadAssetAtPath<GameObject>(string.Format(spumpath, data.Monster_Resource));
+                KALLogger.Log(spumprefab);
+
+
+                Vector3 scale = enemy.character.transform.GetChild(0).transform.localScale;
+                GameObject.DestroyImmediate(enemy.character.transform.GetChild(0).gameObject);
+
+                GameObject spum = Instantiate(spumprefab);
+                spum.transform.localScale = scale;
+                spum.transform.position = Vector3.zero;
+                spum.transform.SetParent(enemy.character.transform);
+
+                spum.transform.GetChild(0).AddComponent<SpumAnimationHandler>();
+                enemy.animationHandler = spum.transform.GetChild(0).GetComponent<SpumAnimationHandler>();     
             }
 
             PrefabUtility.SaveAsPrefabAsset(newPrefab, string.Format(prefabPath, data.String_Key));

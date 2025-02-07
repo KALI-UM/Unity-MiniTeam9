@@ -10,6 +10,8 @@ using static EnemyTable;
 
 public class EnemyMovement : MonoBehaviour
 {
+    public Enemy enemy;
+
     private EnemyData data;
     public EnemyData Data
     {
@@ -51,11 +53,12 @@ public class EnemyMovement : MonoBehaviour
         NextIndex = 0;
         direction = EnemyManager.WayPointData.initialDirection;
 
-        //KALLogger.Log<EnemyMovement>();
+        enemy.SetDirection(direction);
     }
 
     private void MoveTo()
     {
+
         Vector3 next;
 
         float sqrDelta = Mathf.Pow(Speed * Time.deltaTime, 2);
@@ -63,6 +66,8 @@ public class EnemyMovement : MonoBehaviour
 
         if (sqrDelta >= sqrMax)
         {
+            enemy.SetDirection(direction);
+
             if (!IsOnWaypoints)
             {
                 IsOnWaypoints = true;

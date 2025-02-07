@@ -9,7 +9,9 @@ public class Tower : MonoBehaviour
 {
     public TowerAttack towerAttack;
 
-    public SpriteRenderer spriteRenderer;
+    public SpumAnimationHandler animationHandler;
+    public GameObject character;
+
     public SpriteRenderer shadowRenderer;
 
     private TowerManager towerManager;
@@ -57,7 +59,6 @@ public class Tower : MonoBehaviour
 
     #endregion
 
-    private Coroutine coAttack;
 
     private void Awake()
     {
@@ -82,4 +83,19 @@ public class Tower : MonoBehaviour
         towerAttack.enabled = true;
     }
 
+    public void SetDirection(Vector3 targetPos)
+    {
+        SetDefaultDirection();
+        if (transform.position.x < targetPos.x)
+        {
+            var flip = character.transform.localScale;
+            flip.x *= -1;
+            character.transform.localScale = flip;
+        }
+    }
+
+    public void SetDefaultDirection()
+    {
+        character.transform.localScale = Vector3.one;
+    }
 }

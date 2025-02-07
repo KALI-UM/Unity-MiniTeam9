@@ -11,7 +11,7 @@ public class TowerManager : InGameManager
     private readonly Dictionary<eTower, int> towerCounts = new();
 
 
-    public static float GlobalRangeFactor = 1f;
+    public static float GlobalRangeFactor = 1.5f;
     public static float GlobalAttackSpeedFactor = 1f;
     public static float GlobalTowerMoveSpeed = 10f;
 
@@ -43,12 +43,16 @@ public class TowerManager : InGameManager
         get => maxTowerCount;
     }
 
+    public bool IsMaxTowrCount
+    {
+        get => TowerCount >= MaxTowerCount;
+    }
+
     public int TowerCount
     {
         get;
         private set;
     }
-
 
     private void Awake()
     {

@@ -18,6 +18,9 @@ public class SlotInteraction : FocusWindow
     [SerializeField]
     private LocalizationText localizationTowerName;
 
+    [SerializeField]
+    private TowerInformation towerInformation;
+
     private TowerManager towerManager;
     private SlotManager slotManager;
 
@@ -41,8 +44,7 @@ public class SlotInteraction : FocusWindow
         UpdateTowerInteractionPosition();
         fusionButton.interactable = slotManager.SelectedSlot.TowerGroup.CanFusion;
         base.Open();
-        UpdateTowerInformation();
-
+        towerInformation.UpdateTowerInformation(slotManager.SelectedSlot.TowerGroup.Data);
         StartCoroutine(CoInputThreshold());
     }
 
@@ -52,16 +54,18 @@ public class SlotInteraction : FocusWindow
         towerInteraction.transform.position = screenPosition;
     }
 
-    public void UpdateTowerInformation()
-    {
-        localizationTowerName.OnStringIdChange(slotManager.SelectedSlot.TowerGroup.Data.key);
-    }
-
     public override void OnOutFocus()
     {
         base.OnOutFocus();
         Close();
     }
+
+    public override void Close()
+    {
+        base.Close();
+        slotManager.SelectedSlot.OnDeselected();
+    }
+
 
     public void OnClickSell()
     {

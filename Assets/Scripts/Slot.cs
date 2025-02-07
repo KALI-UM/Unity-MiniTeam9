@@ -9,6 +9,9 @@ using static UnityEngine.GraphicsBuffer;
 
 public class Slot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    [SerializeField]
+    private SpriteRenderer circleArea;
+
     protected SlotManager slotManager;
     public SlotManager SlotManager
     {
@@ -24,7 +27,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDra
         private set;
     }
 
-    public Action onSelected;
+    public Action onClicked;
 
     public TowerGroup TowerGroup
     {
@@ -37,7 +40,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDra
         slotManager = manager;
         this.TowerGroup = group;
         this.TowerGroup.towerManager = SlotManager.GameManager.TowerManager;
-        this.TowerGroup.enemyManager= SlotManager.GameManager.EnemyManager;
+        this.TowerGroup.enemyManager = SlotManager.GameManager.EnemyManager;
         group.transform.position = transform.position;
 
         SlotIndex = index;
@@ -87,8 +90,22 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDra
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        onSelected?.Invoke();
+        onClicked?.Invoke();
         KALLogger.Log("ΩΩ∑‘" + SlotIndex + "º±≈√");
+
+    }
+
+    public void OnSelected()
+    {
+        circleArea.gameObject.SetActive(true);
+        var newScale = Vector3.one;
+        newScale *= 2 * TowerGroup.Tower.AttackRange;
+        circleArea.transform.localScale = newScale;
+    }
+
+    public void OnDeselected()
+    {
+        circleArea.gameObject.SetActive(false);
     }
 
     public void OnBeginDrag(PointerEventData eventData)

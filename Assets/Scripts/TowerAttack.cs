@@ -29,6 +29,9 @@ public class TowerAttack : MonoBehaviour
 
     public void AttackTarget()
     {
+        tower.animationHandler.Attack();
+
+        tower.SetDirection(target.transform.position);
         target.OnDamaged(tower.AttackPower);
     }
 
@@ -63,6 +66,8 @@ public class TowerAttack : MonoBehaviour
         }
         return false;
     }
+
+   
 
     private void OnDrawGizmos()
     {

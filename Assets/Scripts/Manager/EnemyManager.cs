@@ -57,8 +57,7 @@ public class EnemyManager : InGameManager
 
     #region EnemyCount
 
-    [SerializeField]
-    private EnemyCountBar enemyCountBar;
+    public Action<int> onEnemyCountChange;
 
     public int CurrEnemyCount
     {
@@ -77,8 +76,6 @@ public class EnemyManager : InGameManager
         InitializeEnemyInitData();
         InitializeEnemyPrefabs();
         InitializeEnemyPool();
-
-        enemyCountBar.SetMaxValue(100);
     }
 
     private void InitializeEnemyPrefabs()
@@ -122,7 +119,7 @@ public class EnemyManager : InGameManager
         Enemy enemy = enemyPools[type].Get();
         enemy.transform.SetParent(gameObject.transform);
         validEnemies.Add(enemy);
-        enemyCountBar.OnCountChanged(CurrEnemyCount);
+        onEnemyCountChange?.Invoke(CurrEnemyCount);
     }
 
     private Enemy CreateEnemy(GameObject gobj)
@@ -133,9 +130,8 @@ public class EnemyManager : InGameManager
         {
             enemy.onDie += () =>
             {
-                enemyPools[enemy.EnemyId].Release(enemy);
                 validEnemies.Remove(enemy);
-                enemyCountBar.OnCountChanged(CurrEnemyCount);
+                onEnemyCountChange?.Invoke(CurrEnemyCount);
 
                 GameManager.goldGemSystem.AddGold(enemy.Data.dropGold);
                 GameManager.goldGemSystem.AddGem(enemy.Data.dropGem);
@@ -147,14 +143,15 @@ public class EnemyManager : InGameManager
         {
             enemy.onDie += () =>
             {
-                enemyPools[enemy.EnemyId].Release(enemy);
                 validEnemies.Remove(enemy);
-                enemyCountBar.OnCountChanged(CurrEnemyCount);
+                onEnemyCountChange?.Invoke(CurrEnemyCount);
 
                 GameManager.goldGemSystem.AddGold(enemy.Data.dropGold);
                 GameManager.goldGemSystem.AddGem(enemy.Data.dropGem);
             };
         }
+
+        enemy.animationHandler.onDeathExit+=()=> enemyPools[enemy.EnemyId].Release(enemy);
         return enemy;
     }
 
