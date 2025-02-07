@@ -8,6 +8,7 @@ using static TowerTable;
 [CustomEditor(typeof(TowerScriptableData))]
 public class TowerScriptableDataEditor : Editor
 {
+  
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
@@ -16,6 +17,20 @@ public class TowerScriptableDataEditor : Editor
         if (dataEditor.currentTowerData != null)
         {
             Editor editor = Editor.CreateEditor(dataEditor.currentTowerData);
+
+            if (Application.isPlaying)
+            {
+                var gameManager = dataEditor.gameManager;
+
+                GUILayout.BeginHorizontal();
+                GUILayout.Label("Spawn "+ dataEditor.currentTowerData.name);
+                if (GUILayout.Button("Spawn")&& gameManager.SlotManager.IsPossibleToSpawnTower())
+                {
+                    var tower = gameManager.TowerManager.GetTower(dataEditor.currentTowerData.Id);
+                    gameManager.SlotManager.AddTower(tower.GetComponent<Tower>());
+                }
+                GUILayout.EndHorizontal();
+            }
 
             GUILayout.BeginHorizontal();
             GUILayout.Label("Reset to CSV data");
@@ -36,6 +51,15 @@ public class TowerScriptableDataEditor : Editor
                 }
                 GUILayout.EndHorizontal();
             }
+
+            GUILayout.BeginHorizontal();
+            GUILayout.Label("Reload Csv data"); 
+            if (GUILayout.Button("Reload"))
+            {
+                DataTableManager.TowerTable.Load(DataTableIds.Tower);
+            }
+            GUILayout.EndHorizontal();
+
             editor.OnInspectorGUI();
         }
     }

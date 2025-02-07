@@ -49,7 +49,7 @@ public class Tower : MonoBehaviour
 
     public float AttackSpeed
     {
-        get => (Data.attackSpeed + Data.attackSpeed * towerManager.AttackSpeedUpgradeRate) * towerManager.factorData.attackRange;
+        get => (Data.attackSpeed + Data.attackSpeed * towerManager.AttackSpeedUpgradeRate) * towerManager.factorData.attackSpeed;
     }
 
     public float AttackInterval

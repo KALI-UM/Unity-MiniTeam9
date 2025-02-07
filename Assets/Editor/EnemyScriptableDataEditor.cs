@@ -43,6 +43,15 @@ public class EnemyScriptableDataEditor : Editor
                 }
                 GUILayout.EndHorizontal();
             }
+
+            GUILayout.BeginHorizontal();
+            GUILayout.Label("Reload Csv data");
+            if (GUILayout.Button("Reload"))
+            {
+                DataTableManager.EnemyTable.Load(DataTableIds.Enemy);
+            }
+            GUILayout.EndHorizontal();
+
             editor.OnInspectorGUI();
         }
     }

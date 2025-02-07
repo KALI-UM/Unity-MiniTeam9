@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour
     public GameObject character;
 
     public Action onDie;
-
+ 
     public eEnemy EnemyId
     {
         get;
@@ -90,6 +90,14 @@ public class Enemy : MonoBehaviour
 
         onDie?.Invoke();
         animationHandler.Death();
+
+        StartCoroutine(CoRelease());
+    }
+
+    private IEnumerator CoRelease()
+    {
+        yield return new WaitForSeconds(1f);
+        animationHandler.OnDeathAnimationExit();
     }
 
     public void SetDirection(Vector3 dir)
