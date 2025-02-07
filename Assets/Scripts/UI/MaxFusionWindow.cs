@@ -80,7 +80,7 @@ public class MaxFusionWindow : FocusWindow
     public void OnSelectRecipe(RecipeProgressTracker recipe)
     {
         currentRecipe = recipe;
-        localizationTowerName.OnStringIdChange(DataTableManager.TowerTable.Get(currentRecipe.Data.Id).String_Key);
+        localizationTowerName.OnStringIdChange(DataTableManager.TowerTable.Get(currentRecipe.Data.Id).Strnig_Key);
         percentBar.value = currentRecipe.ProgressValue;
 
         for (int i = 0; i < currentRecipe.Data.RecipeSum; i++)

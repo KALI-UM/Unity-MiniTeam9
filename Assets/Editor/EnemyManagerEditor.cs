@@ -78,6 +78,8 @@ public class EnemyManagerEditor : Editor
     {
         string prefabPath = "Assets/Resources/Prefabs/Enemy/{0}.prefab";
         string dataPath = "Assets/Resources/Datas/Enemy/{0}.asset";
+        string spumpath = "Assets/Resources/Prefabs/Units/{0}.prefab";
+
 
         UpdateEnemyDatas(list);
 
@@ -94,8 +96,19 @@ public class EnemyManagerEditor : Editor
 
             if (!data.Monster_Resource.IsNullOrEmpty())
             {
-                var sprite = AssetDatabase.LoadAssetAtPath<Sprite>(data.Monster_Resource);
-                enemy.spriteRenderer.sprite = sprite;
+                KALLogger.Log(string.Format(spumpath, data.Monster_Resource));
+                GameObject spumprefab = AssetDatabase.LoadAssetAtPath<GameObject>(string.Format(spumpath, data.Monster_Resource));
+                KALLogger.Log(spumprefab);
+
+
+                Vector3 scale = newPrefab.transform.Find("Enemy").gameObject.transform.localScale;
+                GameObject.DestroyImmediate(newPrefab.transform.Find("Enemy").gameObject);
+                GameObject spum = Instantiate(spumprefab);
+                spum.transform.localScale = scale;
+                spum.name = "Enemy";
+                spum.transform.position = Vector3.zero;
+                spum.transform.SetParent(newPrefab.transform);
+                enemy.animator = spum.transform.GetChild(0).GetComponent<Animator>();
             }
 
             PrefabUtility.SaveAsPrefabAsset(newPrefab, string.Format(prefabPath, data.String_Key));

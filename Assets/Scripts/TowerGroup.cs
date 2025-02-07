@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class TowerGroup : MonoBehaviour
 {
@@ -51,7 +52,7 @@ public class TowerGroup : MonoBehaviour
 
     public bool CanFusion
     {
-        get => IsFull && Data.grade < towerManager.MaxGrade-1;
+        get => IsFull && Data.grade < towerManager.MaxGrade - 2;
     }
 
     #region Move
@@ -116,6 +117,8 @@ public class TowerGroup : MonoBehaviour
         foreach (var tower in towers)
         {
             tower.towerAttack.enabled = false;
+            tower.animator.SetBool("1_Move", true);
+            tower.SetDirection(destination);
         }
 
         Vector3 dir = (destination - transform.position).normalized;
@@ -136,6 +139,8 @@ public class TowerGroup : MonoBehaviour
         foreach (var tower in towers)
         {
             tower.towerAttack.enabled = true;
+            tower.animator.SetBool("1_Move", false);
+            tower.SetDirection(destination);
         }
     }
 

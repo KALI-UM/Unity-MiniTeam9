@@ -6,3 +6,10 @@ NativeFormatImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 200884
+  packageName: 2D Monster Undead - SPUM Premium Addon Pack
+  packageVersion: 3.0.1
+  assetPath: Assets/SPUM/Resources/Addons/Legacy/1_Horse/1_Animation/02_Attack/01_LongRangeAttack/2_Attack_Bow.anim
+  uploadId: 693854

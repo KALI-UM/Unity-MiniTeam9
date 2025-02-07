@@ -9,7 +9,7 @@ public class Tower : MonoBehaviour
 {
     public TowerAttack towerAttack;
 
-    public SpriteRenderer spriteRenderer;
+    public Animator animator;
     public SpriteRenderer shadowRenderer;
 
     private TowerManager towerManager;
@@ -81,4 +81,22 @@ public class Tower : MonoBehaviour
         towerAttack.enabled = true;
     }
 
+    public void SetDirection(Vector3 targetPos)
+    {
+        if (transform.position.x < targetPos.x)
+        {
+            var one = Vector3.one;
+            one.x *= -1;
+            transform.localScale = one;
+        }
+        else
+        {
+            SetDefaultDirection();
+        }
+    }
+
+    public void SetDefaultDirection()
+    {
+        transform.localScale = Vector3.one;
+    }
 }

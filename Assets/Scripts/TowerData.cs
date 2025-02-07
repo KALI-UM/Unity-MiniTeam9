@@ -18,7 +18,7 @@ public class TowerData : ScriptableObject
     public void SetData(TowerRawData raw)
     {
         Id = (eTower)raw.Tower_ID;
-        key = raw.String_Key;
+        key = raw.Strnig_Key;
         grade = raw.Tower_Grade;
         attackType = raw.Tower_AttackType;
         attackPower = raw.Tower_AttackPower;

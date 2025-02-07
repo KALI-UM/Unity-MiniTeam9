@@ -10,7 +10,8 @@ public class Enemy : MonoBehaviour
 {
     public EnemyMovement movement;
     public EnemyHpBar hpBar;
-    public SpriteRenderer spriteRenderer;
+
+    public Animator animator;
 
     public Action onDie;
 
@@ -58,6 +59,7 @@ public class Enemy : MonoBehaviour
     {
         movement.enabled = true;
         movement.Spawn();
+        animator.SetBool("1_Move", true);
     }
 
     public void OnReset()
@@ -84,7 +86,26 @@ public class Enemy : MonoBehaviour
         Hp = 0;
         movement.enabled = false;
 
-        KALLogger.Log("enemy - die", this);
         onDie?.Invoke();
+        animator.SetTrigger("4_Death");
+    }
+
+    public void SetDirection(Vector3 targetPos)
+    {
+        if (transform.position.x < targetPos.x)
+        {
+            var one = Vector3.one;
+            one.x *= -1;
+            transform.localScale = one;
+        }
+        else
+        {
+            SetDefaultDirection();
+        }
+    }
+
+    public void SetDefaultDirection()
+    {
+        transform.localScale = Vector3.one;
     }
 }

@@ -6,3 +6,10 @@ NativeFormatImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 200884
+  packageName: 2D Monster Undead - SPUM Premium Addon Pack
+  packageVersion: 3.0.1
+  assetPath: Assets/SPUM/Resources/Addons/Legacy/0_Unit/1_Animation/00_Idle/0_idle.anim
+  uploadId: 693854
