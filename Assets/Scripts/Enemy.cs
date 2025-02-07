@@ -11,7 +11,8 @@ public class Enemy : MonoBehaviour
     public EnemyMovement movement;
     public EnemyHpBar hpBar;
 
-    public Animator animator;
+    public SpumAnimationHandler animationHandler;
+    public GameObject character;
 
     public Action onDie;
 
@@ -59,7 +60,8 @@ public class Enemy : MonoBehaviour
     {
         movement.enabled = true;
         movement.Spawn();
-        animator.SetBool("1_Move", true);
+
+        animationHandler.Move(true);
     }
 
     public void OnReset()
@@ -87,25 +89,22 @@ public class Enemy : MonoBehaviour
         movement.enabled = false;
 
         onDie?.Invoke();
-        animator.SetTrigger("4_Death");
+        animationHandler.Death();
     }
 
-    public void SetDirection(Vector3 targetPos)
+    public void SetDirection(Vector3 dir)
     {
-        if (transform.position.x < targetPos.x)
+        SetDefaultDirection();
+        if (dir.y > 0 || dir.x > 0)
         {
-            var one = Vector3.one;
-            one.x *= -1;
-            transform.localScale = one;
-        }
-        else
-        {
-            SetDefaultDirection();
+            var flip = character.transform.localScale;
+            flip.x *= -1;
+            character.transform.localScale = flip;
         }
     }
 
     public void SetDefaultDirection()
     {
-        transform.localScale = Vector3.one;
+        character.transform.localScale = Vector3.one;
     }
 }

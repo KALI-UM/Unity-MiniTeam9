@@ -13,6 +13,7 @@ using UnityEditor.TerrainTools;
 using static EnemyTable;
 using static UnityEngine.EventSystems.EventTrigger;
 using System.Drawing.Drawing2D;
+using Unity.VisualScripting;
 
 //[ExecuteInEditMode]
 [CustomEditor(typeof(TowerManager))]
@@ -148,14 +149,15 @@ public class TowerManagerEditor : Editor
                 GameObject spumprefab = AssetDatabase.LoadAssetAtPath<GameObject>(string.Format(spumpath, data.Tower_Resource));
                 KALLogger.Log(spumprefab);
 
-                
-                GameObject.DestroyImmediate(newPrefab.transform.Find("Tower").gameObject);
+                GameObject.DestroyImmediate(tower.character.transform.GetChild(0).gameObject);
 
                 GameObject spum = Instantiate(spumprefab);
-                spum.name = "Tower";
                 spum.transform.position = Vector3.zero;
-                spum.transform.SetParent(newPrefab.transform);
-                tower.animator = spum.transform.GetChild(0).GetComponent<Animator>();
+                spum.transform.SetParent(tower.character.transform);
+
+                spum.transform.GetChild(0).AddComponent<SpumAnimationHandler>();
+                tower.animationHandler = spum.transform.GetChild(0).GetComponent<SpumAnimationHandler>();
+
                 tower.shadowRenderer = spum.transform.GetChild(0).Find("Shadow").transform.Find("Shadow").GetComponent<SpriteRenderer>();
             }
 

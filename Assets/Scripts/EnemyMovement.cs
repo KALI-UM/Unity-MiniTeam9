@@ -53,7 +53,7 @@ public class EnemyMovement : MonoBehaviour
         NextIndex = 0;
         direction = EnemyManager.WayPointData.initialDirection;
 
-        enemy.SetDefaultDirection();
+        enemy.SetDirection(direction);
     }
 
     private void MoveTo()
@@ -66,6 +66,8 @@ public class EnemyMovement : MonoBehaviour
 
         if (sqrDelta >= sqrMax)
         {
+            enemy.SetDirection(direction);
+
             if (!IsOnWaypoints)
             {
                 IsOnWaypoints = true;
@@ -78,7 +80,6 @@ public class EnemyMovement : MonoBehaviour
             next = direction * max;
             direction = EnemyManager.WayPointData.directions[NextIndex];
             next += direction * (delta - max);
-            enemy.SetDirection(transform.position + next);
         }
         else
         {

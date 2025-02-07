@@ -6,6 +6,7 @@ using System.Text;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 using static EnemyTable;
 using static TowerTable;
 
@@ -101,14 +102,16 @@ public class EnemyManagerEditor : Editor
                 KALLogger.Log(spumprefab);
 
 
-                Vector3 scale = newPrefab.transform.Find("Enemy").gameObject.transform.localScale;
-                GameObject.DestroyImmediate(newPrefab.transform.Find("Enemy").gameObject);
+                Vector3 scale = enemy.character.transform.GetChild(0).transform.localScale;
+                GameObject.DestroyImmediate(enemy.character.transform.GetChild(0).gameObject);
+
                 GameObject spum = Instantiate(spumprefab);
                 spum.transform.localScale = scale;
-                spum.name = "Enemy";
                 spum.transform.position = Vector3.zero;
-                spum.transform.SetParent(newPrefab.transform);
-                enemy.animator = spum.transform.GetChild(0).GetComponent<Animator>();
+                spum.transform.SetParent(enemy.character.transform);
+
+                spum.transform.GetChild(0).AddComponent<SpumAnimationHandler>();
+                enemy.animationHandler = spum.transform.GetChild(0).GetComponent<SpumAnimationHandler>();     
             }
 
             PrefabUtility.SaveAsPrefabAsset(newPrefab, string.Format(prefabPath, data.String_Key));

@@ -117,7 +117,7 @@ public class TowerGroup : MonoBehaviour
         foreach (var tower in towers)
         {
             tower.towerAttack.enabled = false;
-            tower.animator.SetBool("1_Move", true);
+            tower.animationHandler.Move(true);
             tower.SetDirection(destination);
         }
 
@@ -139,7 +139,7 @@ public class TowerGroup : MonoBehaviour
         foreach (var tower in towers)
         {
             tower.towerAttack.enabled = true;
-            tower.animator.SetBool("1_Move", false);
+            tower.animationHandler.Move(false);
             tower.SetDirection(destination);
         }
     }

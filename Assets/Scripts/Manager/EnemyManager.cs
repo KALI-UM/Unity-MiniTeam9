@@ -130,7 +130,6 @@ public class EnemyManager : InGameManager
         {
             enemy.onDie += () =>
             {
-                enemyPools[enemy.EnemyId].Release(enemy);
                 validEnemies.Remove(enemy);
                 onEnemyCountChange?.Invoke(CurrEnemyCount);
 
@@ -144,7 +143,6 @@ public class EnemyManager : InGameManager
         {
             enemy.onDie += () =>
             {
-                enemyPools[enemy.EnemyId].Release(enemy);
                 validEnemies.Remove(enemy);
                 onEnemyCountChange?.Invoke(CurrEnemyCount);
 
@@ -152,6 +150,8 @@ public class EnemyManager : InGameManager
                 GameManager.goldGemSystem.AddGem(enemy.Data.dropGem);
             };
         }
+
+        enemy.animationHandler.onDeathExit+=()=> enemyPools[enemy.EnemyId].Release(enemy);
         return enemy;
     }
 
