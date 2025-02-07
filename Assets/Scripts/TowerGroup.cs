@@ -52,7 +52,7 @@ public class TowerGroup : MonoBehaviour
 
     public bool CanFusion
     {
-        get => IsFull && Data.grade < towerManager.MaxGrade - 2;
+        get => IsFull && Data.grade < towerManager.MaxGrade - 1;
     }
 
     #region Move
@@ -125,7 +125,7 @@ public class TowerGroup : MonoBehaviour
         float distance = Vector3.Distance(destination, transform.position);
         while (true)
         {
-            Vector3 move = dir * Time.deltaTime * TowerManager.GlobalTowerMoveSpeed;
+            Vector3 move = dir * Time.deltaTime * towerManager.factorData.towerMoveSpeed;
             transform.position += move;
             distance -= move.magnitude;
             if (distance < 0)

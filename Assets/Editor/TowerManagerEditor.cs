@@ -24,44 +24,7 @@ public class TowerManagerEditor : Editor
     //public static float GlobalTowerMoveSpeed = 10f;
     public override void OnInspectorGUI()
     {
-        if (GUILayout.Button("Update Tower Enum"))
-        {
-            var path = string.Format(DataTable.FormatPath, DataTableIds.Tower);
-            var textAsset = Resources.Load<UnityEngine.TextAsset>(path);
-            var list = DataTable.LoadCSV<TowerRawData>(textAsset.text);
-            UpdateTowerEnum(list);
-        }
-
-        if (GUILayout.Button("Update Tower Prefabs"))
-        {
-            var path = string.Format(DataTable.FormatPath, DataTableIds.Tower);
-            var textAsset = Resources.Load<UnityEngine.TextAsset>(path);
-            var list = DataTable.LoadCSV<TowerRawData>(textAsset.text);
-
-            var towerManager = (TowerManager)target;
-            UpdateTowerPrefabs(towerManager.defaultTowerPrefab, list);
-        }
-
-        EditorGUILayout.LabelField("Range Factor");
-        float currRangeFactor = EditorGUILayout.Slider(TowerManager.GlobalRangeFactor, 0.1f, 5f);
-        if (TowerManager.GlobalRangeFactor != currRangeFactor)
-        {
-            TowerManager.GlobalRangeFactor = currRangeFactor;
-        }
-
-        EditorGUILayout.LabelField("Attack Speed Factor");
-        float currAttackSpeedFactor = EditorGUILayout.Slider(TowerManager.GlobalAttackSpeedFactor, 0.1f, 5f);
-        if (TowerManager.GlobalAttackSpeedFactor != currAttackSpeedFactor)
-        {
-            TowerManager.GlobalAttackSpeedFactor = currAttackSpeedFactor;
-        }
-
-        EditorGUILayout.LabelField("Move Speed Factor");
-        float currMoveSpeedFactor = EditorGUILayout.Slider(TowerManager.GlobalTowerMoveSpeed, 0.1f, 10f);
-        if (TowerManager.GlobalTowerMoveSpeed != currMoveSpeedFactor)
-        {
-            TowerManager.GlobalTowerMoveSpeed = currMoveSpeedFactor;
-        }
+   
 
         base.OnInspectorGUI();
     }

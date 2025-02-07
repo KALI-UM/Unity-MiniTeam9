@@ -6,14 +6,10 @@ using static TowerUpgradeTable;
 
 public class TowerManager : InGameManager
 {
-    public GameObject defaultTowerPrefab;
     private readonly Dictionary<eTower, GameObject> towerPrefabs = new();
     private readonly Dictionary<eTower, int> towerCounts = new();
 
-
-    public static float GlobalRangeFactor = 1.5f;
-    public static float GlobalAttackSpeedFactor = 1f;
-    public static float GlobalTowerMoveSpeed = 10f;
+    public GlobalFactorData factorData;
 
     public int MaxGrade
     {

@@ -6,9 +6,9 @@ using static EnemyTable;
 [CreateAssetMenu(fileName = "EnemyData", menuName = "ScriptableObjects/EnemyData")]
 public class EnemyData : ScriptableObject
 {
-    public eEnemy Id;
-    public string key;
-    public int grade;
+    [ReadOnly] public eEnemy Id;
+    [ReadOnly] public string key;
+    [ReadOnly] public int grade;
     public int maxHp;
     public float moveSpeed;
     public int dropGold;
@@ -23,5 +23,19 @@ public class EnemyData : ScriptableObject
         moveSpeed = raw.Monster_MoveSpeed;
         dropGold = raw.DropGold;
         dropGem = raw.DropGem;
+    }
+
+    public EnemyRawData ConvertToRawData()
+    {
+        EnemyRawData raw = new EnemyRawData();
+        raw.Monster_ID = (int)Id;
+        raw.String_Key = key;
+        raw.Monster_Grade = grade;
+        raw.Monster_HP = maxHp;
+        raw.Monster_MoveSpeed = moveSpeed;
+        raw.DropGold = dropGold;
+        raw.DropGem = dropGem;
+        raw.Monster_Resource = DataTableManager.EnemyTable.Get(Id).Monster_Resource;
+        return raw;
     }
 }

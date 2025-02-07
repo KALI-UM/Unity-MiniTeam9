@@ -19,7 +19,7 @@ public class TowerTable : DataTable
         public int Tower_Grade { get; set; }
         public int Tower_AttackType { get; set; }
         public int Tower_AttackPower { get; set; }
-        public int Tower_AttackSpeed { get; set; }
+        public float Tower_AttackSpeed { get; set; }
         public float Tower_AttackRange { get; set; }
         public int Tower_SaleGold { get; set; }
         public int Tower_SaleGem { get; set; }
