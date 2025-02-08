@@ -39,7 +39,7 @@ public class EmergencySpawnButton : UIElement
             return;
         }
 
-        if (!UIManager.GameManager.SlotManager.IsEmptySlotExist())
+        if (UIManager.GameManager.TowerManager.IsMaxTowrCount || !UIManager.GameManager.SlotManager.IsEmptySlotExist())
         {
             return;
         }

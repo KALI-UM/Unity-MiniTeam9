@@ -5,10 +5,10 @@ using static TowerTable;
 
 public class TowerData : ScriptableObject
 {
-    public eTower Id;
-    public string key;
-    public int grade;
-    public int attackType;
+    [ReadOnly] public eTower Id;
+    [ReadOnly] public string key;
+    [ReadOnly] public int grade;
+    [ReadOnly] public int attackType;
     public int attackPower;
     public float attackSpeed;
     public float attackRange;
@@ -26,5 +26,21 @@ public class TowerData : ScriptableObject
         attackRange = raw.Tower_AttackRange;
         saleGold = raw.Tower_SaleGold;
         saleGem = raw.Tower_SaleGem;
+    }
+
+    public TowerRawData ConvertToRawData()
+    {
+        TowerRawData raw = new TowerRawData();
+        raw.Tower_ID = (int)Id;
+        raw.Strnig_Key = key;
+        raw.Tower_Grade = grade;
+        raw.Tower_AttackType = attackType;
+        raw.Tower_AttackPower = attackPower;
+        raw.Tower_AttackSpeed = attackSpeed;
+        raw.Tower_AttackRange = attackRange;
+        raw.Tower_SaleGold = saleGold;
+        raw.Tower_SaleGem = saleGem;
+        raw.Tower_Resource = DataTableManager.TowerTable.Get(Id).Tower_Resource; 
+        return raw;
     }
 }

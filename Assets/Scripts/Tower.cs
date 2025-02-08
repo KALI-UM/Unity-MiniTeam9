@@ -39,17 +39,17 @@ public class Tower : MonoBehaviour
 
     public float AttackRange
     {
-        get => Data.attackRange * TowerManager.GlobalRangeFactor;
+        get => Data.attackRange * towerManager.factorData.attackRange;
     }
 
     public int AttackPower
     {
-        get => Data.attackPower + (int)(Data.attackPower * towerManager.AttackPowerUpgradeRate);
+        get => Mathf.CeilToInt((Data.attackPower + (Data.attackPower * towerManager.AttackPowerUpgradeRate))*towerManager.factorData.attackPower);
     }
 
     public float AttackSpeed
     {
-        get => (Data.attackSpeed + Data.attackSpeed * towerManager.AttackSpeedUpgradeRate) * TowerManager.GlobalAttackSpeedFactor;
+        get => (Data.attackSpeed + Data.attackSpeed * towerManager.AttackSpeedUpgradeRate) * towerManager.factorData.attackSpeed;
     }
 
     public float AttackInterval
