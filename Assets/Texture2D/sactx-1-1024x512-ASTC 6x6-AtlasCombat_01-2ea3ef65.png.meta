@@ -1,0 +1,719 @@
+fileFormatVersion: 2
+guid: 8463bc0179cfc764ab5ab5a867a4c024
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 50
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 0
+  flipbookColumns: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 4Grade
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 467
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fadc85dfe6ceabc4f9c376122bdfe6c7
+      internalID: 1980371852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ge
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 332
+        width: 52
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8a45fbc42137c6458530e9f89f8f398
+      internalID: -1426461276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_6
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 312
+        width: 53
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 267c4fdfd6d9e4446bcb51d83ce95b16
+      internalID: 1119432378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_7
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d82396ce9cb1cd4d82633267520a06c
+      internalID: -138649406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_12
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 261
+        width: 75
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 583f7ca6883051449aa56cf68270a78c
+      internalID: -138766012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_17
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 136
+        width: 63
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4b6024c9ea5d554892203cbca18f7bd
+      internalID: -437663965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_18
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 136
+        width: 64
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1880c5711e2dd9d49bd534e12819a164
+      internalID: 332024963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_19
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 138
+        width: 65
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 050ba8147311f1d42a9e67e0aeacf351
+      internalID: 2024789615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_20
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 132
+        width: 57
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 406fb90f5c978954d8aea2760325455d
+      internalID: -940094400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_21
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 135
+        width: 64
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 382fdf371fa2ab14b89b50c84a29eb10
+      internalID: 1410075765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_23
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 132
+        width: 60
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cca12cf72e7cf145bc14d6bf7347626
+      internalID: 113834382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_24
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 132
+        width: 62
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 828e0e7bfa1f90c4f95223f84e0b2613
+      internalID: 1054020592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 68
+        width: 67
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1249e2b24ad86c74a83bb1b70b2c17d8
+      internalID: 558841539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_26
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 68
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6e7687fa58efc043a922803bfdbbe50
+      internalID: 670548149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_30
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 68
+        width: 59
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ad20d748807d1e4fb423a4507afc8e0
+      internalID: 900708222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3Grade
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 64
+        width: 28
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9de28f41c1a50454eb85366aadde6dea
+      internalID: 1065656293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gold
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 68
+        width: 59
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ae4a0bfffce24b43aaeb0059235b109
+      internalID: -1322163364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2Grade
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 76
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 645ba3fada6c9ac41858dae8949ad056
+      internalID: 1058073159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gem
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 64
+        width: 54
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3fb6fcf6c482f54e90485344b908486
+      internalID: 1132930968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6fe1ee8c1def444aa4664368f98971b
+      internalID: -589245663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sell
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 60
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcff87883392db4468f11327b82cf25e
+      internalID: 777785673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_41
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 1
+        width: 65
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60cf21dea3f1b3b48869e88b8975a402
+      internalID: -1214088732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_42
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 1
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06810a3f59631cb428bce7d4ec8aa30a
+      internalID: -794780647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_43
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 0
+        width: 72
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4c18914530d476439830d84fc4a67b6
+      internalID: -697541183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_44
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 2
+        width: 60
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0db47be9cd69f804484b7c16e16cb96c
+      internalID: 227334758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_45
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 2
+        width: 34
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbeb1c217da92a240a2949e0b16df681
+      internalID: -1708569153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: cd18ab5c38bb3f94792af1ed2d6bb927
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      2Grade: 1058073159
+      3Grade: 1065656293
+      4Grade: 1980371852
+      Ge: -1426461276
+      Gem: 1132930968
+      Gold: -1322163364
+      Sell: 777785673
+      sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_0: 1455723411
+      sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_1: 2072243331
+      sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_10: 138162493
+      sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_11: -696872378
+      sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_12: -138766012
+      sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_13: -123178078
+      sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_14: 1817587114
+      sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_15: -2041860665
+      sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_16: 901808107
+      sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_17: -437663965
+      sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_18: 332024963
+      sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_19: 2024789615
+      sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_2: 162011313
+      sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_20: -940094400
+      sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_21: 1410075765
+      sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_22: -1492806488
+      sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_23: 113834382
+      sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_24: 1054020592
+      sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_25: 558841539
+      sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_26: 670548149
+      sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_27: 608254299
+      sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_28: -798130453
+      sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_29: -1095253998
+      sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_30: 900708222
+      sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_32: 1372894625
+      sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_35: -396425528
+      sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_37: 1285967464
+      sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_38: -589245663
+      sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_39: -749933995
+      sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_4: 1101809250
+      sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_41: -1214088732
+      sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_42: -794780647
+      sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_43: -697541183
+      sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_44: 227334758
+      sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_45: -1708569153
+      sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_6: 1119432378
+      sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_7: -138649406
+      sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_8: -2053457101
+      sactx-1-1024x512-ASTC 6x6-AtlasCombat_01-2ea3ef65_9: 1440856822
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

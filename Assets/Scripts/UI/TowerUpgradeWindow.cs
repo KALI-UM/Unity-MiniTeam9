@@ -45,8 +45,6 @@ public class TowerUpgradeWindow : FocusWindow
     private int maxUpgradeLv;
 
 
-    private int towerUpgradeLevel = 1;
-
     private List<TowerUpgradeRawData> towerUpgradeRawDatas;
 
     public override void Initialize(UIManager mgr)

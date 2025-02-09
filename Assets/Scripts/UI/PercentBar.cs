@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Slider))]
+[ExecuteAlways]
 public class PercentBar : MonoBehaviour
 {
     private Slider bar;
@@ -17,8 +18,6 @@ public class PercentBar : MonoBehaviour
     {
         bar = GetComponent<Slider>();
         bar.onValueChanged.AddListener((float value)=>OnValueChange(value));
-
-        OnValueChange(0);
     }
     
     public void OnValueChange(float value)

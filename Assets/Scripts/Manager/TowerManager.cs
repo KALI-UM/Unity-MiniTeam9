@@ -11,6 +11,12 @@ public class TowerManager : InGameManager
 
     public GlobalFactorData factorData;
 
+    public MaxFusionSystem MaxFusionSystem
+    {
+        get;
+        private set;
+    }
+
     public int MaxGrade
     {
         get;
@@ -58,6 +64,12 @@ public class TowerManager : InGameManager
         TowerCountChange(0);
     }
 
+    public override void Initialize()
+    {
+        base.Initialize();
+        MaxFusionSystem = new MaxFusionSystem(this);
+    }
+
     private void InitializeTowerPrefabs()
     {
         GameObject[] prefabs = Resources.LoadAll<GameObject>("Prefabs/Tower");
@@ -90,9 +102,9 @@ public class TowerManager : InGameManager
     {
         var go = Instantiate(towerPrefabs[id]);
         go.GetComponent<Tower>().Initialize(this);
-        //var origin = towerPrefabs[id].GetComponent<Tower>();
-        //go.GetComponent<Tower>().InitializeData(origin.TowerId, origin.Data);
         towerCounts[id]++;
+
+        MaxFusionSystem.UpdateRecipeProgress();
         return go;
     }
 
@@ -100,6 +112,8 @@ public class TowerManager : InGameManager
     {
         towerCounts[tower.TowerId]--;
         GameObject.Destroy(tower.gameObject);
+
+        MaxFusionSystem.UpdateRecipeProgress();
         TowerCountChange(-1);
     }
 

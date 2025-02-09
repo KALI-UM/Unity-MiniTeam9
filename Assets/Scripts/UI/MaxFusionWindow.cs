@@ -17,6 +17,9 @@ public class MaxFusionWindow : FocusWindow
     private RecipeProgressTracker currentRecipe;
 
     [SerializeField]
+    private Image towerSprite;
+
+    [SerializeField]
     private LocalizationText localizationTowerName;
 
     [SerializeField]
@@ -43,17 +46,11 @@ public class MaxFusionWindow : FocusWindow
 
     private void Awake()
     {
-        var towerTable = DataTableManager.TowerTable;
-        var towerRecipeTable = DataTableManager.Get<TowerRecipeTable>(DataTableIds.TowerRecipe);
-
-        List<eTower> maxTowers = towerTable.GetTowerGradeList(towerTable.MaxGrade);
-
-        foreach (eTower id in maxTowers)
+        foreach (var tracker in UIManager.GameManager.TowerManager.MaxFusionSystem.ProgressTrackers)
         {
             var button = Instantiate(recipeButtonPrefab);
             var recipeButton = button.GetComponent<RecipeButton>();
             buttons.Add(recipeButton);
-            var tracker = new RecipeProgressTracker(uiManager.GameManager.TowerManager, towerRecipeTable.Get(id));
             recipeButton.SetProgressTracker(tracker);
             recipeButton.button.onClick.AddListener(() => OnSelectRecipe(tracker));
             button.transform.SetParent(recipeScrollContent.transform);
@@ -80,13 +77,14 @@ public class MaxFusionWindow : FocusWindow
     public void OnSelectRecipe(RecipeProgressTracker recipe)
     {
         currentRecipe = recipe;
+        towerSprite.sprite = currentRecipe.TargetTowerSprite;
         localizationTowerName.OnStringIdChange(DataTableManager.TowerTable.Get(currentRecipe.Data.Id).Strnig_Key);
         percentBar.value = currentRecipe.ProgressValue;
 
         for (int i = 0; i < currentRecipe.Data.RecipeSum; i++)
         {
             towerIngredients[i].SetActive(true);
-            towerIngredients[i].GetComponent<TowerIngredientIcon>().SetIcon(currentRecipe.ProgressList[i].exist);
+            towerIngredients[i].GetComponent<TowerIngredientIcon>().SetIcon(currentRecipe.ProgressList[i].exist, currentRecipe.IngredientSpriteList[i]);
         }
 
         for (int i = currentRecipe.Data.RecipeSum; i < towerIngredients.Count; i++)
@@ -97,18 +95,12 @@ public class MaxFusionWindow : FocusWindow
 
     public void OnSpawnTower()
     {
-        if (!currentRecipe.CanFusion || !UIManager.GameManager.SlotManager.IsEmptySlotExist())
+        if (!currentRecipe.CanFusion || UIManager.GameManager.TowerManager.IsMaxTowrCount || !UIManager.GameManager.SlotManager.IsEmptySlotExist())
         {
             return;
         }
 
-        foreach (var ingredient in currentRecipe.ProgressList)
-        {
-            UIManager.GameManager.SlotManager.FindSlot(ingredient.Id).RemoveTower();
-        }
-
-        GameObject tower = UIManager.GameManager.TowerManager.GetTower(currentRecipe.Data.Id);
-        UIManager.GameManager.SlotManager.AddTower(tower.GetComponent<Tower>());
+        UIManager.GameManager.TowerManager.MaxFusionSystem.SpawnMaxLvRecipe(currentRecipe);
         Close();
     }
 

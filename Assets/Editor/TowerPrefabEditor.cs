@@ -8,7 +8,7 @@ using UnityEngine;
 using static TowerTable;
 using static UnityEngine.GraphicsBuffer;
 
-    [CustomEditor(typeof(TowerEditor))]
+[CustomEditor(typeof(TowerEditor))]
 public class TowerPrefabEditor : Editor
 {
     public override void OnInspectorGUI()
@@ -30,9 +30,11 @@ public class TowerPrefabEditor : Editor
             var list = DataTable.LoadCSV<TowerRawData>(textAsset.text);
 
             var towerEditor = (TowerEditor)target;
-            UpdateTowerPrefabs(towerEditor.defaultTowerPrefab, list, towerEditor.shadowColors);
+            UpdateTowerPrefabs(towerEditor.defaultTowerPrefab, list, towerEditor.shadowColors, towerEditor.spumToTexture);
+
+            AssetDatabase.Refresh();
         }
-    
+
         base.OnInspectorGUI();
     }
 
@@ -77,11 +79,12 @@ public class TowerPrefabEditor : Editor
     }
 
 
-    private void UpdateTowerPrefabs(GameObject defaultPrefab, List<TowerRawData> list, List<Color> colors)
+    private void UpdateTowerPrefabs(GameObject defaultPrefab, List<TowerRawData> list, List<Color> colors, SpumToTexture spumToTexture)
     {
         string prefabPath = "Assets/Resources/Prefabs/Tower/{0}.prefab";
         string dataPath = "Assets/Resources/Datas/Tower/{0}.asset";
-        string spumpath = "Assets/Resources/Prefabs/Units/{0}.prefab";
+        string spumPath = "Assets/Resources/Prefabs/Units/{0}.prefab";
+
 
         UpdateTowerDatas(list);
 
@@ -99,8 +102,8 @@ public class TowerPrefabEditor : Editor
 
             if (!string.IsNullOrEmpty(data.Tower_Resource))
             {
-                KALLogger.Log(string.Format(spumpath, data.Tower_Resource));
-                GameObject spumprefab = AssetDatabase.LoadAssetAtPath<GameObject>(string.Format(spumpath, data.Tower_Resource));
+                KALLogger.Log(string.Format(spumPath, data.Tower_Resource));
+                GameObject spumprefab = AssetDatabase.LoadAssetAtPath<GameObject>(string.Format(spumPath, data.Tower_Resource));
                 KALLogger.Log(spumprefab);
 
                 GameObject.DestroyImmediate(tower.character.transform.GetChild(0).gameObject);
@@ -117,8 +120,10 @@ public class TowerPrefabEditor : Editor
 
             tower.shadowRenderer.color = colors[tower.Data.grade];
 
+            newPrefab.name = data.Tower_Resource;
+            spumToTexture.PushToSpumToTextureQueue(newPrefab);
             PrefabUtility.SaveAsPrefabAsset(newPrefab, string.Format(prefabPath, data.Strnig_Key));
-            GameObject.DestroyImmediate(newPrefab);
+            //GameObject.DestroyImmediate(newPrefab);
         }
     }
 }

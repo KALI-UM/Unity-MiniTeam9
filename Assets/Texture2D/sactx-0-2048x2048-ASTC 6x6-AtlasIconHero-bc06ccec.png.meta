@@ -1,0 +1,5364 @@
+fileFormatVersion: 2
+guid: 2c9887069e297064eb566ea3d03f6073
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 50
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 0
+  flipbookColumns: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_0
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 2016
+        width: 108
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01f3d2a2c95edd846ba643a64770e625
+      internalID: 1111905814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_1
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 1920
+        width: 97
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bed8fa880ea5854dafba6a2796505a5
+      internalID: -56343204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_2
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 1812
+        width: 218
+        height: 210
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 849ed395d961af24a993ffcf96865787
+      internalID: 1301930566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_3
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 2018
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f130a60b6217ff84295fc95232271ee7
+      internalID: 2072272868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_4
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 1894
+        width: 145
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b57d392b2590b8d4a826b6ed4a923c51
+      internalID: 1135843235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_5
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1932
+        width: 64
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baae83ef069f5a14e813032c329a1749
+      internalID: 21253130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_6
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 1904
+        width: 115
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ab07401a384fa24b8cab32585f25612
+      internalID: -253319332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_7
+      rect:
+        serializedVersion: 2
+        x: 953
+        y: 2000
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0491d5cb9e17181469ff7ded8c4b4077
+      internalID: -807756817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1800
+        width: 197
+        height: 164
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb1af6bda67f83a478ebf1dc740b8923
+      internalID: -1547134504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1896
+        width: 210
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 516ac0e8ff89c794886a461387a7a1cb
+      internalID: -1635533058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_10
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 1944
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7dab93acd453f94f919742eec714fc1
+      internalID: -458710579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_11
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 1854
+        width: 200
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcba9ac07368dc4418fc8057a6bf4482
+      internalID: 2074098955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_12
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 1908
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c919fd073aae59944924b95a1e12d871
+      internalID: -1418355126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_13
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 1878
+        width: 234
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78a7bbf59db42924697466c2f238223e
+      internalID: 1235637171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_14
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 1916
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1a0f58ad167e6541a27f338dc07d124
+      internalID: -1923376782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_15
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 1909
+        width: 24
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d981f5fe4317a8143870310649e14910
+      internalID: -1068286346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_16
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1800
+        width: 114
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb0597553be56344abe0c533d84cc620
+      internalID: -1288379016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_17
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 1738
+        width: 184
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 250fe84d74008fe4d958aedbe66556eb
+      internalID: -150991638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_18
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 1909
+        width: 30
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a4dc47d6e262854db5dad79c456a910
+      internalID: 475208337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_19
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 1909
+        width: 12
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40ca691f2d291264d8a9d6578cb8aa66
+      internalID: -1548826737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_20
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 1800
+        width: 48
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da81cab33df4b3a4e8e55557889880e6
+      internalID: 1735187492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_21
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 1728
+        width: 182
+        height: 167
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd1456cf677eb67448fd0fee179ff6be
+      internalID: -591324564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_22
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1884
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ef9d8a94ff6f3b45bc694d26139dd43
+      internalID: 384075207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_23
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 1744
+        width: 188
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08f72aa28ea994e4d9309298d68716f7
+      internalID: 1992802620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_24
+      rect:
+        serializedVersion: 2
+        x: 1133
+        y: 1650
+        width: 275
+        height: 239
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e52cbc9c65f5da74aaaf9d9718dc0f8a
+      internalID: -67574477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_25
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 1806
+        width: 178
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 801842ce2a9f74a48ab163d0f2e3406d
+      internalID: -542098739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_26
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 1724
+        width: 48
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3653534199a4c2345a43cd40d77b0656
+      internalID: 947961658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_27
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 1756
+        width: 104
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39ca9fe44215a7c49b0bd722d15f7bfe
+      internalID: -809504725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_28
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 1704
+        width: 210
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad8d52dbd1f5d1f41adf5832ce586a50
+      internalID: 1579985558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_29
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 1848
+        width: 114
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67343e4efefd97144a9f5022cddb3a70
+      internalID: -2109040903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_30
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 1813
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9605c19d3ecaa44c8333365a55ead5d
+      internalID: -700448860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_31
+      rect:
+        serializedVersion: 2
+        x: 1422
+        y: 1230
+        width: 302
+        height: 618
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5488e404c748da5428165d8bc3206b7a
+      internalID: 200602659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_32
+      rect:
+        serializedVersion: 2
+        x: 1704
+        y: 1752
+        width: 120
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8b3c50ade0f259479e7bc06680eb297
+      internalID: 1670773026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1604
+        width: 186
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2422a094771be9146bfc9cac0a163a85
+      internalID: -1610601389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_34
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 1584
+        width: 166
+        height: 217
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 920e0a15f476f1944beb6845e21865fb
+      internalID: 598524992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_35
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 1764
+        width: 12
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a27abef875f20db44988850c4676e89c
+      internalID: -76427195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_36
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 1488
+        width: 325
+        height: 323
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 521f56cdfd47725428a0db5c481a3d1a
+      internalID: -1581721520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_37
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 1794
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82b129136d5f86945ba4b2e2f32d46e2
+      internalID: -1186002712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_38
+      rect:
+        serializedVersion: 2
+        x: 1398
+        y: 1776
+        width: 12
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 325458dec3add63428d54bd4d17c6e75
+      internalID: -1325697148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_39
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 1764
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 261a5cbe27f3ec243ab47cc0a24d8788
+      internalID: -781888923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_40
+      rect:
+        serializedVersion: 2
+        x: 1824
+        y: 1746
+        width: 48
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c872cd71528c43419cb0e6a856aa5cd
+      internalID: 999494276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_41
+      rect:
+        serializedVersion: 2
+        x: 1878
+        y: 1752
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e69fb15b433f26488eea785d53db281
+      internalID: 579932147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_42
+      rect:
+        serializedVersion: 2
+        x: 1884
+        y: 1752
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbe7b0161c218ab46b090b3027fca43b
+      internalID: 1759417022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_43
+      rect:
+        serializedVersion: 2
+        x: 1895
+        y: 1749
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e9cf5ec6db7b1142a8b9f1c8dae8d6d
+      internalID: 866023577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_44
+      rect:
+        serializedVersion: 2
+        x: 1914
+        y: 1734
+        width: 6
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ac3374dad252474f93ca58e97b53d62
+      internalID: -536137272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_45
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 1729
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0b6d819da2a5e24b828f21d467de9c4
+      internalID: 163530796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_46
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 1556
+        width: 172
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40e3e488e2e395642839f8a42e456030
+      internalID: 945757042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_47
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 1722
+        width: 79
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ab91267edef3f24b9c68670fd60c8d2
+      internalID: -1305959059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_48
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 1734
+        width: 49
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16ae110fd600dc24c98da4d5d1cf516e
+      internalID: -1959637519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_49
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 1704
+        width: 14
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bb87f6010e11ab48a587e3462c939e5
+      internalID: -2082232429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_50
+      rect:
+        serializedVersion: 2
+        x: 1715
+        y: 1658
+        width: 203
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 165b1fcbc6990cf468121f0b50fe2ea9
+      internalID: 1193005066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_51
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 1620
+        width: 13
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5470741dcf9cad14dab952a5cabcdb00
+      internalID: -725106232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_52
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 1722
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4b95857614b98b42bf585de20b34388
+      internalID: -570661464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_53
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1549
+        width: 191
+        height: 174
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a212fc8cd642041418b6680a81e145c3
+      internalID: -1362759678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1602
+        width: 107
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b09db98d4f0a9544ea34bd2059543a6b
+      internalID: -1228167864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_55
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 1596
+        width: 18
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89db7f742f56449438b13e1573f39166
+      internalID: 970811386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_56
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 1536
+        width: 135
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5878577d1125154aa9ba3b59c68bc1d
+      internalID: 1708553061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_57
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 1662
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bce484f5f2516e47854397b3a5f065f
+      internalID: -1275709426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_58
+      rect:
+        serializedVersion: 2
+        x: 1223
+        y: 1494
+        width: 117
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cd2c2ffe62e05745bbeb3e130b409da
+      internalID: -1760271327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_59
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 1608
+        width: 24
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67b180b10cfad304e8d71c8e14cb678d
+      internalID: 1189305289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_60
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 1572
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f19568319cda2964e9a2cbea2fa619cf
+      internalID: 1169691630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_61
+      rect:
+        serializedVersion: 2
+        x: 1717
+        y: 1650
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe350ff9ac8f5ab4d8586e8d9628942f
+      internalID: -200869871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_62
+      rect:
+        serializedVersion: 2
+        x: 1722
+        y: 1567
+        width: 91
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64d1caf4baa508b4fbb170f72ba0e0f3
+      internalID: -59545100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_63
+      rect:
+        serializedVersion: 2
+        x: 1817
+        y: 1558
+        width: 109
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb2d5ddad92ee9d4cbc9fb790e4e5743
+      internalID: -1990183033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_64
+      rect:
+        serializedVersion: 2
+        x: 1720
+        y: 1630
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d226f3f775e7b1d479edb0ede302a8dc
+      internalID: -401052445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_65
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 1601
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c47a23c7c0637d4d977a95b16058e57
+      internalID: 1910023011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_66
+      rect:
+        serializedVersion: 2
+        x: 1341
+        y: 1496
+        width: 104
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4086064c00b6da24a9a247ff4a104344
+      internalID: -1169572222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_67
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1410
+        width: 182
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2def0dfb8c57d51458669012a68de033
+      internalID: -218129511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_68
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 1420
+        width: 190
+        height: 174
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2a6d931777204f48aadab7bedec3210
+      internalID: -844215323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_69
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 1416
+        width: 30
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3615fcd7d7201c546b270247156dbc7f
+      internalID: 424018277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_70
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 1335
+        width: 156
+        height: 210
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13e606e5fb4573f42857f5983e53fc67
+      internalID: 107838747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_71
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 1524
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6da9e21884863c4c9a5327541b95c22
+      internalID: -1309986932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_72
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 1344
+        width: 12
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 796c7d2e4402d5445831e914486e9b7e
+      internalID: 647834346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_73
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 1340
+        width: 174
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 062a1c9c460031f42864352672ac226a
+      internalID: -964670055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_74
+      rect:
+        serializedVersion: 2
+        x: 1219
+        y: 1536
+        width: 5
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f7ca7600cf5d7b4cbbc9eb806717d96
+      internalID: 1411698891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_75
+      rect:
+        serializedVersion: 2
+        x: 1713
+        y: 1459
+        width: 99
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69c5c16765b07e646b8e640cd0dad668
+      internalID: 2063109899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_76
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 1458
+        width: 114
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0807a6c7b7e0a2419f228b01f76e42a
+      internalID: -2082598144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_77
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 1530
+        width: 53
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6585e73fee779734192234ca471f44dc
+      internalID: 1549596441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_78
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 1488
+        width: 130
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 279b31e485442fa4c9c5bac68e728ac9
+      internalID: -1283628138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_79
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 1512
+        width: 44
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40c65c7eeb1fe3340a7743ea20ba8228
+      internalID: -1014684104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_80
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 1367
+        width: 168
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a3a8ee52dee2ac439e3613ab43587ec
+      internalID: 1728455118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_81
+      rect:
+        serializedVersion: 2
+        x: 1219
+        y: 1512
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a99666f611489db41a36b5f07a6d1c93
+      internalID: 1604289449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_82
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 1330
+        width: 327
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8491e1ee88edf71489adb22ec3e04eb2
+      internalID: 1757021668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_83
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 1336
+        width: 132
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d7cc8ce9cef0154ab36024cc865ee54
+      internalID: -1365133334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_84
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 1479
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 052f78f54f3303f4abeebd8538be415c
+      internalID: 1330329813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_85
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 1440
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf211175a9debdd4593d2fae6bc8ae2b
+      internalID: -1000408750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_86
+      rect:
+        serializedVersion: 2
+        x: 1734
+        y: 1367
+        width: 120
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a4108bba9ea3fc40beb300a1dd90b63
+      internalID: -1527950940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_87
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 1452
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a698ee6460718c48ba99f85ff8e5d3e
+      internalID: 2016953936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_88
+      rect:
+        serializedVersion: 2
+        x: 1851
+        y: 1344
+        width: 149
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d040e77fa4353af4c9c4949d107c70df
+      internalID: 996346590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_89
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1419
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2218523d331e17d45948bfd7f154d927
+      internalID: -761049473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_90
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 1361
+        width: 94
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 714f1df95979c5149b293d91fc982604
+      internalID: -904283812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_91
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 1244
+        width: 198
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a018b790a77084e47ba15c3ce934ac91
+      internalID: -988804483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_92
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 1410
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f47c27c047314594490fc72c986d9678
+      internalID: 1493784858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_93
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1332
+        width: 181
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ad6dd91cd6878f46917e0bb1b662cdf
+      internalID: 793920283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_94
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1191
+        width: 184
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b41052320afd27a4c8509899c1a668ca
+      internalID: -94499841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_95
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 1332
+        width: 85
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49580470b004ed94aa6b73e062b1caa4
+      internalID: -31940365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_96
+      rect:
+        serializedVersion: 2
+        x: 1434
+        y: 1374
+        width: 12
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c8949fcb64d98443a8dc63302f64c92
+      internalID: 728591597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_97
+      rect:
+        serializedVersion: 2
+        x: 1576
+        y: 848
+        width: 338
+        height: 540
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98850887f5e0fb64f8c5b40842e149e9
+      internalID: -666060435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_98
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 1368
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8806e44860861364f9e50a08040fdc5b
+      internalID: 1479900469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_99
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 1356
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8a42950ba7f5e84794ba2cb3af5e04d
+      internalID: 1683022517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_100
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 1116
+        width: 173
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0e108722346c89478755596fc084920
+      internalID: -1420646327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_101
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 1175
+        width: 183
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86dbea176c9827d48a2a59792b4e6669
+      internalID: -1182959948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_102
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 1002
+        width: 140
+        height: 366
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 834f1481976a159448e2ea340821fbbe
+      internalID: 867671061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_103
+      rect:
+        serializedVersion: 2
+        x: 1848
+        y: 1232
+        width: 128
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dda497590441f749804f7da548e881f
+      internalID: 1147566420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_104
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 1284
+        width: 6
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db13de181ba97f3409770ad8ac13a68a
+      internalID: 1725687282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_105
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 1338
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e4d6d05b2189e942a1bf53ac9816767
+      internalID: 1879389782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_106
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 1314
+        width: 19
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd9bfb820dd055f44a976833c8942a2d
+      internalID: 857563332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_107
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 1188
+        width: 204
+        height: 164
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 039b26bc621517944879327b9ed5de89
+      internalID: -836451333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_108
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 1278
+        width: 84
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5576dd8b2c3883a41a0cf7e95e916d64
+      internalID: 433180731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_109
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 1164
+        width: 214
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27a794c9394fec941b5d7d4ddd697991
+      internalID: 712009465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_110
+      rect:
+        serializedVersion: 2
+        x: 1161
+        y: 1122
+        width: 163
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aab323a7f6f8a042a430f97255ae4d5
+      internalID: 664754461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_111
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 1296
+        width: 48
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49d227025eaf1a44cbe6f4b85f61e163
+      internalID: 739671784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_112
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1256
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b46fdb13fd9a5e445af08a6ca123c3b7
+      internalID: -579925269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_113
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 1206
+        width: 18
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b56a6e59e2deec545a8f543c841d963e
+      internalID: 860533808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_114
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 1191
+        width: 102
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4878d1ce9a1b247428004bcb3b26b096
+      internalID: -1132174836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_115
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 1194
+        width: 48
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a75adb7596a853e45a59af6ae8fe8394
+      internalID: -1081295876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_116
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 984
+        width: 199
+        height: 258
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a6a5bf40691f814e87d5d713b1b05e6
+      internalID: 1289015744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_117
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 993
+        width: 361
+        height: 218
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f0540efbcc45d74eaa75d9b29b93bad
+      internalID: 1857689348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_118
+      rect:
+        serializedVersion: 2
+        x: 1325
+        y: 1179
+        width: 4
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bdf6dcd2e6ac734a88c5e63b438d2bd
+      internalID: 950838230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_119
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 1136
+        width: 165
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 536b77a91800dea4992ac1513e42099f
+      internalID: -1759422410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_120
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 212
+        height: 167
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1caad23a9fe15b44d86b20fcb24a2706
+      internalID: 2033531454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_121
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 1188
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47771177446bccf4f8e77bf23d004b65
+      internalID: 1049892272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_122
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 1171
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8e0bd86c0749314b8e60c77ff8391b2
+      internalID: 1242429719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_123
+      rect:
+        serializedVersion: 2
+        x: 1164
+        y: 1032
+        width: 168
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfc383179e6f4ac408b710af91c5901c
+      internalID: -62048545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_124
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 996
+        width: 208
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a0b651afb27a014780c4ad4f7fe6d09
+      internalID: -858384610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_125
+      rect:
+        serializedVersion: 2
+        x: 988
+        y: 1026
+        width: 170
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77137f9b7a61abb4899306214817de41
+      internalID: 621935056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_126
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 1122
+        width: 22
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c69a7a78eded1934b9e1266c292d644e
+      internalID: 1680456255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_127
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 828
+        width: 147
+        height: 305
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fded78471df5584aa00f64b369c3526
+      internalID: -706783635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_128
+      rect:
+        serializedVersion: 2
+        x: 1842
+        y: 1047
+        width: 108
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98847b17aa4243740b50f720b2f47723
+      internalID: -1684598100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_129
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 1098
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 504289b50a74de14a939e8fcc14324ef
+      internalID: 1274538007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_130
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 1050
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22c5036072c21c44482f27fd7b43c4b1
+      internalID: 2089588206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_131
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 954
+        width: 48
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ed2187a2eb2cf441b956b0e0790babf
+      internalID: -1950256519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_132
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 1038
+        width: 41
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1504cd837398c5c4481671026af4554d
+      internalID: -1348914360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_134
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 888
+        width: 178
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e2212e8e9a44b5498c2ab00278cc92e
+      internalID: -126125060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_135
+      rect:
+        serializedVersion: 2
+        x: 1161
+        y: 1009
+        width: 171
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4a1b102332a23b458f420ed3d94499a
+      internalID: -119239193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_136
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 990
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccd6434d8d482ce4eae37e70b5c9f3fe
+      internalID: 446709513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_137
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 791
+        width: 441
+        height: 213
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0195ec7006d6c24eaf3f9475216e53f
+      internalID: -730765951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_138
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 1002
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbcf6ee90229f7c41ac50e145ecd4cdb
+      internalID: 2079884060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_139
+      rect:
+        serializedVersion: 2
+        x: 1333
+        y: 996
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8492d0d146c767243bf5f84bd0dee11c
+      internalID: -20878162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_140
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 906
+        width: 200
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c2f8d5c8f7826d49aa2e088f5c3d29e
+      internalID: 1003644867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_141
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 600
+        width: 218
+        height: 396
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66f8d247b953fd842b578a63061ca6fd
+      internalID: 909924551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_142
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 966
+        width: 31
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3990b4a007b3ac9448cfb26242e61178
+      internalID: 1464353783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_143
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 820
+        width: 114
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efb6941b910ff734e865b04172c1c681
+      internalID: 300348798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_144
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 747
+        width: 187
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c28e4ce6523ef71419904c1ab1377b33
+      internalID: 615788895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_145
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 906
+        width: 162
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00d1e51627b6d0941bc10617a9a16fdc
+      internalID: -1942088155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_146
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 884
+        width: 8
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 895d6676c7b7487479dd996aaf926083
+      internalID: -1048449667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_147
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 860
+        width: 19
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce7d7ad0f3fb20e4fa7c608b9933e064
+      internalID: 378781617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_148
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 828
+        width: 31
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6abf8d81aa674e408690768448f9e9e
+      internalID: 1392591755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_149
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 531
+        width: 342
+        height: 350
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bdbe7faee5ed9648806f6c45170945e
+      internalID: -1062378963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_150
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 840
+        width: 48
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef0afe2cd1e0e75449788e45ac285589
+      internalID: 1207723749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_151
+      rect:
+        serializedVersion: 2
+        x: 1672
+        y: 836
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0be434f0d6863e498c852bc03cdf16e
+      internalID: -401966389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_152
+      rect:
+        serializedVersion: 2
+        x: 1676
+        y: 744
+        width: 228
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80ae41952ce665f45ba281b9207b8a60
+      internalID: -1966089303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_153
+      rect:
+        serializedVersion: 2
+        x: 1660
+        y: 828
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a15a2b48086acfb499fc00ffd504b4fe
+      internalID: -123909558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_154
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 600
+        width: 225
+        height: 228
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63ee5eb9b01d328468955d128ae3fe7f
+      internalID: 1473959139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_155
+      rect:
+        serializedVersion: 2
+        x: 1627
+        y: 822
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b62bc2d30b48af740ace12bc387bd68a
+      internalID: 611252564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_156
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 764
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 331f96f90711dc242ac58e5821f82563
+      internalID: -1443523113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_157
+      rect:
+        serializedVersion: 2
+        x: 1339
+        y: 680
+        width: 173
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5c342d4a2290cc469758c24b75da366
+      internalID: -753220202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_158
+      rect:
+        serializedVersion: 2
+        x: 1516
+        y: 646
+        width: 160
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f59af9b64101b84691f14f0dd91c193
+      internalID: 1804999061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_159
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 486
+        width: 269
+        height: 258
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bd99e8ade996d046bf96a9c151f4d44
+      internalID: -54483671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_160
+      rect:
+        serializedVersion: 2
+        x: 1510
+        y: 742
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab8d24e8a6e58a44ca4da8831e981d3e
+      internalID: -521328283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_161
+      rect:
+        serializedVersion: 2
+        x: 1682
+        y: 646
+        width: 158
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42f1a5b17b1bc144dbd81d55971bc5ad
+      internalID: 9083787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_162
+      rect:
+        serializedVersion: 2
+        x: 1849
+        y: 732
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1e4aafe54744e54fa7d0e663e5930a7
+      internalID: 505521611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_163
+      rect:
+        serializedVersion: 2
+        x: 1257
+        y: 491
+        width: 507
+        height: 193
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0653a0bde96bf724ab78e8e97c16770f
+      internalID: -150491157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_164
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 432
+        width: 198
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 513a251d29f90564db683b894d139c17
+      internalID: -164312186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_165
+      rect:
+        serializedVersion: 2
+        x: 1849
+        y: 657
+        width: 29
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab7dacea22ada0445a96fca08cd2091d
+      internalID: -1915624071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_166
+      rect:
+        serializedVersion: 2
+        x: 1944
+        y: 636
+        width: 12
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eade842bc4120d4bb831e39e32638d1
+      internalID: 1654168684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_167
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 432
+        width: 258
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e56d519b5328524992c4ee49638135e
+      internalID: -1020708794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_168
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 611
+        width: 29
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a121fe51ae7b1ff448d687e376bd99b0
+      internalID: -947742901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_169
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 438
+        width: 208
+        height: 209
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e379565995785a543ae9351631521e42
+      internalID: -493009149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_170
+      rect:
+        serializedVersion: 2
+        x: 1944
+        y: 570
+        width: 12
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43ba86259bf8b1746851a8ce946739ce
+      internalID: 711888826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_171
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 412
+        width: 212
+        height: 184
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3e5180e89b63c64883ae783208a0f88
+      internalID: 2227577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_172
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 594
+        width: 66
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2040b390a59a19e4982d5144e754e98f
+      internalID: -1535020085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_173
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 558
+        width: 120
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d075c5699262c694fa02509caa387ec1
+      internalID: -1466928183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_174
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 392
+        width: 252
+        height: 173
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a8f217fc74fb2a44b97dd5da6c6d234
+      internalID: 167456250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_175
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 564
+        width: 30
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bcbf2d490d5aae4cb18b25f7dae7c85
+      internalID: 75897849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_176
+      rect:
+        serializedVersion: 2
+        x: 1944
+        y: 540
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdb3234753167574abe94fcf977ca642
+      internalID: 155733373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_177
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 353
+        width: 192
+        height: 183
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7f949aabf8412f4b9167e7e2e692dbb
+      internalID: 1625116146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_178
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 368
+        width: 178
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d1a411d159da9944ad5cfb28ea5dbae
+      internalID: -1770679574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_179
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 348
+        width: 156
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f3832c777e6b86489e0866e3da8a3c4
+      internalID: 1030320577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_180
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 485
+        width: 35
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94252f2e6ddf2494c8c98d2a258babc5
+      internalID: -1155499555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_181
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 330
+        width: 158
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40a833cd01ec0fb4eb0082f332727c19
+      internalID: 576225857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_182
+      rect:
+        serializedVersion: 2
+        x: 1739
+        y: 486
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5366617a55df7664bb796218ab47bd16
+      internalID: -660118823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_183
+      rect:
+        serializedVersion: 2
+        x: 1423
+        y: 339
+        width: 170
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bde35e4982e014347808adb227536869
+      internalID: -1653909842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_184
+      rect:
+        serializedVersion: 2
+        x: 1712
+        y: 474
+        width: 28
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74083152bab2e6243a91e1c79be71c3a
+      internalID: 236918286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_185
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 456
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83b8aaaa1b003d348879683afc828497
+      internalID: 1575091446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_186
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 458
+        width: 12
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecaaf0b679abd8146b6772fb920ddc7d
+      internalID: 1608410678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_187
+      rect:
+        serializedVersion: 2
+        x: 1732
+        y: 444
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aef996c66fb3bf4181de72d40f5be55
+      internalID: 281769227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_188
+      rect:
+        serializedVersion: 2
+        x: 1884
+        y: 338
+        width: 152
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 036d63627254d2c4a81091b027410628
+      internalID: 1813370911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_189
+      rect:
+        serializedVersion: 2
+        x: 1974
+        y: 366
+        width: 66
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a862a12e108a1004d98b076719c78745
+      internalID: 580275555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_190
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 438
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa0d87f243a2d3843a689139f4f3008d
+      internalID: 1446676182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_191
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 438
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2f05a67ac27a9c4b869f8b56b618b15
+      internalID: -1312558454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_192
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 438
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab45c0d61312989478792f0451366886
+      internalID: 1347249397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_193
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 438
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dd8320511164304e95cec57eaf8c79e
+      internalID: -591311677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_194
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 200
+        width: 372
+        height: 242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d815474830873264c8be2e157944d491
+      internalID: 1671016641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_195
+      rect:
+        serializedVersion: 2
+        x: 1736
+        y: 320
+        width: 188
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ba55bd680883974c8285e6700df7e1e
+      internalID: -328383996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_196
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 232
+        width: 213
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 054c61234b94d5a45829ef210f08707f
+      internalID: -37060115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_197
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 396
+        width: 22
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: def837b00101ab14b8b1a8cd9c25ee86
+      internalID: -399664705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_198
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 432
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ec37229e573c944fa4f27563f6698d7
+      internalID: 2060723793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_199
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 223
+        width: 246
+        height: 209
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e5b348812724f54882c00deddf55999
+      internalID: 477725345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_200
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 169
+        width: 222
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c898ed037fff034aa6e27471268308c
+      internalID: 934379382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_201
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 347
+        width: 150
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46f30be06ae441144ae1feee66023b8d
+      internalID: -2143047760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_202
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 330
+        width: 54
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a101fc28a50d1bf4e818c38cb7984fd3
+      internalID: 14744789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_203
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 347
+        width: 47
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 851fb74aa69cb454a88f090bf3295a4d
+      internalID: -117373473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_204
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 192
+        width: 189
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 972f95cc4ccb9c74f82ec506adf22d4d
+      internalID: 2111016096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_205
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 324
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0bdaf32fe8dee24f89290a4dab98f52
+      internalID: -1596175200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_206
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 354
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06d0bdf2519c67b47bdce4368dd0d234
+      internalID: 1104665430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_207
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 354
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0a885e834319684cade18a0675977e5
+      internalID: 813334351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_208
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 348
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 920f4dcfd7e2ba243a5f3bc883d59951
+      internalID: -740773929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_209
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 348
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1646c3cfa9e176545b34015232b36bd2
+      internalID: 1932705157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_210
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 164
+        width: 169
+        height: 174
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 571dedf5c3a20704b85f2f5850205c31
+      internalID: 1930891903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_211
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 178
+        width: 174
+        height: 167
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79edfbfd05433ce40b36324dce5a95e7
+      internalID: 1725649327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_212
+      rect:
+        serializedVersion: 2
+        x: 1401
+        y: 164
+        width: 171
+        height: 175
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a881eb8dc6e3354a9bec7d8af9adfe6
+      internalID: -1691428664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_213
+      rect:
+        serializedVersion: 2
+        x: 1578
+        y: 164
+        width: 151
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e57b0eb4e140ad849996b65d129b34e4
+      internalID: -440909748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_214
+      rect:
+        serializedVersion: 2
+        x: 1736
+        y: 150
+        width: 184
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6678060447be4643af6036ecdc21657
+      internalID: 1590093749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_215
+      rect:
+        serializedVersion: 2
+        x: 1753
+        y: 312
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daee80f2c35f875438a272fb3de4605a
+      internalID: 1551218585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_216
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 306
+        width: 4
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12531f4eb3a4fd74ab8bd9367ac76da2
+      internalID: -1321549069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_217
+      rect:
+        serializedVersion: 2
+        x: 1884
+        y: 120
+        width: 134
+        height: 213
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaf2d52a2e17f724c9a824a110bba281
+      internalID: -1845593383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_218
+      rect:
+        serializedVersion: 2
+        x: 1944
+        y: 315
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3be71852a2e1584fa938292a595ebd3
+      internalID: -629242812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_219
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 237
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e9cd06f8a44f8a499e79fb882e7c052
+      internalID: -990627755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_220
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 2
+        width: 206
+        height: 226
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cb445478b3b68c4ea595e6fcac5ae00
+      internalID: -1771905799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_221
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 204
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d7344c95e902034a84bd51d1fdf6f83
+      internalID: 522420746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_222
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 0
+        width: 204
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2fbdc9c854edc148839f56f89e9d851
+      internalID: 1745136915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_223
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 0
+        width: 206
+        height: 203
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d9b1ddb97f812a46876b59a701bf73a
+      internalID: 663378654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_224
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 184
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2928b0a7625b194ea0ea018f2e00053
+      internalID: -1226775656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_225
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 0
+        width: 168
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95a6cee44f9f69d41b7393ee9db919ae
+      internalID: 1950389317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_226
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 188
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d162c5cdf5285847b086e9a7e5c2843
+      internalID: -919893939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_227
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 186
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1479417425d161a409c5a51ccb923c43
+      internalID: 1464416539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_228
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 0
+        width: 188
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba3e78ea4d64d1246bf3215363568120
+      internalID: -1952750269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_229
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 0
+        width: 172
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65825829422d93a41ba62de63e8e56bf
+      internalID: -2105010748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_230
+      rect:
+        serializedVersion: 2
+        x: 1252
+        y: 168
+        width: 4
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7059d9a3c0b2c9048b5db3bd57a4a5c3
+      internalID: -1501248190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_231
+      rect:
+        serializedVersion: 2
+        x: 1418
+        y: 162
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ee9cc65ac2db76458189410962cc1be
+      internalID: -123993094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_232
+      rect:
+        serializedVersion: 2
+        x: 1445
+        y: 151
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca22e02b7c8dfed489b6c18579e4cc19
+      internalID: -1719842836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_233
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 0
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5319ffbd1c8862a42ae33f492788962e
+      internalID: -2088831208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_234
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 132
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dccab6bdbbc416a418d0a11b24d6e467
+      internalID: -1357394067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_235
+      rect:
+        serializedVersion: 2
+        x: 1589
+        y: 0
+        width: 193
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fc438dc3ce8694499622fef73f0ae78
+      internalID: 1261285450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_236
+      rect:
+        serializedVersion: 2
+        x: 1768
+        y: 2
+        width: 172
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e25bce0cc3a1ea459979ae92b23c1d9
+      internalID: 1399880735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_237
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 0
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b91d825be800cc4d815d9fed4396f9e
+      internalID: 1226651904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_238
+      rect:
+        serializedVersion: 2
+        x: 1794
+        y: 0
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ab9ca9d381001c4bb7a694a2cd40228
+      internalID: -2107747186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: b41e330b4f50d5446ae8f85efe8ff743
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_0: 1111905814
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_1: -56343204
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_10: -458710579
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_100: -1420646327
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_101: -1182959948
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_102: 867671061
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_103: 1147566420
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_104: 1725687282
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_105: 1879389782
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_106: 857563332
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_107: -836451333
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_108: 433180731
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_109: 712009465
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_11: 2074098955
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_110: 664754461
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_111: 739671784
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_112: -579925269
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_113: 860533808
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_114: -1132174836
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_115: -1081295876
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_116: 1289015744
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_117: 1857689348
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_118: 950838230
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_119: -1759422410
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_12: -1418355126
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_120: 2033531454
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_121: 1049892272
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_122: 1242429719
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_123: -62048545
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_124: -858384610
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_125: 621935056
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_126: 1680456255
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_127: -706783635
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_128: -1684598100
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_129: 1274538007
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_13: 1235637171
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_130: 2089588206
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_131: -1950256519
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_132: -1348914360
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_133: 1697685902
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_134: -126125060
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_135: -119239193
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_136: 446709513
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_137: -730765951
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_138: 2079884060
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_139: -20878162
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_14: -1923376782
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_140: 1003644867
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_141: 909924551
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_142: 1464353783
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_143: 300348798
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_144: 615788895
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_145: -1942088155
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_146: -1048449667
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_147: 378781617
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_148: 1392591755
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_149: -1062378963
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_15: -1068286346
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_150: 1207723749
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_151: -401966389
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_152: -1966089303
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_153: -123909558
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_154: 1473959139
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_155: 611252564
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_156: -1443523113
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_157: -753220202
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_158: 1804999061
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_159: -54483671
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_16: -1288379016
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_160: -521328283
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_161: 9083787
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_162: 505521611
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_163: -150491157
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_164: -164312186
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_165: -1915624071
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_166: 1654168684
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_167: -1020708794
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_168: -947742901
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_169: -493009149
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_17: -150991638
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_170: 711888826
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_171: 2227577
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_172: -1535020085
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_173: -1466928183
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_174: 167456250
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_175: 75897849
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_176: 155733373
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_177: 1625116146
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_178: -1770679574
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_179: 1030320577
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_18: 475208337
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_180: -1155499555
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_181: 576225857
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_182: -660118823
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_183: -1653909842
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_184: 236918286
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_185: 1575091446
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_186: 1608410678
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_187: 281769227
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_188: 1813370911
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_189: 580275555
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_19: -1548826737
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_190: 1446676182
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_191: -1312558454
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_192: 1347249397
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_193: -591311677
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_194: 1671016641
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_195: -328383996
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_196: -37060115
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_197: -399664705
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_198: 2060723793
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_199: 477725345
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_2: 1301930566
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_20: 1735187492
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_200: 934379382
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_201: -2143047760
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_202: 14744789
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_203: -117373473
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_204: 2111016096
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_205: -1596175200
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_206: 1104665430
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_207: 813334351
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_208: -740773929
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_209: 1932705157
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_21: -591324564
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_210: 1930891903
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_211: 1725649327
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_212: -1691428664
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_213: -440909748
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_214: 1590093749
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_215: 1551218585
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_216: -1321549069
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_217: -1845593383
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_218: -629242812
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_219: -990627755
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_22: 384075207
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_220: -1771905799
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_221: 522420746
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_222: 1745136915
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_223: 663378654
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_224: -1226775656
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_225: 1950389317
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_226: -919893939
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_227: 1464416539
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_228: -1952750269
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_229: -2105010748
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_23: 1992802620
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_230: -1501248190
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_231: -123993094
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_232: -1719842836
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_233: -2088831208
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_234: -1357394067
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_235: 1261285450
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_236: 1399880735
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_237: 1226651904
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_238: -2107747186
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_24: -67574477
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_25: -542098739
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_26: 947961658
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_27: -809504725
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_28: 1579985558
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_29: -2109040903
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_3: 2072272868
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_30: -700448860
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_31: 200602659
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_32: 1670773026
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_33: -1610601389
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_34: 598524992
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_35: -76427195
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_36: -1581721520
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_37: -1186002712
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_38: -1325697148
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_39: -781888923
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_4: 1135843235
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_40: 999494276
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_41: 579932147
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_42: 1759417022
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_43: 866023577
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_44: -536137272
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_45: 163530796
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_46: 945757042
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_47: -1305959059
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_48: -1959637519
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_49: -2082232429
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_5: 21253130
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_50: 1193005066
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_51: -725106232
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_52: -570661464
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_53: -1362759678
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_54: -1228167864
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_55: 970811386
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_56: 1708553061
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_57: -1275709426
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_58: -1760271327
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_59: 1189305289
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_6: -253319332
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_60: 1169691630
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_61: -200869871
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_62: -59545100
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_63: -1990183033
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_64: -401052445
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_65: 1910023011
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_66: -1169572222
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_67: -218129511
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_68: -844215323
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_69: 424018277
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_7: -807756817
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_70: 107838747
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_71: -1309986932
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_72: 647834346
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_73: -964670055
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_74: 1411698891
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_75: 2063109899
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_76: -2082598144
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_77: 1549596441
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_78: -1283628138
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_79: -1014684104
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_8: -1547134504
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_80: 1728455118
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_81: 1604289449
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_82: 1757021668
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_83: -1365133334
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_84: 1330329813
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_85: -1000408750
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_86: -1527950940
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_87: 2016953936
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_88: 996346590
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_89: -761049473
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_9: -1635533058
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_90: -904283812
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_91: -988804483
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_92: 1493784858
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_93: 793920283
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_94: -94499841
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_95: -31940365
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_96: 728591597
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_97: -666060435
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_98: 1479900469
+      sactx-0-2048x2048-ASTC 6x6-AtlasIconHero-bc06ccec_99: 1683022517
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

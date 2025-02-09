@@ -1,0 +1,2173 @@
+fileFormatVersion: 2
+guid: 4606ba5e85d8c7b44a264b8fed9d9608
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 50
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 0
+  flipbookColumns: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_3
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 1932
+        width: 62
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18c27884770911746bf38a7909af2cf4
+      internalID: 1582417956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_4
+      rect:
+        serializedVersion: 2
+        x: 1945
+        y: 1936
+        width: 73
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3840c1d1e2eb6c46b6edae3a23bbae7
+      internalID: 1936963175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1860
+        width: 113
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21a829cdad5295e42a44a7f9e60adf37
+      internalID: -30354492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_6
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 1846
+        width: 97
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6bd628e9733b444f910ba43eb036fbc
+      internalID: -242746573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_7
+      rect:
+        serializedVersion: 2
+        x: 1564
+        y: 1606
+        width: 102
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 695564d49276aa44e92157f1feac416a
+      internalID: -38662082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_8
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 1850
+        width: 73
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91e224fad2db78848ab25c92462c1af1
+      internalID: 627828100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_10
+      rect:
+        serializedVersion: 2
+        x: 1572
+        y: 1892
+        width: 68
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 715650c778c729146adc2cb48d773f17
+      internalID: 1728838666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_11
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 1888
+        width: 62
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d7cee9aa2084f048b71a2cf53b22677
+      internalID: 1710160109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_13
+      rect:
+        serializedVersion: 2
+        x: 1948
+        y: 1866
+        width: 74
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0af6270068495e4e9076f618d7d07fd
+      internalID: 826844151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_14
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 1749
+        width: 104
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71c737b0ecd6c0743859599fb133dbe4
+      internalID: -511948639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_15
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 1864
+        width: 84
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 758cd4e0797660943b5557958c867e8a
+      internalID: -1803795525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_17
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 1669
+        width: 170
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abbaa11ac5e358e41a27f30db284bf14
+      internalID: -696863456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_18
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 1869
+        width: 85
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bdcd1647355cb340adc10c68bb8ae14
+      internalID: 710377415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1492
+        width: 142
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 891d7f74b293af2449a244c95918a327
+      internalID: -1428071918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_21
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 1526
+        width: 128
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11f0125d93495d94586598b977103f38
+      internalID: -2113589334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_22
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 1772
+        width: 121
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c4c95bbabfb8634a95b0ed3cbfb4143
+      internalID: -1648116340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_23
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 1671
+        width: 72
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 897730bb9b164244f8d3caa5d907f172
+      internalID: 339775623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1384
+        width: 90
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7c99fe6cd5c70947bf395426fdc2df1
+      internalID: 1117875803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_25
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 1344
+        width: 84
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3576cbf47c0e35c40bb47339be5e2def
+      internalID: -446152981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_26
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 1343
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07cf1f2d57f8f7440bcc881570cba430
+      internalID: 1900048122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_27
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 1413
+        width: 84
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 943f17d51449a3a47a3957dc204708f5
+      internalID: -584435739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_29
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 1386
+        width: 128
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f06f2047620be443bcfba757b03b419
+      internalID: -479738039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_31
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 1274
+        width: 125
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03ff432f16a7bfc4ca51c0e8cd2c2bb4
+      internalID: 770660193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_32
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 1278
+        width: 128
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 900f8279b0f02594ea79403668920a11
+      internalID: -1831204306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_33
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 1251
+        width: 141
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 742762383da6dd1409c8e2c6597b7f10
+      internalID: -920342835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_34
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 1252
+        width: 66
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4ac367a24019df45b1836994a9bbf1b
+      internalID: -1613364871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_35
+      rect:
+        serializedVersion: 2
+        x: 1311
+        y: 1171
+        width: 137
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c118a4ab7d121c4489f7f1e1b48a08c
+      internalID: -1091103963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_38
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 1246
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9570bf37665b474491f881b782818f0
+      internalID: 35045559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_41
+      rect:
+        serializedVersion: 2
+        x: 1580
+        y: 1168
+        width: 92
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6223c46aa16e0e44af94476f9dd4971
+      internalID: 115108226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_42
+      rect:
+        serializedVersion: 2
+        x: 1725
+        y: 663
+        width: 174
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bb9e6f172ad3c144a16616a3ab852ec
+      internalID: -1706772920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_43
+      rect:
+        serializedVersion: 2
+        x: 1794
+        y: 1182
+        width: 102
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20ebeabe1dcb7844bab99eafec737773
+      internalID: -1543070502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_44
+      rect:
+        serializedVersion: 2
+        x: 1928
+        y: 0
+        width: 84
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 379b9ef10c7503b4d8c6a9e25bf04b37
+      internalID: 651952347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_1
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 1681
+        width: 95
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc14fcf2ddbec2448a35dbc9b2a39d0c
+      internalID: -534141489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_2
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 1846
+        width: 84
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51d34776d54d9c149bc9b5b429124aa0
+      internalID: 1782082322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_9
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 1864
+        width: 85
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3882e7fbd0c9847498e3d221a05fc855
+      internalID: -1145322969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attackSpeed
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 1392
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6c7750d424b40846b9cac7796940787
+      internalID: -316790118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgradeicon
+      rect:
+        serializedVersion: 2
+        x: 1504
+        y: 1339
+        width: 129
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d15c86341233c642b8a1d80b27cee16
+      internalID: 43461336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_16
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 1665
+        width: 121
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03e1dc014d9dc4e47b6003f918129b9d
+      internalID: 1388846711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_30
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 1573
+        width: 93
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d805ad340a48a804c9655ae1be03c8a4
+      internalID: 372393106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emergencyicon
+      rect:
+        serializedVersion: 2
+        x: 1451
+        y: 1172
+        width: 127
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb8027b97e0ac34438a021b785927baf
+      internalID: 506017959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackPower
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 987
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b99fc42a40b627847973de691c56335f
+      internalID: 95331113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_0
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 1818
+        width: 113
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89b7fbc3cbbdcdf489e5b1ca989aa7dc
+      internalID: -1347757442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arelt
+      rect:
+        serializedVersion: 2
+        x: 1362
+        y: 233
+        width: 226
+        height: 211
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffddab68ad6215d4797a7aee4925352e
+      internalID: 1778750990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_36
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 994
+        width: 194
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9d7e6b6d2dd69b40be8f2362891d2ca
+      internalID: -1634735761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_39
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 895
+        width: 299
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39073133e79feb8499b46e8addf13a1e
+      internalID: 1426777101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_40
+      rect:
+        serializedVersion: 2
+        x: 1325
+        y: 1659
+        width: 201
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0da0e5152099c745be145fe649eddf0
+      internalID: 1821137209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_45
+      rect:
+        serializedVersion: 2
+        x: 1896
+        y: 725
+        width: 73
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cd7493b8f52466488b1d386dcbf0cb5
+      internalID: -1960188939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_46
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 1502
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c83b173ef430ef24eb01708ca7672536
+      internalID: -632103281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_47
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 1935
+        width: 68
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76090a18a83d1bf4e943843d0e2d5a16
+      internalID: -1814236569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1769
+        width: 201
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d01bd533e376b7f41ae9574914ea1f50
+      internalID: -739742525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_49
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 1496
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f724500717453a478227f11cfa708b2
+      internalID: -272244589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_28
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 1773
+        width: 86
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c9d0b86d39dd804299cb79c63aa1a00
+      internalID: 1775555840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_50
+      rect:
+        serializedVersion: 2
+        x: 1364
+        y: 803
+        width: 321
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28479666cea00064780075896c39fac5
+      internalID: 1566157667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SimpleTextbox2
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 898
+        width: 290
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 144, y: 0, z: 143, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce867c3117592d64dacf8f09573bf360
+      internalID: 1017603905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_52
+      rect:
+        serializedVersion: 2
+        x: 1804
+        y: 199
+        width: 101
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 788a541aeb880f240a1d3614ce286662
+      internalID: 49866721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_53
+      rect:
+        serializedVersion: 2
+        x: 1690
+        y: 1079
+        width: 104
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b500f4fb3a8a024195ee97786e610ac
+      internalID: 227355333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_54
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 1660
+        width: 101
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 320fdd8c81b444f4183b853ce02f9795
+      internalID: 1394809508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_55
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 1660
+        width: 107
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdd8d21d546757441ac811eaa8cbe3fe
+      internalID: 1456061806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_56
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 1771
+        width: 94
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7b70e9f77ed79943b26221fd922e6d6
+      internalID: -1007907433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_57
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 996
+        width: 77
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9f8d541f8397e944bbb9bece9c01748
+      internalID: 1504040668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_58
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1006
+        width: 169
+        height: 169
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 729295716be97be4ab8ec99a505e3ee6
+      internalID: 1918332338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_59
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 1
+        width: 225
+        height: 235
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc94fda99d4b2b74788eef622918c8ca
+      internalID: -2115238953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_60
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 663
+        width: 336
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7332df8d9a91ef540be87f5a34c458de
+      internalID: -455091711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_61
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 1680
+        width: 107
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a94e4ca87b87b4347a11e14e41125ba3
+      internalID: -1230013094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_62
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 1846
+        width: 80
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4333da9c72ff63749bd55fe76c44d3d5
+      internalID: -845578304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_63
+      rect:
+        serializedVersion: 2
+        x: 1489
+        y: 1801
+        width: 86
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ce96470bd2aabc42ae6d2d912858321
+      internalID: -1879969161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_64
+      rect:
+        serializedVersion: 2
+        x: 1580
+        y: 1801
+        width: 84
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15ddf151a6019854e84850f621565566
+      internalID: 1470973523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_65
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 622
+        width: 275
+        height: 272
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48bf5986c4123a944855bbecad8f360e
+      internalID: -254030154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_66
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 1855
+        width: 79
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5fe1bbe61ebe2548989a18957a2afdc
+      internalID: 433480316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_67
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 1242
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0112148788d4c8e48be0b5df951043f0
+      internalID: -740946279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_68
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 1772
+        width: 99
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bab73a6d9b23df04a9896a7a1d8a22fb
+      internalID: 67537125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellowBox
+      rect:
+        serializedVersion: 2
+        x: 1640
+        y: 1393
+        width: 94
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 42, y: 54, z: 28, w: 45}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fde1859e6d82a5458f46d8d84ccb729
+      internalID: 1009712450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_70
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 1392
+        width: 101
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f15695b228f64e4890eff16794a0648
+      internalID: 1546105717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_71
+      rect:
+        serializedVersion: 2
+        x: 1251
+        y: 1853
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a90e7701089df41449cd3c54f6e5d4d6
+      internalID: 913865417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1227
+        width: 90
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee9c999c1ac9ee34c92ce7e2de3dcafd
+      internalID: 1913838086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_73
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 1184
+        width: 84
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a20392a980ed09448623aecc461622e
+      internalID: -824092289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_74
+      rect:
+        serializedVersion: 2
+        x: 1737
+        y: 1503
+        width: 86
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5849125b8a15785449fa125992e18914
+      internalID: 465584228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_75
+      rect:
+        serializedVersion: 2
+        x: 1828
+        y: 1588
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7650ef22fd7bb594a883f9cbbaac5cbb
+      internalID: -1417358931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_76
+      rect:
+        serializedVersion: 2
+        x: 1749
+        y: 1595
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c5698f084330fe4d9b971b39324f8a8
+      internalID: -2090198304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_77
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 1933
+        width: 74
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a276488b262562e48bb1fbea09dc4358
+      internalID: -1111296248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_78
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 1933
+        width: 99
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba595665fc6d0864f92d1da22e87ef67
+      internalID: 207312017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SimpleTextbox
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 399
+        width: 485
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6868095f8cd0f6d46bb16c5457df8138
+      internalID: 1000548333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_80
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 963
+        width: 77
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e100945c0a1bad842ab5f0fbd30a798e
+      internalID: -1827621919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_81
+      rect:
+        serializedVersion: 2
+        x: 1688
+        y: 964
+        width: 118
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b6085b4369df4d4f9485de91a8a774d
+      internalID: -1575100721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_82
+      rect:
+        serializedVersion: 2
+        x: 1581
+        y: 1036
+        width: 106
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f83f4e6aded4554b87563672ead433c
+      internalID: 1269371514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_83
+      rect:
+        serializedVersion: 2
+        x: 1097
+        y: 1559
+        width: 113
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8866c0f151273af4f8f2f5bdde67b062
+      internalID: -2097196493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_84
+      rect:
+        serializedVersion: 2
+        x: 1211
+        y: 1558
+        width: 114
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d243418b1c59718458d7896ff3963c93
+      internalID: -751912522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_85
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 1878
+        width: 70
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 553a7bff091d7364cb7eb74bddbfe4fe
+      internalID: -113346336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windowOutline
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 0
+        width: 453
+        height: 147
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cdd632a0f8f8064eb3a2ef66ca2f76c
+      internalID: -386272066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_12
+      rect:
+        serializedVersion: 2
+        x: 1687
+        y: 867
+        width: 290
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09089158ee969024f9a7ef0ffd3da208
+      internalID: 651070906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backgroundbrown
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 1935
+        width: 84
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 20, y: 20, z: 21, w: 15}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4941b8a406ad2114287b16ddface5bb4
+      internalID: 2146421169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backgroundwhite
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 1859
+        width: 84
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 20, y: 24, z: 23, w: 20}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aa2d06840ce8a8479f1fc6d0cb2e473
+      internalID: -1019280144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backgroundgrey
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 1789
+        width: 86
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 21, y: 21, z: 31, w: 22}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bacaa4a6c15e9de49aedb363271b353c
+      internalID: 2102432468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: afa94b26ac6bd80419f94d12b0f44c19
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      AttackPower: 95331113
+      Emergencyicon: -1634735761
+      SimpleTextbox: 1000548333
+      SimpleTextbox2: 1017603905
+      Upgradeicon: 43461336
+      arelt: 1778750990
+      attackSpeed: -316790118
+      backgroundbrown: 2146421169
+      backgroundgrey: 2102432468
+      backgroundwhite: -1019280144
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_0: -1347757442
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_1: -534141489
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_10: 1728838666
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_11: 1710160109
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_12: 651070906
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_13: 826844151
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_14: -511948639
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_15: -1803795525
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_16: 1388846711
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_17: -696863456
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_18: 710377415
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_19: -1428071918
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_2: 1782082322
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_21: -2113589334
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_22: -1648116340
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_23: 339775623
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_24: 1117875803
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_25: -446152981
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_26: 1900048122
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_27: -584435739
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_28: 1775555840
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_29: -479738039
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_3: 1582417956
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_30: 372393106
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_31: 770660193
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_32: -1831204306
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_33: -920342835
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_34: -1613364871
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_35: -1091103963
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_36: -1634735761
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_38: 35045559
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_39: 1426777101
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_4: 1936963175
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_40: 1821137209
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_41: 115108226
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_42: -1706772920
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_43: -1543070502
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_44: 651952347
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_45: -1960188939
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_46: -632103281
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_47: -1814236569
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_48: -739742525
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_49: -272244589
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_5: -30354492
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_50: 1566157667
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_52: 49866721
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_53: 227355333
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_54: 1394809508
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_55: 1456061806
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_56: -1007907433
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_57: 1504040668
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_58: 1918332338
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_59: -2115238953
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_6: -242746573
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_60: -455091711
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_61: -1230013094
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_62: -845578304
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_63: -1879969161
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_64: 1470973523
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_65: -254030154
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_66: 433480316
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_67: -740946279
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_68: 67537125
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_7: -38662082
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_70: 1546105717
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_71: 913865417
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_72: 1913838086
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_73: -824092289
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_74: 465584228
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_75: -1417358931
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_76: -2090198304
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_77: -1111296248
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_78: 207312017
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_8: 627828100
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_80: -1827621919
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_81: -1575100721
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_82: 1269371514
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_83: -2097196493
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_84: -751912522
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_85: -113346336
+      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_9: -1145322969
+      windowOutline: -386272066
+      yellowBox: 1009712450
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

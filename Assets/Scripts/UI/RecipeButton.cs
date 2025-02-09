@@ -8,7 +8,11 @@ using static TowerRecipeTable;
 
 public class RecipeButton : UIElement
 {
+
     public Button button;
+
+    [SerializeField]
+    private Image icon;
 
     [SerializeField]
     private Slider percentBar;
@@ -24,11 +28,11 @@ public class RecipeButton : UIElement
     public void SetProgressTracker(RecipeProgressTracker tracker)
     {
         ProgressTracker = tracker;
+        icon.sprite= ProgressTracker.TargetTowerSprite;
     }
 
     public void UpdateRecipeButton()
     {
-        ProgressTracker.UpdateRecipeProgress();
         percentBar.value = ProgressTracker.ProgressValue;
     }
 }

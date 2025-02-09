@@ -1,7 +1,8 @@
 public enum UIElements
 {
 	WaveTimer,
-	EnemyCount,
-	CoinGemBar,
+	EnemyCountBar,
+	GoldGemBar,
 	TowerSpawn,
+	MaxLvMiniButtons,
 }

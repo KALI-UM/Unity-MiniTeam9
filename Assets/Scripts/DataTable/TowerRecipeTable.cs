@@ -1,6 +1,7 @@
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using static EnemyTable;
 
@@ -28,6 +29,10 @@ public class TowerRecipeTable : DataTable
     }
 
     private readonly Dictionary<eTower, TowerRecipeData> dictionary = new();
+    public List<TowerRecipeData> RecipeDatas
+    {
+        get => dictionary.Values.ToList<TowerRecipeData>();
+    }
 
     public override void Load(string filename)
     {
