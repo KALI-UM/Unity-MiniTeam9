@@ -52,7 +52,15 @@ public class TowerGroup : MonoBehaviour
 
     public bool CanFusion
     {
-        get => IsFull && Data.grade < towerManager.MaxGrade - 1;
+        get
+        {
+            if (IsEmpty)
+            {
+                return false;
+            }
+
+            return IsFull && Data.grade < towerManager.MaxGrade - 1;
+        }
     }
 
     #region Move

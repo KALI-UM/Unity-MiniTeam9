@@ -49,4 +49,24 @@ public class TowerSpawn : UIElement
         spawnCostText.text = spawnCost.ToString();
     }
 
+    public void OnClickSpawn(eTower Id)
+    {
+        if (!UIManager.GameManager.goldGemSystem.CanPayGold(spawnCost))
+        {
+            return;
+        }
+
+        if (UIManager.GameManager.TowerManager.IsMaxTowrCount || !UIManager.GameManager.SlotManager.IsEmptySlotExist())
+        {
+            return;
+        }
+
+        UIManager.GameManager.goldGemSystem.PayGold(spawnCost);
+        GameObject tower = UIManager.GameManager.TowerManager.GetTower(Id);
+        UIManager.GameManager.SlotManager.AddTower(tower.GetComponent<Tower>());
+
+        spawnCost += 2;
+        spawnCostText.text = spawnCost.ToString();
+    }
+
 }

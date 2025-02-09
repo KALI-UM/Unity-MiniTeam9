@@ -13,8 +13,8 @@ public class MaxFusionWindow : FocusWindow
     [SerializeField]
     private Button fusionButton;
 
-    [ReadOnly, SerializeField]
-    private RecipeProgressTracker currentRecipe;
+    [ReadOnly]
+    public RecipeProgressTracker currentRecipe;
 
     [SerializeField]
     private Image towerSprite;

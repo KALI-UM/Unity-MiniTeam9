@@ -1349,7 +1349,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sactx-2-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_59
+      name: icon5lv
       rect:
         serializedVersion: 2
         x: 1336
@@ -2798,13 +2798,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sactx-2-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_128
+      name: Touch
       rect:
         serializedVersion: 2
         x: 0
-        y: 1303
-        width: 174
-        height: 245
+        y: 1309
+        width: 128
+        height: 57
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8522,6 +8522,8 @@ TextureImporter:
     nameFileIdTable:
       SimpleTextbox: 653310041
       SimpleWindow: -520704701
+      Touch: 536294486
+      icon5lv: 1906202730
       sactx-2-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_0: 684517528
       sactx-2-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_1: 1881922417
       sactx-2-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_10: 78644769
@@ -8555,7 +8557,6 @@ TextureImporter:
       sactx-2-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_125: -1973876062
       sactx-2-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_126: 582148485
       sactx-2-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_127: 780549103
-      sactx-2-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_128: 536294486
       sactx-2-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_129: -1959779090
       sactx-2-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_13: 893496889
       sactx-2-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_130: -668129574
@@ -8875,7 +8876,6 @@ TextureImporter:
       sactx-2-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_56: -15361645
       sactx-2-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_57: -1097726921
       sactx-2-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_58: -909200827
-      sactx-2-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_59: 1906202730
       sactx-2-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_6: 1490798321
       sactx-2-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_60: -1737846780
       sactx-2-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_61: -350008760

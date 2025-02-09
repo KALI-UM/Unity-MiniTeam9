@@ -91,8 +91,6 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDra
     public void OnPointerClick(PointerEventData eventData)
     {
         onClicked?.Invoke();
-        KALLogger.Log("슬롯" + SlotIndex + "선택");
-
     }
 
     public void OnSelected()
@@ -118,7 +116,6 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDra
 
     public void OnDrag(PointerEventData eventData)
     {
-        KALLogger.Log("슬롯" + SlotIndex + "드래그->" + eventData.pointerEnter.name);
         if (!TowerGroup.IsEmpty)
         {
             var slot = eventData.pointerEnter.GetComponent<Slot>();
@@ -137,8 +134,6 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDra
     //드래그 끝날시 호출
     public void OnEndDrag(PointerEventData eventData)
     {
-        KALLogger.Log("슬롯" + SlotIndex + "드래그끝");
-
         var slot = eventData.pointerEnter.GetComponent<Slot>();
         if (slot != null)
         {

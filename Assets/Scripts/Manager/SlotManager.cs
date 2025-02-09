@@ -46,6 +46,8 @@ public class SlotManager : InGameManager
         private set;
     }
 
+    public Action onSlotDragEnd;
+
     private void Awake()
     {
         TowerPositions = towerPositions;
@@ -168,7 +170,20 @@ public class SlotManager : InGameManager
     {
         foreach (Slot slot in slots)
         {
-            if (!slot.TowerGroup.IsEmpty&&slot.TowerGroup.TowerId==id)
+            if (!slot.TowerGroup.IsEmpty && slot.TowerGroup.TowerId == id)
+            {
+                return slot;
+            }
+        }
+
+        return null;
+    }
+
+    public Slot FindSlot(Predicate<Slot> predicate)
+    {
+        foreach (Slot slot in slots)
+        {
+            if (predicate(slot))
             {
                 return slot;
             }
@@ -183,7 +198,6 @@ public class SlotManager : InGameManager
         lineRenderer.enabled = true;
         lineRenderer.SetPosition(0, dragStart);
         lineRenderer.SetPosition(1, dragStart);
-
     }
 
     public void OnDragSlot(Vector3 enterSlot)
@@ -195,6 +209,7 @@ public class SlotManager : InGameManager
     {
         IsSlotDragging = false;
         lineRenderer.enabled = false;
+        onSlotDragEnd?.Invoke();
     }
 
     static public Vector3 GetTowerPosition(int towerCount, int towerIndex)
