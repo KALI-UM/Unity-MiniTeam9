@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TowerInformation : UIElement
 {
     [SerializeField]
-    private SpriteRenderer towerIconRederer;
+    private Image towerImage;
 
    [SerializeField]
     private LocalizationText towerNameText;
@@ -23,6 +24,7 @@ public class TowerInformation : UIElement
 
     public void UpdateTowerInformation(TowerData data)
     {
+        towerImage.sprite = data.towerSprite;
         towerNameText.OnStringIdChange(data.key);
         //towerGradeText.OnStringIdChange(data.attackType)
         towerAttackPowerText.text  = data.attackPower.ToString();

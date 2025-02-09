@@ -5,6 +5,8 @@ using static TowerTable;
 
 public class TowerData : ScriptableObject
 {
+    static private readonly string spritePath = "Textures/Tower/{0}";
+
     [ReadOnly] public eTower Id;
     [ReadOnly] public string key;
     [ReadOnly] public int grade;
@@ -14,6 +16,8 @@ public class TowerData : ScriptableObject
     public float attackRange;
     public int saleGold;
     public int saleGem;
+    public Sprite towerSprite;
+
 
     public void SetData(TowerRawData raw)
     {
@@ -26,6 +30,7 @@ public class TowerData : ScriptableObject
         attackRange = raw.Tower_AttackRange;
         saleGold = raw.Tower_SaleGold;
         saleGem = raw.Tower_SaleGem;
+        towerSprite = Resources.Load<Sprite>(string.Format(spritePath, raw.Tower_Resource));
     }
 
     public TowerRawData ConvertToRawData()
@@ -40,7 +45,7 @@ public class TowerData : ScriptableObject
         raw.Tower_AttackRange = attackRange;
         raw.Tower_SaleGold = saleGold;
         raw.Tower_SaleGem = saleGem;
-        raw.Tower_Resource = DataTableManager.TowerTable.Get(Id).Tower_Resource; 
+        raw.Tower_Resource = DataTableManager.TowerTable.Get(Id).Tower_Resource;
         return raw;
     }
 }

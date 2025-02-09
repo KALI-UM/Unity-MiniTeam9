@@ -21,3 +21,4 @@ MonoBehaviour:
   attackRange: 1
   saleGold: 0
   saleGem: 0
+  towerSprite: {fileID: 21300000, guid: 98c23a4964b76fb45b64c84c0630fbd6, type: 3}
