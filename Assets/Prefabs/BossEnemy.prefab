@@ -424,7 +424,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movement: {fileID: 9078676883207702622}
   hpBar: {fileID: 6358746299593617960}
-  animator: {fileID: 4822082495721606852}
+  animationHandler: {fileID: 0}
   character: {fileID: 5136657867138287571}
   data: {fileID: 0}
   hp: 0
@@ -450,7 +450,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2455747337142597147}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b90f239d68a6e894f85422653a4f4c62, type: 3}
+  m_Script: {fileID: 11500000, guid: 88a7c26bb335e2349a1919b4ed3794f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hpBar: {fileID: 7036689411225135342}
@@ -720,8 +720,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f7d5f54cc8a3040a74c8b3704e9ab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &4822082495721606852 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 2025806811731348541, guid: 6646aaa0302f0412b8483a6da4dd3d1f, type: 3}
-  m_PrefabInstance: {fileID: 6842769885748904697}
-  m_PrefabAsset: {fileID: 0}
+  animator: {fileID: 0}

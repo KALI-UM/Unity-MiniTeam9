@@ -131,7 +131,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 732701049}
-  - component: {fileID: 732701048}
+  - component: {fileID: 732701050}
   m_Layer: 0
   m_Name: TowerPrefabEditor
   m_TagString: Untagged
@@ -139,27 +139,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &732701048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 732701047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 362dcf207b7ca364e83a9555feb1d50e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultTowerPrefab: {fileID: 3503033444322115339, guid: 2a742bea9da63bf468a803288932ac10, type: 3}
-  shadowColors:
-  - {r: 0, g: 0, b: 0, a: 0}
-  - {r: 0, g: 0, b: 0, a: 0.5882353}
-  - {r: 0, g: 0.6223035, b: 1, a: 0.5882353}
-  - {r: 0, g: 0.61635214, b: 0.022622187, a: 0.5882353}
-  - {r: 0.70881367, g: 0, b: 1, a: 0.5882353}
-  - {r: 1, g: 0.7392224, b: 0, a: 0.5882353}
-  spumToTexture: {fileID: 1510406264}
 --- !u!4 &732701049
 Transform:
   m_ObjectHideFlags: 0
@@ -175,6 +154,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &732701050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732701047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84cfb6148c89abd4f8c509fae87dc75e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultTowerPrefab: {fileID: 3503033444322115339, guid: 2a742bea9da63bf468a803288932ac10, type: 3}
+  shadowColors:
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0.5882353}
+  - {r: 0.21069163, g: 0.32775825, b: 1, a: 0.5882353}
+  - {r: 0.22702646, g: 1, b: 0, a: 0.5882353}
+  - {r: 0.6893384, g: 0, b: 0.8301887, a: 0.5882353}
+  - {r: 1, g: 0.775064, b: 0, a: 0.5882353}
+  spumToTexture: {fileID: 1510406264}
 --- !u!1 &773536542
 GameObject:
   m_ObjectHideFlags: 0

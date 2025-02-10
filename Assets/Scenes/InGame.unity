@@ -3135,7 +3135,7 @@ MonoBehaviour:
   m_text: New Text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f43a1357934e0dc4a83a4233ce186534, type: 2}
-  m_sharedMaterial: {fileID: -7367457768409758466, guid: f43a1357934e0dc4a83a4233ce186534, type: 2}
+  m_sharedMaterial: {fileID: 3660470641963183180, guid: f43a1357934e0dc4a83a4233ce186534, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -17038,8 +17038,8 @@ MonoBehaviour:
   m_ChildAlignment: 1
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 140, y: 180}
-  m_Spacing: {x: 30, y: 50}
+  m_CellSize: {x: 150, y: 200}
+  m_Spacing: {x: 20, y: 20}
   m_Constraint: 1
   m_ConstraintCount: 4
 --- !u!1001 &1269705785
@@ -23198,7 +23198,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2108613403}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f208614d2c0f2742ad240d69816c8de, type: 3}
+  m_Script: {fileID: 11500000, guid: 12a326ecdefbb2d4a833f3c8f80a88b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   towerImage: {fileID: 2044748211}
