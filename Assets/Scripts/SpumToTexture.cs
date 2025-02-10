@@ -12,7 +12,7 @@ public class SpumToTexture : MonoBehaviour
 
     private string spumTexPath = "Assets/Resources/Textures/Tower/{0}";
 
-    private bool isProcessing = false; // ÁøÇà ÁßÀÎÁö Ã¼Å©
+    private bool isProcessing = false; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã¼Å©
 
     public void PushToSpumToTextureQueue(GameObject spum)
     {
@@ -30,7 +30,7 @@ public class SpumToTexture : MonoBehaviour
         if (!isProcessing)
         {
             isProcessing = true;
-            EditorApplication.update += ProcessQueue; // ¿¡µðÅÍ¿¡¼­ ½ÇÇàµÇµµ·Ï º¯°æ
+            EditorApplication.update += ProcessQueue; // ï¿½ï¿½ï¿½ï¿½ï¿½Í¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Çµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         }
     }
 
@@ -39,7 +39,7 @@ public class SpumToTexture : MonoBehaviour
         if (spumToTextureQueue.Count == 0)
         {
             isProcessing = false;
-            EditorApplication.update -= ProcessQueue; // ¾÷µ¥ÀÌÆ® ·çÇÁ¿¡¼­ Á¦°Å
+            EditorApplication.update -= ProcessQueue; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             AssetDatabase.Refresh();
             return;
         }
@@ -48,13 +48,13 @@ public class SpumToTexture : MonoBehaviour
         spumToTextureQueue.RemoveAt(0);
         spum.SetActive(true);
 
-        SceneView.RepaintAll(); // ¿¡µðÅÍ ¸ðµå¿¡¼­ ºä °»½Å
+        SceneView.RepaintAll(); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½å¿¡ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
-        //ÇÑ ÇÁ·¹ÀÓ ±â´Ù¸± ÇÊ¿ä ¾øÀÌ ¹Ù·Î ·»´õ¸µ
+        //ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ù¸ï¿½ ï¿½Ê¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ù·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         spumCamera.Render();
         SaveTextureToFileUtility.SaveRenderTextureToFile(spumCamera.targetTexture, string.Format(spumTexPath, spum.name));
 
-        Debug.Log("Ä¸ÃÄ ¿Ï·á: " + spum.name);
+        Debug.Log("Ä¸ï¿½ï¿½ ï¿½Ï·ï¿½: " + spum.name);
         GameObject.DestroyImmediate(spum);
     }
 
