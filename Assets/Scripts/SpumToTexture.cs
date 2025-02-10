@@ -1,10 +1,10 @@
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
+#if UNITY_EDITOR
 [ExecuteAlways]
+
 public class SpumToTexture : MonoBehaviour
 {
     public Camera spumCamera;
@@ -65,3 +65,4 @@ public class SpumToTexture : MonoBehaviour
     }
 }
 
+#endif
