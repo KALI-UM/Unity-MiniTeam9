@@ -40,6 +40,12 @@ public class SlotManager : InGameManager
     [SerializeField]
     private LineRenderer lineRenderer;
 
+    [SerializeField]
+    private SpriteRenderer selectBoxRenderer;
+
+    [SerializeField]
+    private SpriteRenderer startBoxRenderer;
+
     public bool IsSlotDragging
     {
         get;
@@ -196,6 +202,10 @@ public class SlotManager : InGameManager
     {
         IsSlotDragging = true;
         lineRenderer.enabled = true;
+        selectBoxRenderer.enabled = true;
+        startBoxRenderer.enabled = true;
+        startBoxRenderer.transform.position = dragStart;
+
         lineRenderer.SetPosition(0, dragStart);
         lineRenderer.SetPosition(1, dragStart);
     }
@@ -203,12 +213,15 @@ public class SlotManager : InGameManager
     public void OnDragSlot(Vector3 enterSlot)
     {
         lineRenderer.SetPosition(1, enterSlot);
+        selectBoxRenderer.transform.position = enterSlot;
     }
 
     public void OnEndDragSlot()
     {
         IsSlotDragging = false;
         lineRenderer.enabled = false;
+        startBoxRenderer.enabled = false;
+        selectBoxRenderer.enabled = false;
         onSlotDragEnd?.Invoke();
     }
 

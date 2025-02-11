@@ -1853,7 +1853,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sactx-1-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_93
+      name: SimpleBox
       rect:
         serializedVersion: 2
         x: 552
@@ -1862,7 +1862,7 @@ TextureImporter:
         height: 221
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 68, y: 37, z: 67, w: 126}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -3691,6 +3691,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       IconBack: 207303892
+      SimpleBox: 268944648
       SimpleButto: 46653501
       SimpleButton: 796520971
       SimpleTextbox: 402676579
@@ -3866,7 +3867,6 @@ TextureImporter:
       sactx-1-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_90: -515897468
       sactx-1-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_91: -1390667148
       sactx-1-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_92: -225450649
-      sactx-1-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_93: 268944648
       sactx-1-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_94: -70430187
       sactx-1-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_95: -1851166143
       sactx-1-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_96: -197637976

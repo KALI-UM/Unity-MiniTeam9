@@ -20,7 +20,6 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDra
 
     private List<Tower> towers = new();
 
-
     public int SlotIndex
     {
         get;
@@ -108,6 +107,9 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDra
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        SlotManager.GameManager.UIManager.Close(FocusWindows.SlotInteraction);
+        SlotManager.SelectedSlot.OnDeselected();
+
         if (!TowerGroup.IsEmpty)
         {
             slotManager.OnBeginDragSlot(transform.position);
@@ -135,7 +137,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDra
     public void OnEndDrag(PointerEventData eventData)
     {
         var slot = eventData.pointerEnter.GetComponent<Slot>();
-        if (slot != null)
+        if (slot != null && slot != this)
         {
             TowerGroup temp = TowerGroup;
 

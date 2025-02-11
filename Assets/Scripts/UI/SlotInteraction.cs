@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEditor.Timeline.TimelinePlaybackControls;
 
 public class SlotInteraction : FocusWindow
 {
@@ -10,10 +12,17 @@ public class SlotInteraction : FocusWindow
     private
     GameObject towerInteraction;
 
+    public Button sellButton;
+    public Button fusionButton;
+
     [SerializeField]
-    private Button sellButton;
+    private TextMeshProUGUI costText;
+
     [SerializeField]
-    private Button fusionButton;
+    private GameObject gold;
+
+    [SerializeField]
+    private GameObject gem;
 
     [SerializeField]
     private LocalizationText localizationTowerName;
@@ -32,19 +41,28 @@ public class SlotInteraction : FocusWindow
         towerManager = UIManager.GameManager.TowerManager;
     }
 
-   
+
     private void Awake()
     {
         sellButton.onClick.AddListener(() => OnClickSell());
-        fusionButton.onClick.AddListener(()=> OnClickFusion());
+        fusionButton.onClick.AddListener(() => OnClickFusion());
     }
 
     public override void Open()
     {
         UpdateTowerInteractionPosition();
-        fusionButton.interactable = slotManager.SelectedSlot.TowerGroup.CanFusion;
+        sellButton.gameObject.SetActive(slotManager.SelectedSlot.TowerGroup.Data.grade != towerManager.MaxGrade);
+        fusionButton.gameObject.SetActive(slotManager.SelectedSlot.TowerGroup.CanFusion);
+
         base.Open();
         towerInformation.UpdateTowerInformation(slotManager.SelectedSlot.TowerGroup.Data);
+
+        var currData = slotManager.SelectedSlot.TowerGroup.Data;
+
+        gold.SetActive(currData.saleGold != 0);
+        gem.SetActive(currData.saleGem != 0);
+        costText.text = Mathf.Max(currData.saleGold, currData.saleGem).ToString();
+
         StartCoroutine(CoInputThreshold());
     }
 
@@ -91,6 +109,6 @@ public class SlotInteraction : FocusWindow
     protected override void DisableInput()
     {
         sellButton.enabled = false;
-        fusionButton.enabled=false;
+        fusionButton.enabled = false;
     }
 }

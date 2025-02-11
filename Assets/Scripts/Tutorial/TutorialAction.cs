@@ -14,10 +14,20 @@ public class TutorialAction : MonoBehaviour
 
     public void Start()
     {
+        towerSpawn.spawnButton.onClick.RemoveAllListeners();
+        towerSpawn.spawnButton.onClick.AddListener(() => PressTowerSpawn());
+
         gameManager.SlotManager.onSlotDragEnd += () => DragTowerSlot();
 
-        towerSpawn.spawnButton.onClick.RemoveAllListeners();
-        towerSpawn.spawnButton.onClick.AddListener(() => TowerSpawn());
+        slotInteraction.fusionButton.onClick.AddListener(() => FusionTower());
+
+        upgradeButton.onClick.AddListener(() => ClickTowerUpgrade());
+
+        attackUpgrade.onClick.AddListener(() => UpgradeTower());
+
+        maxFusionWindowButton.onClick.AddListener(() => ClickMaxFusion());
+
+        maxFusionWindow.fusionButton.onClick.AddListener(() => MaxFusion());
     }
 
     public void InitialGoldGemSetting()
@@ -29,13 +39,12 @@ public class TutorialAction : MonoBehaviour
     private TowerSpawn towerSpawn;
     public int towerSpawnCount = 6;
     private int currentTowerSpawnCount = 0;
-    public void TowerSpawn()
-    {
-        towerSpawn.OnClickSpawn(eTower.Tower_Name_BreadBoxer);
-    }
+
 
     public void PressTowerSpawn()
     {
+        towerSpawn.OnClickSpawn(eTower.Tower_Name_BreadBoxer);
+
         currentTowerSpawnCount++;
         if (currentTowerSpawnCount == towerSpawnCount)
         {
@@ -53,10 +62,16 @@ public class TutorialAction : MonoBehaviour
         gameManager.SlotManager.FindSlot((slot) => slot.TowerGroup.CanFusion).onClicked.Invoke();
     }
 
+    [SerializeField]
+    private SlotInteraction slotInteraction;
+
     public void FusionTower()
     {
         TutorialEvent.Instance.Broadcast("Tutorial03_FusionTower");
     }
+
+    [SerializeField]
+    private Button upgradeButton;
 
     public void ClickTowerUpgrade()
     {
@@ -65,6 +80,8 @@ public class TutorialAction : MonoBehaviour
 
     public int towerUpgradeCount = 6;
     private int currentTowerUpgradeCount = 0;
+    [SerializeField]
+    private Button attackUpgrade;
     public void UpgradeTower()
     {
         currentTowerUpgradeCount++;
@@ -84,6 +101,11 @@ public class TutorialAction : MonoBehaviour
 
     [SerializeField]
     private MaxFusionWindow maxFusionWindow;
+
+    [SerializeField]
+    private Button maxFusionWindowButton;
+
+
     public void MaxFusionTargetSetting()
     {
         var targetTracker = gameManager.TowerManager.MaxFusionSystem.ProgressTrackers.Find(tracker => tracker.Data.Id == eTower.Tower_Name_DeadBear);

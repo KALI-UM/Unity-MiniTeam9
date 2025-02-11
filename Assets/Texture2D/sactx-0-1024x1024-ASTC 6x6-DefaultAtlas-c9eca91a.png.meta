@@ -118,7 +118,7 @@ TextureImporter:
         width: 98
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -139,7 +139,7 @@ TextureImporter:
         width: 74
         height: 74
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 22, y: 21, z: 23, w: 22}
       outline: []
       physicsShape: []
@@ -160,7 +160,7 @@ TextureImporter:
         width: 74
         height: 74
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 23, y: 23, z: 23, w: 23}
       outline: []
       physicsShape: []
@@ -168,6 +168,27 @@ TextureImporter:
       bones: []
       spriteID: 92293115c1e4a0249a919ecdf6e18b39
       internalID: -1382650557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SimpleBox
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 263
+        width: 67
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 31, y: 31, z: 30, w: 30}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6485ad09d191b11438bb06dfa1c52581
+      internalID: 1593987838
       vertices: []
       indices: 
       edges: []
@@ -183,6 +204,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      SimpleBox: 1593987838
       purplebutton: -317343197
       xButton: 1980957282
       yellowButton: -1382650557

@@ -1370,13 +1370,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sactx-2-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_60
+      name: Trashcan
       rect:
         serializedVersion: 2
-        x: 1482
-        y: 1560
-        width: 339
-        height: 352
+        x: 1605
+        y: 1831
+        width: 57
+        height: 71
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3869,16 +3869,16 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sactx-2-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_179
+      name: SimpleBox
       rect:
         serializedVersion: 2
-        x: 564
+        x: 566
         y: 1177
-        width: 133
+        width: 83
         height: 95
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 40, y: 0, z: 36, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -6707,7 +6707,7 @@ TextureImporter:
       name: sactx-2-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_314
       rect:
         serializedVersion: 2
-        x: 0
+        x: 519
         y: 0
         width: 828
         height: 655
@@ -8520,9 +8520,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      SimpleBox: -1214257675
       SimpleTextbox: 653310041
       SimpleWindow: -520704701
       Touch: 536294486
+      Trashcan: -1737846780
       icon5lv: 1906202730
       sactx-2-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_0: 684517528
       sactx-2-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_1: 1881922417
@@ -8612,7 +8614,6 @@ TextureImporter:
       sactx-2-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_176: 1371551895
       sactx-2-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_177: 867351578
       sactx-2-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_178: 1132615848
-      sactx-2-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_179: -1214257675
       sactx-2-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_18: -1235181694
       sactx-2-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_180: -319323512
       sactx-2-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_181: 1109698732
@@ -8877,7 +8878,6 @@ TextureImporter:
       sactx-2-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_57: -1097726921
       sactx-2-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_58: -909200827
       sactx-2-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_6: 1490798321
-      sactx-2-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_60: -1737846780
       sactx-2-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_61: -350008760
       sactx-2-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_62: -685066492
       sactx-2-2048x2048-ASTC 6x6-AtlasCommon-cb62b24c_63: 2084237926
