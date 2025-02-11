@@ -170,8 +170,8 @@ MonoBehaviour:
   shadowColors:
   - {r: 0, g: 0, b: 0, a: 0}
   - {r: 0, g: 0, b: 0, a: 0.5882353}
-  - {r: 0.21069163, g: 0.32775825, b: 1, a: 0.5882353}
   - {r: 0.22702646, g: 1, b: 0, a: 0.5882353}
+  - {r: 0.21069163, g: 0.32775825, b: 1, a: 0.5882353}
   - {r: 0.6893384, g: 0, b: 0.8301887, a: 0.5882353}
   - {r: 1, g: 0.775064, b: 0, a: 0.5882353}
   spumToTexture: {fileID: 1510406264}
@@ -355,7 +355,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 1, g: 0, b: 1, a: 0}
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

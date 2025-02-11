@@ -424,6 +424,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movement: {fileID: 9078676883207702622}
   hpBar: {fileID: 6358746299593617960}
+  damageTextChanger: {fileID: 0}
   animationHandler: {fileID: 0}
   character: {fileID: 5136657867138287571}
   data: {fileID: 0}

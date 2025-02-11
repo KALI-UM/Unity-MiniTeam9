@@ -25,6 +25,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private UIManager uiManager;
 
+    [SerializeField]
+    private EffectManager effectManager;
+
     public EnemyManager EnemyManager
     {
         get => enemyManager;
@@ -43,6 +46,11 @@ public class GameManager : MonoBehaviour
     public UIManager UIManager
     {
         get => uiManager;
+    }
+
+    public EffectManager EffectManager
+    {
+        get => effectManager;
     }
 
     #endregion

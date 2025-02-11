@@ -19,3 +19,4 @@ MonoBehaviour:
   moveSpeed: 1
   dropGold: 0
   dropGem: 2
+  enemySpum: {fileID: 6769144775301545458, guid: 994bbbe328621e14cbc4db108794a2fb, type: 3}

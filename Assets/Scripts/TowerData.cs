@@ -6,6 +6,7 @@ using static TowerTable;
 public class TowerData : ScriptableObject
 {
     static private readonly string spritePath = "Textures/Tower/{0}";
+    static private readonly string spumPath = "Prefabs/Units/{0}";
 
     [ReadOnly] public eTower Id;
     [ReadOnly] public string key;
@@ -17,6 +18,7 @@ public class TowerData : ScriptableObject
     public int saleGold;
     public int saleGem;
     public Sprite towerSprite;
+    public GameObject towerSpum;
 
 
     public void SetData(TowerRawData raw)
@@ -31,6 +33,7 @@ public class TowerData : ScriptableObject
         saleGold = raw.Tower_SaleGold;
         saleGem = raw.Tower_SaleGem;
         towerSprite = Resources.Load<Sprite>(string.Format(spritePath, raw.Tower_Resource));
+        towerSpum = Resources.Load<GameObject>(string.Format(spumPath, raw.Tower_Resource));
     }
 
     public TowerRawData ConvertToRawData()

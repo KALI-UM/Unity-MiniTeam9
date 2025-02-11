@@ -14,12 +14,12 @@ public class Enemy : MonoBehaviour
     public SpumAnimationHandler animationHandler;
     public GameObject character;
 
+    public Action<int> onDamaged;
     public Action onDie;
  
     public eEnemy EnemyId
     {
-        get;
-        private set;
+        get =>Data.Id;
     }
 
     [ReadOnly, SerializeField]
@@ -44,15 +44,9 @@ public class Enemy : MonoBehaviour
         private set;
     }
 
-    private void Awake()
-    {
-        EnemyId = Data.Id;
-        movement.InitializeData(data);
-    }
 
     public void InitializeData(EnemyData data)
     {
-        EnemyId = data.Id;
         this.data = data;
     }
 
@@ -80,6 +74,7 @@ public class Enemy : MonoBehaviour
             OnDie();
         }
         hpBar.OnHpChanged(Hp, Data.maxHp);
+        onDamaged?.Invoke(damage);
     }
 
     public virtual void OnDie()
