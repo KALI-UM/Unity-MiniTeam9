@@ -32,7 +32,11 @@ public class TowerAttack : MonoBehaviour
         tower.animationHandler.Attack();
 
         tower.SetDirection(target.transform.position);
-        target.OnDamaged(tower.AttackPower);
+        var fire = tower.towerManager.EffectManager.Get<Projectile>(eEffects.Fire);
+        fire.SetDestination(target.transform.position);
+        fire.duration = tower.animationHandler.GetCurrentAnimationClipLength();
+        fire.Play(transform.position);
+        StartCoroutine(CoAttackDamageApply(0.5f));
     }
 
     private IEnumerator CoAttack()
@@ -51,6 +55,12 @@ public class TowerAttack : MonoBehaviour
 
             yield return new WaitForSeconds(tower.AttackInterval);
         }
+    }
+
+    private IEnumerator CoAttackDamageApply(float ratio)
+    {
+        yield return new WaitForSeconds(tower.animationHandler.GetCurrentAnimationClipLength()*ratio);
+        target.OnDamaged(tower.AttackPower);
     }
 
     private bool FindTarget()

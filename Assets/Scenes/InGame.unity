@@ -6751,6 +6751,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectPrefabs:
   - {fileID: 1241177307132760647, guid: 40bb20802e6a2aa45b96ecea5a7eae86, type: 3}
+  - {fileID: 1327275406950634941, guid: 5b9ca57f4d25e8041adf8d907e9ae81d, type: 3}
 --- !u!1 &807669724
 GameObject:
   m_ObjectHideFlags: 0

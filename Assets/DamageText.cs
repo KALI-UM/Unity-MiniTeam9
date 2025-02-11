@@ -3,7 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+
 
 [RequireComponent(typeof(TextMeshPro))]
 public class DamageText : Effect
@@ -13,19 +15,20 @@ public class DamageText : Effect
     static readonly private string mFormat = "{0:N2}M";
 
     [SerializeField]
-    private TextMeshPro text;
+    private TextMeshPro textMesh;
 
-    public float FloatingTime = 1f;
+    [SerializeField]
+    private  List<float> fontSize;
     [ReadOnly]
     public UnityEngine.Color color;
 
     private void Awake()
     {
-        color = text.color;
-        var startColor = text.color;
+        color = textMesh.color;
+        var startColor = textMesh.color;
         color.a = 1;
         startColor.a = 0;
-        text.color = startColor;
+        textMesh.color = startColor;
     }
 
     static public string IntToDamageText(int value)
@@ -33,12 +36,13 @@ public class DamageText : Effect
         string damageText;
         switch (value)
         {
-            case >= 10000:
+            case > 10000:
                 float m = value / 10000;
                 damageText = string.Format(mFormat, m);
+                
                 break;
 
-            case >= 1000:
+            case > 1000:
                 float k = value / 1000;
                 damageText = string.Format(kFormat, k);
                 break;
@@ -55,12 +59,12 @@ public class DamageText : Effect
     public override void Play(Vector3 position)
     {
         base.Play(position);
-        text.color = color;
-        text.DOFade(0, FloatingTime).OnComplete(() => Release());
+        textMesh.color = color;
+        textMesh.DOFade(0, duration).OnComplete(() => Release());
     }
 
     public void SetDamageText(int value)
     {
-        text.text = IntToDamageText(value);
+        textMesh.text = IntToDamageText(value);
     }
 }

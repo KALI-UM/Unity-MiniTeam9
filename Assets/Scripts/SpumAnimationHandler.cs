@@ -29,6 +29,11 @@ public class SpumAnimationHandler : MonoBehaviour
         animator.SetTrigger(attackHash);
     }
 
+    public float GetCurrentAnimationClipLength()
+    {
+        return animator.GetCurrentAnimatorStateInfo(0).length;
+    }
+
     public void Death()
     {
         animator.SetTrigger(deathHash);

@@ -128,10 +128,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 4.95
-  m_fontSizeBase: 10
+  m_fontSize: 4
+  m_fontSizeBase: 4
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 2
   m_fontSizeMax: 20
   m_fontStyle: 0
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0.29323578, y: 0.3033762, z: 0.32418585, w: 0.51385546}
+  m_margin: {x: 0.019150734, y: 0.3033762, z: 0.012149334, w: 0.51385546}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
@@ -186,8 +186,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 1
-  text: {fileID: 8130039022115742377}
-  FloatingTime: 1
+  textMesh: {fileID: 8130039022115742377}
+  fontSize: []
   color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!210 &443787387646858147
 SortingGroup:

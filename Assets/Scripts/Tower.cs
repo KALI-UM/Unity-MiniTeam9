@@ -14,7 +14,8 @@ public class Tower : MonoBehaviour
 
     public SpriteRenderer shadowRenderer;
 
-    private TowerManager towerManager;
+    [ReadOnly]
+    public TowerManager towerManager;
 
     public TowerGroup TowerGroup
     {

@@ -53,6 +53,11 @@ public class EffectManager : InGameManager
         return effectPools[Id].Get();
     }
 
+    public T Get<T>(eEffects Id) where T : Effect
+    {
+        return effectPools[Id].Get() as T;
+    }
+
     public Effect Play(eEffects Id, Vector3 position)
     {
         var effect = effectPools[Id].Get();
