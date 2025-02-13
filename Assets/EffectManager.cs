@@ -11,12 +11,33 @@ public class EffectManager : InGameManager
 
     private void Awake()
     {
-
-
         InitializeEffectPools();
     }
 
-    private void InitializeEffectPools()
+    //public void InitializeEffectPools<T>(T effectPrefab) where T : Effect
+    //{
+    //    effectPools.Clear();
+
+    //    for (int i = 0; i < effectPrefabs.Count; i++)
+    //    {
+    //        var eff = effectPrefabs[i];
+    //        var id = (eEffects)i;
+    //        ObjectPool<Effect> pool = new
+    //        (
+    //            createFunc: () => CreateEffect(eff, id),
+    //            actionOnGet: e => e.OnGet(),
+    //            //actionOnRelease: e => e.OnRelease(),
+    //            //actionOnDestroy: obj => obj.Dispose(),
+    //            //collectionCheck: false,
+    //            defaultCapacity: 100,
+    //            maxSize: 200
+    //        );
+
+    //        effectPools.Add(id, pool);
+    //    }
+    //}
+
+    public void InitializeEffectPools()
     {
         effectPools.Clear();
 
@@ -41,9 +62,9 @@ public class EffectManager : InGameManager
 
     public Effect CreateEffect(GameObject prefab, eEffects id)
     {
-        var gobj=Instantiate(prefab);
+        var gobj=Instantiate(prefab, transform);
         Effect effect = gobj.GetComponent<Effect>();
-        effect.release += () => effectPools[id].Release(effect);
+        effect.returnToObjPool += () => effectPools[id].Release(effect);
         effect.Reset();
         return effect;
     }

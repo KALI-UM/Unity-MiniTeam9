@@ -18,9 +18,14 @@ public class DamageText : Effect
     private TextMeshPro textMesh;
 
     [SerializeField]
-    private  List<float> fontSize;
+    private List<float> fontSize;
     [ReadOnly]
     public UnityEngine.Color color;
+
+    //private DG.Tweening.Sequence damageTextSequence;
+
+    [SerializeField]
+    private Vector3 offset;
 
     private void Awake()
     {
@@ -29,6 +34,16 @@ public class DamageText : Effect
         color.a = 1;
         startColor.a = 0;
         textMesh.color = startColor;
+
+        //damageTextSequence = DOTween.Sequence().SetAutoKill(false);
+        //damageTextSequence.OnStart(() =>
+        //{
+        //    textMesh.color = color;
+        //    textMesh.transform.position=Vector3.zero;
+        //});
+        //damageTextSequence.Append(textMesh.DOFade(0, duration));
+        //damageTextSequence.Join(textMesh.transform.DOLocalMoveY(0.5f, duration));
+        //damageTextSequence.OnComplete(() => ReturnToObjectPool());
     }
 
     static public string IntToDamageText(int value)
@@ -39,7 +54,7 @@ public class DamageText : Effect
             case > 10000:
                 float m = value / 10000;
                 damageText = string.Format(mFormat, m);
-                
+
                 break;
 
             case > 1000:
@@ -58,9 +73,14 @@ public class DamageText : Effect
 
     public override void Play(Vector3 position)
     {
-        base.Play(position);
+        gameObject.SetActive(true);
+        //damageTextSequence.Restart();
+        var top = position + offset;
+
+        transform.position = top;
         textMesh.color = color;
-        textMesh.DOFade(0, duration).OnComplete(() => Release());
+        textMesh.DOFade(0, duration);
+        textMesh.transform.DOLocalMoveY(transform.position.y + 0.5f, duration).OnComplete(() => ReturnToObjectPool());
     }
 
     public void SetDamageText(int value)

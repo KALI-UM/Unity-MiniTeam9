@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PopWindow : UIElement
 {
-    public float popTime = 1f;
+    public float popDuration = 1f;
 
     public virtual void Open()
     {
@@ -19,7 +19,7 @@ public class PopWindow : UIElement
 
     private IEnumerator CoPop()
     {
-        yield return new WaitForSeconds(popTime);
+        yield return new WaitForSeconds(popDuration);
         Close();
     }
 }

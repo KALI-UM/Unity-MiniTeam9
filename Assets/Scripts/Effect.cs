@@ -6,7 +6,7 @@ using UnityEngine;
 public class Effect : MonoBehaviour
 {
     public float duration=1f;
-    public Action release;
+    public Action returnToObjPool;
 
     public virtual void Play(Vector3 position)
     {
@@ -24,8 +24,9 @@ public class Effect : MonoBehaviour
 
     }
 
-    public virtual void Release()
+    public virtual void ReturnToObjectPool()
     {
-        release?.Invoke();
+        gameObject.SetActive(false);
+        returnToObjPool.Invoke();
     }
 }

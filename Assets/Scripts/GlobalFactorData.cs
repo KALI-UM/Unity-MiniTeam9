@@ -10,5 +10,6 @@ public class GlobalFactorData : ScriptableObject
     public float attackSpeed;
     public float attackRange;
     public float towerMoveSpeed;
+    public float towerProjectileSpeed;
     //public float enemyMoveSpeed;
 }

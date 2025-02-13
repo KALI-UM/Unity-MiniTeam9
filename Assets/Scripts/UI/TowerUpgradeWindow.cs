@@ -52,7 +52,7 @@ public class TowerUpgradeWindow : FocusWindow
         base.Initialize(mgr);
         towerManager = UIManager.GameManager.TowerManager;
 
-        windowOpen.onClick.AddListener(() => UIManager.Open(FocusWindows.TowerUpgrade));
+        windowOpen.onClick.AddListener(() => UIManager.Open(FocusWindows.TowerUpgradeWindow));
     }
     private void Awake()
     {

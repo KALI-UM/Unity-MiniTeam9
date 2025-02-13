@@ -38,7 +38,7 @@ public class TowerManagerEditor : Editor
 
         foreach (var data in list)
         {
-            sb.AppendLine($"\t{data.Strnig_Key} = {data.Tower_ID},");
+            sb.AppendLine($"\t{data.String_Key} = {data.Tower_ID},");
         }
         sb.AppendLine(@"}");
 
@@ -58,13 +58,13 @@ public class TowerManagerEditor : Editor
         foreach (var data in list)
         {
             //이미 있으면 삭제
-            AssetDatabase.DeleteAsset(string.Format(dataPath, data.Strnig_Key));
+            AssetDatabase.DeleteAsset(string.Format(dataPath, data.String_Key));
 
             //해당 데이터 ScriptableObject생성
             TowerData scriptableData = ScriptableObject.CreateInstance<TowerData>();
             scriptableData.SetData(data);
 
-            AssetDatabase.CreateAsset(scriptableData, string.Format(dataPath, data.Strnig_Key));
+            AssetDatabase.CreateAsset(scriptableData, string.Format(dataPath, data.String_Key));
             AssetDatabase.SaveAssets();
         }
     }
@@ -97,12 +97,12 @@ public class TowerManagerEditor : Editor
         foreach (var data in list)
         {
             //이미 있으면 삭제
-            AssetDatabase.DeleteAsset(string.Format(prefabPath, data.Strnig_Key));
+            AssetDatabase.DeleteAsset(string.Format(prefabPath, data.String_Key));
             GameObject newPrefab = Instantiate(defaultPrefab);
             var tower = newPrefab.GetComponent<Tower>();
 
             //해당 데이터 ScriptableObject
-            TowerData scriptableData = AssetDatabase.LoadAssetAtPath<TowerData>(string.Format(dataPath, data.Strnig_Key));
+            TowerData scriptableData = AssetDatabase.LoadAssetAtPath<TowerData>(string.Format(dataPath, data.String_Key));
             tower.InitializeData(scriptableData);
 
 
@@ -126,7 +126,7 @@ public class TowerManagerEditor : Editor
 
             tower.shadowRenderer.color = colorList[tower.Data.grade];
 
-            PrefabUtility.SaveAsPrefabAsset(newPrefab, string.Format(prefabPath, data.Strnig_Key));
+            PrefabUtility.SaveAsPrefabAsset(newPrefab, string.Format(prefabPath, data.String_Key));
             GameObject.DestroyImmediate(newPrefab);
         }
     }

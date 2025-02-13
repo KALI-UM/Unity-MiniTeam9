@@ -16,9 +16,10 @@ MonoBehaviour:
   key: Tower_Name_Sheep
   grade: 5
   attackType: 1
-  attackPower: 350
+  attackPower: 450
   attackSpeed: 2
   attackRange: 2
   saleGold: 0
   saleGem: 0
-  towerSprite: {fileID: 21300000, guid: 4fdc2e9bb8267754e924ba2a0e98c270, type: 3}
+  towerSprite: {fileID: 21300000, guid: 6c3d28cc3858b7c4287242e15056449c, type: 3}
+  towerSpum: {fileID: 3753996815801147750, guid: 08f110592498502469ba6a8dff276a06, type: 3}

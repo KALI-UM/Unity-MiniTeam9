@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
     #endregion
 
     private Coroutine coStartThreshold;
-    public float startThresholdTime = 3f;
+    public float startThresholdTime = 10f;
 
     public Action onGameClear;
     public Action onGameOver;
@@ -92,13 +92,9 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-
-
-
         InitializeManagers();
 
         EnemyManager.onBossEnemyDie += () => OnBossEnemyDie();
-
         waveDatas = DataTableManager.Get<WaveTable>(DataTableIds.Wave).GetWaveDatas();
         CurrentWaveNumber = 0;
     }
@@ -167,11 +163,6 @@ public class GameManager : MonoBehaviour
             
             yield return new WaitForSeconds(CurrentWaveData.waveDuration);
             StopCoroutine(coWaveSpawnEnemy);
-
-            if(CurrentWaveNumber!=0&&CurrentWaveNumber % 10==0)
-            {
-                OnGameOver();
-            }
         }
     }
 
@@ -205,6 +196,11 @@ public class GameManager : MonoBehaviour
 
     public void OnBossEnemyDie()
     {
+        if(lastWaveNumber==CurrentWaveNumber)
+        {
+            OnGameOver();
+        }
+
         StopCoroutine(coWave);
         coWave = StartCoroutine(CoWave());
     }

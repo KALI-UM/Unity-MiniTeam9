@@ -16,9 +16,10 @@ MonoBehaviour:
   key: Tower_Name_Frankie
   grade: 5
   attackType: 0
-  attackPower: 400
+  attackPower: 500
   attackSpeed: 2
   attackRange: 1
   saleGold: 0
   saleGem: 0
-  towerSprite: {fileID: 21300000, guid: 98c23a4964b76fb45b64c84c0630fbd6, type: 3}
+  towerSprite: {fileID: 21300000, guid: 41fb222241ef3394bb49e56c63f5090f, type: 3}
+  towerSpum: {fileID: 3551499191030771501, guid: 18e57c20d45027145a95fdedd9c9830b, type: 3}

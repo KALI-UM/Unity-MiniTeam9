@@ -16,9 +16,10 @@ MonoBehaviour:
   key: Tower_Name_Victorious
   grade: 5
   attackType: 1
-  attackPower: 350
+  attackPower: 450
   attackSpeed: 2
   attackRange: 2
   saleGold: 0
   saleGem: 0
-  towerSprite: {fileID: 21300000, guid: 4fdc2e9bb8267754e924ba2a0e98c270, type: 3}
+  towerSprite: {fileID: 21300000, guid: 12f6e3d19c804c54387f9ccdbe8aecf8, type: 3}
+  towerSpum: {fileID: 5987374589438665201, guid: 60929947c01e68b4cba53eb13d7fa18c, type: 3}

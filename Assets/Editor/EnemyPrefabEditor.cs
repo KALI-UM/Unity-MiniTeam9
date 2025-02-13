@@ -84,7 +84,7 @@ public class EnemyPrefabEditor : Editor
 
 
         UpdateEnemyDatas(list);
-
+        
         foreach (var data in list)
         {
             //이미 있으면 삭제
@@ -111,8 +111,9 @@ public class EnemyPrefabEditor : Editor
                 spum.transform.position = Vector3.zero;
                 spum.transform.SetParent(enemy.character.transform);
 
-                spum.transform.GetChild(0).AddComponent<SpumAnimationHandler>();
-                enemy.animationHandler = spum.transform.GetChild(0).GetComponent<SpumAnimationHandler>();
+                //spum.GetComponent<SPUM_Prefabs>().OverrideControllerInit();
+                var handler = spum.AddComponent<SpumAnimationHandler>();
+                enemy.animationHandler = handler;
             }
 
             PrefabUtility.SaveAsPrefabAsset(newPrefab, string.Format(prefabPath, data.String_Key));

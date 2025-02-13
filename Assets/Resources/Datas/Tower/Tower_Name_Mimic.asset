@@ -16,9 +16,10 @@ MonoBehaviour:
   key: Tower_Name_Mimic
   grade: 5
   attackType: 0
-  attackPower: 400
+  attackPower: 500
   attackSpeed: 2
   attackRange: 1
   saleGold: 0
   saleGem: 0
-  towerSprite: {fileID: 21300000, guid: 98c23a4964b76fb45b64c84c0630fbd6, type: 3}
+  towerSprite: {fileID: 21300000, guid: 324d6b93d31aad7488e8642a5fb1a041, type: 3}
+  towerSpum: {fileID: 2982807728717343627, guid: 9e2ab91250d838448a838fd44c7a04ac, type: 3}

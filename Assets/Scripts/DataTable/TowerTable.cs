@@ -15,7 +15,7 @@ public class TowerTable : DataTable
     public class TowerRawData
     {
         public int Tower_ID { get; set; }
-        public string Strnig_Key { get; set; }
+        public string String_Key { get; set; }
         public int Tower_Grade { get; set; }
         public int Tower_AttackType { get; set; }
         public int Tower_AttackPower { get; set; }

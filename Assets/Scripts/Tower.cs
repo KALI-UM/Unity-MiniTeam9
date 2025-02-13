@@ -13,6 +13,7 @@ public class Tower : MonoBehaviour
     public GameObject character;
 
     public SpriteRenderer shadowRenderer;
+   
 
     [ReadOnly]
     public TowerManager towerManager;

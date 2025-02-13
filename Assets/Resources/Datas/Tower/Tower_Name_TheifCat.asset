@@ -21,4 +21,5 @@ MonoBehaviour:
   attackRange: 2
   saleGold: 10
   saleGem: 0
-  towerSprite: {fileID: 21300000, guid: 2f442c76c3480f042a276564a417b533, type: 3}
+  towerSprite: {fileID: 21300000, guid: a49812b2152821f4185da1fee6f492fe, type: 3}
+  towerSpum: {fileID: 8898845766513491369, guid: 0e656a7d4c6ab984da724220a881905f, type: 3}

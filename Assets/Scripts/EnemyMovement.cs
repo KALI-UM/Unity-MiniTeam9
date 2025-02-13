@@ -52,7 +52,6 @@ public class EnemyMovement : MonoBehaviour
 
     private void MoveTo()
     {
-
         Vector3 next;
 
         float sqrDelta = Mathf.Pow(Speed * Time.deltaTime, 2);

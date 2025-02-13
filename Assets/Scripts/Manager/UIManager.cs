@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using UnityEditor.PackageManager.UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -45,7 +46,14 @@ public class UIManager : InGameManager
 
         GameManager.onWaveStart += (WaveData data) =>
         {
-            Open(PopWindows.Wave);
+            if (data.waveNumber % 10 == 0)
+            {
+                Open(PopWindows.BossWave);
+            }
+            else
+            {
+                Open(PopWindows.Wave);
+            }
 
             foreach (var ui in focusWindows)
             {
@@ -69,8 +77,8 @@ public class UIManager : InGameManager
         GameManager.onGameOver += () => Open(FocusWindows.GameOver);
         GameManager.onGameClear += () => Open(FocusWindows.GameClear);
 
-        GameManager.goldGemSystem.onGoldPayFail += () => Open(PopWindows.Alert);
-        GameManager.goldGemSystem.onGemPayFail += () => Open(PopWindows.Alert);
+        GameManager.goldGemSystem.onGoldPayFail += () => Alert("Alert_LessGold");
+        GameManager.goldGemSystem.onGemPayFail += () => Alert("Alert_LessGem");
     }
 
     private void Awake()
@@ -90,6 +98,7 @@ public class UIManager : InGameManager
         currentWindow = window;
         //[(int)currentWindow].OnFocus();
         focusWindows[(int)currentWindow].Open();
+
     }
 
     public void Close(FocusWindows window)
@@ -105,6 +114,13 @@ public class UIManager : InGameManager
     public void Open(PopWindows window)
     {
         popWindows[(int)window].Open();
+    }
+
+    public void Alert(string key)
+    {
+        var alert = popWindows[(int)PopWindows.Alert] as AlertWindow;
+        alert.Open();
+        alert.SetString(key);
     }
 
     public void CloseAllPopWindow()

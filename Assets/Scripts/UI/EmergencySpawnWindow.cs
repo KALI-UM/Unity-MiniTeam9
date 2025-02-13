@@ -16,7 +16,7 @@ public class EmergencySpawnWindow : FocusWindow
     public override void Initialize(UIManager mgr)
     {
         base.Initialize(mgr);
-        windowOpen.onClick.AddListener(() => UIManager.Open(FocusWindows.EmergencySpawn));
+        windowOpen.onClick.AddListener(() => UIManager.Open(FocusWindows.EmergencySpwanWindow));
 
         foreach (var button in spawnButtons)
         {

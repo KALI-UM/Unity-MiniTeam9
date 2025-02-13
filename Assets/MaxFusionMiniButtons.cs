@@ -23,7 +23,7 @@ public class MaxFusionMiniButtons : UIElement
 
         foreach (var tracker in UIManager.GameManager.TowerManager.MaxFusionSystem.ProgressTrackers)
         {
-            var maxFusionButton = Instantiate(maxFusionButtonPrefab);
+            var maxFusionButton = Instantiate(maxFusionButtonPrefab, transform);
             maxFusionButton.transform.SetParent(gameObject.transform);
             maxFusionButton.SetActive(false);
 

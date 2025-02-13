@@ -22,3 +22,4 @@ MonoBehaviour:
   saleGold: 0
   saleGem: 4
   towerSprite: {fileID: 21300000, guid: 51cefea49ba7ca143b524aba3334771f, type: 3}
+  towerSpum: {fileID: 8284939713691133566, guid: a5489143a588a064d98db88058a24dad, type: 3}

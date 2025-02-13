@@ -144,7 +144,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDra
             ChangeTowerGroup(slot.TowerGroup);
             slot.ChangeTowerGroup(temp);
         }
-
+        
         slotManager.OnEndDragSlot();
     }
 

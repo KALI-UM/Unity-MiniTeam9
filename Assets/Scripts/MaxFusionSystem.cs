@@ -56,6 +56,6 @@ public class MaxFusionSystem
         towerManager.GameManager.SlotManager.AddTower(tower.GetComponent<Tower>());
 
         
-        fusionAlertPop.Open(target.TargetTowerSprite, DataTableManager.TowerTable.Get(target.Data.Id).Strnig_Key);
+        fusionAlertPop.Open(target.TargetTowerSprite, DataTableManager.TowerTable.Get(target.Data.Id).String_Key);
     }
 }

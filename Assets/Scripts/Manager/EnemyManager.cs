@@ -85,30 +85,36 @@ public class EnemyManager : InGameManager
     private void InitializeEnemyPrefabs()
     {
 #if UNITY_EDITOR
-        EnemyData[] datas = Resources.LoadAll<EnemyData>("Datas/Enemy");
-        foreach (var data in datas)
+        //EnemyData[] datas = Resources.LoadAll<EnemyData>("Datas/Enemy");
+        //foreach (var data in datas)
+        //{
+        //    GameObject enemyPrefab = (data.grade == 2 ? Instantiate(bossEnemyPrefab) : Instantiate(defaultEnemyPrefab));
+        //    var enemy = enemyPrefab.GetComponent<Enemy>();
+
+        //    //해당 데이터 ScriptableObject
+        //    enemy.InitializeData(data);
+
+        //    if (data.enemySpum != null)
+        //    {
+        //        GameObject spumprefab = Instantiate(data.enemySpum);
+        //        Vector3 scale = enemy.character.transform.GetChild(0).transform.localScale;
+        //        GameObject.DestroyImmediate(enemy.character.transform.GetChild(0).gameObject);
+
+        //        spumprefab.transform.localScale = scale;
+        //        spumprefab.transform.position = Vector3.zero;
+        //        spumprefab.transform.SetParent(enemy.character.transform);
+        //        var handler = spumprefab.AddComponent<SpumAnimationHandler>();
+        //        enemy.animationHandler = handler;
+        //    }
+        //    enemyPrefabs.Add(data.Id, enemyPrefab);
+        //    enemyPrefab.name = data.key;
+        //    enemyPrefab.transform.position = new Vector3(100, 100, 100);
+        //}
+        GameObject[] prefabs = Resources.LoadAll<GameObject>("Prefabs/Enemy");
+        foreach (var enmey in prefabs)
         {
-            GameObject enemyPrefab = (data.grade == 2 ? Instantiate(bossEnemyPrefab) : Instantiate(defaultEnemyPrefab));
-            var enemy = enemyPrefab.GetComponent<Enemy>();
-
-            //해당 데이터 ScriptableObject
-            enemy.InitializeData(data);
-
-            if (data.enemySpum != null)
-            {
-                GameObject spumprefab = Instantiate(data.enemySpum);
-                Vector3 scale = enemy.character.transform.GetChild(0).transform.localScale;
-                GameObject.DestroyImmediate(enemy.character.transform.GetChild(0).gameObject);
-
-                spumprefab.transform.localScale = scale;
-                spumprefab.transform.position = Vector3.zero;
-                spumprefab.transform.SetParent(enemy.character.transform);
-                spumprefab.transform.GetChild(0).AddComponent<SpumAnimationHandler>();
-                enemy.animationHandler = spumprefab.transform.GetChild(0).GetComponent<SpumAnimationHandler>();
-            }
-            enemyPrefabs.Add(data.Id, enemyPrefab);
-            enemyPrefab.name = data.key;
-            enemyPrefab.transform.position = new Vector3(100, 100, 100);
+            var id = Enum.Parse<eEnemy>(enmey.name);
+            enemyPrefabs.Add(id, enmey);
         }
 #else
     GameObject[] prefabs = Resources.LoadAll<GameObject>("Prefabs/Enemy");
@@ -132,7 +138,7 @@ public class EnemyManager : InGameManager
                 actionOnRelease: e => OnReleaseEnemy(e),
                 //actionOnDestroy: obj => obj.Dispose(),
                 //collectionCheck: false,
-                defaultCapacity: 35,
+                defaultCapacity: 50,
                 maxSize: 100
             );
             enemyPools.Add(enemy.Key, pool);
