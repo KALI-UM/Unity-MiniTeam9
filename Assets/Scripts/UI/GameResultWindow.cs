@@ -16,7 +16,7 @@ public class GameResultWindow : FocusWindow
     //[SerializeField]
     //private Sprite overSprite;
 
-    private Sequence resultWindowAnimation;
+    //private Sequence resultWindowAnimation;
 
     private void Awake()
     {
@@ -24,17 +24,16 @@ public class GameResultWindow : FocusWindow
         lobbyButton.onClick.AddListener(OnClickLobby);
     }
 
-    private void Start()
-    {
-        resultWindowAnimation = DOTween.Sequence().SetAutoKill(false);
-        float initialSize = title.rectTransform.sizeDelta.x;
-        resultWindowAnimation.Append(title.rectTransform.DOSizeDelta(new Vector2(initialSize + 500f, title.rectTransform.sizeDelta.y), 2f));
-    }
+    //private void Start()
+    //{
+    //    resultWindowAnimation = DOTween.Sequence().SetAutoKill(false);
+    //    resultWindowAnimation.Append(title.rectTransform.DOSizeDelta(new Vector2(title.rectTransform.sizeDelta.x + 500f, title.rectTransform.sizeDelta.y), 2f));
+    //}
 
     public override void Open()
     {
         base.Open();
-        resultWindowAnimation.Restart();
+        //resultWindowAnimation.Restart();
     }
 
     public void OnClickRestart()

@@ -1,5 +1,3 @@
-using JetBrains.Annotations;
-using UnityEditor.PackageManager.UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -74,9 +72,18 @@ public class UIManager : InGameManager
             }
         };
 
-        GameManager.onGameOver += () => Open(FocusWindows.GameOver);
-        GameManager.onGameClear += () => Open(FocusWindows.GameClear);
-       
+        GameManager.onGameOver += () =>
+        {
+            Open(FocusWindows.GameOver);
+            SoundManager.Instance.PlaySFX("BattleEffect_08_EndGame");
+        }; 
+        GameManager.onGameClear += () =>
+        {
+            Open(FocusWindows.GameClear);
+            SoundManager.Instance.PlaySFX("BattleEffect_08_VictoryGame");
+        };
+
+
     }
 
     private void Awake()
