@@ -87,12 +87,14 @@ public class TowerUpgradeWindow : FocusWindow
 
             uiManager.GameManager.TowerManager.SetAttackPowerUpgradeRate(towerUpgradeRawDatas[attackPowerLv].PowerBonus);
             UpdateAttackPowerText(attackPowerLv);
+
+            SoundManager.Instance.PlaySFX("BattleEffect_08_GainGold");
         }
     }
 
     public void UpdateAttackPowerText(int lv)
     {
-        attackPowerLvText.text = lv.ToString();
+        attackPowerLvText.text = "LV" + lv.ToString();
 
         if (lv == maxUpgradeLv)
         {
@@ -132,12 +134,13 @@ public class TowerUpgradeWindow : FocusWindow
             attackSpeedLv++;
             uiManager.GameManager.TowerManager.SetAttackSpeedUpgradeRate(towerUpgradeRawDatas[attackSpeedLv].PowerBonus);
             UpdateAttackSpeedText(attackSpeedLv);
+            SoundManager.Instance.PlaySFX("BattleEffect_08_GainGold");
         }
     }
 
     public void UpdateAttackSpeedText(int lv)
     {
-        attackSpeedLvText.text = lv.ToString();
+        attackSpeedLvText.text = "LV"+lv.ToString();
 
         if(lv== maxUpgradeLv)
         {

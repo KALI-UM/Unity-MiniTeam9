@@ -6,4 +6,5 @@ public enum UIElements
 	TowerSpawn,
 	MaxLvMiniButtons,
 	SideButtons,
+	TowerInformation,
 }

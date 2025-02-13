@@ -30,14 +30,14 @@ public class GoldGemSystem
     {
         gold += amount;
         onGoldCountChange?.Invoke(Gold);
-        SoundManager.Instance.PlaySFX("BattleEffect_08_GainGold");
+        //SoundManager.Instance.PlaySFX("BattleEffect_08_GainGold");
     }
 
     public void AddGem(int amount)
     {
         gem += amount;
         onGemCountChange?.Invoke(Gem);
-        SoundManager.Instance.PlaySFX("BattleEffect_08_GainCristal");
+        //SoundManager.Instance.PlaySFX("BattleEffect_08_GainCristal");
     }
 
     public bool CanPayGold(int amount)
