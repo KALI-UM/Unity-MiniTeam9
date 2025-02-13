@@ -47,6 +47,8 @@ public class TowerSpawn : UIElement
 
         spawnCost += 2;
         spawnCostText.text = spawnCost.ToString();
+
+        SoundManager.Instance.PlaySFX("BattleEffect_01_Call");
     }
 
     public void OnClickSpawn(eTower Id)

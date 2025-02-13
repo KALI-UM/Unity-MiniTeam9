@@ -16,6 +16,7 @@ public class Enemy : MonoBehaviour
 
     public Action<int> onDamaged;
     public Action onDie;
+    public Action onSpawn;
  
     public eEnemy EnemyId
     {
@@ -54,6 +55,7 @@ public class Enemy : MonoBehaviour
     {
         movement.enabled = true;
         movement.Spawn();
+        onSpawn?.Invoke();
 
         animationHandler.Move(true);
     }

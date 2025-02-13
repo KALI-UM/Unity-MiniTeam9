@@ -45,5 +45,7 @@ public class EmergencySpawnButton : UIElement
 
         GameObject tower = UIManager.GameManager.TowerManager.GetRandomTower(grade);
         UIManager.GameManager.SlotManager.AddTower(tower.GetComponent<Tower>());
+
+        SoundManager.Instance.PlaySFX("BattleEffect_01_Call");
     }
 }

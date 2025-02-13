@@ -176,6 +176,8 @@ public class EnemyManager : InGameManager
 
                 onBossEnemyDie?.Invoke();
             };
+
+            enemy.onSpawn +=()=> SoundManager.Instance.PlayBGM("Bgm_Boss01");
         }
         else
         {

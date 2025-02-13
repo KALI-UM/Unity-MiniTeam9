@@ -96,6 +96,7 @@ public class SlotInteraction : FocusWindow
     {
         slotManager.SelectedSlot.FusionTower();
         Close();
+        SoundManager.Instance.PlaySFX("BattleEffect_06_Merge");
     }
 
     protected override void EnableInput()

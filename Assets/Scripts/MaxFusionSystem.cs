@@ -57,5 +57,6 @@ public class MaxFusionSystem
 
         
         fusionAlertPop.Open(target.TargetTowerSprite, DataTableManager.TowerTable.Get(target.Data.Id).String_Key);
+        SoundManager.Instance.PlaySFX("BattleEffect_01_Call_Legend");
     }
 }

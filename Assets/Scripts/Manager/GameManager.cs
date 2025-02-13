@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private EffectManager effectManager;
 
+
     public EnemyManager EnemyManager
     {
         get => enemyManager;
@@ -109,6 +110,14 @@ public class GameManager : MonoBehaviour
         Application.targetFrameRate = -1;
 #endif
         coStartThreshold = StartCoroutine(CoStartDelay());
+
+        var audioData = Resources.Load<AudioClipPackData>("Datas/InGameAudioPackData");
+        SoundManager.Instance.SetAudioClipPack(audioData);
+        SoundManager.Instance.PlayBGM("Bgm_battle01");
+
+
+        goldGemSystem.AddGold(initialCoinCount);
+        goldGemSystem.AddGem(initialGemCount);
     }
 
     private void InitializeManagers()
@@ -123,8 +132,7 @@ public class GameManager : MonoBehaviour
         EnemyManager.Initialize();
         UIManager.Initialize();
 
-        goldGemSystem.AddGold(initialCoinCount);
-        goldGemSystem.AddGem(initialGemCount);
+
     }
 
     private void Update()
