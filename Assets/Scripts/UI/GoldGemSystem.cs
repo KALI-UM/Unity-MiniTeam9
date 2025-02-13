@@ -48,7 +48,7 @@ public class GoldGemSystem
         return gem >= amount;
     }
 
-    public bool PayGold(int amount)
+    public bool TryPayGold(int amount)
     {
         if (!CanPayGold(amount))
         {
@@ -56,12 +56,11 @@ public class GoldGemSystem
             return false;
         }
 
-        gold -= amount;
-        onGoldCountChange?.Invoke(Gold);
+        PayGold(amount);
         return true;
     }
 
-    public bool PayGem(int amount)
+    public bool TryPayGem(int amount)
     {
         if (!CanPayGem(amount))
         {
@@ -69,8 +68,19 @@ public class GoldGemSystem
             return false;
         }
 
+        PayGem(amount);
+        return true;
+    }
+
+    public void PayGold(int amount)
+    {
+        gold -= amount;
+        onGoldCountChange?.Invoke(Gold);
+    }
+
+    public void PayGem(int amount)
+    {
         gem -= amount;
         onGemCountChange?.Invoke(Gem);
-        return true;
     }
 }

@@ -1,3 +1,4 @@
+using DG.Tweening;
 using DG.Tweening.Core.Easing;
 using System;
 using System.Collections;
@@ -11,6 +12,9 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDra
 {
     [SerializeField]
     private SpriteRenderer circleArea;
+
+    [SerializeField]
+    private SpriteRenderer effectRenderer;
 
     protected SlotManager slotManager;
     public SlotManager SlotManager
@@ -33,6 +37,20 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDra
         get;
         private set;
     }
+
+    //private Sequence slotAnimation;
+
+    //private void Awake()
+    //{
+    //    slotAnimation= DOTween.Sequence().SetAutoKill(false);
+    //    slotAnimation.OnStart(() => slotAnimation.Pause());        
+    //}
+    //private void Start()
+    //{
+    //    slotAnimation.OnPlay(()=>effectRenderer.gameObject.SetActive(true));
+    //    slotAnimation.Append(effectRenderer.DOFade(0, 2f).SetEase(Ease.InSine));
+    //    slotAnimation.OnComplete(()=>effectRenderer.gameObject.SetActive(false));
+    //}
 
     public void Initialize(SlotManager manager, TowerGroup group, int index)
     {
@@ -58,6 +76,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDra
     public void AddTower(Tower tower)
     {
         TowerGroup.AddTower(tower);
+        //slotAnimation.Restart();
     }
 
     public void FusionTower()

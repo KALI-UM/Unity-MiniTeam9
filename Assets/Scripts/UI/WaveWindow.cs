@@ -13,10 +13,11 @@ public class WaveWindow : PopWindow
 
     private Sequence waveAnimation;
 
+
     public void Awake()
     {
         waveAnimation = DOTween.Sequence().SetAutoKill(false);
-        waveAnimation.Append(transform.DOScaleY(1.5f, popDuration*0.5f)).SetEase(Ease.InBounce).Append(transform.DOScaleY(0f,popDuration*0.5f));
+        waveAnimation.Append(transform.DOMoveX(transform.position.x-500f, popDuration));
     }
 
     public override void Open()

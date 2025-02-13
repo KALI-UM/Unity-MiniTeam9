@@ -33,12 +33,12 @@ public class EmergencySpawnButton : UIElement
 
     public void OnClickSpawnGrade(int grade, int gemCost)
     {
-        if (!UIManager.GameManager.goldGemSystem.PayGem(gemCost))
+        if (UIManager.GameManager.TowerManager.IsMaxTowrCount || !UIManager.GameManager.SlotManager.IsEmptySlotExist())
         {
             return;
         }
 
-        if (UIManager.GameManager.TowerManager.IsMaxTowrCount || !UIManager.GameManager.SlotManager.IsEmptySlotExist())
+        if (!UIManager.GameManager.goldGemSystem.TryPayGem(gemCost))
         {
             return;
         }

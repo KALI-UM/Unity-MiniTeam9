@@ -99,6 +99,17 @@ public class GameManager : MonoBehaviour
         CurrentWaveNumber = 0;
     }
 
+    private void Start()
+    {
+        goldGemSystem.onGoldPayFail += () => UIManager.Alert("Alert_LessGold");
+        goldGemSystem.onGemPayFail += () => UIManager.Alert("Alert_LessGem");
+
+#if UNITY_EDITOR
+        //프레임제한 풀기
+        Application.targetFrameRate = -1;
+#endif
+        coStartThreshold = StartCoroutine(CoStartDelay());
+    }
 
     private void InitializeManagers()
     {
@@ -114,15 +125,6 @@ public class GameManager : MonoBehaviour
 
         goldGemSystem.AddGold(initialCoinCount);
         goldGemSystem.AddGem(initialGemCount);
-    }
-
-    private void Start()
-    {
-#if UNITY_EDITOR
-        //프레임제한 풀기
-        Application.targetFrameRate = -1;
-#endif
-        coStartThreshold = StartCoroutine(CoStartDelay());
     }
 
     private void Update()
@@ -160,7 +162,7 @@ public class GameManager : MonoBehaviour
         {
             OnWaveStart();
             coWaveSpawnEnemy = StartCoroutine(CoSpawnEnemy(CurrentWaveNumber));
-            
+
             yield return new WaitForSeconds(CurrentWaveData.waveDuration);
             StopCoroutine(coWaveSpawnEnemy);
         }
@@ -196,12 +198,14 @@ public class GameManager : MonoBehaviour
 
     public void OnBossEnemyDie()
     {
-        if(lastWaveNumber==CurrentWaveNumber)
+        if (lastWaveNumber == CurrentWaveNumber)
         {
-            OnGameOver();
+            OnGameClear();
         }
-
-        StopCoroutine(coWave);
-        coWave = StartCoroutine(CoWave());
+        else
+        {
+            StopCoroutine(coWave);
+            coWave = StartCoroutine(CoWave());
+        }
     }
 }

@@ -100,7 +100,6 @@ public class SlotManager : InGameManager
         return (GameManager.TowerManager.TowerCount <= GameManager.TowerManager.MaxTowerCount && IsEmptySlotExist());
     }
 
-
     public void AddTower(Tower tower, int index)
     {
         //ÁßÃ¸ÇÒ ¼ö ÀÖ´Â ½½·ÔÀÌ ÀÖ´Ù¸é ÁßÃ¸

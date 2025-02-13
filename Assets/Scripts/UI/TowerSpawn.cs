@@ -31,17 +31,17 @@ public class TowerSpawn : UIElement
 
     public void OnClickSpawn()
     {
-        if (!UIManager.GameManager.goldGemSystem.CanPayGold(spawnCost))
-        {
-            return;
-        }
-
         if (UIManager.GameManager.TowerManager.IsMaxTowrCount||!UIManager.GameManager.SlotManager.IsEmptySlotExist())
         {
             return;
         }
 
-        UIManager.GameManager.goldGemSystem.PayGold(spawnCost);
+        if (!UIManager.GameManager.goldGemSystem.TryPayGold(spawnCost))
+        {
+            return;
+        }
+
+
         GameObject tower = UIManager.GameManager.TowerManager.GetRandomTower(1);
         UIManager.GameManager.SlotManager.AddTower(tower.GetComponent<Tower>());
 
@@ -51,17 +51,16 @@ public class TowerSpawn : UIElement
 
     public void OnClickSpawn(eTower Id)
     {
-        if (!UIManager.GameManager.goldGemSystem.CanPayGold(spawnCost))
-        {
-            return;
-        }
-
         if (UIManager.GameManager.TowerManager.IsMaxTowrCount || !UIManager.GameManager.SlotManager.IsEmptySlotExist())
         {
             return;
         }
 
-        UIManager.GameManager.goldGemSystem.PayGold(spawnCost);
+        if (!UIManager.GameManager.goldGemSystem.TryPayGold(spawnCost))
+        {
+            return;
+        }
+
         GameObject tower = UIManager.GameManager.TowerManager.GetTower(Id);
         UIManager.GameManager.SlotManager.AddTower(tower.GetComponent<Tower>());
 

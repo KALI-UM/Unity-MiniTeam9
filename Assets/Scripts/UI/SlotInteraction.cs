@@ -51,6 +51,7 @@ public class SlotInteraction : FocusWindow
         fusionButton.gameObject.SetActive(slotManager.SelectedSlot.TowerGroup.CanFusion);
 
         base.Open();
+        towerInformation.gameObject.SetActive(true);
         towerInformation.UpdateTowerInformation(slotManager.SelectedSlot.TowerGroup.Data);
 
         var currData = slotManager.SelectedSlot.TowerGroup.Data;
@@ -77,6 +78,7 @@ public class SlotInteraction : FocusWindow
     public override void Close()
     {
         base.Close();
+        towerInformation.gameObject.SetActive(false);
         slotManager.SelectedSlot.OnDeselected();
     }
 

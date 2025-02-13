@@ -25,7 +25,7 @@ public class TowerAttack : MonoBehaviour
 
     public void Awake()
     {
-        if (tower.Data.attackType==0)
+        if (tower.Data.attackType == 0)
         {
             AttackTarget = AttackMelee;
         }
@@ -75,17 +75,31 @@ public class TowerAttack : MonoBehaviour
     private IEnumerator CoAttackProjectileDamageApply(float ratio)
     {
         yield return new WaitForSeconds(tower.animationHandler.GetCurrentAnimationClipLength() * ratio);
-        target.OnDamaged(tower.AttackPower);
+        if (!IsValidTarget)
+        {
+            FindTarget();
+        }
 
-        var fire = tower.towerManager.EffectManager.Get<Projectile>(eEffects.Fire);
-        fire.SetDestination(target.transform.position);
-        fire.Play(tower.transform.position + new Vector3(0.25f, 0.25f, 0));
+        if (IsValidTarget)
+        {
+            target.OnDamaged(tower.AttackPower);
+            var fire = tower.towerManager.EffectManager.Get<Projectile>(eEffects.Fire);
+            fire.SetDestination(target.transform.position);
+            fire.Play(tower.transform.position + new Vector3(0.25f, 0.25f, 0));
+        }
     }
     private IEnumerator CoAttackMeleeDamageApply(float ratio)
     {
         yield return new WaitForSeconds(tower.animationHandler.GetCurrentAnimationClipLength() * ratio);
-        target.OnDamaged(tower.AttackPower);
+        if (!IsValidTarget)
+        {
+            FindTarget();
+        }
 
+        if (IsValidTarget)
+        {
+            target.OnDamaged(tower.AttackPower);
+        }
         //var fire = tower.towerManager.EffectManager.Get<Projectile>(eEffects.Fire);
         //fire.SetDestination(target.transform.position);
         //fire.Play(transform.position);

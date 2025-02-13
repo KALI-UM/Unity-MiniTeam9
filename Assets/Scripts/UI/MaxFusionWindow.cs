@@ -43,7 +43,7 @@ public class MaxFusionWindow : FocusWindow
         fusionButton.onClick.AddListener(() => OnSpawnTower());
     }
 
-    private void Awake()
+    private void Start()
     {
         foreach (var tracker in UIManager.GameManager.TowerManager.MaxFusionSystem.ProgressTrackers)
         {
