@@ -25,6 +25,7 @@ public class WaveWindow : PopWindow
         KALLogger.Log<WaveWindow>();
         base.Open();
         waveAnimation.Restart();
+        SoundManager.Instance.PlayBGM("Bgm_battle01");
     }
 
     public void OnWaveStart(WaveData data)
