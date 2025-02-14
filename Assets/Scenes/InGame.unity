@@ -7760,7 +7760,7 @@ MonoBehaviour:
   effectManager: {fileID: 805429424}
   startThresholdTime: 3
   waveDatas: []
-  lastWaveNumber: 40
+  lastWaveNumber: 80
 --- !u!4 &941585312
 Transform:
   m_ObjectHideFlags: 0
