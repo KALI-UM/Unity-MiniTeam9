@@ -16,9 +16,10 @@ MonoBehaviour:
   key: Tower_Name_Forg
   grade: 5
   attackType: 0
-  attackPower: 400
+  attackPower: 500
   attackSpeed: 2
   attackRange: 1
   saleGold: 0
   saleGem: 0
   towerSprite: {fileID: 21300000, guid: 98c23a4964b76fb45b64c84c0630fbd6, type: 3}
+  towerSpum: {fileID: 7824423479369818435, guid: d9ccb0fa876123d4dac07016f2d02276, type: 3}

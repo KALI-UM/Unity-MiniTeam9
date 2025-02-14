@@ -1375,7 +1375,7 @@ TextureImporter:
         serializedVersion: 2
         x: 1
         y: 1006
-        width: 169
+        width: 164
         height: 169
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1853,13 +1853,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_81
+      name: blueRoundButton
       rect:
         serializedVersion: 2
-        x: 1688
-        y: 964
-        width: 118
-        height: 114
+        x: 1694
+        y: 967
+        width: 112
+        height: 111
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1895,16 +1895,16 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_83
+      name: emergencyBox
       rect:
         serializedVersion: 2
-        x: 1097
-        y: 1559
-        width: 113
-        height: 119
+        x: 1101
+        y: 1561
+        width: 108
+        height: 114
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 30, y: 28, z: 30, w: 31}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1916,16 +1916,16 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_84
+      name: blueBox
       rect:
         serializedVersion: 2
-        x: 1211
-        y: 1558
-        width: 114
-        height: 119
+        x: 1215
+        y: 1562
+        width: 107
+        height: 112
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 31, y: 35, z: 30, w: 31}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -2062,6 +2062,132 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: roundButton
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 804
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16b631fd64cc3c54381790d64d8bb3df
+      internalID: 2123639528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellowoutlinebox
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 1673
+        width: 108
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 46, y: 69, z: 48, w: 73}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4712c1a7280258149986fffff31a4f10
+      internalID: 747600116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windowOutlin
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 542
+        width: 470
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a5db5c8cc2c2fa478b1151867dd5da1
+      internalID: 1169156204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purpleButton
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 998
+        width: 154
+        height: 164
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6698b9fbec9918a43a5a4362ca9f8630
+      internalID: -1721417781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roundButto
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 804
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3188148e8f7b28d42aa4117415298954
+      internalID: -1052291780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: circlebuttonShape
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 1135
+        width: 138
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d06d55da54b28c94aa957f237698bf13
+      internalID: -1144310343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -2083,6 +2209,13 @@ TextureImporter:
       backgroundbrown: 2146421169
       backgroundgrey: 2102432468
       backgroundwhite: -1019280144
+      blueBox: -751912522
+      blueRoundButton: -1575100721
+      circlebuttonShape: -1144310343
+      emergencyBox: -2097196493
+      purpleButton: -1721417781
+      roundButto: -1052291780
+      roundButton: 2123639528
       sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_0: -1347757442
       sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_1: -534141489
       sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_10: 1728838666
@@ -2158,14 +2291,13 @@ TextureImporter:
       sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_78: 207312017
       sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_8: 627828100
       sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_80: -1827621919
-      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_81: -1575100721
       sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_82: 1269371514
-      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_83: -2097196493
-      sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_84: -751912522
       sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_85: -113346336
       sactx-0-2048x2048-ASTC 6x6-AtlasCombat_01-2ea3ef65_9: -1145322969
+      windowOutlin: 1169156204
       windowOutline: -386272066
       yellowBox: 1009712450
+      yellowoutlinebox: 747600116
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

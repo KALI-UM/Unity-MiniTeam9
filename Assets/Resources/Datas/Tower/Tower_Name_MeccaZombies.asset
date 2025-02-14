@@ -16,9 +16,10 @@ MonoBehaviour:
   key: Tower_Name_MeccaZombies
   grade: 5
   attackType: 1
-  attackPower: 350
+  attackPower: 450
   attackSpeed: 2
   attackRange: 2
   saleGold: 0
   saleGem: 0
-  towerSprite: {fileID: 21300000, guid: 4fdc2e9bb8267754e924ba2a0e98c270, type: 3}
+  towerSprite: {fileID: 21300000, guid: 02247e56fabd47f4481608ec23877d14, type: 3}
+  towerSpum: {fileID: 5675370171775832061, guid: 3a7ada477b3df4b4f9284cfcd4fc5c6d, type: 3}

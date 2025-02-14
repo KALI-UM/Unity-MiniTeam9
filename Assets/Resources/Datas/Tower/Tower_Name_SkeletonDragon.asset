@@ -16,9 +16,10 @@ MonoBehaviour:
   key: Tower_Name_SkeletonDragon
   grade: 5
   attackType: 1
-  attackPower: 350
+  attackPower: 450
   attackSpeed: 2
   attackRange: 2
   saleGold: 0
   saleGem: 0
-  towerSprite: {fileID: 21300000, guid: 4fdc2e9bb8267754e924ba2a0e98c270, type: 3}
+  towerSprite: {fileID: 21300000, guid: 3ebb1d112f517aa458c412dbcf8646e5, type: 3}
+  towerSpum: {fileID: 2224940201716199399, guid: afa32d0610e26a14fbd680d040f6c881, type: 3}

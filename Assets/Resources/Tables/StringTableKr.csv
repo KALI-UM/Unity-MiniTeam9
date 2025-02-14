@@ -1,4 +1,4 @@
-String_Key,Ko
+String_Key,String
 Tower_Name_BreadBoxer,식빵 복서
 Tower_Name_SkeletonArcher,해골 궁수
 Tower_Name_TheifCat,스리슬쩍냥
@@ -21,7 +21,7 @@ Tower_Name_Sushi,스시 선생
 Tower_Name_Forg,개굴단장
 Tower_Name_Frankie,프랑키
 Tower_Name_JackO,잭 오
-Tower_SkeletonDragon,해골룡
+Tower_Name_SkeletonDragon,해골룡
 Tower_Name_Hotdog,크레이지 핫도그
 Tower_Name_Sheep,라이양
 Tower_Name_DeadBear,데드베어
@@ -44,3 +44,34 @@ Tower_Grade_4,마계 공작
 Tower_Grade_5,군단장
 Key_Wave_Normal,{0}웨이브
 Key_Wave_Boss,보스몬스터가 출현하였습니다
+Tuto_Dialog_1,호출 버튼을 누르면 마족을 호출할 수 있습니다.
+Tuto_Dialog_2,드래그로 마족의 위치를 변경할 수 있습니다.
+Tuto_Dialog_3,합체 버튼을 누르면 마족을 진화시킬 수 있습니다.
+Tuto_Dialog_4,강화 버튼을 눌러 마족을 강화할 수 있습니다.
+Tuto_Dialog_5,강력한 적 영웅을 처치하려면 군단장이 필요합니다.
+Tuto_ActionLog_1,호출 버튼을 터치하세요
+Tuto_ActionLog_2,마족의 위치를 변경하세요
+Tuto_ActionLog_3,합체 버튼을 터치하세요
+Tuto_ActionLog_4,공격력 강화 버튼을 눌러서 마족을 강화하세요
+Tuto_ActionLog_5,군단장 버튼을 눌러 군단장을 호출하세요
+Tower_Call,호출
+Tower_Upgrade,강화
+Tower_EmergencyCall,긴급 호출
+Tower_AttackPower,공격력
+Tower_AttackSpeed,공격 속도
+Tower_EmergencyCall_Grade_2,중급 호출
+Tower_EmergencyCall_Grade_3,상급 호출
+Tower_EmergencyCall_Grade_4,특급 호출
+Tower_Evolution,진화
+Tower_Evolution_Source,진화 재료 마족
+Tower_Grade_5_Appeared,군단장 등장
+Game_Tutorial,튜토리얼
+Game_Start,전투시작
+Game_Result,결과
+Final_Wave,최종 웨이브
+Highest_Wave,최고 웨이브
+Game_Lobby,로비
+Tower_Fusion,합체
+Game_Continue,계속하기
+Alert_LessGold,골드가 부족합니다.
+Alert_LessGem,마정석이 부족합니다.

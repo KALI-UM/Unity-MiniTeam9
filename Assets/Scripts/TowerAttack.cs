@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,19 +21,37 @@ public class TowerAttack : MonoBehaviour
         }
     }
 
-    private Coroutine coAttack;
+    private Action AttackTarget;
+
+    public void Awake()
+    {
+        if (tower.Data.attackType == 0)
+        {
+            AttackTarget = AttackMelee;
+        }
+        else
+        {
+            AttackTarget = AttackProjectile;
+        }
+    }
 
     public void OnEnable()
     {
-        coAttack = StartCoroutine(CoAttack());
+        StartCoroutine(CoAttack());
     }
 
-    public void AttackTarget()
+    public void AttackMelee()
     {
-        tower.animationHandler.Attack();
-
+        tower.animationHandler.Attack(tower.AttackSpeed);
         tower.SetDirection(target.transform.position);
-        target.OnDamaged(tower.AttackPower);
+        StartCoroutine(CoAttackMeleeDamageApply(0.5f));
+    }
+
+    public void AttackProjectile()
+    {
+        tower.animationHandler.Attack(tower.AttackSpeed);
+        tower.SetDirection(target.transform.position);
+        StartCoroutine(CoAttackProjectileDamageApply(1f));
     }
 
     private IEnumerator CoAttack()
@@ -53,6 +72,39 @@ public class TowerAttack : MonoBehaviour
         }
     }
 
+    private IEnumerator CoAttackProjectileDamageApply(float ratio)
+    {
+        yield return new WaitForSeconds(tower.animationHandler.GetCurrentAnimationClipLength() * ratio);
+        if (!IsValidTarget)
+        {
+            FindTarget();
+        }
+
+        if (IsValidTarget)
+        {
+            target.OnDamaged(tower.AttackPower);
+            var fire = tower.towerManager.EffectManager.Get<Projectile>(eEffects.Fire);
+            fire.SetDestination(target.transform.position);
+            fire.Play(tower.transform.position + new Vector3(0.25f, 0.25f, 0));
+        }
+    }
+    private IEnumerator CoAttackMeleeDamageApply(float ratio)
+    {
+        yield return new WaitForSeconds(tower.animationHandler.GetCurrentAnimationClipLength() * ratio);
+        if (!IsValidTarget)
+        {
+            FindTarget();
+        }
+
+        if (IsValidTarget)
+        {
+            target.OnDamaged(tower.AttackPower);
+        }
+        //var fire = tower.towerManager.EffectManager.Get<Projectile>(eEffects.Fire);
+        //fire.SetDestination(target.transform.position);
+        //fire.Play(transform.position);
+    }
+
     private bool FindTarget()
     {
         var closestEnemy = tower.TowerGroup.enemyManager.ValidEnemies.
@@ -67,7 +119,7 @@ public class TowerAttack : MonoBehaviour
         return false;
     }
 
-   
+
 
     private void OnDrawGizmos()
     {

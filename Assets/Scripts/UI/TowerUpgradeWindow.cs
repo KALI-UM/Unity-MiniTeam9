@@ -52,7 +52,7 @@ public class TowerUpgradeWindow : FocusWindow
         base.Initialize(mgr);
         towerManager = UIManager.GameManager.TowerManager;
 
-        windowOpen.onClick.AddListener(() => UIManager.Open(FocusWindows.TowerUpgrade));
+        windowOpen.onClick.AddListener(() => UIManager.Open(FocusWindows.TowerUpgradeWindow));
     }
     private void Awake()
     {
@@ -79,20 +79,22 @@ public class TowerUpgradeWindow : FocusWindow
     public void OnClickAttackPowerButton()
     {
         var goldGemSystem = uiManager.GameManager.goldGemSystem;
-        bool canPayGold = goldGemSystem.PayGold(towerUpgradeRawDatas[attackPowerLv + 1].GoldCost);
-        bool canPayGem = goldGemSystem.PayGem(towerUpgradeRawDatas[attackPowerLv + 1].GemCost);
+        bool canPayGold = goldGemSystem.TryPayGold(towerUpgradeRawDatas[attackPowerLv + 1].GoldCost);
+        bool canPayGem = goldGemSystem.TryPayGem(towerUpgradeRawDatas[attackPowerLv + 1].GemCost);
         if (canPayGold && canPayGem)
         {
             attackPowerLv++;
 
             uiManager.GameManager.TowerManager.SetAttackPowerUpgradeRate(towerUpgradeRawDatas[attackPowerLv].PowerBonus);
             UpdateAttackPowerText(attackPowerLv);
+
+            SoundManager.Instance.PlaySFX("BattleEffect_08_GainGold");
         }
     }
 
     public void UpdateAttackPowerText(int lv)
     {
-        attackPowerLvText.text = lv.ToString();
+        attackPowerLvText.text = "LV" + lv.ToString();
 
         if (lv == maxUpgradeLv)
         {
@@ -125,19 +127,20 @@ public class TowerUpgradeWindow : FocusWindow
     public void OnClickAttackSpeedButton()
     {
         var goldGemSystem = uiManager.GameManager.goldGemSystem;
-        bool canPayGold = goldGemSystem.PayGold(towerUpgradeRawDatas[attackSpeedLv + 1].GoldCost);
-        bool canPayGem = goldGemSystem.PayGem(towerUpgradeRawDatas[attackSpeedLv + 1].GemCost);
+        bool canPayGold = goldGemSystem.TryPayGold(towerUpgradeRawDatas[attackSpeedLv + 1].GoldCost);
+        bool canPayGem = goldGemSystem.TryPayGem(towerUpgradeRawDatas[attackSpeedLv + 1].GemCost);
         if (canPayGold && canPayGem)
         {
             attackSpeedLv++;
             uiManager.GameManager.TowerManager.SetAttackSpeedUpgradeRate(towerUpgradeRawDatas[attackSpeedLv].PowerBonus);
             UpdateAttackSpeedText(attackSpeedLv);
+            SoundManager.Instance.PlaySFX("BattleEffect_08_GainGold");
         }
     }
 
     public void UpdateAttackSpeedText(int lv)
     {
-        attackSpeedLvText.text = lv.ToString();
+        attackSpeedLvText.text = "LV"+lv.ToString();
 
         if(lv== maxUpgradeLv)
         {

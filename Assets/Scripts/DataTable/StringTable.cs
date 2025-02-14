@@ -10,7 +10,7 @@ public class StringTable : DataTable
     public class StringData
     {
         public string String_Key { get; set; }
-        public string Ko { get; set; }
+        public string String { get; set; }
     }
 
     private readonly Dictionary<string, string> dictionary = new Dictionary<string, string>();
@@ -25,7 +25,7 @@ public class StringTable : DataTable
         {
             if (!dictionary.ContainsKey(item.String_Key))
             {
-                dictionary.Add(item.String_Key, item.Ko);
+                dictionary.Add(item.String_Key, item.String);
             }
             else
             {

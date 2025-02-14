@@ -5,46 +5,61 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class MenuWindow : FocusWindow
+public class MenuWindow : UIElement
 {
     [SerializeField]
     private Button windowOpen;
 
+    public Button exitButton;
+    public Button pauseButton;
     public Button restartButton;
     public Button lobbyButton;
 
     private void Awake()
     {
+        windowOpen.onClick.AddListener(SetOpen);
+        exitButton.onClick.AddListener(Reset);
+        pauseButton.onClick.AddListener(OnClickPause);
         restartButton.onClick.AddListener(OnClickRestart);
         lobbyButton.onClick.AddListener(OnClickLobby);
+
+        Reset();
     }
 
-    public override void Initialize(UIManager mgr)
+    private void Reset()
     {
-        base.Initialize(mgr);
-        windowOpen.onClick.AddListener(() => UIManager.Open(FocusWindows.Menu));
+        windowOpen.gameObject.SetActive(true);
+        exitButton.gameObject.SetActive(false);
+        pauseButton.gameObject.SetActive(false);
+        restartButton.gameObject.SetActive(false);
+        lobbyButton.gameObject.SetActive(false);
     }
 
-    public override void Open()
+    private void SetOpen()
     {
-        base.Open();
-        Time.timeScale = 0;
-    }
-
-    public override void Close()
-    {
-        base.Close();
-        Time.timeScale = 1f;
+        windowOpen.gameObject.SetActive(false);
+        exitButton.gameObject.SetActive(true);
+        pauseButton.gameObject.SetActive(true);
+        restartButton.gameObject.SetActive(false);
+        lobbyButton.gameObject.SetActive(true);
     }
 
     public void OnClickRestart()
     {
-        Close();
+        Time.timeScale = 1f;
+        restartButton.gameObject.SetActive(false);
+        pauseButton.gameObject.SetActive(true);
+    }
+
+    public void OnClickPause()
+    {
+        Time.timeScale = 0;
+        restartButton.gameObject.SetActive(true);
+        pauseButton.gameObject.SetActive(false);
     }
 
     public void OnClickLobby()
     {
-        Close();
         SceneManager.LoadScene("Lobby");
     }
 }

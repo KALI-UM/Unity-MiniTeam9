@@ -33,17 +33,19 @@ public class EmergencySpawnButton : UIElement
 
     public void OnClickSpawnGrade(int grade, int gemCost)
     {
-        if (!UIManager.GameManager.goldGemSystem.PayGem(gemCost))
+        if (UIManager.GameManager.TowerManager.IsMaxTowrCount || !UIManager.GameManager.SlotManager.IsEmptySlotExist())
         {
             return;
         }
 
-        if (UIManager.GameManager.TowerManager.IsMaxTowrCount || !UIManager.GameManager.SlotManager.IsEmptySlotExist())
+        if (!UIManager.GameManager.goldGemSystem.TryPayGem(gemCost))
         {
             return;
         }
 
         GameObject tower = UIManager.GameManager.TowerManager.GetRandomTower(grade);
         UIManager.GameManager.SlotManager.AddTower(tower.GetComponent<Tower>());
+
+        SoundManager.Instance.PlaySFX("BattleEffect_01_Call");
     }
 }

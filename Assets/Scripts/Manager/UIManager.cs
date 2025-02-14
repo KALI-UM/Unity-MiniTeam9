@@ -1,4 +1,3 @@
-using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -45,7 +44,14 @@ public class UIManager : InGameManager
 
         GameManager.onWaveStart += (WaveData data) =>
         {
-            Open(PopWindows.Wave);
+            if (data.waveNumber % 10 == 0)
+            {
+                Open(PopWindows.BossWave);
+            }
+            else
+            {
+                Open(PopWindows.Wave);
+            }
 
             foreach (var ui in focusWindows)
             {
@@ -66,11 +72,18 @@ public class UIManager : InGameManager
             }
         };
 
-        GameManager.onGameOver += () => Open(FocusWindows.GameOver);
-        GameManager.onGameClear += () => Open(FocusWindows.GameClear);
+        GameManager.onGameOver += () =>
+        {
+            Open(FocusWindows.GameOver);
+            SoundManager.Instance.PlaySFX("BattleEffect_08_EndGame");
+        }; 
+        GameManager.onGameClear += () =>
+        {
+            Open(FocusWindows.GameClear);
+            SoundManager.Instance.PlaySFX("BattleEffect_08_VictoryGame");
+        };
 
-        GameManager.goldGemSystem.onGoldPayFail += () => Open(PopWindows.Alert);
-        GameManager.goldGemSystem.onGemPayFail += () => Open(PopWindows.Alert);
+
     }
 
     private void Awake()
@@ -90,6 +103,7 @@ public class UIManager : InGameManager
         currentWindow = window;
         //[(int)currentWindow].OnFocus();
         focusWindows[(int)currentWindow].Open();
+
     }
 
     public void Close(FocusWindows window)
@@ -105,6 +119,13 @@ public class UIManager : InGameManager
     public void Open(PopWindows window)
     {
         popWindows[(int)window].Open();
+    }
+
+    public void Alert(string key)
+    {
+        var alert = popWindows[(int)PopWindows.Alert] as AlertWindow;
+        alert.Open();
+        alert.SetString(key);
     }
 
     public void CloseAllPopWindow()

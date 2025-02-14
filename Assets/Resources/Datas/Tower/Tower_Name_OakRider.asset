@@ -16,9 +16,10 @@ MonoBehaviour:
   key: Tower_Name_OakRider
   grade: 5
   attackType: 0
-  attackPower: 400
+  attackPower: 500
   attackSpeed: 2
   attackRange: 1
   saleGold: 0
   saleGem: 0
-  towerSprite: {fileID: 21300000, guid: 98c23a4964b76fb45b64c84c0630fbd6, type: 3}
+  towerSprite: {fileID: 21300000, guid: a0a593cf99aba5b489d9942d81452952, type: 3}
+  towerSpum: {fileID: 6780781378084168726, guid: 8b378ad5026e94446a7f09515680d2f2, type: 3}

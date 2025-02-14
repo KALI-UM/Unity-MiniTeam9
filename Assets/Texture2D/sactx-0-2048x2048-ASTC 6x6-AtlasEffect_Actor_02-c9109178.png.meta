@@ -11072,13 +11072,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sactx-0-2048x2048-ASTC 6x6-AtlasEffect_Actor_02-c9109178_522
+      name: fire
       rect:
         serializedVersion: 2
-        x: 72
-        y: 1456
-        width: 72
-        height: 68
+        x: 81
+        y: 1469
+        width: 40
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -48609,6 +48609,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      fire: 1697988981
       sactx-0-2048x2048-ASTC 6x6-AtlasEffect_Actor_02-c9109178_0: -1170558041
       sactx-0-2048x2048-ASTC 6x6-AtlasEffect_Actor_02-c9109178_1: -458311039
       sactx-0-2048x2048-ASTC 6x6-AtlasEffect_Actor_02-c9109178_10: -431724292
@@ -50389,7 +50390,6 @@ TextureImporter:
       sactx-0-2048x2048-ASTC 6x6-AtlasEffect_Actor_02-c9109178_52: 1336545654
       sactx-0-2048x2048-ASTC 6x6-AtlasEffect_Actor_02-c9109178_520: -1457669229
       sactx-0-2048x2048-ASTC 6x6-AtlasEffect_Actor_02-c9109178_521: 306089429
-      sactx-0-2048x2048-ASTC 6x6-AtlasEffect_Actor_02-c9109178_522: 1697988981
       sactx-0-2048x2048-ASTC 6x6-AtlasEffect_Actor_02-c9109178_523: 371951187
       sactx-0-2048x2048-ASTC 6x6-AtlasEffect_Actor_02-c9109178_524: -1814047727
       sactx-0-2048x2048-ASTC 6x6-AtlasEffect_Actor_02-c9109178_525: 258992033

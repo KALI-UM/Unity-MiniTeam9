@@ -5,4 +5,6 @@ public enum UIElements
 	GoldGemBar,
 	TowerSpawn,
 	MaxLvMiniButtons,
+	SideButtons,
+	TowerInformation,
 }

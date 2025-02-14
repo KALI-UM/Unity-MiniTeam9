@@ -39,7 +39,7 @@ public class MaxFusionWindow : FocusWindow
     public override void Initialize(UIManager mgr)
     {
         base.Initialize(mgr);
-        windowOpen.onClick.AddListener(() => UIManager.Open(FocusWindows.MaxLvFusion));
+        windowOpen.onClick.AddListener(() => UIManager.Open(FocusWindows.MaxLvFusionWindow));
         fusionButton.onClick.AddListener(() => OnSpawnTower());
     }
 
@@ -47,12 +47,11 @@ public class MaxFusionWindow : FocusWindow
     {
         foreach (var tracker in UIManager.GameManager.TowerManager.MaxFusionSystem.ProgressTrackers)
         {
-            var button = Instantiate(recipeButtonPrefab);
+            var button = Instantiate(recipeButtonPrefab, recipeScrollContent.transform);
             var recipeButton = button.GetComponent<RecipeButton>();
             buttons.Add(recipeButton);
             recipeButton.SetProgressTracker(tracker);
             recipeButton.button.onClick.AddListener(() => OnSelectRecipe(tracker));
-            button.transform.SetParent(recipeScrollContent.transform);
         }
     }
 
@@ -77,7 +76,7 @@ public class MaxFusionWindow : FocusWindow
     {
         currentRecipe = recipe;
         towerSprite.sprite = currentRecipe.TargetTowerSprite;
-        localizationTowerName.OnStringIdChange(DataTableManager.TowerTable.Get(currentRecipe.Data.Id).Strnig_Key);
+        localizationTowerName.OnStringIdChange(DataTableManager.TowerTable.Get(currentRecipe.Data.Id).String_Key);
         percentBar.value = currentRecipe.ProgressValue;
 
         for (int i = 0; i < currentRecipe.Data.RecipeSum; i++)

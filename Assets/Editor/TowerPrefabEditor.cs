@@ -47,7 +47,7 @@ public class TowerPrefabEditor : Editor
 
         foreach (var data in list)
         {
-            sb.AppendLine($"\t{data.Strnig_Key} = {data.Tower_ID},");
+            sb.AppendLine($"\t{data.String_Key} = {data.Tower_ID},");
         }
         sb.AppendLine(@"}");
 
@@ -67,13 +67,13 @@ public class TowerPrefabEditor : Editor
         foreach (var data in list)
         {
             //이미 있으면 삭제
-            AssetDatabase.DeleteAsset(string.Format(dataPath, data.Strnig_Key));
+            AssetDatabase.DeleteAsset(string.Format(dataPath, data.String_Key));
 
             //해당 데이터 ScriptableObject생성
             TowerData scriptableData = ScriptableObject.CreateInstance<TowerData>();
             scriptableData.SetData(data);
 
-            AssetDatabase.CreateAsset(scriptableData, string.Format(dataPath, data.Strnig_Key));
+            AssetDatabase.CreateAsset(scriptableData, string.Format(dataPath, data.String_Key));
             AssetDatabase.SaveAssets();
         }
     }
@@ -85,18 +85,18 @@ public class TowerPrefabEditor : Editor
         string dataPath = "Assets/Resources/Datas/Tower/{0}.asset";
         string spumPath = "Assets/Resources/Prefabs/Units/{0}.prefab";
 
-
+        int y = 0;
         UpdateTowerDatas(list);
 
         foreach (var data in list)
         {
             //이미 있으면 삭제
-            AssetDatabase.DeleteAsset(string.Format(prefabPath, data.Strnig_Key));
+            AssetDatabase.DeleteAsset(string.Format(prefabPath, data.String_Key));
             GameObject newPrefab = Instantiate(defaultPrefab);
             var tower = newPrefab.GetComponent<Tower>();
 
             //해당 데이터 ScriptableObject
-            TowerData scriptableData = AssetDatabase.LoadAssetAtPath<TowerData>(string.Format(dataPath, data.Strnig_Key));
+            TowerData scriptableData = AssetDatabase.LoadAssetAtPath<TowerData>(string.Format(dataPath, data.String_Key));
             tower.InitializeData(scriptableData);
 
 
@@ -111,10 +111,10 @@ public class TowerPrefabEditor : Editor
                 GameObject spum = Instantiate(spumprefab);
                 spum.transform.position = Vector3.zero;
                 spum.transform.SetParent(tower.character.transform);
+                //spum.GetComponent<SPUM_Prefabs>().OverrideControllerInit();
 
-                spum.transform.GetChild(0).AddComponent<SpumAnimationHandler>();
-                tower.animationHandler = spum.transform.GetChild(0).GetComponent<SpumAnimationHandler>();
-
+                var handler = spum.AddComponent<SpumAnimationHandler>();
+                tower.animationHandler = handler;
                 tower.shadowRenderer = spum.transform.GetChild(0).Find("Shadow").transform.Find("Shadow").GetComponent<SpriteRenderer>();
             }
 
@@ -122,7 +122,10 @@ public class TowerPrefabEditor : Editor
 
             newPrefab.name = data.Tower_Resource;
             spumToTexture.PushToSpumToTextureQueue(newPrefab);
-            PrefabUtility.SaveAsPrefabAsset(newPrefab, string.Format(prefabPath, data.Strnig_Key));
+            PrefabUtility.SaveAsPrefabAsset(newPrefab, string.Format(prefabPath, data.String_Key));
+            var lineup = new Vector3(0, ++y * 10, 0);
+            newPrefab.transform.position = lineup;
+
             //GameObject.DestroyImmediate(newPrefab);
         }
     }

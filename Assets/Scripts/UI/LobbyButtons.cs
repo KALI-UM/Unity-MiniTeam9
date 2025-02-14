@@ -13,6 +13,13 @@ public class LobbyButtons
     private void Awake()
     {
         startGameButton.onClick.AddListener(() => SceneManager.LoadScene("InGame"));
-        startTutorialButton.onClick.AddListener(() => SceneManager.LoadScene("Tutorial"));
+        //startTutorialButton.onClick.AddListener(() => SceneManager.LoadScene("Tutorial"));
+    }
+
+    private void Start()
+    {
+        var audioData = Resources.Load<AudioClipPackData>("Datas/LobbyAudioPackData");
+        SoundManager.Instance.SetAudioClipPack(audioData);
+        SoundManager.Instance.PlayBGM("Bgm_01_Lobby01");
     }
 }

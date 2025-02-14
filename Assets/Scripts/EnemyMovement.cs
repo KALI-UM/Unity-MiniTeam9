@@ -12,15 +12,9 @@ public class EnemyMovement : MonoBehaviour
 {
     public Enemy enemy;
 
-    private EnemyData data;
-    public EnemyData Data
-    {
-        get => data;
-    }
-
     public float Speed
     {
-        get => Data.moveSpeed;
+        get => enemy.Data.moveSpeed;
     }
 
     private Vector3 direction;
@@ -58,7 +52,6 @@ public class EnemyMovement : MonoBehaviour
 
     private void MoveTo()
     {
-
         Vector3 next;
 
         float sqrDelta = Mathf.Pow(Speed * Time.deltaTime, 2);
@@ -87,11 +80,6 @@ public class EnemyMovement : MonoBehaviour
         }
 
         transform.position = transform.position + next;
-    }
-
-    public void InitializeData(EnemyData data)
-    {
-        this.data = data;
     }
 
 }

@@ -13,8 +13,8 @@ public static class DataTableIds
 {
     public static readonly string[] String =
     {
-        "StringTableKr",
-        "StringTableEn",
+        "StringTableKR",
+        "StringTableEN",
     };
 
     public static readonly string Tower = "TowerTable";

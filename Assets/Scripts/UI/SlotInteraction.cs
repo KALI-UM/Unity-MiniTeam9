@@ -1,10 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEditor.Timeline.TimelinePlaybackControls;
 
 public class SlotInteraction : FocusWindow
 {
@@ -55,6 +51,7 @@ public class SlotInteraction : FocusWindow
         fusionButton.gameObject.SetActive(slotManager.SelectedSlot.TowerGroup.CanFusion);
 
         base.Open();
+        towerInformation.gameObject.SetActive(true);
         towerInformation.UpdateTowerInformation(slotManager.SelectedSlot.TowerGroup.Data);
 
         var currData = slotManager.SelectedSlot.TowerGroup.Data;
@@ -81,6 +78,7 @@ public class SlotInteraction : FocusWindow
     public override void Close()
     {
         base.Close();
+        towerInformation.gameObject.SetActive(false);
         slotManager.SelectedSlot.OnDeselected();
     }
 
@@ -98,6 +96,7 @@ public class SlotInteraction : FocusWindow
     {
         slotManager.SelectedSlot.FusionTower();
         Close();
+        SoundManager.Instance.PlaySFX("BattleEffect_06_Merge");
     }
 
     protected override void EnableInput()

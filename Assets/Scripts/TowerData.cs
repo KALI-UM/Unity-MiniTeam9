@@ -6,6 +6,7 @@ using static TowerTable;
 public class TowerData : ScriptableObject
 {
     static private readonly string spritePath = "Textures/Tower/{0}";
+    static private readonly string spumPath = "Prefabs/Units/{0}";
 
     [ReadOnly] public eTower Id;
     [ReadOnly] public string key;
@@ -17,12 +18,13 @@ public class TowerData : ScriptableObject
     public int saleGold;
     public int saleGem;
     public Sprite towerSprite;
+    public GameObject towerSpum;
 
 
     public void SetData(TowerRawData raw)
     {
         Id = (eTower)raw.Tower_ID;
-        key = raw.Strnig_Key;
+        key = raw.String_Key;
         grade = raw.Tower_Grade;
         attackType = raw.Tower_AttackType;
         attackPower = raw.Tower_AttackPower;
@@ -31,13 +33,14 @@ public class TowerData : ScriptableObject
         saleGold = raw.Tower_SaleGold;
         saleGem = raw.Tower_SaleGem;
         towerSprite = Resources.Load<Sprite>(string.Format(spritePath, raw.Tower_Resource));
+        towerSpum = Resources.Load<GameObject>(string.Format(spumPath, raw.Tower_Resource));
     }
 
     public TowerRawData ConvertToRawData()
     {
         TowerRawData raw = new TowerRawData();
         raw.Tower_ID = (int)Id;
-        raw.Strnig_Key = key;
+        raw.String_Key = key;
         raw.Tower_Grade = grade;
         raw.Tower_AttackType = attackType;
         raw.Tower_AttackPower = attackPower;

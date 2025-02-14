@@ -8,13 +8,29 @@ public class InGameManager : MonoBehaviour
     private GameManager gameManager;
     public GameManager GameManager { get => gameManager; }
 
-    private static InGameManagers managerId;
-    public InGameManagers Id
+    public EnemyManager EnemyManager
     {
-        get
-        {
-            return managerId;
-        }
+        get => GameManager.EnemyManager;
+    }
+
+    public TowerManager TowerManager
+    {
+        get => GameManager.TowerManager;
+    }
+
+    public SlotManager SlotManager
+    {
+        get => GameManager.SlotManager;
+    }
+
+    public UIManager UIManager
+    {
+        get => GameManager.UIManager;
+    }
+
+    public EffectManager EffectManager
+    {
+        get => GameManager.EffectManager;
     }
 
     public virtual void InitializeManager(GameManager gm)
