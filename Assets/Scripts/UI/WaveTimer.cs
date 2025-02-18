@@ -17,7 +17,10 @@ public class WaveTimer : UIElement
 
     private float waveTime = 0;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        UIManager.GameManager.WaveSystem.onWaveStart += OnWaveStart;
+    }
     void Update()
     {
         int tempTime = Mathf.CeilToInt(waveTime);
@@ -30,7 +33,7 @@ public class WaveTimer : UIElement
 
     public void OnWaveStart(WaveData data)
     {
-        enabled = true;
+        //enabled = true;
 
         waveText.text = string.Format(waveFormat, data.waveNumber);
         waveTime = data.waveDuration;

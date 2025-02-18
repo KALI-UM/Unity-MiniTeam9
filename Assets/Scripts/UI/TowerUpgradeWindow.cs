@@ -78,7 +78,7 @@ public class TowerUpgradeWindow : FocusWindow
 
     public void OnClickAttackPowerButton()
     {
-        var goldGemSystem = uiManager.GameManager.goldGemSystem;
+        var goldGemSystem = uiManager.GameManager.GoldGemSystem;
         bool canPayGold = goldGemSystem.TryPayGold(towerUpgradeRawDatas[attackPowerLv + 1].GoldCost);
         bool canPayGem = goldGemSystem.TryPayGem(towerUpgradeRawDatas[attackPowerLv + 1].GemCost);
         if (canPayGold && canPayGem)
@@ -126,7 +126,7 @@ public class TowerUpgradeWindow : FocusWindow
 
     public void OnClickAttackSpeedButton()
     {
-        var goldGemSystem = uiManager.GameManager.goldGemSystem;
+        var goldGemSystem = uiManager.GameManager.GoldGemSystem;
         bool canPayGold = goldGemSystem.TryPayGold(towerUpgradeRawDatas[attackSpeedLv + 1].GoldCost);
         bool canPayGem = goldGemSystem.TryPayGem(towerUpgradeRawDatas[attackSpeedLv + 1].GemCost);
         if (canPayGold && canPayGem)

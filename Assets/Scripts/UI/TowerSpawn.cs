@@ -36,7 +36,7 @@ public class TowerSpawn : UIElement
             return;
         }
 
-        if (!UIManager.GameManager.goldGemSystem.TryPayGold(spawnCost))
+        if (!UIManager.GameManager.GoldGemSystem.TryPayGold(spawnCost))
         {
             return;
         }
@@ -58,7 +58,7 @@ public class TowerSpawn : UIElement
             return;
         }
 
-        if (!UIManager.GameManager.goldGemSystem.TryPayGold(spawnCost))
+        if (!UIManager.GameManager.GoldGemSystem.TryPayGold(spawnCost))
         {
             return;
         }

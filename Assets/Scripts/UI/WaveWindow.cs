@@ -12,13 +12,10 @@ public class WaveWindow : PopWindow
     private LocalizationText localizationText;
 
     //private Sequence waveAnimation;
-
-
-    //public void Awake()
-    //{
-    //    waveAnimation = DOTween.Sequence().SetAutoKill(false);
-    //    waveAnimation.Append(transform.DOMoveX(transform.position.x-500f, popDuration));
-    //}
+    private void Start()
+    {
+        UIManager.GameManager.WaveSystem.onWaveStart += OnWaveStart;
+    }
 
     public override void Open()
     {

@@ -38,7 +38,7 @@ public class EmergencySpawnButton : UIElement
             return;
         }
 
-        if (!UIManager.GameManager.goldGemSystem.TryPayGem(gemCost))
+        if (!UIManager.GameManager.GoldGemSystem.TryPayGem(gemCost))
         {
             return;
         }
