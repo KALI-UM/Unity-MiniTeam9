@@ -4,7 +4,6 @@ using UnityEngine;
 
 #if UNITY_EDITOR
 [ExecuteAlways]
-
 public class SpumToTexture : MonoBehaviour
 {
     public Camera spumCamera;
@@ -57,8 +56,6 @@ public class SpumToTexture : MonoBehaviour
         Debug.Log("ĸ�� �Ϸ�: " + spum.name);
         GameObject.DestroyImmediate(spum);
     }
-
-
     public void Test()
     {
         SaveTextureToFileUtility.SaveRenderTextureToFile(spumCamera.targetTexture, string.Format(spumTexPath, "temp"));

@@ -1060,7 +1060,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 20}
   m_SizeDelta: {x: 1000, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &75993779
@@ -7751,8 +7751,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d235098f6d53d043b586b1fde841d30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialCoinCount: 200
-  initialGemCount: 0
+  initialCoinCount: 2000
+  initialGemCount: 100
   slotManager: {fileID: 1341808401}
   towerManager: {fileID: 1185533406}
   enemyManager: {fileID: 434634360}
@@ -19997,12 +19997,32 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7969301409055782641, guid: 5d2a939641d246548b52e617448da526, type: 3}
+      propertyPath: m_text
+      value: "\uC9C4\uD654"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969301409055782641, guid: 5d2a939641d246548b52e617448da526, type: 3}
+      propertyPath: m_fontSize
+      value: 60.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969301409055782641, guid: 5d2a939641d246548b52e617448da526, type: 3}
+      propertyPath: m_margin.w
+      value: 10.012024
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969301409055782641, guid: 5d2a939641d246548b52e617448da526, type: 3}
+      propertyPath: m_margin.y
+      value: 2.6696777
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969301409055782641, guid: 5d2a939641d246548b52e617448da526, type: 3}
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 3660470641963183180, guid: f43a1357934e0dc4a83a4233ce186534, type: 2}
     - target: {fileID: 7969301409055782641, guid: 5d2a939641d246548b52e617448da526, type: 3}
-      propertyPath: m_hasFontAssetChanged
+      propertyPath: m_enableAutoSizing
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969301409055782641, guid: 5d2a939641d246548b52e617448da526, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8732519809382179449, guid: 5d2a939641d246548b52e617448da526, type: 3}
       propertyPath: m_Name
@@ -22727,7 +22747,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 28.111267}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1926621844
