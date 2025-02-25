@@ -42,9 +42,18 @@ public class UIManager : InGameManager
             ui.Initialize(this);
         }
 
-        GameManager.onWaveStart += (WaveData data) =>
+    }
+
+    private void Awake()
+    {
+        screenArea.onClick.AddListener(() => OnClickNotUIArea());
+    }
+
+    private void Start()
+    {
+        GameManager.WaveSystem.onWaveStart += (WaveData data) =>
         {
-            if (data.waveNumber % 10 == 0)
+            if (data.isBossWave)
             {
                 Open(PopWindows.BossWave);
             }
@@ -53,44 +62,36 @@ public class UIManager : InGameManager
                 Open(PopWindows.Wave);
             }
 
-            foreach (var ui in focusWindows)
-            {
-                var currUI = ui;
-                currUI.SendMessage("OnWaveStart", data, SendMessageOptions.DontRequireReceiver);
-            }
+            //foreach (var ui in focusWindows)
+            //{
+            //    var currUI = ui;
+            //    currUI.SendMessage("OnWaveStart", data, SendMessageOptions.DontRequireReceiver);
+            //}
 
-            foreach (var ui in popWindows)
-            {
-                var currUI = ui;
-                currUI.SendMessage("OnWaveStart", data, SendMessageOptions.DontRequireReceiver);
-            }
+            //foreach (var ui in popWindows)
+            //{
+            //    var currUI = ui;
+            //    currUI.SendMessage("OnWaveStart", data, SendMessageOptions.DontRequireReceiver);
+            //}
 
-            foreach (var ui in uiElements)
-            {
-                var currUI = ui;
-                currUI.SendMessage("OnWaveStart", data, SendMessageOptions.DontRequireReceiver);
-            }
+            //foreach (var ui in uiElements)
+            //{
+            //    var currUI = ui;
+            //    currUI.SendMessage("OnWaveStart", data, SendMessageOptions.DontRequireReceiver);
+            //}
         };
 
         GameManager.onGameOver += () =>
         {
             Open(FocusWindows.GameOver);
             SoundManager.Instance.PlaySFX("BattleEffect_08_EndGame");
-        }; 
+        };
         GameManager.onGameClear += () =>
         {
             Open(FocusWindows.GameClear);
             SoundManager.Instance.PlaySFX("BattleEffect_08_VictoryGame");
         };
-
-
     }
-
-    private void Awake()
-    {
-        screenArea.onClick.AddListener(() => OnClickNotUIArea());
-    }
-
     public void OpenFocusWindow(int windowId)
     {
         Open((FocusWindows)windowId);

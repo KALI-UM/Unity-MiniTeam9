@@ -103,15 +103,12 @@ public class TowerPrefabEditor : Editor
             if (!string.IsNullOrEmpty(data.Tower_Resource))
             {
                 KALLogger.Log(string.Format(spumPath, data.Tower_Resource));
-                GameObject spumprefab = AssetDatabase.LoadAssetAtPath<GameObject>(string.Format(spumPath, data.Tower_Resource));
-                KALLogger.Log(spumprefab);
+                //GameObject spumprefab = AssetDatabase.LoadAssetAtPath<GameObject>(string.Format(spumPath, data.Tower_Resource));
+                GameObject spumprefab = tower.Data.towerSpum;
 
                 GameObject.DestroyImmediate(tower.character.transform.GetChild(0).gameObject);
 
-                GameObject spum = Instantiate(spumprefab);
-                spum.transform.position = Vector3.zero;
-                spum.transform.SetParent(tower.character.transform);
-                //spum.GetComponent<SPUM_Prefabs>().OverrideControllerInit();
+                GameObject spum = Instantiate(spumprefab, tower.character.transform);
 
                 var handler = spum.AddComponent<SpumAnimationHandler>();
                 tower.animationHandler = handler;

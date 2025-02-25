@@ -28,7 +28,7 @@ public class WaveTable : DataTable
         public int enemyCount;
         public float spawnInterval;
         public float waveDuration;
-
+        public bool isBossWave;
         public string waveTextFormat;
     }
 
@@ -64,7 +64,8 @@ public class WaveTable : DataTable
         data.spawnInterval = raw.Spawn_Interval;
         data.waveDuration = raw.Spawn_Duration;
         data.waveTextFormat = raw.Wave_Text_Key;
-        
+        data.isBossWave = (DataTableManager.EnemyTable.Get(data.enemyId).Monster_Grade == 2);
+
         return data;
     }
 }

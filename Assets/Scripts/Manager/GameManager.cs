@@ -6,8 +6,14 @@ using static WaveTable;
 
 public class GameManager : MonoBehaviour
 {
-    [ReadOnly]
-    public readonly GoldGemSystem goldGemSystem = new();
+
+    private readonly GoldGemSystem goldGemSystem = new();
+    public GoldGemSystem GoldGemSystem
+    {
+        get => goldGemSystem;
+    }
+
+
     public int initialCoinCount = 200;
     public int initialGemCount = 0;
 
@@ -59,67 +65,45 @@ public class GameManager : MonoBehaviour
     private Coroutine coStartThreshold;
     public float startThresholdTime = 10f;
 
+    #region Wave
+    [SerializeField]
+    private WaveSystem waveSystem;
+    public WaveSystem WaveSystem
+    {
+        get => waveSystem;
+    }
+
+    [SerializeField]
+    private int maxEnemyCount = 100;
+
     public Action onGameClear;
     public Action onGameOver;
 
-    #region Wave
-
-    [SerializeField]
-    private List<WaveData> waveDatas;
-
-    public WaveData CurrentWaveData
-    {
-        get => waveDatas[CurrentWaveNumber];
-    }
-
-    public int CurrentWaveNumber
-    {
-        get;
-        private set;
-    }
-
-    public int lastWaveNumber = 10;
-    public bool IsLastWave
-    {
-        get => CurrentWaveNumber >= lastWaveNumber;
-    }
-
-    public Action<WaveData> onWaveStart;
-
-    private Coroutine coWave;
-    private Coroutine coWaveSpawnEnemy;
-
     #endregion
-
     private void Awake()
     {
         InitializeManagers();
-
         EnemyManager.onBossEnemyDie += () => OnBossEnemyDie();
-        waveDatas = DataTableManager.Get<WaveTable>(DataTableIds.Wave).GetWaveDatas();
-        CurrentWaveNumber = 0;
     }
-
     private void Start()
     {
-        goldGemSystem.onGoldPayFail += () => UIManager.Alert("Alert_LessGold");
-        goldGemSystem.onGemPayFail += () => UIManager.Alert("Alert_LessGem");
+        var audioData = Resources.Load<AudioClipPackData>("Datas/InGameAudioPackData");
+        SoundManager.Instance.SetAudioClipPack(audioData);
+        SoundManager.Instance.PlayBGM("Bgm_battle01");
+
+        GoldGemSystem.onGoldPayFail += () => UIManager.Alert("Alert_LessGold");
+        GoldGemSystem.onGemPayFail += () => UIManager.Alert("Alert_LessGem");
+        GoldGemSystem.AddGold(initialCoinCount);
+        GoldGemSystem.AddGem(initialGemCount);
+
+        WaveSystem.onWaveStart += (WaveData data) => GoldGemSystem.AddGold(data.waveNumber * 10);
 
 #if UNITY_EDITOR
         //프레임제한 풀기
         Application.targetFrameRate = -1;
 #endif
         coStartThreshold = StartCoroutine(CoStartDelay());
-
-        var audioData = Resources.Load<AudioClipPackData>("Datas/InGameAudioPackData");
-        SoundManager.Instance.SetAudioClipPack(audioData);
-        SoundManager.Instance.PlayBGM("Bgm_battle01");
-
-
-        goldGemSystem.AddGold(initialCoinCount);
-        goldGemSystem.AddGem(initialGemCount);
     }
-
     private void InitializeManagers()
     {
         SlotManager.InitializeManager(this);
@@ -131,89 +115,43 @@ public class GameManager : MonoBehaviour
         TowerManager.Initialize();
         EnemyManager.Initialize();
         UIManager.Initialize();
-
-
     }
-
     private void Update()
     {
-        switch (EnemyManager.ValidEnemies.Count)
+        if (EnemyManager.ValidEnemies.Count >= maxEnemyCount)
         {
-            case 0:
-                {
-                    if (IsLastWave)
-                    {
-                        OnGameClear();
-                    }
-                    break;
-                }
-            case 100:
-                {
-                    OnGameOver();
-                    break;
-                }
-        }
-    }
-
-    private IEnumerator CoSpawnEnemy(int waveNumber)
-    {
-        for (int i = 0; i < waveDatas[waveNumber].enemyCount; i++)
-        {
-            EnemyManager.SpawnEnemy(waveDatas[waveNumber].enemyId);
-            yield return new WaitForSeconds(waveDatas[CurrentWaveNumber].spawnInterval);
-        }
-    }
-
-    private IEnumerator CoWave()
-    {
-        while (!IsLastWave)
-        {
-            OnWaveStart();
-            coWaveSpawnEnemy = StartCoroutine(CoSpawnEnemy(CurrentWaveNumber));
-
-            yield return new WaitForSeconds(CurrentWaveData.waveDuration);
-            StopCoroutine(coWaveSpawnEnemy);
+            OnGameOver();
         }
     }
 
     private IEnumerator CoStartDelay()
     {
         yield return new WaitForSecondsRealtime(startThresholdTime);
-        coWave = StartCoroutine(CoWave());
+        WaveSystem.StartWave(1);
     }
 
     public void OnGameOver()
     {
-        StopCoroutine(coWave);
-        StopCoroutine(coWaveSpawnEnemy);
-
+        WaveSystem.StopWave();
         onGameOver?.Invoke();
     }
 
     public void OnGameClear()
     {
+        WaveSystem.StopWave();
         onGameClear?.Invoke();
         KALLogger.Log("Game Clear");
     }
 
-    public void OnWaveStart()
-    {
-        goldGemSystem.AddGold(CurrentWaveNumber * 10);
-
-        CurrentWaveNumber++;
-        onWaveStart?.Invoke(CurrentWaveData);
-    }
-
     public void OnBossEnemyDie()
     {
-        if (lastWaveNumber == CurrentWaveNumber)
+        if (WaveSystem.IsLastWave)
         {
             OnGameClear();
         }
         else
         {
-            StopCoroutine(coWave);
-            coWave = StartCoroutine(CoWave());
+            WaveSystem.StartWave(WaveSystem.CurrentWaveNumber + 1);
         }
     }
 }

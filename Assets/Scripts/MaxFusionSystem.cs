@@ -54,7 +54,6 @@ public class MaxFusionSystem
 
         GameObject tower = towerManager.GetTower(target.Data.Id);
         towerManager.GameManager.SlotManager.AddTower(tower.GetComponent<Tower>());
-
         
         fusionAlertPop.Open(target.TargetTowerSprite, DataTableManager.TowerTable.Get(target.Data.Id).String_Key);
         SoundManager.Instance.PlaySFX("BattleEffect_01_Call_Legend");
