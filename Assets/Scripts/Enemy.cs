@@ -8,6 +8,12 @@ using static TowerTable;
 
 public class Enemy : MonoBehaviour
 {
+    public CellIndexer CellIndex
+    {
+        get;
+        private set;
+    }
+
     public EnemyMovement movement;
     public EnemyHpBar hpBar;
 
@@ -45,6 +51,10 @@ public class Enemy : MonoBehaviour
         private set;
     }
 
+    private void Start()
+    {
+        CellIndex = new CellIndexer(character);
+    }
 
     public void InitializeData(EnemyData data)
     {

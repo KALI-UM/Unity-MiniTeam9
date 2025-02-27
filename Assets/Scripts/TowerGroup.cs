@@ -3,10 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 using static UnityEngine.GraphicsBuffer;
 
 public class TowerGroup : MonoBehaviour
 {
+    public CellIndexer CellIndex
+    {
+        get;
+        private set;
+    }
+
     public eTower TowerId
     {
         get;
@@ -67,6 +74,11 @@ public class TowerGroup : MonoBehaviour
     private Coroutine coMoveTo;
 
     #endregion
+
+    private void Start()
+    {
+        CellIndex = new CellIndexer(gameObject);
+    }
 
     public void AddTower(Tower tower)
     {

@@ -1,0 +1,1315 @@
+fileFormatVersion: 2
+guid: 1489b8d1172eee346a44490088427909
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 90
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_0
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 498
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deca007bc065751409e4778542b1f590
+      internalID: -1990753735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_1
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 498
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a809b0d149f3b443bf88fb726c18758
+      internalID: -86573265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_2
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 498
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09f3d427dfb05f84e9ac2e318e76062d
+      internalID: -1391473789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_3
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 498
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe96b54ba90095a4db7eaa9a85b848e0
+      internalID: -934520416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_4
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 498
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2245db293c910214185f3ec3013dd9d5
+      internalID: 1465525188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_5
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 498
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d461418f60daab4db8d2ab9581c6c69
+      internalID: -1176684274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_6
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 498
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ae2751f4fb24d44b8309f685daaf3f1
+      internalID: 1614655566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_7
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 498
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e98affe3eb6e0e344aeeb267c4241c4e
+      internalID: 2042409600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_8
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 498
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 320a4b3528166aa4b8f4b382574ecb14
+      internalID: -275070217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_9
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 408
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ae43a1694894e64ebe3cf36b8ed4884
+      internalID: 1480643216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_10
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 408
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8a3569152eb68546be2596101ea6035
+      internalID: -654834412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_11
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 408
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d5a78d0cddf56c40ad025b865973398
+      internalID: 1270827093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_12
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 408
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 639a2ed846f329d42a27676ec989770e
+      internalID: -1512567956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_13
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 408
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8a550d8fda05b84189b21c95def2cd8
+      internalID: -1482292442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_14
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 408
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dae900de8b9444346b179d1ee580ab08
+      internalID: -1316341167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_15
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 408
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 979f38e257293b14db00945e47c78349
+      internalID: -599548483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_16
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 408
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 632a1eb322e90f9408bf4f5afcb439d0
+      internalID: -24259149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_17
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 408
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9951e58b4ef17e4aa353499e0d6bd42
+      internalID: 994592292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_18
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 318
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc9c98f034b62dc4e9fd06ed558584bc
+      internalID: -21378052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_19
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 318
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f998c9b5d19c50f469cbc731fa347d39
+      internalID: 1760811407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_20
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 318
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65149d6286eadd642bf364a261dfed43
+      internalID: 1835749258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_21
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 318
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 074deebf535be8843ace689b3ea9f72d
+      internalID: -1603785063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_22
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 318
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27dd185a255779f409b5a12787e747f6
+      internalID: -2119981968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_23
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 318
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60604ac9659dcab4a811b87df7e9cf5b
+      internalID: 899762293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_24
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 318
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 987d96191cf198d4882a91ee492bf880
+      internalID: -276485848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_25
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 318
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3c551c6af4be4b459c80575ed80dfab
+      internalID: 2086420871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_26
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 318
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75470864cf8ad7749a3443219e6d2e07
+      internalID: 169181171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_27
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 228
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 660cc36adc7354f44891e9765ca99a03
+      internalID: 1917820386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_28
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 228
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea025f9441e441943a6a93be5084062a
+      internalID: 177767584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_29
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 228
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a64ef0317d895a4f8c1278537d31857
+      internalID: 252736159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_30
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 228
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68a0eff0d679de945a067b1f09c680bb
+      internalID: -856648342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_31
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 228
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a206b740665197241bc62cb8a111e4cf
+      internalID: 197234587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_32
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 228
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 397616a917a05ae43b2f96766131ba03
+      internalID: 1988001231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_33
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 228
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d75fd9d9a01f06745a6b199b031dfd1f
+      internalID: -1400616102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_34
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 228
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1aec2f3e5f8d2449bba96bc174eb47e
+      internalID: -252221867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_35
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 228
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed682844d370e144589d6856648f66c9
+      internalID: 1398873012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_36
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 138
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5bca9812831d0f4fb866f10faaa4891
+      internalID: 1238143226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_37
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 138
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 889cd49849a0df745a25726e294eed7b
+      internalID: -727577401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_38
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 138
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f33102f4e2a9ef04ea86d356036d73fb
+      internalID: 2024175707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_39
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 138
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e422d9a43b62fbd438d575b628cbe273
+      internalID: -254546152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_40
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 138
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab17feb25f99f1946a011c9676e8da72
+      internalID: -1516677314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_41
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 138
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70d19f3c1b95aca44a45e1f393623e8b
+      internalID: 281545527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_42
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 138
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a855a773f650534bb1420ae9c7e0ea2
+      internalID: -1364292215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_43
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 151
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00ecee8f33a49bf429388e2b7d80739f
+      internalID: 905694870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_44
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 138
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90b487c16531cb64da036261c9eebe64
+      internalID: 210749950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_45
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 48
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 194e90af425b6fd4490164fe12decc55
+      internalID: 1226901596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_46
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 62
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69142fdca12aee14aa5c1471e9bd2904
+      internalID: -1600724200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_47
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 62
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22b66ed9c12919544a2519d32091b572
+      internalID: -480416704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_48
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 62
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdec5c477a85bc64c9de6cdb51e6c492
+      internalID: 1400226145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_49
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 62
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98058a9308e9a4849916e7ec05aa4963
+      internalID: -1511368936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_50
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 62
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae7c8c3bfb1bff545aa146476253044c
+      internalID: -1771113782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_51
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 61
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f01c29661ecac9047bf271a12c5a5c3e
+      internalID: 2052576107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_52
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 61
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f2f7e279f2b939428a66ce5da376108
+      internalID: 333427305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Floor(2)_53
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 48
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4d354dceb61c34408cec5c775968d51
+      internalID: -2127008411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Mimic_Floor(2)_0: -1990753735
+      Mimic_Floor(2)_1: -86573265
+      Mimic_Floor(2)_10: -654834412
+      Mimic_Floor(2)_11: 1270827093
+      Mimic_Floor(2)_12: -1512567956
+      Mimic_Floor(2)_13: -1482292442
+      Mimic_Floor(2)_14: -1316341167
+      Mimic_Floor(2)_15: -599548483
+      Mimic_Floor(2)_16: -24259149
+      Mimic_Floor(2)_17: 994592292
+      Mimic_Floor(2)_18: -21378052
+      Mimic_Floor(2)_19: 1760811407
+      Mimic_Floor(2)_2: -1391473789
+      Mimic_Floor(2)_20: 1835749258
+      Mimic_Floor(2)_21: -1603785063
+      Mimic_Floor(2)_22: -2119981968
+      Mimic_Floor(2)_23: 899762293
+      Mimic_Floor(2)_24: -276485848
+      Mimic_Floor(2)_25: 2086420871
+      Mimic_Floor(2)_26: 169181171
+      Mimic_Floor(2)_27: 1917820386
+      Mimic_Floor(2)_28: 177767584
+      Mimic_Floor(2)_29: 252736159
+      Mimic_Floor(2)_3: -934520416
+      Mimic_Floor(2)_30: -856648342
+      Mimic_Floor(2)_31: 197234587
+      Mimic_Floor(2)_32: 1988001231
+      Mimic_Floor(2)_33: -1400616102
+      Mimic_Floor(2)_34: -252221867
+      Mimic_Floor(2)_35: 1398873012
+      Mimic_Floor(2)_36: 1238143226
+      Mimic_Floor(2)_37: -727577401
+      Mimic_Floor(2)_38: 2024175707
+      Mimic_Floor(2)_39: -254546152
+      Mimic_Floor(2)_4: 1465525188
+      Mimic_Floor(2)_40: -1516677314
+      Mimic_Floor(2)_41: 281545527
+      Mimic_Floor(2)_42: -1364292215
+      Mimic_Floor(2)_43: 905694870
+      Mimic_Floor(2)_44: 210749950
+      Mimic_Floor(2)_45: 1226901596
+      Mimic_Floor(2)_46: -1600724200
+      Mimic_Floor(2)_47: -480416704
+      Mimic_Floor(2)_48: 1400226145
+      Mimic_Floor(2)_49: -1511368936
+      Mimic_Floor(2)_5: -1176684274
+      Mimic_Floor(2)_50: -1771113782
+      Mimic_Floor(2)_51: 2052576107
+      Mimic_Floor(2)_52: 333427305
+      Mimic_Floor(2)_53: -2127008411
+      Mimic_Floor(2)_6: 1614655566
+      Mimic_Floor(2)_7: 2042409600
+      Mimic_Floor(2)_8: -275070217
+      Mimic_Floor(2)_9: 1480643216
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

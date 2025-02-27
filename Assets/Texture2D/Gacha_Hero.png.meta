@@ -1,11 +1,9 @@
 fileFormatVersion: 2
 guid: bf6a1ecc9df5e8544be6c3ea8a0a6ec4
-timeCreated: 1738924736
-licenseType: Free
 TextureImporter:
-  serializedVersion: 13
   internalIDToNameTable: []
   externalObjects: {}
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -45,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 0
   alignment: 0
@@ -56,7 +54,7 @@ TextureImporter:
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 0
@@ -82,45 +80,656 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Gacha_Hero_0
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 1020
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f825c5ded9a8ae4e9ef76f6479fb1ed
+      internalID: 1209019044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gacha_Hero_1
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 847
+        width: 209
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fce36e3c287298d44879c5778fcc9160
+      internalID: 1268034445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gacha_Hero_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1016
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f24b54d06d62d7f41b1fa18eae45c925
+      internalID: 1619374954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gacha_Hero_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 888
+        width: 188
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38466bf56bc4e24448d401d74f3a754b
+      internalID: -717881359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gacha_Hero_4
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 1008
+        width: 8
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2fc44f309daf4a47ad0499b2272b88e
+      internalID: -1769714152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gacha_Hero_5
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 608
+        width: 330
+        height: 397
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a279003bfa0972b4da2e5b3f308fa891
+      internalID: -262110665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gacha_Hero_6
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 744
+        width: 194
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 012b3faafe4d72f43a9192c3df17eb99
+      internalID: 400381741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gacha_Hero_11
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 638
+        width: 218
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2184eb8195ef9b241bf555bfcf5cea1b
+      internalID: 1556427282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gacha_Hero_15
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 679
+        width: 52
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3334c132b72170d4f8dbcfb03cdfe4f8
+      internalID: 761625364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gacha_Hero_16
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 611
+        width: 182
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c118005c65e98fd40b8995bb1decc233
+      internalID: -1716029557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gacha_Hero_17
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 676
+        width: 54
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d2c3c8964992f140b1b5f253dd3bae8
+      internalID: 1627269051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gacha_Hero_18
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 271
+        width: 217
+        height: 407
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfa24f46639032c4582c1c8e55eb6f60
+      internalID: 1601224763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gacha_Hero_19
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 648
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a2b11d1cb7cd01478b2c914367c8a5a
+      internalID: -1547340687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gacha_Hero_20
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 510
+        width: 54
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 839d2184004d0ae43b966ab24eb52083
+      internalID: -312518741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gacha_Hero_21
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 516
+        width: 244
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24bd0eca6cdae1c438988d71b80790de
+      internalID: 141470888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gacha_Hero_22
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 620
+        width: 32
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dd4cdc31abb91841975ad174f496c05
+      internalID: 412019588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gacha_Hero_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 300
+        width: 360
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb040d6d1af74e141ad6c8d38bfc1bd7
+      internalID: 1858426231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gacha_Hero_24
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 352
+        width: 242
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a160d5a5d3c81c145ade022ddc344e9e
+      internalID: 205595907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gacha_Hero_28
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 364
+        width: 92
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52a2eeb3a1e1a9843b7db1ca37911e4d
+      internalID: -1178254353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gacha_Hero_32
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 188
+        width: 164
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3faadc1bffe86ee47a02b770db61ef08
+      internalID: 238526430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gacha_Hero_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 375
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb7d7506d157e734b8a7f0fc030f755e
+      internalID: 785967497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gacha_Hero_34
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 168
+        width: 292
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f85c7107d6578d74b801a833af2d2272
+      internalID: 509845187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gacha_Hero_35
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 268
+        width: 294
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f55ca32dda9c9284da12635aa7a35a36
+      internalID: -658390731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gacha_Hero_36
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 268
+        width: 148
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a2237f2836f285469b21139c9e1178a
+      internalID: -350560835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gacha_Hero_37
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 3
+        width: 405
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf49574911a263548bd2f0f71da69a64
+      internalID: -271822137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gacha_Hero_38
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 0
+        width: 254
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4d735be9c0f0a047b4078dcbc881bd0
+      internalID: -1860828929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gacha_Hero_39
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 120
+        width: 236
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0724aae073b71834b9383e707ecd0caf
+      internalID: -663162073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID:
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
-    indices: []
+    indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
-  mipmapLimitGroupName:
-  output:
-    textureImportInstructions:
-      compressedFormat: 0
-      uncompressedFormat: 0
-      desiredFormat: 0
-      usageMode: 0
-      colorSpace: 0
-      androidETC2FallbackFormat: 0
-      width: 0
-      height: 0
-      depth: 0
-      cubeIntermediateSize: 0
-      cubeMode: 0
-      cubeLayout: 0
-      compressionQuality: 0
-      androidETC2FallbackDownscale: 0
-      vtOnly: 0
-    sourceTextureInformation:
-      width: 0
-      height: 0
-      doesTextureContainAlpha: 0
-      sourceWasHDR: 0
-    importInspectorWarnings:
+    nameFileIdTable:
+      Gacha_Hero_0: 1209019044
+      Gacha_Hero_1: 1268034445
+      Gacha_Hero_10: 2001181605
+      Gacha_Hero_11: 1556427282
+      Gacha_Hero_12: 1496903745
+      Gacha_Hero_13: 1875139233
+      Gacha_Hero_14: -935538626
+      Gacha_Hero_15: 761625364
+      Gacha_Hero_16: -1716029557
+      Gacha_Hero_17: 1627269051
+      Gacha_Hero_18: 1601224763
+      Gacha_Hero_19: -1547340687
+      Gacha_Hero_2: 1619374954
+      Gacha_Hero_20: -312518741
+      Gacha_Hero_21: 141470888
+      Gacha_Hero_22: 412019588
+      Gacha_Hero_23: 1858426231
+      Gacha_Hero_24: 205595907
+      Gacha_Hero_25: -275334334
+      Gacha_Hero_26: -1904778692
+      Gacha_Hero_27: 2029367747
+      Gacha_Hero_28: -1178254353
+      Gacha_Hero_29: -1213570209
+      Gacha_Hero_3: -717881359
+      Gacha_Hero_30: 1220742522
+      Gacha_Hero_31: 876025985
+      Gacha_Hero_32: 238526430
+      Gacha_Hero_33: 785967497
+      Gacha_Hero_34: 509845187
+      Gacha_Hero_35: -658390731
+      Gacha_Hero_36: -350560835
+      Gacha_Hero_37: -271822137
+      Gacha_Hero_38: -1860828929
+      Gacha_Hero_39: -663162073
+      Gacha_Hero_4: -1769714152
+      Gacha_Hero_40: 745034101
+      Gacha_Hero_5: -262110665
+      Gacha_Hero_6: 400381741
+      Gacha_Hero_7: 620692445
+      Gacha_Hero_8: 471036671
+      Gacha_Hero_9: 1937562255
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  userData:
-  assetBundleName:
-  assetBundleVariant:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
