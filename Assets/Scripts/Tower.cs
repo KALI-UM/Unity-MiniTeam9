@@ -44,6 +44,11 @@ public class Tower : MonoBehaviour
         get => Data.attackRange * towerManager.factorData.attackRange;
     }
 
+    public int AttackIndexRange
+    {
+        get => Mathf.CeilToInt(AttackRange/CellIndexer.CellSize);
+    }
+
     public int AttackPower
     {
         get => Mathf.CeilToInt((Data.attackPower + (Data.attackPower * towerManager.AttackPowerUpgradeRate))*towerManager.factorData.attackPower);

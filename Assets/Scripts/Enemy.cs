@@ -23,6 +23,7 @@ public class Enemy : MonoBehaviour
     public Action<int> onDamaged;
     public Action onDie;
     public Action onSpawn;
+    public Action onMove;
  
     public eEnemy EnemyId
     {
@@ -51,7 +52,7 @@ public class Enemy : MonoBehaviour
         private set;
     }
 
-    private void Start()
+    private void Awake()
     {
         CellIndex = new CellIndexer(character);
     }

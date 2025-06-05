@@ -1,11 +1,5 @@
-using DG.Tweening;
-using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using Unity.VisualScripting;
 using UnityEngine;
-using static EnemyTable;
 
 
 public class EnemyMovement : MonoBehaviour
@@ -34,6 +28,7 @@ public class EnemyMovement : MonoBehaviour
         get;
         private set;
     } = false;
+
 
     private void Update()
     {
@@ -80,6 +75,8 @@ public class EnemyMovement : MonoBehaviour
         }
 
         transform.position = transform.position + next;
+
+        enemy.onMove?.Invoke();
     }
 
 }

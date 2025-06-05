@@ -22,7 +22,7 @@ public class SpumToTexture : MonoBehaviour
     {
         foreach (var spum in spumToTextureQueue)
         {
-            spum.transform.position = new Vector3(5, 1, 1);
+            //spum.transform.position = new Vector3(5, 1, 1);
             spum.SetActive(false);
         }
 

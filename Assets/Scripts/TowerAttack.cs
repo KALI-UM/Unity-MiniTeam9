@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
@@ -107,8 +106,23 @@ public class TowerAttack : MonoBehaviour
 
     private bool FindTarget()
     {
-        var closestEnemy = tower.TowerGroup.enemyManager.ValidEnemies.
-            OrderBy(e => Vector3.Distance(e.transform.position, tower.TowerGroup.transform.position)).
+        if (tower.TowerGroup.enemyManager.ValidEnemies.Count <= 0)
+        {
+            return false;
+        }
+        return FindClosestTarget();
+    }
+
+    private bool FindClosestTarget()
+    {
+        //return FindTargetRaw();
+        return FindTargetByIndex();
+    }
+
+    private bool FindTargetRaw()
+    {
+        var closestEnemy = tower.TowerGroup.enemyManager.ValidEnemies
+.OrderBy(e => Vector3.Distance(e.transform.position, tower.TowerGroup.transform.position)).
             FirstOrDefault();
 
         if (closestEnemy != null && Vector3.Distance(closestEnemy.transform.position, tower.TowerGroup.transform.position) <= tower.AttackRange)
@@ -119,7 +133,35 @@ public class TowerAttack : MonoBehaviour
         return false;
     }
 
+    private bool FindTargetByIndex()
+    {
+        //var closestEnemyList = tower.TowerGroup.enemyManager.ValidCellIndexedEnemies.
+        int towerX = tower.TowerGroup.CellIndex.X;
+        int towerY = tower.TowerGroup.CellIndex.Y;
+        
+        var closestEnemyList = tower.TowerGroup.enemyManager.ValidEnemies.
+            Where(e =>
+            Mathf.Abs(e.CellIndex.X -
+            towerX)
+            <= tower.AttackIndexRange &&
+            Mathf.Abs(e.CellIndex.Y - towerY)
+            <= tower.AttackIndexRange);
 
+
+        if (closestEnemyList.Count() <= 0)
+        {
+            return false;
+        }
+        var closestEnemy = closestEnemyList.OrderBy(e => Vector3.Distance(e.transform.position, tower.TowerGroup.transform.position)).
+         FirstOrDefault();
+
+        if (closestEnemyList != null && Vector3.Distance(closestEnemy.transform.position, tower.TowerGroup.transform.position) <= tower.AttackRange)
+        {
+            target = closestEnemy;
+            return true;
+        }
+        return false;
+    }
 
     private void OnDrawGizmos()
     {

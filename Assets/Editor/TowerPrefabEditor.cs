@@ -85,7 +85,7 @@ public class TowerPrefabEditor : Editor
         string dataPath = "Assets/Resources/Datas/Tower/{0}.asset";
         string spumPath = "Assets/Resources/Prefabs/Units/{0}.prefab";
 
-        int y = 0;
+        //int y = 0;
         UpdateTowerDatas(list);
 
         foreach (var data in list)
@@ -109,6 +109,7 @@ public class TowerPrefabEditor : Editor
                 GameObject.DestroyImmediate(tower.character.transform.GetChild(0).gameObject);
 
                 GameObject spum = Instantiate(spumprefab, tower.character.transform);
+               
 
                 var handler = spum.AddComponent<SpumAnimationHandler>();
                 tower.animationHandler = handler;
@@ -120,8 +121,8 @@ public class TowerPrefabEditor : Editor
             newPrefab.name = data.Tower_Resource;
             spumToTexture.PushToSpumToTextureQueue(newPrefab);
             PrefabUtility.SaveAsPrefabAsset(newPrefab, string.Format(prefabPath, data.String_Key));
-            var lineup = new Vector3(0, ++y * 10, 0);
-            newPrefab.transform.position = lineup;
+            //var lineup = new Vector3(0, ++y * 10, 0);
+            //newPrefab.transform.position = lineup;
 
             //GameObject.DestroyImmediate(newPrefab);
         }

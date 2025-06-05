@@ -75,7 +75,7 @@ public class TowerGroup : MonoBehaviour
 
     #endregion
 
-    private void Start()
+    private void Awake()
     {
         CellIndex = new CellIndexer(gameObject);
     }

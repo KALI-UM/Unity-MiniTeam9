@@ -52,7 +52,6 @@ public class EnemyScriptableDataEditor : Editor
             }
             GUILayout.EndHorizontal();
 
-            editor.OnInspectorGUI();
         }
     }
 

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEditor;
@@ -25,9 +26,17 @@ public class EnemyManager : InGameManager
     //Valid = 공격가능한 enemy 목록을 관리
     private List<Enemy> validEnemies = new();
 
-    public List<Enemy> ValidEnemies
+    public IReadOnlyList<Enemy> ValidEnemies
     {
         get => validEnemies;
+    }
+
+    [ReadOnly, SerializeField]
+    //Valid = 공격가능한 enemy 목록을 관리
+    private Dictionary<(int, int), List<Enemy>> validCellIndexedEnemies = new();
+    public IReadOnlyDictionary<(int, int), List<Enemy>> ValidCellIndexedEnemies
+    {
+        get => validCellIndexedEnemies;
     }
 
 
@@ -80,6 +89,14 @@ public class EnemyManager : InGameManager
         InitializeEnemyInitData();
         InitializeEnemyPrefabs();
         InitializeEnemyPools();
+    }
+
+    private void LateUpdate()
+    {
+        foreach (var indexedEnemies in validCellIndexedEnemies)
+        {
+            indexedEnemies.Value.Clear();
+        }
     }
 
     private void InitializeEnemyPrefabs()
@@ -169,6 +186,7 @@ public class EnemyManager : InGameManager
             enemy.onDie += () =>
             {
                 validEnemies.Remove(enemy);
+                validCellIndexedEnemies[(enemy.CellIndex.X, enemy.CellIndex.Y)].Remove(enemy);
                 onEnemyCountChange?.Invoke(CurrEnemyCount);
 
                 GameManager.GoldGemSystem.AddGold(enemy.Data.dropGold);
@@ -177,13 +195,14 @@ public class EnemyManager : InGameManager
                 onBossEnemyDie?.Invoke();
             };
 
-            enemy.onSpawn +=()=> SoundManager.Instance.PlayBGM("Bgm_Boss01");
+            enemy.onSpawn += () => SoundManager.Instance.PlayBGM("Bgm_Boss01");
         }
         else
         {
             enemy.onDie += () =>
             {
                 validEnemies.Remove(enemy);
+                validCellIndexedEnemies[(enemy.CellIndex.X, enemy.CellIndex.Y)].Remove(enemy);
                 onEnemyCountChange?.Invoke(CurrEnemyCount);
 
                 GameManager.GoldGemSystem.AddGold(enemy.Data.dropGold);
@@ -193,9 +212,11 @@ public class EnemyManager : InGameManager
 
         enemy.onDamaged += (int damage) =>
         {
-            temp(enemy.transform, damage);
+            ShowDamageTextEffect(enemy.transform, damage);
         };
         enemy.animationHandler.onDeathExit += () => enemyPools[enemy.EnemyId].Release(enemy);
+
+        enemy.onMove +=()=> UpdateEnemyCellIndex(enemy);
         return enemy;
     }
 
@@ -212,8 +233,21 @@ public class EnemyManager : InGameManager
         enemy.gameObject.SetActive(false);
     }
 
+    public void UpdateEnemyCellIndex(Enemy enemy)
+    {
+        if (!validCellIndexedEnemies.ContainsKey((enemy.CellIndex.X, enemy.CellIndex.Y)))
+        {
+            List<Enemy> currentCellIndexedEnemies = new();
+            currentCellIndexedEnemies.Add(enemy);
+            validCellIndexedEnemies[(enemy.CellIndex.X, enemy.CellIndex.Y)]=currentCellIndexedEnemies;
+        }
+        else
+        {
+            validCellIndexedEnemies[(enemy.CellIndex.X, enemy.CellIndex.Y)].Add(enemy);
+        }
+    }
 
-    public void temp(Transform position, int damage)
+    public void ShowDamageTextEffect(Transform position, int damage)
     {
         var effect = EnemyManager.EffectManager.Get(eEffects.DamageText) as DamageText;
 
