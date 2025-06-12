@@ -19,9 +19,9 @@
     <td align="center"><strong>최상위 타워 진화</strong></td>
   </tr>
   <tr>
-    <td><img src="./Screenshot/TowerInfo.jpg" width="200"/></td>
-    <td><img src="./Screenshot/TowerMove.jpg" width="200"/></td>
-    <td><img src="./Screenshot/TowerFusion.jpg" width="200"/></td>
+    <td><img src="./Screenshot/TowerInfo.jpg" width="250"/></td>
+    <td><img src="./Screenshot/TowerMove.jpg" width="250"/></td>
+    <td><img src="./Screenshot/TowerFusion.jpg" width="250"/></td>
   </tr>
 </table>
 
