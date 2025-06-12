@@ -55,6 +55,8 @@ public class TowerAttack : MonoBehaviour
 
     private IEnumerator CoAttack()
     {
+        InitializeClosestEnemyQuery();
+
         while (true)
         {
             if (!IsValidTarget)
@@ -133,20 +135,21 @@ public class TowerAttack : MonoBehaviour
         return false;
     }
 
-    private bool FindTargetByIndex()
+    private System.Collections.Generic.IEnumerable<Enemy> closestEnemyQuery;
+    private void InitializeClosestEnemyQuery()
     {
-        //var closestEnemyList = tower.TowerGroup.enemyManager.ValidCellIndexedEnemies.
-        int towerX = tower.TowerGroup.CellIndex.X;
-        int towerY = tower.TowerGroup.CellIndex.Y;
-        
-        var closestEnemyList = tower.TowerGroup.enemyManager.ValidEnemies.
+        closestEnemyQuery = tower.TowerGroup.enemyManager.ValidEnemies.
             Where(e =>
             Mathf.Abs(e.CellIndex.X -
-            towerX)
+            tower.TowerGroup.CellIndex.X)
             <= tower.AttackIndexRange &&
-            Mathf.Abs(e.CellIndex.Y - towerY)
+            Mathf.Abs(e.CellIndex.Y - tower.TowerGroup.CellIndex.Y)
             <= tower.AttackIndexRange);
+    }
 
+    private bool FindTargetByIndex()
+    {
+        var closestEnemyList = closestEnemyQuery;
 
         if (closestEnemyList.Count() <= 0)
         {
