@@ -27,4 +27,6 @@
   </tr>
 </table>
 
-
+- **아이콘 이미지 캡처 툴**
+  - 게임 오브젝트를 캡처해 png파일로 생성하는 에디터 툴 개발 👉 [SaveTextureToFileUtility.cs](https://github.com/KALI-UM/Unity-MiniTeam9/blob/main/Assets/Scripts/SaveTextureToFileUtility.cs)
+  
