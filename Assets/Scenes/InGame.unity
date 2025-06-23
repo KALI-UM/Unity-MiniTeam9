@@ -1092,7 +1092,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.25, y: 0}
   m_SizeDelta: {x: 1000, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &75993779
@@ -5492,7 +5492,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.25, y: 0}
   m_SizeDelta: {x: 1000, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &617665479
@@ -8130,7 +8130,7 @@ MonoBehaviour:
   effectManager: {fileID: 805429424}
   startThresholdTime: 3
   waveSystem: {fileID: 2037285434}
-  maxEnemyCount: 100
+  maxEnemyCount: 1000
 --- !u!4 &941585312
 Transform:
   m_ObjectHideFlags: 0
@@ -19597,7 +19597,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.5183585, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1926621844
@@ -20264,6 +20264,15 @@ MonoBehaviour:
   gameManager: {fileID: 941585311}
   waveDatas: []
   lastWaveNumber: 80
+  waveMode: 0
+  testWaveData:
+    waveNumber: 1
+    enemyId: 21101
+    enemyCount: 1000
+    spawnInterval: 0.1
+    waveDuration: 600000
+    isBossWave: 0
+    waveTextFormat: "\uD14C\uC2A4\uD2B8"
 --- !u!1 &2044748209
 GameObject:
   m_ObjectHideFlags: 0

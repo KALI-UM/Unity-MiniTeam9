@@ -31,7 +31,20 @@ public class WaveSystem : MonoBehaviour
         get => CurrentWaveNumber >= lastWaveNumber;
     }
 
-    public Action<WaveData> onWaveStart;
+
+    public enum WaveMode
+    {
+        Game,
+        Test,
+    }
+
+    [SerializeField]
+    private WaveMode waveMode;
+
+    [SerializeField]
+    private WaveData testWaveData;
+
+   public Action<WaveData> onWaveStart;
     public Action onWaveEnd;
     public Action onBossWaveTimeOver;
 
@@ -39,8 +52,18 @@ public class WaveSystem : MonoBehaviour
     private Coroutine coWaveSpawnEnemy;
     private void Start()
     {
-        waveDatas = DataTableManager.Get<WaveTable>(DataTableIds.Wave).GetWaveDatas();
+        if (waveMode == WaveMode.Game)
+        {
+            waveDatas = DataTableManager.Get<WaveTable>(DataTableIds.Wave).GetWaveDatas();
+        }
+        else if(waveMode == WaveMode.Test)
+        {
+            waveDatas = new List<WaveData>();
+            waveDatas.Add(new WaveData());
+            waveDatas.Add(testWaveData);
+        }
     }
+
     public void StartWave(int waveNumber)
     {
         //이전 Wave가 있다면 중지
@@ -55,13 +78,13 @@ public class WaveSystem : MonoBehaviour
         if (coWave != null)
         {
             StopCoroutine(coWave);
-            coWave=null;
+            coWave = null;
         }
 
         if (coWaveSpawnEnemy != null)
         {
             StopCoroutine(coWaveSpawnEnemy);
-            coWaveSpawnEnemy=null; 
+            coWaveSpawnEnemy = null;
         }
     }
     private IEnumerator CoWave(WaveData data)

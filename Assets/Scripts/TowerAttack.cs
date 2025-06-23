@@ -1,6 +1,8 @@
+using Cysharp.Threading.Tasks;
 using System;
 using System.Collections;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
@@ -34,9 +36,10 @@ public class TowerAttack : MonoBehaviour
         }
     }
 
-    public void OnEnable()
+    public  void OnEnable()
     {
-        StartCoroutine(CoAttack());
+       StartCoroutine(CoAttack());
+       //await UniAttackAsync();
     }
 
     public void AttackMelee()
@@ -174,4 +177,80 @@ public class TowerAttack : MonoBehaviour
         Gizmos.color = Color.blue;
         Gizmos.DrawLine(transform.position, target.transform.position);
     }
+
+    private async UniTask UniAttackAsync()
+    {
+        InitializeClosestEnemyQuery();
+
+        while (true)
+        {
+            if (!IsValidTarget)
+            {
+                FindTarget();
+            }
+
+            if (IsValidTarget)
+            {
+                if (tower.Data.attackType == 0)
+                {
+                    AttackMeleeAsync();
+                }
+                else
+                {
+                    AttackProjectileAsync();
+                }
+            }
+
+            await UniTask.Delay(TimeSpan.FromSeconds(tower.AttackInterval));
+        }  
+    }
+
+    public async void AttackMeleeAsync()
+    {
+        tower.animationHandler.Attack(tower.AttackSpeed);
+        tower.SetDirection(target.transform.position);
+        await UniAttackMeleeDamageAsync(0.5f);
+    }
+
+    public async void AttackProjectileAsync()
+    {
+        tower.animationHandler.Attack(tower.AttackSpeed);
+        tower.SetDirection(target.transform.position);
+        await UniAttackProjectileDamageApplyAsync(1f);
+    }
+
+
+    private async UniTask UniAttackProjectileDamageApplyAsync(float ratio)
+    {
+        await UniTask.Delay(TimeSpan.FromSeconds(tower.animationHandler.GetCurrentAnimationClipLength() * ratio));
+        if (!IsValidTarget)
+        {
+            FindTarget();
+        }
+
+        if (IsValidTarget)
+        {
+            target.OnDamaged(tower.AttackPower);
+            var fire = tower.towerManager.EffectManager.Get<Projectile>(eEffects.Fire);
+            fire.SetDestination(target.transform.position);
+            fire.Play(tower.transform.position + new Vector3(0.25f, 0.25f, 0));
+        }
+    }
+    private async UniTask UniAttackMeleeDamageAsync(float ratio)
+    {
+        await UniTask.Delay(TimeSpan.FromSeconds(tower.animationHandler.GetCurrentAnimationClipLength() * ratio));
+        if (!IsValidTarget)
+        {
+            FindTarget();
+        }
+
+        if (IsValidTarget)
+        {
+            target.OnDamaged(tower.AttackPower);
+        }
+        //var fire = tower.towerManager.EffectManager.Get<Projectile>(eEffects.Fire);
+        //fire.SetDestination(target.transform.position);
+        //fire.Play(transform.position);
+    }
+
 }
