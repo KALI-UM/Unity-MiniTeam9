@@ -103,6 +103,7 @@ public class GameManager : MonoBehaviour
         Application.targetFrameRate = -1;
 #endif
         coStartThreshold = StartCoroutine(CoStartDelay());
+       
     }
     private void InitializeManagers()
     {
@@ -128,6 +129,7 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(startThresholdTime);
         WaveSystem.StartWave(1);
+        //waveSystem.StartWaveAsync(1);
     }
 
     public void OnGameOver()

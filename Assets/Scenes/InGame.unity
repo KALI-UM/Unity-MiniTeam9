@@ -8237,7 +8237,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 586970098486721244, guid: a437dd3284159114bb1ab8a9aa6ac504, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2102137633801294413, guid: a437dd3284159114bb1ab8a9aa6ac504, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20264,7 +20264,7 @@ MonoBehaviour:
   gameManager: {fileID: 941585311}
   waveDatas: []
   lastWaveNumber: 80
-  waveMode: 0
+  waveMode: 1
   testWaveData:
     waveNumber: 1
     enemyId: 21101

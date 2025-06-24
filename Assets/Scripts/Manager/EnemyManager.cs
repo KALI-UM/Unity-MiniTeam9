@@ -91,6 +91,25 @@ public class EnemyManager : InGameManager
         InitializeEnemyPools();
     }
 
+    private void Start()
+    {
+        Queue<Enemy> temporaryEnemyQueue = new Queue<Enemy>();
+
+        for (int i = 0; i < 1000; i++)
+        {
+            Enemy enemy = enemyPools[eEnemy.Enemy_Soldier].Get();
+            enemy.transform.SetParent(gameObject.transform);
+            temporaryEnemyQueue.Enqueue(enemy);
+        }
+
+        while (temporaryEnemyQueue.Count != 0)
+        {
+            var enemy = temporaryEnemyQueue.Dequeue();
+            enemyPools[enemy.EnemyId].Release(enemy);
+        }
+  
+    }
+
     private void LateUpdate()
     {
         foreach (var indexedEnemies in validCellIndexedEnemies)
@@ -155,8 +174,8 @@ public class EnemyManager : InGameManager
                 actionOnRelease: e => OnReleaseEnemy(e),
                 //actionOnDestroy: obj => obj.Dispose(),
                 //collectionCheck: false,
-                defaultCapacity: 50,
-                maxSize: 100
+                defaultCapacity: 500,
+                maxSize: 1000
             );
             enemyPools.Add(enemy.Key, pool);
         }
@@ -176,6 +195,7 @@ public class EnemyManager : InGameManager
         validEnemies.Add(enemy);
         onEnemyCountChange?.Invoke(CurrEnemyCount);
     }
+
 
     private Enemy CreateEnemy(GameObject gobj)
     {
@@ -216,7 +236,7 @@ public class EnemyManager : InGameManager
         };
         enemy.animationHandler.onDeathExit += () => enemyPools[enemy.EnemyId].Release(enemy);
 
-        enemy.onMove +=()=> UpdateEnemyCellIndex(enemy);
+        enemy.onMove += () => UpdateEnemyCellIndex(enemy);
         return enemy;
     }
 
@@ -239,7 +259,7 @@ public class EnemyManager : InGameManager
         {
             List<Enemy> currentCellIndexedEnemies = new();
             currentCellIndexedEnemies.Add(enemy);
-            validCellIndexedEnemies[(enemy.CellIndex.X, enemy.CellIndex.Y)]=currentCellIndexedEnemies;
+            validCellIndexedEnemies[(enemy.CellIndex.X, enemy.CellIndex.Y)] = currentCellIndexedEnemies;
         }
         else
         {

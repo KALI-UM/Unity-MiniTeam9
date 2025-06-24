@@ -1,7 +1,9 @@
+using Cysharp.Threading.Tasks;
 using DG.Tweening.Core.Easing;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.UIElements;
 using static WaveTable;
@@ -73,6 +75,7 @@ public class WaveSystem : MonoBehaviour
         onWaveStart?.Invoke(CurrentWaveData);
         coWave = StartCoroutine(CoWave(CurrentWaveData));
     }
+
     public void StopWave()
     {
         if (coWave != null)
@@ -109,6 +112,49 @@ public class WaveSystem : MonoBehaviour
         {
             gameManager.EnemyManager.SpawnEnemy(data.enemyId);
             yield return new WaitForSeconds(data.spawnInterval);
+        }
+    }
+
+    private CancellationTokenSource uniWaveCancel;
+    private CancellationTokenSource uniSpawnCancel;
+    
+
+    public async void StartWaveAsync(int waveNumber)
+    {
+        //이전 Wave가 있다면 중지
+        uniWaveCancel?.Cancel();
+        uniSpawnCancel?.Cancel();
+
+        CurrentWaveNumber = waveNumber;
+        onWaveStart?.Invoke(CurrentWaveData);
+        await UniWaveAsync(CurrentWaveData);
+    }
+
+    private async UniTask UniWaveAsync(WaveData data)
+    {
+        uniWaveCancel = new CancellationTokenSource();
+        await UniSpawnEnemyAsync(data);
+        await UniTask.Delay(TimeSpan.FromSeconds(data.waveDuration));
+
+        if (data.isBossWave)
+        {
+            onBossWaveTimeOver?.Invoke();
+            return;
+        }
+
+        if (data.waveNumber < lastWaveNumber)
+        {
+            StartWave(data.waveNumber + 1);
+        }
+    }
+
+    private async UniTask UniSpawnEnemyAsync(WaveData data)
+    {
+        uniSpawnCancel= new CancellationTokenSource();
+        for (int i = 0; i < data.enemyCount; i++)
+        {
+            gameManager.EnemyManager.SpawnEnemy(data.enemyId);
+            await UniTask.Delay(TimeSpan.FromSeconds(data.spawnInterval));
         }
     }
 }

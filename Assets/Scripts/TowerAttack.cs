@@ -2,6 +2,7 @@ using Cysharp.Threading.Tasks;
 using System;
 using System.Collections;
 using System.Linq;
+using System.Threading;
 using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
@@ -13,6 +14,7 @@ public class TowerAttack : MonoBehaviour
 
     [ReadOnly, SerializeField]
     private Enemy target;
+
 
     public bool IsValidTarget
     {
@@ -36,10 +38,28 @@ public class TowerAttack : MonoBehaviour
         }
     }
 
+    private void OnDisable()
+    {
+        disableCancellation.Cancel();
+    }
+
+    private void OnDestroy()
+    {
+        destroyCancellation.Cancel();
+        destroyCancellation.Dispose();
+    }
+
+
     public  void OnEnable()
     {
-       StartCoroutine(CoAttack());
-       //await UniAttackAsync();
+        StartCoroutine(CoAttack());
+
+        //if (disableCancellation != null)
+        //{
+        //    disableCancellation.Dispose();
+        //}
+        //disableCancellation = new CancellationTokenSource();
+        //await UniAttackAsync();
     }
 
     public void AttackMelee()
@@ -177,6 +197,9 @@ public class TowerAttack : MonoBehaviour
         Gizmos.color = Color.blue;
         Gizmos.DrawLine(transform.position, target.transform.position);
     }
+
+    CancellationTokenSource disableCancellation = new CancellationTokenSource(); //厚劝己拳矫 秒家贸府
+    CancellationTokenSource destroyCancellation = new CancellationTokenSource(); //昏力矫 秒家贸府
 
     private async UniTask UniAttackAsync()
     {
