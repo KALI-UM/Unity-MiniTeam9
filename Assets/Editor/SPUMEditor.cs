@@ -9,7 +9,7 @@ public class SPUMEditor : Editor
     private static void ResolutionSPUMPrefabMaterial()
     {
         // Load Main Material
-        Material spriteDiffuseMaterial = AssetDatabase.LoadAssetAtPath("Assets/SPUM/Res/Materials/SpriteDiffuse.mat", typeof(Material)) as Material;
+        Material spriteDiffuseMaterial = AssetDatabase.LoadAssetAtPath("Assets/SPUM/Basic_Resources/Materials/SpriteDiffuse.mat", typeof(Material)) as Material;
 
         // Load SPUM Character Prefabs
         string folderPath = "Assets/Resources/Prefabs/";
