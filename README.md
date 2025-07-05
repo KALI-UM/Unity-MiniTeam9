@@ -27,6 +27,14 @@
   </tr>
 </table>
 
-- **아이콘 이미지 캡처 툴**
-  - 게임 오브젝트를 캡처해 png파일로 생성하는 에디터 툴 개발 👉 [SaveTextureToFileUtility.cs](https://github.com/KALI-UM/Unity-MiniTeam9/blob/main/Assets/Scripts/SaveTextureToFileUtility.cs)
+- **타워 상호작용**
+  - 타워를 선택해서 타워 판매, 합체, 이동
+  - 골드를 지불하여 랜덤 타워 소환
+  - 타워를 재료로 최상위 타워로 진화 👉 [SaveTextureToFileUtility.cs](https://github.com/KALI-UM/Unity-MiniTeam9/blob/main/Assets/Scripts/SaveTextureToFileUtility.cs)
+- **적**
+  - 데이터테이블 데이터를 기반으로 적을 소환하는 웨이브 진행
+  - 오브젝트 풀 적용
+
+- 게임 오브젝트를 캡처해 png파일로 생성하는 **아이콘 이미지 캡처** 에디터 툴 개발 👉 [SaveTextureToFileUtility.cs](https://github.com/KALI-UM/Unity-MiniTeam9/blob/main/Assets/Scripts/SaveTextureToFileUtility.cs)
+- 모바일 화면 대응 👉 [SaveTextureToFileUtility.cs](https://github.com/KALI-UM/Unity-MiniTeam9/blob/main/Assets/Scripts/SaveTextureToFileUtility.cs)
   
