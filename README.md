@@ -36,6 +36,6 @@
   - 데이터테이블 데이터를 기반으로 적을 소환하는 웨이브 진행
   - 오브젝트 풀 적용
 
-- 게임 오브젝트를 캡처해 png파일로 생성하는 **아이콘 이미지 캡처** 에디터 툴 개발
+- 게임 오브젝트를 캡처해 png파일로 생성하는 **아이콘 이미지 캡처** 에디터 툴 개발 👉 [Capture Studio](https://github.com/KALI-UM/CaptureStudio)
 - **타워, 적 프리펩 일괄 제작** 에디터 툴 개발 👉 [TowerPrefabEditor.cs](https://github.com/KALI-UM/Unity-MiniTeam9/blob/main/Assets/Editor/TowerPrefabEditor.cs)
   
