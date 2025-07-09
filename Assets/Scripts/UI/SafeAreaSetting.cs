@@ -14,6 +14,27 @@ public class SafeAreaSetting : MonoBehaviour
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
+        ApplySafeAreaCanvasAnchor2();
+    }
+
+    public void ApplySafeAreaCanvasAnchor()
+    {
+        var minAnchor = Screen.safeArea.position;
+        var maxAnchor = Screen.safeArea.position + Screen.safeArea.size;
+
+        minAnchor.x /= Screen.currentResolution.width;
+        minAnchor.y /= Screen.currentResolution.height;
+
+        maxAnchor.x /= Screen.currentResolution.width;
+        maxAnchor.y /= Screen.currentResolution.height;
+
+        rectTransform.anchorMin = minAnchor;
+        rectTransform.anchorMax = maxAnchor;
+    }
+
+    public void ApplySafeAreaCanvasAnchor2()
+    {
+        rectTransform = GetComponent<RectTransform>();
 
         var newPos = rectTransform.position;
         if (rectTransform.anchorMax.y == rectTransform.anchorMin.y)

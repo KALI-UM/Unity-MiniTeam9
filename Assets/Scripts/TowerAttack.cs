@@ -50,16 +50,16 @@ public class TowerAttack : MonoBehaviour
     }
 
 
-    public  void OnEnable()
+    public async void OnEnable()
     {
-        StartCoroutine(CoAttack());
+        //StartCoroutine(CoAttack());
 
-        //if (disableCancellation != null)
-        //{
-        //    disableCancellation.Dispose();
-        //}
-        //disableCancellation = new CancellationTokenSource();
-        //await UniAttackAsync();
+        if (disableCancellation != null)
+        {
+            disableCancellation.Dispose();
+        }
+        disableCancellation = new CancellationTokenSource();
+        await UniAttackAsync();
     }
 
     public void AttackMelee()
@@ -209,6 +209,7 @@ public class TowerAttack : MonoBehaviour
         {
             if (!IsValidTarget)
             {
+                //공격 대상 탐색
                 FindTarget();
             }
 
@@ -216,10 +217,12 @@ public class TowerAttack : MonoBehaviour
             {
                 if (tower.Data.attackType == 0)
                 {
+                    //근접 공격
                     AttackMeleeAsync();
                 }
                 else
                 {
+                    //원거리 공격
                     AttackProjectileAsync();
                 }
             }
