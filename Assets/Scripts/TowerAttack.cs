@@ -50,16 +50,16 @@ public class TowerAttack : MonoBehaviour
     }
 
 
-    public async void OnEnable()
+    public  void OnEnable()
     {
-        //StartCoroutine(CoAttack());
+        StartCoroutine(CoAttack());
 
-        if (disableCancellation != null)
-        {
-            disableCancellation.Dispose();
-        }
-        disableCancellation = new CancellationTokenSource();
-        await UniAttackAsync();
+        //if (disableCancellation != null)
+        //{
+        //    disableCancellation.Dispose();
+        //}
+        //disableCancellation = new CancellationTokenSource();
+        //await UniAttackAsync();
     }
 
     public void AttackMelee()
