@@ -31,7 +31,7 @@
   - 타워를 선택해서 타워 판매, 합체, 이동
   - 골드를 지불하여 랜덤 타워 소환
   - 타워를 재료로 최상위 타워로 진화 👉 [RecipeProgressTracker.cs](https://github.com/KALI-UM/Unity-MiniTeam9/blob/main/Assets/Scripts/RecipeProgressTracker.cs#L70), [MaxFusionSystem.cs](https://github.com/KALI-UM/Unity-MiniTeam9/blob/main/Assets/Scripts/MaxFusionSystem.cs#L45)
-  - 공격 범위 내의 적 공격에서 Cell단위 계산으로 거리 검사량을 줄임 👉 [TowerAttack.cs](https://github.com/KALI-UM/Unity-MiniTeam9/blob/main/Assets/Scripts/TowerAttack.cs#L153)
+  - 공격 범위 내의 적 공격에서 Cell단위 계산으로 거리 검사량을 줄임 👉 [TowerAttack.cs](https://github.com/KALI-UM/Unity-MiniTeam9/blob/main/Assets/Scripts/TowerAttack.cs#L169)
 - **적**
   - 데이터테이블 데이터를 기반으로 적을 소환하는 웨이브 진행
   - 오브젝트 풀 적용
