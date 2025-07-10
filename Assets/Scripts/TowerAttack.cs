@@ -40,26 +40,21 @@ public class TowerAttack : MonoBehaviour
 
     private void OnDisable()
     {
-        disableCancellation.Cancel();
+        uniCancelToken.Cancel();
     }
 
     private void OnDestroy()
     {
-        destroyCancellation.Cancel();
-        destroyCancellation.Dispose();
+        uniCancelToken.Cancel();
+        uniCancelToken.Dispose();
     }
 
 
-    public  void OnEnable()
+    public async void OnEnable()
     {
-        StartCoroutine(CoAttack());
+        //StartCoroutine(CoAttack());
 
-        //if (disableCancellation != null)
-        //{
-        //    disableCancellation.Dispose();
-        //}
-        //disableCancellation = new CancellationTokenSource();
-        //await UniAttackAsync();
+        await UniAttackAsync();
     }
 
     public void AttackMelee()
@@ -79,6 +74,7 @@ public class TowerAttack : MonoBehaviour
     private IEnumerator CoAttack()
     {
         InitializeClosestEnemyQuery();
+
 
         while (true)
         {
@@ -198,15 +194,19 @@ public class TowerAttack : MonoBehaviour
         Gizmos.DrawLine(transform.position, target.transform.position);
     }
 
-    CancellationTokenSource disableCancellation = new CancellationTokenSource(); //비활성화시 취소처리
-    CancellationTokenSource destroyCancellation = new CancellationTokenSource(); //삭제시 취소처리
+   private  CancellationTokenSource uniCancelToken = new CancellationTokenSource(); //비활성화시 취소처리
 
     private async UniTask UniAttackAsync()
     {
+        uniCancelToken = new CancellationTokenSource();
         InitializeClosestEnemyQuery();
-
         while (true)
         {
+            if (uniCancelToken.IsCancellationRequested)
+            {
+                return;
+            }
+
             if (!IsValidTarget)
             {
                 //공격 대상 탐색
@@ -226,9 +226,8 @@ public class TowerAttack : MonoBehaviour
                     AttackProjectileAsync();
                 }
             }
-
             await UniTask.Delay(TimeSpan.FromSeconds(tower.AttackInterval));
-        }  
+        }
     }
 
     public async void AttackMeleeAsync()
